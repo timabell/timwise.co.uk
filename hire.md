@@ -14,7 +14,7 @@ Consultants can bring along a laptop with Visual Studio 2017 Professional if req
 <h2 align="left">About Me (Tim Abell)</h2>
 <p align="left">I specialize in C# / ASP.NET MVC projects, both legacy & greenfield. I bring full-stack skills, with an emphasis on back-end technologies.</p>
 <p align="left">I’ve focussed on programming projects and roles since graduating in 2000 with a degree in Cybernetics & Control Engineering from Reading University, I shifted from permanent jobs to contracting in 2012.</p>
-<p align="left">Some of the principles I bring to my work are: honesty (even when it’s hard), best practices, quality, elegance, practicality and continuous improvement. Learn more here: <a href="https://blog.timwise.co.uk/2018/03/10/my-approach-to-my-work/">https://blog.timwise.co.uk/2018/03/10/my-approach-to-my-work/</a></p>
+<p align="left">Some of the principles I bring to my work are: honesty (even when it’s hard), best practices, quality, elegance, practicality and continuous improvement. Learn more here: <a href="/2018/03/10/my-approach-to-my-work/">/2018/03/10/my-approach-to-my-work/</a></p>
 <p align="left"><a href="https://app.pluralsight.com/profile/timabell" target="_blank" rel="noopener"><img class="alignnone size-full wp-image-821" src="https://blogtimwise.files.wordpress.com/2018/03/selection_188.png" alt="Selection_188" width="709" height="137" /></a></p>
 <p align="left">I have a broad interest in programming and business and am always doing something beyond client work. My current side-project (written in GoLang) is <a href="http://schemaexplorer.io/">http://schemaexplorer.io/</a></p>
 
