@@ -1,0 +1,30 @@
+---
+layout: post
+title: 100 reasons I hate TFS-VC
+date: 
+type: post
+parent_id: '0'
+published: false
+password: ''
+status: draft
+categories: []
+tags: []
+meta:
+  _wpcom_is_markdown: '1'
+author:
+  login: timabell
+  email: tim@timwise.co.uk
+  display_name: timabell
+  first_name: ''
+  last_name: ''
+permalink: "/"
+---
+<p>Team Foundation Server has a version control system that is an improved version of SourceSafe, which is like the devil having a makeover.</p>
+<p>In the name of explaining why project's should avoid TFS-VC in favour of at the very least TFS's git hosting here's a list of nasty papercuts that add up to a shitty dev experience and damage to the software held therein. This is largely subjective but should give you an idea of the scale of the problems it has.</p>
+<p>There are some workarounds and practices for avoiding some of these pains. Offline workspaces is terrible though so doesn't compensate for anything.</p>
+<ol>
+<li>Editing a file requires a server checkout. WTF.</li>
+<li>It has some kind of cached idea of what's on disk. Just read the damn filesystem FFS. Gets out of sync any time any time an oxygen atom hits your PC.&nbsp;</li>
+<li>Adding a file to a project results in an "Add Progress" progress bar in a modal dialog while TFS gets in your way. Jarringly breaking your chain of thought.</li>
+<li>Get latest... "Automatically resolved conflict ... As AutoMerge". But what did it do?...</li>
+</ol>
