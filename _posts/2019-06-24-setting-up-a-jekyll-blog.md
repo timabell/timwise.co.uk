@@ -23,6 +23,9 @@ What you need to follow along:
 * simple dev friendly templating,
 * a nice simple code-friendly mobile-friendly design,
 * full control.
+* [public revision
+  history](https://github.com/timabell/timwise.co.uk/commits/master) of blog
+  posts with no extra effort (no more "updated: blah" in blog posts)
 
 # Why jeykll fits that
 
