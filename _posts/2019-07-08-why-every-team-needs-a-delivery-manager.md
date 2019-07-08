@@ -83,7 +83,7 @@ The approach is not new, Joel wrote this in 2000:
 > <https://www.joelonsoftware.com/2000/03/19/two-stories/>
 
 but I've personally never seen it called out as a specific role like this
-outside of my work for "Digital" teams in UK Government. I hope this become
+outside of my work for "Digital" teams in UK Government. I hope this becomes
 more common everywhere.
 
 As a developer on an Agile team working inside a government team (not for the
