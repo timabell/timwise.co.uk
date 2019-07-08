@@ -3,6 +3,7 @@ layout: default
 ---
 {% assign excerpt_limit = 3 %}
 
+
 <!--<div id="gh-latest"></div>-->
 <div class="posts">
   {% for post in site.posts limit:excerpt_limit %}
@@ -21,6 +22,9 @@ layout: default
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
   {% endfor %}
+
+{% include subscribe.html %}
+
   <h1>Older posts</h1>
   <ul>
     {% for post in site.posts offset:excerpt_limit %}
