@@ -28,12 +28,15 @@ layout: default
   </div>
 
   <div>
-    <p><em><a href='http://twitter.com/share?text=Read this: "{{ page.title }}" by @{{ site.footer-links.twitter }}&url={{site.url}}{{page.url}}' target='_blank'>tweet this</a></em></p>
+    Share:
+      <a href='http://twitter.com/share?text=Read this: "{{ page.title }}" by @{{
+        site.footer-links.twitter }}&url={{site.url}}{{page.url}}'
+        target='_blank'>Tweet</a>
+      |
+       <a target='_blank'
+         href="https://www.linkedin.com/shareArticle?mini=true&url={{site.url}}{{page.url}}&title={{ page.title }}">
+      LinkedIn</a>
   </div>
-
-  <!--<div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
-  </div>-->
 
   {% include subscribe.html %}
 
