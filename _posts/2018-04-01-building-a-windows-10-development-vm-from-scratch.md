@@ -66,7 +66,7 @@ tar -cpC $base $src -P | pv -s $(du -sb $base/$src | awk '{print $1}') | lz4 >> 
 *   backup again
 
 <div class="flickr-pic">
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/tim_abell/38944561440/" title="IMG_20171102_170234"><img src="https://live.staticflickr.com/4798/38944561440_829d76ac80.jpg" width="500" height="375" alt="IMG_20171102_170234"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<a href="https://www.flickr.com/photos/tim_abell/38944561440/" title="IMG_20171102_170234"><img src="https://live.staticflickr.com/4798/38944561440_829d76ac80.jpg" style="max-height: 375px" alt="IMG_20171102_170234"></a>
 </div>
 
 ## The Snapshot Trials
