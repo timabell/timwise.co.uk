@@ -66,7 +66,10 @@ tar -cpC $base $src -P | pv -s $(du -sb $base/$src | awk '{print $1}') | lz4 >> 
 *   backup again
 
 <div class="flickr-pic">
-<a href="https://www.flickr.com/photos/tim_abell/38944561440/" title="IMG_20171102_170234"><img src="https://live.staticflickr.com/4798/38944561440_829d76ac80.jpg" style="max-height: 375px" alt="IMG_20171102_170234"></a>
+<a href="https://www.flickr.com/photos/tim_abell/38944561440/"
+target="_blank"><img
+src="https://live.staticflickr.com/4798/38944561440_829d76ac80.jpg"
+style="max-height: 375px" alt="Photo of a lit pool at night"></a>
 </div>
 
 ## The Snapshot Trials
