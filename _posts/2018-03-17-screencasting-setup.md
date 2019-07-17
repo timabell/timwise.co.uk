@@ -9,7 +9,7 @@ permalink: "/2018/03/17/screencasting-setup/"
 ---
 I just made a video to demo schema explorer.
 
-<https://youtu.be/cqStb6M-Q90>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cqStb6M-Q90" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 I did this in one take with no post-production work. I figure practice will improve my selection and delivery of the content.
 
