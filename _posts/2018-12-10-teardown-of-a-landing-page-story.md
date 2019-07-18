@@ -9,16 +9,6 @@ password: ''
 status: publish
 categories: []
 tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _rest_api_published: '1'
-  _rest_api_client_id: "-1"
-  _publicize_job_id: '25227776940'
-  timeline_notification: '1544431213'
-  _oembed_220097354ef38600e6d6270169e684f0: <a href="https://flic.kr/p/SYQSYf"><img
-    src="https://live.staticflickr.com/4164/33461099014_c2ce23d162.jpg" alt="IMG_20170424_121829_crop"
-    width="500" height="114" /></a>
-  _oembed_time_220097354ef38600e6d6270169e684f0: '1561084876'
 author:
   login: timabell
   email: tim@timwise.co.uk
@@ -27,7 +17,7 @@ author:
   last_name: ''
 permalink: "/2018/12/10/teardown-of-a-landing-page-story/"
 ---
-Here's my analysis of the depth of information and thought that's gone into a deceptively brief piece of landing-page copy. It's from https://realtimeboard.com/blog/accelerate-growth-early-stage-startups/ that I'm trying to use as inspiration for http://schemaexplorer.io/
+Here's my analysis of the depth of information and thought that's gone into a deceptively brief piece of landing-page copy. It's from <https://realtimeboard.com/blog/accelerate-growth-early-stage-startups/> that I'm trying to use as inspiration for <http://schemaexplorer.io/>
 
 I had to de-construct the example story in order to work out how to do my own so having put the work in I thought I'd share it with you all here.
 
@@ -83,7 +73,7 @@ Introduce the brand name. Tease. Read on to satisfy that completion-bias tendenc
 
 Also the name itself conveys a lot of meaning
 
-"Farm" - fresh produce, direct from the supplier  
+"Farm" - fresh produce, direct from the supplier
 "stead" - homely, small supplies, not industrial or full of chemicals
 
 > where you’re able to have that same stuff
@@ -130,6 +120,6 @@ point to hard cost-benefit for the service - you don't have time (as mentioned t
 
 Let me know if that's helped you in any way.
 
-If you happen to be someone that deals with databases and are keen to try new tools then please do me a favour and sign up to the http://schemaexplorer.io/ mailing list (you'll have to ignore my terrible marketing text till I'm as good as Brady).
+If you happen to be someone that deals with databases and are keen to try new tools then please do me a favour and sign up to the <http://schemaexplorer.io/> mailing list (you'll have to ignore my terrible marketing text till I'm as good as Brady).
 
 ~ Tim
