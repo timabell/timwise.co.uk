@@ -9,4 +9,7 @@ blogger_id: tag:blogger.com,1999:blog-5082828566240519947.post-70754377106355508
 blogger_orig_url: https://timwise.blogspot.com/2008/07/work-at-emapsite.html
 ---
 
-The company I work for, emapsite is hiring a developer.<br />Interviews are starting so you'll have to be quick.<br /><br />More details available on their <a href="http://www.emapsite.com/news/viewnews.aspx?story=160">news item</a>.
+The company I work for, emapsite is hiring a developer.  
+Interviews are starting so you'll have to be quick.  
+
+More details available on their [news item](http://www.emapsite.com/news/viewnews.aspx?story=160).
