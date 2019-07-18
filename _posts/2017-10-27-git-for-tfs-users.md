@@ -22,14 +22,8 @@ author:
   last_name: ''
 permalink: "/2017/10/27/git-for-tfs-users/"
 ---
-<p>I'm considering creating a 30 minute video to help teams transition from Team Foundation Server source control to git (hosted with TFS or Visual Studio Team Services - aka VSTS).</p>
-<p>Please <a href="http://eepurl.com/c9imrH">register your interest</a>. If I get enough interest in this then I'll do the work to put it together and launch it.</p>
-<p><img class="aligncenter size-full wp-image-724" src="{{ site.baseurl }}/assets/tfs-to-git-terminal.png" alt="tfs-to-git-terminal" width="625" height="529" /></p>
-<div id="mc_embed_signup">
-<div id="mc_embed_signup_scroll">
-<p><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--></p>
-<div style="position:absolute;left:-5000px;"></div>
-<div class="clear"></div>
-</div>
-</div>
-<p>&nbsp;</p>
+I'm considering creating a 30 minute video to help teams transition from Team Foundation Server source control to git (hosted with TFS or Visual Studio Team Services - aka VSTS).
+
+Please [register your interest](http://eepurl.com/c9imrH). If I get enough interest in this then I'll do the work to put it together and launch it.
+
+![tfs-to-git-terminal]({{ site.baseurl }}/assets/tfs-to-git-terminal.png)
