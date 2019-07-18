@@ -9,4 +9,65 @@ blogger_id: tag:blogger.com,1999:blog-5082828566240519947.post-62479159044892374
 blogger_orig_url: https://timwise.blogspot.com/2013/12/getting-rails-4-up-and-running-with.html
 ---
 
-<i>Brain dump warning!</i><br /><br />This is a follow up to&nbsp;<a href="http://timwise.blogspot.co.uk/2013/05/installing-ruby-2-rails-4-on-ubuntu.html" style="color: #3465a4;">http://timwise.blogspot.co.uk/2013/05/installing-ruby-2-rails-4-on-ubuntu.html</a>&nbsp;and is just a list of steps needed to get a clean install of Ubuntu up to speed with an existing site.<br /><ul><li dir="ltr">Install rbenv to manage ruby versions</li><ul><li dir="ltr"><a href="https://github.com/sj26/rbenv-install" style="color: #3465a4;">https://github.com/sj26/rbenv-install</a></li><li dir="ltr"><i>git clone https://github.com/sstephenson/rbenv.git&nbsp;~/.rbenv</i></li></ul><li>Install ruby-build to manage installation of ruby versions into rbenv</li><ul><li><a href="https://github.com/sstephenson/ruby-build" style="color: #3465a4;">https://github.com/sstephenson/ruby-build</a></li><li><i>git clone https://github.com/sstephenson/ruby-build.git&nbsp;~/.rbenv/plugins/ruby-build</i></li></ul><li>For convenience install dotmatrix - this will set up the rbenv environment correctly, amongst other things</li><ul><li>clone <a href="https://github.com/timabell/dotmatrix" style="color: #3465a4;">https://github.com/timabell/dotmatrix</a></li><li>run bin/install</li><li>restart any running terminal(s) to get rbenv</li></ul></ul><ul><li dir="ltr">get a project (includes a .ruby-version file for rbenv, and a Gemfile for bundle)</li><ul><li dir="ltr"><i>git clone git@github.com:timabell/symbol-library.git</i></li></ul><li><i>sudo apt-get install libssl-dev libreadline-dev</i></li><ul><li dir="ltr">readline is needed for rails console, and has to be installed before ruby. If you've already installed ruby then just re-run rbenv install and it will overwrite the existing build with a version with readline support. ref:&nbsp;<a href="http://vvv.tobiassjosten.net/ruby/readline-in-ruby-with-rbenv/" style="color: #3465a4;">http://vvv.tobiassjosten.net/ruby/readline-in-ruby-with-rbenv/</a></li></ul><li dir="ltr"><i>rbenv install x.x.x-xxxx</i></li><ul><li dir="ltr">autocompletes, yay!</li><li dir="ltr">.. or better still reads from .ruby-version I think so you can just run `rbenv install` if you are in the project folder</li></ul><li dir="ltr"><i>gem install bundler</i><br /><ul><li dir="ltr">from the right directory so done for right ruby version</li><li dir="ltr">rbenv rehash</li></ul></li><li dir="ltr"><i>bundle</i><br /><ul><li dir="ltr">will install all the gems for the project</li></ul></li><li dir="ltr"><strike>don't sudo apt-get install rbenv ~&nbsp;</strike>doesn't provide sufficiently up to date ruby</li><li dir="ltr"><strike>gem install rails --version 4.0.2 --no-ri --no-rdoc ~&nbsp;</strike>don't need this when you have a gem file with rails in it, bundle will do it for you</li><li dir="ltr"><i>sudo apt-get install nodejs</i><br /><ul><li dir="ltr">for javascript runtime (rails server throwing an error without this)</li></ul></li><li dir="ltr"><i>bundle exec rails server</i></li><li dir="ltr"><i>bundle exec rails console</i></li><ul><li dir="ltr">needs readline (see above)</li></ul></ul><div>Other stuff I like in my install<br /><ul><li dir="ltr">dotmatrix bin/vimbundles<br /><ul><li dir="ltr">includes vim-rails and friends</li><li dir="ltr">full list <a href="https://github.com/timabell/dotmatrix/blob/master/bin/vimbundles.sh#L45" style="color: #3465a4;">https://github.com/timabell/dotmatrix/blob/master/bin/vimbundles.sh#L45</a></li></ul></li><li dir="ltr">console colours from bin/solarize.sh in dotmatrix/bin</li><li dir="ltr">tmux</li></ul><div>This is mostly for my own reference but maybe it'll help someone else out.</div></div>
+_Brain dump warning!_  
+
+This is a follow up to [http://timwise.blogspot.co.uk/2013/05/installing-ruby-2-rails-4-on-ubuntu.html](http://timwise.blogspot.co.uk/2013/05/installing-ruby-2-rails-4-on-ubuntu.html) and is just a list of steps needed to get a clean install of Ubuntu up to speed with an existing site.  
+
+*   Install rbenv to manage ruby versions
+
+*   [https://github.com/sj26/rbenv-install](https://github.com/sj26/rbenv-install)
+*   _git clone https://github.com/sstephenson/rbenv.git ~/.rbenv_
+
+*   Install ruby-build to manage installation of ruby versions into rbenv
+
+*   [https://github.com/sstephenson/ruby-build](https://github.com/sstephenson/ruby-build)
+*   _git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build_
+
+*   For convenience install dotmatrix - this will set up the rbenv environment correctly, amongst other things
+
+*   clone [https://github.com/timabell/dotmatrix](https://github.com/timabell/dotmatrix)
+*   run bin/install
+*   restart any running terminal(s) to get rbenv
+
+*   get a project (includes a .ruby-version file for rbenv, and a Gemfile for bundle)
+
+*   _git clone git@github.com:timabell/symbol-library.git_
+
+*   _sudo apt-get install libssl-dev libreadline-dev_
+
+*   readline is needed for rails console, and has to be installed before ruby. If you've already installed ruby then just re-run rbenv install and it will overwrite the existing build with a version with readline support. ref: [http://vvv.tobiassjosten.net/ruby/readline-in-ruby-with-rbenv/](http://vvv.tobiassjosten.net/ruby/readline-in-ruby-with-rbenv/)
+
+*   _rbenv install x.x.x-xxxx_
+
+*   autocompletes, yay!
+*   .. or better still reads from .ruby-version I think so you can just run `rbenv install` if you are in the project folder
+
+*   _gem install bundler_  
+
+    *   from the right directory so done for right ruby version
+    *   rbenv rehash
+*   _bundle_  
+
+    *   will install all the gems for the project
+*   <strike>don't sudo apt-get install rbenv ~ </strike>doesn't provide sufficiently up to date ruby
+*   <strike>gem install rails --version 4.0.2 --no-ri --no-rdoc ~ </strike>don't need this when you have a gem file with rails in it, bundle will do it for you
+*   _sudo apt-get install nodejs_  
+
+    *   for javascript runtime (rails server throwing an error without this)
+*   _bundle exec rails server_
+*   _bundle exec rails console_
+
+*   needs readline (see above)
+
+<div>Other stuff I like in my install  
+
+*   dotmatrix bin/vimbundles  
+
+    *   includes vim-rails and friends
+    *   full list [https://github.com/timabell/dotmatrix/blob/master/bin/vimbundles.sh#L45](https://github.com/timabell/dotmatrix/blob/master/bin/vimbundles.sh#L45)
+*   console colours from bin/solarize.sh in dotmatrix/bin
+*   tmux
+
+<div>This is mostly for my own reference but maybe it'll help someone else out.</div>
+
+</div>
