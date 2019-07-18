@@ -9,12 +9,6 @@ password: ''
 status: publish
 categories: []
 tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _rest_api_published: '1'
-  _rest_api_client_id: "-1"
-  _publicize_job_id: '12989173114'
-  _oembed_cd8f9fe5a7f7de6521cb1a9ff32c4513: "{{unknown}}"
 author:
   login: timabell
   email: tim@timwise.co.uk
@@ -37,7 +31,9 @@ As a result "diagrams" is now the top-priority feature being added to SDV.
 
 It also gives me a new name for Sql Data Viewer...
 
-https://www.flickr.com/photos/tim_abell/24405997637/
+<div class="flickr-pic">
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/tim_abell/24405997637/" title="IMG_20171219_160643"><img src="https://live.staticflickr.com/4731/24405997637_bda2d45a93.jpg" width="500" height="276" alt="IMG_20171219_160643"></a>
+</div>
 
 ## New name, new domain
 
