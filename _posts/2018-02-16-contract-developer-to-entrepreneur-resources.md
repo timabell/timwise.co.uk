@@ -9,12 +9,6 @@ password: ''
 status: publish
 categories: []
 tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _rest_api_published: '1'
-  _rest_api_client_id: "-1"
-  _publicize_job_id: '14823334960'
-  timeline_notification: '1518820300'
 author:
   login: timabell
   email: tim@timwise.co.uk
@@ -39,7 +33,7 @@ Some [more suggestions on the cocoon blog](https://cocoon.life/blog/6-must-read-
 
 ## Inspiration
 
-*   https://www.softwarebyrob.com/2015/03/26/the-stairstep-approach-to-bootstrapping/
+*   <https://www.softwarebyrob.com/2015/03/26/the-stairstep-approach-to-bootstrapping/>
 
 ## Podcasts
 
@@ -69,9 +63,9 @@ Some [more suggestions on the cocoon blog](https://cocoon.life/blog/6-must-read-
 *   [http://tinymarketingwins.com/](http://tinymarketingwins.com/) - learn marketing even before you have anything to sell
 *   [https://designacademy.io/](https://designacademy.io/) - design for developers
 *   [https://www.ditchinghourly.com/](https://www.ditchinghourly.com/)
-*   http://startupclass.samaltman.com/ - also on youtube & as a podcast:
+*   <http://startupclass.samaltman.com/> - also on youtube & as a podcast:
 
-https://www.youtube.com/watch?v=CBYhVcO4WgI&list=PL5q_lef6zVkaTY_cT1k7qFNF2TidHCe-1
+<https://www.youtube.com/watch?v=CBYhVcO4WgI&list=PL5q_lef6zVkaTY_cT1k7qFNF2TidHCe-1>
 
 ## Community
 
