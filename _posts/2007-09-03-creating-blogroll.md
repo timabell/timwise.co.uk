@@ -10,4 +10,34 @@ blogger_id: tag:blogger.com,1999:blog-5082828566240519947.post-55575928077156449
 blogger_orig_url: https://timwise.blogspot.com/2007/09/creating-blogroll.html
 ---
 
-Update 11th Sep 2007:<br />xsession responded to my support request, and the <a href="http://www.timwise.co.uk/blogroll.opml">opml</a> file is now served, complete with the correct mime type.<br /><hr/><br />Update 26th Dec 2009<br />Now on a linux host so no mime type issues now.<br /><br />Podcast list added: <a href="http://www.timwise.co.uk/podcasts.opml">podcasts.opml</a>.<br /><br />Now styled with custom xslt file <a href="http://www.timwise.co.uk/opml.xsl">opml.xsl</a>.<br /><hr /><br />As people may want to see my rss and podcast subscriptions, I have created a blogroll for you.<br /><br />I've started with an <a href="http://en.wikipedia.org/wiki/OPML">OPML</a> file, created by hand and uploaded to my web host. Unfortunately my web host won't (currently) serve the ".opml" file extension so I've had to use .txt.<br /><br />so <a href="http://www.timwise.co.uk/blogroll.opml">http://www.timwise.co.uk/blogroll.opml</a> became <a href="http://www.timwise.co.uk/blogroll.opml.txt">http://www.timwise.co.uk/blogroll.opml.txt</a><br /><br />I then validated the file with <a href="http://validator.opml.org/">http://validator.opml.org/</a><br />I then added my feed to <a href="http://share.opml.org/">http://share.opml.org/</a> so you can now see the list at <a href="http://share.opml.org/viewsharedfeeds/?user_id=7189">http://share.opml.org/viewsharedfeeds/?user_id=7189</a><br />In the opml I've separated podcasts and news feeds, but share.opml doesn't use this info.<br /><br />There is some <a href="http://www.isolani.co.uk/blog/semanticweb/OpmlTheXmlFormatWithNoFriends">controversy</a> over opml, but hell, it does the job. We can all upgrade when a better alternative goes mainstream.<br /><br />Useful references:<br /><a href="http://www.kbcafe.com/rss/?guid=20051003145153">http://www.kbcafe.com/rss/?guid=20051003145153</a><br /><a href="http://www.rss-tools.com/opml-generators.htm">http://www.rss-tools.com/opml-generators.htm</a><br /><a href="http://www.bioneural.net/2005/10/09/iblog-opml-bloglines-reading-list/">http://www.bioneural.net/2005/10/09/iblog-opml-bloglines-reading-list/</a><br /><a href="http://nayyeri.net/archive/2007/02/17/create-a-blogroll-from-opml-files.aspx">http://nayyeri.net/archive/2007/02/17/create-a-blogroll-from-opml-files.aspx</a>
+Update 11th Sep 2007:  
+xsession responded to my support request, and the [opml](http://www.timwise.co.uk/blogroll.opml) file is now served, complete with the correct mime type.  
+
+* * *
+
+Update 26th Dec 2009  
+Now on a linux host so no mime type issues now.  
+
+Podcast list added: [podcasts.opml](http://www.timwise.co.uk/podcasts.opml).  
+
+Now styled with custom xslt file [opml.xsl](http://www.timwise.co.uk/opml.xsl).  
+
+* * *
+
+As people may want to see my rss and podcast subscriptions, I have created a blogroll for you.  
+
+I've started with an [OPML](http://en.wikipedia.org/wiki/OPML) file, created by hand and uploaded to my web host. Unfortunately my web host won't (currently) serve the ".opml" file extension so I've had to use .txt.  
+
+so [http://www.timwise.co.uk/blogroll.opml](http://www.timwise.co.uk/blogroll.opml) became [http://www.timwise.co.uk/blogroll.opml.txt](http://www.timwise.co.uk/blogroll.opml.txt)  
+
+I then validated the file with [http://validator.opml.org/](http://validator.opml.org/)  
+I then added my feed to [http://share.opml.org/](http://share.opml.org/) so you can now see the list at [http://share.opml.org/viewsharedfeeds/?user_id=7189](http://share.opml.org/viewsharedfeeds/?user_id=7189)  
+In the opml I've separated podcasts and news feeds, but share.opml doesn't use this info.  
+
+There is some [controversy](http://www.isolani.co.uk/blog/semanticweb/OpmlTheXmlFormatWithNoFriends) over opml, but hell, it does the job. We can all upgrade when a better alternative goes mainstream.  
+
+Useful references:  
+[http://www.kbcafe.com/rss/?guid=20051003145153](http://www.kbcafe.com/rss/?guid=20051003145153)  
+[http://www.rss-tools.com/opml-generators.htm](http://www.rss-tools.com/opml-generators.htm)  
+[http://www.bioneural.net/2005/10/09/iblog-opml-bloglines-reading-list/](http://www.bioneural.net/2005/10/09/iblog-opml-bloglines-reading-list/)  
+[http://nayyeri.net/archive/2007/02/17/create-a-blogroll-from-opml-files.aspx](http://nayyeri.net/archive/2007/02/17/create-a-blogroll-from-opml-files.aspx)
