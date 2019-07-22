@@ -3,7 +3,7 @@ layout: post
 title: New year new blog
 date: '2017-01-17T23:36:00.000Z'
 author: Tim Abell
-tags: 
+tags: blogger-import
 modified_time: '2017-01-17T23:36:03.863Z'
 blogger_id: tag:blogger.com,1999:blog-5082828566240519947.post-5400732084517296093
 blogger_orig_url: https://timwise.blogspot.com/2017/01/new-year-new-blog.html
