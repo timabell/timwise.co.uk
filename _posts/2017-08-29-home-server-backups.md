@@ -9,11 +9,6 @@ password: ''
 status: publish
 categories: []
 tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _rest_api_published: '1'
-  _rest_api_client_id: "-1"
-  _publicize_job_id: '8759358030'
 author:
   login: timabell
   email: tim@timwise.co.uk
@@ -40,7 +35,8 @@ Somehow need to make the disk accessible to the VM.
 
 Finding the luks partition when plugged into the host:
 
-<pre>tim@spot:~$ sudo fdisk -l
+```
+tim@spot:~$ sudo fdisk -l
 ...
 Disk /dev/sdc: 931.5 GiB, 1000170586112 bytes, 1953458176 sectors
 Units: sectors of 1 * 512 = 512 bytes
@@ -55,15 +51,18 @@ Device Boot Start End Sectors Size Id Type
 
 tim@spot:~$ ll /dev/disk/by-uuid/
 ...
-lrwxrwxrwx 1 root root 10 Aug 29 21:51 **6ca09b72-8c9b-4571-8943-9f1d520671ab -> ../../sdc2**</pre>
+lrwxrwxrwx 1 root root 10 Aug 29 21:51 **6ca09b72-8c9b-4571-8943-9f1d520671ab -> ../../sdc2**
+```
 
 Confirm it's the luks partition:
 
-<pre>tim@spot:~$ sudo cryptsetup luksDump /dev/disk/by-uuid/6ca09b72-8c9b-4571-8943-9f1d520671ab
+```
+tim@spot:~$ sudo cryptsetup luksDump /dev/disk/by-uuid/6ca09b72-8c9b-4571-8943-9f1d520671ab
 LUKS header information for /dev/disk/by-uuid/6ca09b72-8c9b-4571-8943-9f1d520671abVersion: 1
 Cipher name: aes
 Cipher mode: xts-plain64
 Hash spec: sha1
-...</pre>
+...
+```
 
 I'll update this post with any details as I progress. Don't hold your breath though!
