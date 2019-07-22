@@ -22,6 +22,8 @@ author:
   last_name: ''
 permalink: "/2017/08/29/home-server-docker-compose/"
 ---
-<p>Another step in making a throw-away home server: docker-compose.</p>
-<p>Find my compose file and setup script at https://github.com/timabell/home-server-docker-compose</p>
-<p>I learned how to use docker-compose while working on reverse-proxying sdv, find out more: https://github.com/timabell/sdv-docker</p>
+Another step in making a throw-away home server: docker-compose.
+
+Find my compose file and setup script at https://github.com/timabell/home-server-docker-compose
+
+I learned how to use docker-compose while working on reverse-proxying sdv, find out more: https://github.com/timabell/sdv-docker
