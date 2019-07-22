@@ -9,11 +9,6 @@ password: ''
 status: publish
 categories: []
 tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _rest_api_published: '1'
-  _rest_api_client_id: "-1"
-  _publicize_job_id: '5730621813'
 author:
   login: timabell
   email: tim@timwise.co.uk
@@ -36,4 +31,4 @@ I've had to choose monthly or per-feature on Patreon, and I've gone for monthly 
 
 I haven't picked a specific daily rate I'd work on this for yet, but I'd probably give some discount over my normal contract rates just because I think it's worthwhile and I enjoy it.
 
-Do you or your employer use any of my open source projects? Fund me to make them better! Head over to https://www.patreon.com/timabell with your boss's credit card and then drop me a line to let me know what's of interest to you.
+Do you or your employer use any of my open source projects? Fund me to make them better! Head over to <https://www.patreon.com/timabell> with your boss's credit card and then drop me a line to let me know what's of interest to you.
