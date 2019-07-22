@@ -9,15 +9,6 @@ password: ''
 status: publish
 categories: []
 tags: []
-meta:
-  _rest_api_published: '1'
-  _rest_api_client_id: "-1"
-  _publicize_job_id: '2695137876'
-  _wpcom_is_markdown: '1'
-  _oembed_220097354ef38600e6d6270169e684f0: <a href="https://flic.kr/p/SYQSYf"><img
-    src="https://farm5.staticflickr.com/4164/33461099014_c2ce23d162.jpg" alt="IMG_20170424_121829_crop"
-    width="500" height="114" /></a>
-  _oembed_time_220097354ef38600e6d6270169e684f0: '1493305631'
 author:
   login: timabell
   email: tim@timwise.co.uk
@@ -53,7 +44,8 @@ So now after a reboot I can `ssh -X` into the DomU server, then using virt-manag
 
 It wasn't immediately obvious how to set up the networking. This was the network config that worked in the end (after ifdown/ifup, also tested with full reboot):
 
-<pre>$ cat /etc/network/interfaces
+```
+$ cat /etc/network/interfaces
 source /etc/network/interfaces.d/*
 
 # The loopback network interface
@@ -67,7 +59,8 @@ iface xenbr0 inet dhcp
 # The primary network interface
 auto enp1s0
 iface enp1s0 inet manual
-#iface enp1s0 inet dhcp</pre>
+#iface enp1s0 inet dhcp
+```
 
 ## Docker
 
@@ -79,7 +72,8 @@ First test case was [transmission-bt](https://transmissionbt.com/) which I run t
 
 To install and run it:
 
-<pre>$ sudo -i
+```
+$ sudo -i
 # useradd -r -s /sbin/nologin transmission
 # id transmission
 id=999(transmission) gid=999(transmission) groups=999(transmission)
@@ -96,11 +90,12 @@ id=999(transmission) gid=999(transmission) groups=999(transmission)
   -p 9091:9091 -p 51413:51413 -p 51413:51413/udp \
   linuxserver/transmission
 # docker start transmission
-# docker logs -f transmission</pre>
+# docker logs -f transmission
+```
 
 useradd ref: [http://askubuntu.com/questions/29359/how-to-add-user-without-home](http://askubuntu.com/questions/29359/how-to-add-user-without-home)
 
-Once that was done I could see the transmission web UI at http://dom1vm:9091/. Hurrah.
+Once that was done I could see the transmission web UI at `http://dom1vm:9091/`. Hurrah.
 
 ## syncthing
 
@@ -112,18 +107,20 @@ Same deal with folders and users, then:
 
 ## Start on boot
 
-<pre>docker update --restart=unless-stopped transmission 
-docker update --restart=unless-stopped syncthing</pre>
+```
+docker update --restart=unless-stopped transmission
+docker update --restart=unless-stopped syncthing
+```
 
 [http://stackoverflow.com/a/37479753/10245](http://stackoverflow.com/a/37479753/10245)
 
 ## Todo
 
 *   [nextcloud](https://nextcloud.com/) - has an iOS app that syncthing doesn't yet, might also have better selective sync
-    *   https://store.docker.com/community/images/wonderfall/nextcloud
+    *   <https://store.docker.com/community/images/wonderfall/nextcloud>
 *   plex server
-    *   https://www.plex.tv/
+    *   <https://www.plex.tv/>
 
 ## Further reading
 
-*   https://forum.level1techs.com/t/dexter-kanes-ultra-paranoid-encrypted-nas-completed/98340
+*   <https://forum.level1techs.com/t/dexter-kanes-ultra-paranoid-encrypted-nas-completed/98340>
