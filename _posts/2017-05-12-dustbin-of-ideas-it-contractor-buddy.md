@@ -41,7 +41,9 @@ So what sank it?
 *   Even though the company would not be inserted into the financial transaction, they would still need to be a communication relay between employer/agent and candidate, and the received opinion is that this just won't fly.
 *   The number of contractors who could find this useful could be small, with the highly in-demand people not having to put in much work to get the next contract (therefore not gaining much value from the service), and the the not-in-demand contractors are not a market the business would want to be primarily associated with as it could become a by-word for low-quality talent. This leaves the middle ground which may not be enough of a market to support the business. Before I'd talked to anyone I'd assumed that all contractors would want this (based on sample size of one - me).
 
-https://www.flickr.com/photos/tim_abell/32091991176/
+<div class="flickr-pic">
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/tim_abell/32091991176/" title="New cycle route, green park - closed at night, wtf"><img src="https://live.staticflickr.com/765/32091991176_0f19b14a2f.jpg" width="500" height="374" alt="New cycle route, green park - closed at night, wtf"></a>
+</div>
 
 The investment required to prove/disprove these suppositions would be significant, as I think you'd basically have to build the functioning business to see what happens in reality. So on that basis, "I'm out!"
 
