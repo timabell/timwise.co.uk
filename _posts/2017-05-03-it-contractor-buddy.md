@@ -10,27 +10,6 @@ status: publish
 categories: []
 tags:
 - startup
-meta:
-  _wpcom_is_markdown: '1'
-  _oembed_220097354ef38600e6d6270169e684f0: <a href="https://flic.kr/p/SYQSYf"><img
-    src="https://farm5.staticflickr.com/4164/33461099014_c2ce23d162.jpg" alt="IMG_20170424_121829_crop"
-    width="500" height="114" /></a>
-  _oembed_d00406e0b31eef5b86ff5b6cf41c6fa4: <a href="https://flic.kr/p/SYQSYf"><img
-    src="https://farm5.staticflickr.com/4164/33461099014_c2ce23d162_z.jpg" alt="IMG_20170424_121829_crop"
-    width="640" height="146" /></a>
-  _rest_api_published: '1'
-  _rest_api_client_id: "-1"
-  _publicize_job_id: '4654393443'
-  _oembed_f48388d19ac8041c6f7860d031b2c30a: <a href="https://flic.kr/p/SYQSYf"><img
-    src="https://farm5.staticflickr.com/4164/33461099014_c2ce23d162_z.jpg" alt="IMG_20170424_121829_crop"
-    width="640" height="146" /></a>
-  _oembed_time_220097354ef38600e6d6270169e684f0: '1493814800'
-  _oembed_time_d00406e0b31eef5b86ff5b6cf41c6fa4: '1493814874'
-  _oembed_9d8e438e850ee112835c01b6c0726d27: <a href="https://flic.kr/p/SYQSYf"><img
-    src="https://farm5.staticflickr.com/4164/33461099014_c2ce23d162_c.jpg" alt="IMG_20170424_121829_crop"
-    width="800" height="183" /></a>
-  _oembed_time_9d8e438e850ee112835c01b6c0726d27: '1493814876'
-  _oembed_time_f48388d19ac8041c6f7860d031b2c30a: '1493814879'
 author:
   login: timabell
   email: tim@timwise.co.uk
@@ -60,7 +39,9 @@ A concierge service for IT contractors.
 
 As I know from first-hand experience the job hunt is a time-consuming slog where being on top of all your leads is critical to avoid being taken advantage of rate-wise by a sharp-eyed contingency recruiter, or having a deal ruined by duplicate CV submissions.
 
-https://flic.kr/p/SYQSYf
+<div class="flickr-pic">
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/tim_abell/33461099014/" title="IMG_20170424_121829_crop"><img src="https://live.staticflickr.com/4164/33461099014_c2ce23d162.jpg" width="500" height="114" alt="IMG_20170424_121829_crop"></a>
+</div>
 
 ## How is this different from all the other recruiters?
 
