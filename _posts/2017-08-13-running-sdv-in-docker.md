@@ -9,11 +9,6 @@ password: ''
 status: publish
 categories: []
 tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _rest_api_published: '1'
-  _rest_api_client_id: "-1"
-  _publicize_job_id: '8230643421'
 author:
   login: timabell
   email: tim@timwise.co.uk
@@ -30,14 +25,17 @@ Just bought a shared server with [bytemark](https://www.bytemark.co.uk/). (£10/
 
 Ssh'd in, created my own user to use with sudo instead of root. Ran the following, and immediately had a copy of sdv listening on the internet.
 
-<pre>sudo apt install tmux docker docker-compose
+```
+sudo apt install tmux docker docker-compose
 sudo adduser tim docker
 # logout & reconnect to get new group to take effect
-wget https://raw.githubusercontent.com/timabell/sdv-docker/master/docker-compose.yml</pre>
+wget https://raw.githubusercontent.com/timabell/sdv-docker/master/docker-compose.yml
+```
 
 and then for the magic:
 
-<pre>tim@sdvweb:~$ docker-compose up
+```
+tim@sdvweb:~$ docker-compose up
 Pulling sdv (timabell/sdv:latest)...
 latest: Pulling from timabell/sdv
 d5c6f90da05d: Pull complete
@@ -55,7 +53,8 @@ Attaching to tim_sdv_1
 sdv_1 | ./sdv-linux-x64 -listenOn 0.0.0.0 -port 8080 -driver sqlite -db /data/Chinook_Sqlite_AutoIncrementPKs.sqlite
 sdv_1 | 2017/08/13 19:14:44 Sql Data Viewer v0.4; Copyright 2015-2017 Tim Abell <sdv@timwise.co.uk>
 sdv_1 | 2017/08/13 19:14:44 ## This pre-release software will expire on: 2017-10-01 00:00:00 +0000 UTC, contact sdv@timwise.co.uk for a license. ##
-sdv_1 | 2017/08/13 19:14:44 Starting server on http://0.0.0.0:8080/ - Press Ctrl-C to kill server.</pre>
+sdv_1 | 2017/08/13 19:14:44 Starting server on http://0.0.0.0:8080/ - Press Ctrl-C to kill server.
+```
 
 And that's it, listening on the internet!
 
@@ -63,8 +62,8 @@ And that's it, listening on the internet!
 
 Any changes I make will be to the [docker and compose files](https://hub.docker.com/r/timabell/sdv/), resulting in trivially easy to repeat deployments, making the server completely throwaway. Huzzah! Docker is awesome.
 
-I've also bought a domain for the product, but haven't set much up on it yet: http://www.sqldataviewer.com/
+I've also bought a domain for the product, but haven't set much up on it yet: <http://www.sqldataviewer.com/>
 
 Next up, getting nginx reverse proxy to provide ssl. And finishing the refactor I was in the middle of to get data types to behave, and finishing the automated regression tests I'd just started (needed for reliable multi rdbms support), and finding my market, and marketing the product, and doing more features, and build the marketing automation to drive sales, etc etc. Not too much to do then! Your support would be appreciated, if you're interested make sure you [sign up to the mailing list now](https://www.getdrip.com/forms/70504364/submissions/new)!
 
-If you're wondering why docker matters more generally then listen to this podcast episode: Hanselminutes: Practical Containers for Developers with Aja Hammerly http://www.hanselminutes.com/default.aspx?ShowID=18514
+If you're wondering why docker matters more generally then listen to this podcast episode: Hanselminutes: Practical Containers for Developers with Aja Hammerly <http://www.hanselminutes.com/default.aspx?ShowID=18514>
