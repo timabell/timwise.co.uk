@@ -149,4 +149,7 @@ If you aren't up to the full `git` setup, you can edit your blog directly in git
 
 Wordpress was overcomplicated for my needs, and slower to use/read, this new setup should mean I can tap away on the train and send new thoughts your way more regularly.
 
-Bonus points for MailChimp's [rss to email](https://mailchimp.com/features/rss-to-email/) which means it'll automatically hit your inbox.
+# Extras
+
+* Bonus points for MailChimp's [rss to email](https://mailchimp.com/features/rss-to-email/) which means it'll automatically hit your inbox. (I haven't manageed to make it work yet though.)
+* Here's all the jekyll gems github pages allows you to add <https://github.com/github/pages-gem/blob/master/lib/github-pages/plugins.rb#L5>
