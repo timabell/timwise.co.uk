@@ -36,12 +36,19 @@ or
 
 ```
 if (thing)
+  Action();
+```
+
+or
+
+```
+if (thing)
 {
 	Action();
 }
 ```
 
-We should always use the latter to avoid introducing bugs when modifying the code manually or through merge tools.
+We should always use the braces to avoid introducing bugs when modifying the code manually or through merge tools.
 
 For the reasons behind this, read the following:
 
