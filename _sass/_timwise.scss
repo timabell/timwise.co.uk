@@ -6,6 +6,11 @@
 .post #subscribe #mc_embed_signup {
     background: inherit;
 }
+
 .flickr-pic {
     text-align: center;
+}
+.post .flickr-pic img {
+    max-width: 600px;
+    max-height: 400px;
 }
