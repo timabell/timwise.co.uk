@@ -27,7 +27,9 @@ My recommendation from experience so far is to use [rbenv](http://rbenv.org/) to
 *   Sidenote, [http://rbenv.org/](http://rbenv.org/) is just a one-click link to [https://github.com/sstephenson/rbenv](https://github.com/sstephenson/rbenv)
 *   Direct link to [rbenv readme](https://github.com/sstephenson/rbenv#readme) (for your convenience)
 
-<div style="text-align: center;">[![](https://farm8.staticflickr.com/7308/8734272311_0c9c44ca1a_n.jpg)](https://secure.flickr.com/photos/tim_abell/8734272311)</div>
+<div class="flickr-pic">
+<a href="https://www.flickr.com/photos/tim_abell/8734272311"><img src="https://live.staticflickr.com/7308/8734272311_f49ccb1e42_k.jpg" alt="Minster Church, Boscastle"></a>
+</div>
 
 <div>  
 **rbenv installation**  
@@ -64,7 +66,10 @@ If you don't install the openssl development libraries you get this:
 
     BUILD FAILED...The Ruby openssl extension was not compiled. Missing the OpenSSL lib?
 
-<div style="text-align: center;">[![](https://farm8.staticflickr.com/7310/8734303977_0f753f999a_n.jpg)](https://secure.flickr.com/photos/tim_abell/8734303977)</div>
+<div class="flickr-pic">
+<a href="https://www.flickr.com/photos/tim_abell/8734303977"><img
+src="https://live.staticflickr.com/7310/8734303977_566f96b159_k.jpg" alt="Looking out of a cave on the beach"></a>
+</div>
 
 **Ruby installation**  
 
