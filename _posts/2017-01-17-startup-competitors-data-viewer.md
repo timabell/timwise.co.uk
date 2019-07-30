@@ -37,3 +37,9 @@ though it's a solved problem? Are there any ideas left on the earth?
 
 Something for me to consider this week. I might update this post with further
 thoughts. Your thoughts are welcome.
+
+---
+
+* You might also like this post: [Database tools I was surprised
+  existed](/2019/06/10/database-tools-you-didnt-know-about/)
+* I did end up building it, and it became <https://schemaexplorer.io/>
