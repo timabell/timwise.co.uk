@@ -13,19 +13,15 @@ blogger_id: tag:blogger.com,1999:blog-5082828566240519947.post-52576545226154654
 blogger_orig_url: https://timwise.blogspot.com/2012/04/poll-svn-server-for-changes-with-git.html
 ---
 
-<div style="font-size: 16px; font-family: Georgia, serif; ">  
-Just for convenience, paste this in a git bash window:</div>
+
+Just for convenience, paste this in a git bash window:
 
     while true; do date; echo "Polling svn server..."; git svn fetch;echo "Sleeping."; sleep 300; done
 
-<div><span>  
-</span></div>
+![](/assets/poll-svn_catch.png)
 
-[![](http://3.bp.blogspot.com/-gjo7YaLzSpI/T32-eIibreI/AAAAAAAAAEg/NE4QizgAB5U/s400/poll-svn_catch.png)](http://3.bp.blogspot.com/-gjo7YaLzSpI/T32-eIibreI/AAAAAAAAAEg/NE4QizgAB5U/s1600/poll-svn_catch.png)
+Then just refresh your favourite git log viewer.
 
-<div>Then just refresh your favourite git log viewer.  
+Get the gist: [poll-svn.sh gist](https://gist.github.com/2353631)
 
-Get the gist: [poll-svn.sh gist](https://gist.github.com/2353631)  
-</div>
-
-<div>That's all folks!</div>
+That's all folks!
