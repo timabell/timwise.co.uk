@@ -12,7 +12,7 @@ blogger_orig_url: https://timwise.blogspot.com/2013/05/installing-ruby-2-rails-4
 
 Installing [Ruby](http://www.ruby-lang.org/) 2 + [Rails](http://rubyonrails.org/) 4 on [Ubuntu](http://www.ubuntu.com/) 12.04 LTS
 
-_Update Dec 2013:_ You may also wish to read [benkwok's blog post on installing ruby and rails](http://benkwok.wordpress.com/2013/08/15/install-rails-on-ubuntu-12-04-lts-with-rbenv/). I've also [posted my notes from installing for an existing project](http://timwise.blogspot.co.uk/2013/12/getting-rails-4-up-and-running-with.html) which doesn't entirely replace this post but reflects my more recent learnings.
+_Update Dec 2013:_ You may also wish to read [benkwok's blog post on installing ruby and rails](http://benkwok.wordpress.com/2013/08/15/install-rails-on-ubuntu-12-04-lts-with-rbenv/). I've also [posted my notes from installing for an existing project](/2013/12/04/getting-rails-4-up-and-running-with/) which doesn't entirely replace this post but reflects my more recent learnings.
 
 There's a few of these blog posts around, but here's mine for my own benefit (I'm sure this won't be the last time I do it!).
 

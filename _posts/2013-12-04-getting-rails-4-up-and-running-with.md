@@ -12,7 +12,7 @@ blogger_orig_url: https://timwise.blogspot.com/2013/12/getting-rails-4-up-and-ru
 _Brain dump warning!_
 
 This is a follow up to
-[http://timwise.blogspot.co.uk/2013/05/installing-ruby-2-rails-4-on-ubuntu.html](http://timwise.blogspot.co.uk/2013/05/installing-ruby-2-rails-4-on-ubuntu.html)
+[Installing ruby 2 + Rails 4 on Ubuntu 12.04 LTS](/2013/05/13/installing-ruby-2-rails-4-on-ubuntu/)
 and is just a list of steps needed to get a clean install of Ubuntu up to speed
 with an existing site.
 
