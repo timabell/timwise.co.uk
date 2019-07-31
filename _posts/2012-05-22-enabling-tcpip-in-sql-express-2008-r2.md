@@ -12,16 +12,16 @@ blogger_id: tag:blogger.com,1999:blog-5082828566240519947.post-73568846200878530
 blogger_orig_url: https://timwise.blogspot.com/2012/05/enabling-tcpip-in-sql-express-2008-r2.html
 ---
 
-Programs > .. R2 > SQL Server Configuration Manager  
-Network config > Protocols > tcp/ip > enable & properties  
+Programs > .. R2 > SQL Server Configuration Manager
+Network config > Protocols > tcp/ip > enable & properties
 
-<div class="separator" style="clear: both; text-align: center;">[![](http://3.bp.blogspot.com/-bcotqeE-qFo/T7tzqnDyBfI/AAAAAAAAAFc/sjBLaus6uu4/s320/sql-express-tcp-ip.png)](http://3.bp.blogspot.com/-bcotqeE-qFo/T7tzqnDyBfI/AAAAAAAAAFc/sjBLaus6uu4/s1600/sql-express-tcp-ip.png)</div>
+![](/assets/sql-express-tcp-ip.png)
 
-Clear the dynamic port under IPAll  
-Set the TCP Port to 1433 (which is the standard sql server port).  
+Clear the dynamic port under IPAll
+Set the TCP Port to 1433 (which is the standard sql server port).
 
-You can then connect to "localhost" (with no instance specified) in management studio.  
+You can then connect to "localhost" (with no instance specified) in management studio.
 
-refs:  
+refs:
 
 *   [https://vgoes.wordpress.com/2007/06/05/jdbc-to-sql-server-express/](https://vgoes.wordpress.com/2007/06/05/jdbc-to-sql-server-express/)
