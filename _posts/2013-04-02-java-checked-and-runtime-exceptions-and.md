@@ -3,7 +3,7 @@ layout: post
 title: Java checked and runtime exceptions and how to transition
 date: '2013-04-02T21:25:00.000Z'
 author: Tim Abell
-tags: 
+tags:
 modified_time: '2013-04-02T21:37:03.810Z'
 blogger_id: tag:blogger.com,1999:blog-5082828566240519947.post-2601004754756824237
 blogger_orig_url: https://timwise.blogspot.com/2013/04/java-checked-and-runtime-exceptions-and.html
@@ -17,7 +17,12 @@ I've read that checked exceptions are a way of making exceptions be part of the 
 
 I have some sympathy with this idea and can see how it can allow for more robust code when done well. My experience has generally been that it is not handled well and the reaction is to add a lot of meaningless code or to throw away the exception and hide the problem, causing difficulties troubleshooting later.
 
-[![](http://farm9.staticflickr.com/8337/8278346178_3bcf551666_q.jpg)](http://www.flickr.com/photos/tim_abell/8278346178) When I've been in control of the API I've been tempted to always through runtime exceptions and avoid the problem entirely, however this time whilst working on someone else's class I came across a call to an external library that threw an `IOException` which I couldn't change. This made me think a bit harder about the problem. I initially thought my options were to immediately catch and rethrow as a runtime exception or to add `throws IOException` / `throws Exception` to every piece of the call chain.
+<div class="flickr-pic">
+<a href="https://www.flickr.com/photos/tim_abell/8278346178"><img
+src="https://live.staticflickr.com/8337/8278346178_3bcf551666.jpg" alt="Photo of fungus on a tree"></a>
+</div>
+
+When I've been in control of the API I've been tempted to always through runtime exceptions and avoid the problem entirely, however this time whilst working on someone else's class I came across a call to an external library that threw an `IOException` which I couldn't change. This made me think a bit harder about the problem. I initially thought my options were to immediately catch and rethrow as a runtime exception or to add `throws IOException` / `throws Exception` to every piece of the call chain.
 
 I tried the latter approach of propagating the `throws` up through many layers, which although messy did work; right up until I hit a call within a `toString()` method, which is defined by `Object` and doesn't allow you to change the API of the method (by adding a checked exception). Incidentally I think that having toString() rely on code that could throw a file system exception like this did is a dodgy design, but that wasn't my code and would have been a large rewrite.
 
