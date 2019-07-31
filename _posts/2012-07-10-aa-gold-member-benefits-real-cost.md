@@ -28,7 +28,7 @@ This is for a single car policy covering Roadside, Home Start and Relay starting
 
 That means, the AA are pricing their gold benefits at **<span style="color: red;">£27</span>** even though they look like they are free on the renewal letter! Some cheek.  
 
-<div class="separator" style="clear: both; text-align: center;">[![](http://1.bp.blogspot.com/-A4lqKF45sig/T_x3sQI1LxI/AAAAAAAAAHE/b0U0t-K1vZE/s400/20120710_001.jpg)](http://1.bp.blogspot.com/-A4lqKF45sig/T_x3sQI1LxI/AAAAAAAAAHE/b0U0t-K1vZE/s1600/20120710_001.jpg)</div>
+![](/assets/aa-renewal-letter.jpg)
 
 <div class="separator" style="clear: both; text-align: left;">I queried the details of this so called benefit and established the following:</div>
 
