@@ -20,7 +20,14 @@ Some sites have checkboxes which show/hide another element when you click them. 
 
 So here's how you avoid that with jQuery:  
 
-    <script type="text/javascript">    $(function() {        // initialise show/hide to match the checkbox value        $('.targetelements').toggle($('#mycheckbox').attr('checked'));        // attach click handler for show/hide to checkbox        $('#mycheckbox').click(function(){ $('.targetelements').toggle(this.checked);})    });</script>   
+    <script type="text/javascript">
+        $(function() {
+            // initialise show/hide to match the checkbox value
+            $('.targetelements').toggle($('#mycheckbox').attr('checked'));
+            // attach click handler for show/hide to checkbox
+            $('#mycheckbox').click(function(){ $('.targetelements').toggle(this.checked);})
+        });
+    </script>   
 
 Simples!  
 
