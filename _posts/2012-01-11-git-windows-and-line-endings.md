@@ -38,7 +38,7 @@ This is an outright bug that unfortunately the msysgit developers have chosen
 not to address (as is their prerogative), and I don't have the resources needed
 to provide a patch of sufficient quality or run my own variant of msysgit.
 
-[Issue 228, failure to rename a file](http://code.google.com/p/msysgit/issues/detail?id=228)
+* [Git-for-windows page on all the case issues](https://github.com/git-for-windows/git/wiki/File-names,-Branch-names,-Path-quotation,-Executable-bit-and-file-modes,-core.FileMod://github.com/git-for-windows/git/wiki/File-names,-Branch-names,-Path-quotation,-Executable-bit-and-file-modes,-core.FileMode)
 
 The simple test is to change the case of a file's name, which fails, however
 most obvious workaround (rename to another file name in one commit, and back
@@ -57,11 +57,19 @@ or how to solve it. It also leaves the victim's source directory in an
 inconsistent state, so if they try to ignore the problem and carry on they will
 get into more of a pickle.
 
-Having to notify every member of your team that you have changed the case of a file and point them to a workaround is hardly going to endear them to their new fangled source control "git".
+Having to notify every member of your team that you have changed the case of a
+file and point them to a workaround is hardly going to endear them to their new
+fangled source control "git".
 
 A real world example of why this might happen:
 
-File in your source tree that has been around since before you had any naming conventions: "_VATRate.cs_" containing a _VATRate_ class. (Value Added Tax). You now enforce a naming convention where Acronyms are in Pascal case, i.e. _VatRate_. In order to rename the class you must also rename the file, therefore _VATRate.cs_ is renamed to _VatRate.cs_, triggering the above bug for your entire team whenever they happen to fetch (and worse every time they switch between branches that do / don't have the patch).
+File in your source tree that has been around since before you had any naming
+conventions: "_VATRate.cs_" containing a _VATRate_ class. (Value Added Tax).
+You now enforce a naming convention where Acronyms are in Pascal case, i.e.
+_VatRate_. In order to rename the class you must also rename the file,
+therefore _VATRate.cs_ is renamed to _VatRate.cs_, triggering the above bug for
+your entire team whenever they happen to fetch (and worse every time they
+switch between branches that do / don't have the patch).
 
 # Line Endings
 
