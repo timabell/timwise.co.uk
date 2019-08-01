@@ -13,27 +13,24 @@ blogger_id: tag:blogger.com,1999:blog-5082828566240519947.post-14967834761005576
 blogger_orig_url: https://timwise.blogspot.com/2011/10/lvm-reiserfs-for-win.html
 ---
 
-LVM + ReiserFS for the win!  
+LVM + ReiserFS for the win!
 
-It's so easy to add more space  
-`
+It's so easy to add more space
 
-<pre>root@atom:~  
-# lvextend -L +100G /dev/vg2/local  
- Extending logical volume local to 200.00 GiB  
- Logical volume local successfully resized  
-root@atom:~  
-# resize_reiserfs /dev/vg2/local  
-resize_reiserfs 3.6.21 (2009 www.namesys.com)  
+```
+root@atom:~
+# lvextend -L +100G /dev/vg2/local
+ Extending logical volume local to 200.00 GiB
+ Logical volume local successfully resized
+root@atom:~
+# resize_reiserfs /dev/vg2/local
+resize_reiserfs 3.6.21 (2009 www.namesys.com)
 
-resize_reiserfs: On-line resizing finished successfully.  
-root@atom:~  
-# df -h /dev/mapper/vg2-local  
-Filesystem            Size  Used Avail Use% Mounted on  
-/dev/mapper/vg2-local  
-                     200G   18G  183G   9% /media/local  
-root@atom:~  
-
-</pre>
-
-`
+resize_reiserfs: On-line resizing finished successfully.
+root@atom:~
+# df -h /dev/mapper/vg2-local
+Filesystem            Size  Used Avail Use% Mounted on
+/dev/mapper/vg2-local
+                     200G   18G  183G   9% /media/local
+root@atom:~
+```
