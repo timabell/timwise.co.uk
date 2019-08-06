@@ -12,6 +12,6 @@ blogger_id: tag:blogger.com,1999:blog-5082828566240519947.post-29910524894294055
 blogger_orig_url: https://timwise.blogspot.com/2009/12/mcts-in-aspnet-35-mission-accomplished.html
 ---
 
-<div style="background-color: white;padding:1em;">![Microsoft Certified Technology Specialist](http://www.timwise.co.uk/images/blog/MCTS-ASP.NET-3.5.png)</div>
+![Microsoft Certified Technology Specialist](/assets/MCTS-ASP.NET-3.5.png)
 
-I am now a <span style="font-style: italic;">Microsoft Certified Technology Specialist in .NET Framework 3.5, ASP.NET Applications</span>, which is nice.
+I am now a *Microsoft Certified Technology Specialist in .NET Framework 3.5, ASP.NET Applications*, which is nice.
