@@ -12,4 +12,114 @@ blogger_id: tag:blogger.com,1999:blog-5082828566240519947.post-86239336113073497
 blogger_orig_url: https://timwise.blogspot.com/2009/01/format-all-document-in-visual-studio.html
 ---
 
-Here's a handy macro script for visual studio I knocked together today.<br />It runs "edit, format document" on every document of the listed file types.<br /><br />You have to keep an eye on it as it's interactive and does sometimes pop up a message and wait for an answer.<br /><br />You can get the vb file at <a href="http://github.com/timabell/vs-formatter-macro">http://github.com/timabell/vs-formatter-macro</a><br />More info at <a href="http://wiki.github.com/timabell/vs-formatter-macro">http://wiki.github.com/timabell/vs-formatter-macro</a><br /><br />Below is the original code. Note that this is older than the version available on github above.<br /><pre><br /><code><br />Imports System<br />Imports EnvDTE<br />Imports EnvDTE80<br />Imports EnvDTE90<br />Imports System.Collections.Generic<br />Imports System.Diagnostics<br />Imports System.Text<br /><br />Public Module Formatting<br /><br /> Dim allowed As List(Of String) = New List(Of String)<br /> Dim processed As Integer = 0<br /> Dim ignored As Integer = 0<br /> Dim errors As StringBuilder = New StringBuilder()<br /> Dim skippedExtensions As List(Of String) = New List(Of String)<br /><br /> Public Sub FormatProject()<br />  allowed.Add(".master")<br />  allowed.Add(".aspx")<br />  allowed.Add(".ascx")<br />  allowed.Add(".asmx")<br />  allowed.Add(".cs")<br />  allowed.Add(".vb")<br />  allowed.Add(".config")<br />  allowed.Add(".css")<br />  allowed.Add(".htm")<br />  allowed.Add(".html")<br />  allowed.Add(".js")<br />  Try<br />   recurseSolution(AddressOf processItem)<br />  Catch ex As Exception<br />   Debug.Print("error in main loop: " + ex.ToString())<br />  End Try<br />  Debug.Print("processed items: " + processed.ToString())<br />  Debug.Print("ignored items: " + ignored.ToString())<br />  Debug.Print("ignored extensions: " + String.Join(" ", skippedExtensions.ToArray()))<br />  Debug.Print(errors.ToString())<br /> End Sub<br /><br /> Private Sub processItem(ByVal Item As ProjectItem)<br />  If Not Item.Name.Contains(".") Then<br />   'Debug.Print("no file extension. ignoring.")<br />   ignored += 1<br />   Return<br />  End If<br />  Dim ext As String<br />  ext = Item.Name.Substring(Item.Name.LastIndexOf(".")) 'get file extension<br />  If allowed.Contains(ext) Then<br />   formatItem(Item)<br />   processed += 1<br />  Else<br />   'Debug.Print("ignoring file with extension: " + ext)<br />   If Not skippedExtensions.Contains(ext) Then<br />    skippedExtensions.Add(ext)<br />   End If<br />   ignored += 1<br />  End If<br /> End Sub<br /><br /> Private Sub formatItem(ByVal Item As ProjectItem)<br />  Debug.Print("processing file " + Item.Name)<br />  Try<br />   Dim window As EnvDTE.Window<br />   window = Item.Open()<br />   window.Activate()<br />   DTE.ExecuteCommand("Edit.FormatDocument", "")<br />   window.Document.Save()<br />   window.Close()<br />  Catch ex As Exception<br />   Debug.Print("error processing file." + ex.ToString())<br />   errors.Append("error processing file " + Item.Name + "  " + ex.ToString())<br />  End Try<br /> End Sub<br /><br /> Private Delegate Sub task(ByVal Item As ProjectItem)<br /><br /> Private Sub recurseSolution(ByVal taskRoutine As task)<br />  For Each Proj As Project In DTE.Solution.Projects<br />   Debug.Print("project " + Proj.Name)<br />   For Each Item As ProjectItem In Proj.ProjectItems<br />    recurseItems(Item, 0, taskRoutine)<br />   Next<br />  Next<br /> End Sub<br /><br /> Private Sub recurseItems(ByVal Item As ProjectItem, ByVal depth As Integer, ByVal taskRoutine As task)<br />  Dim indent As String = New String("-", depth)<br />  Debug.Print(indent + " " + Item.Name)<br />  If Not Item.ProjectItems Is Nothing Then<br />   For Each Child As ProjectItem In Item.ProjectItems<br />    taskRoutine(Child)<br />    recurseItems(Child, depth + 1, taskRoutine)<br />   Next<br />  End If<br /> End Sub<br /><br />End Module<br /></code><br /></pre>
+Here's a handy macro script for visual studio I knocked together today.  
+It runs "edit, format document" on every document of the listed file types.  
+
+You have to keep an eye on it as it's interactive and does sometimes pop up a message and wait for an answer.  
+
+You can get the vb file at [http://github.com/timabell/vs-formatter-macro](http://github.com/timabell/vs-formatter-macro)  
+More info at [http://wiki.github.com/timabell/vs-formatter-macro](http://wiki.github.com/timabell/vs-formatter-macro)  
+
+Below is the original code. Note that this is older than the version available on github above.  
+
+<pre>  
+`  
+Imports System  
+Imports EnvDTE  
+Imports EnvDTE80  
+Imports EnvDTE90  
+Imports System.Collections.Generic  
+Imports System.Diagnostics  
+Imports System.Text  
+
+Public Module Formatting  
+
+ Dim allowed As List(Of String) = New List(Of String)  
+ Dim processed As Integer = 0  
+ Dim ignored As Integer = 0  
+ Dim errors As StringBuilder = New StringBuilder()  
+ Dim skippedExtensions As List(Of String) = New List(Of String)  
+
+ Public Sub FormatProject()  
+  allowed.Add(".master")  
+  allowed.Add(".aspx")  
+  allowed.Add(".ascx")  
+  allowed.Add(".asmx")  
+  allowed.Add(".cs")  
+  allowed.Add(".vb")  
+  allowed.Add(".config")  
+  allowed.Add(".css")  
+  allowed.Add(".htm")  
+  allowed.Add(".html")  
+  allowed.Add(".js")  
+  Try  
+   recurseSolution(AddressOf processItem)  
+  Catch ex As Exception  
+   Debug.Print("error in main loop: " + ex.ToString())  
+  End Try  
+  Debug.Print("processed items: " + processed.ToString())  
+  Debug.Print("ignored items: " + ignored.ToString())  
+  Debug.Print("ignored extensions: " + String.Join(" ", skippedExtensions.ToArray()))  
+  Debug.Print(errors.ToString())  
+ End Sub  
+
+ Private Sub processItem(ByVal Item As ProjectItem)  
+  If Not Item.Name.Contains(".") Then  
+   'Debug.Print("no file extension. ignoring.")  
+   ignored += 1  
+   Return  
+  End If  
+  Dim ext As String  
+  ext = Item.Name.Substring(Item.Name.LastIndexOf(".")) 'get file extension  
+  If allowed.Contains(ext) Then  
+   formatItem(Item)  
+   processed += 1  
+  Else  
+   'Debug.Print("ignoring file with extension: " + ext)  
+   If Not skippedExtensions.Contains(ext) Then  
+    skippedExtensions.Add(ext)  
+   End If  
+   ignored += 1  
+  End If  
+ End Sub  
+
+ Private Sub formatItem(ByVal Item As ProjectItem)  
+  Debug.Print("processing file " + Item.Name)  
+  Try  
+   Dim window As EnvDTE.Window  
+   window = Item.Open()  
+   window.Activate()  
+   DTE.ExecuteCommand("Edit.FormatDocument", "")  
+   window.Document.Save()  
+   window.Close()  
+  Catch ex As Exception  
+   Debug.Print("error processing file." + ex.ToString())  
+   errors.Append("error processing file " + Item.Name + "  " + ex.ToString())  
+  End Try  
+ End Sub  
+
+ Private Delegate Sub task(ByVal Item As ProjectItem)  
+
+ Private Sub recurseSolution(ByVal taskRoutine As task)  
+  For Each Proj As Project In DTE.Solution.Projects  
+   Debug.Print("project " + Proj.Name)  
+   For Each Item As ProjectItem In Proj.ProjectItems  
+    recurseItems(Item, 0, taskRoutine)  
+   Next  
+  Next  
+ End Sub  
+
+ Private Sub recurseItems(ByVal Item As ProjectItem, ByVal depth As Integer, ByVal taskRoutine As task)  
+  Dim indent As String = New String("-", depth)  
+  Debug.Print(indent + " " + Item.Name)  
+  If Not Item.ProjectItems Is Nothing Then  
+   For Each Child As ProjectItem In Item.ProjectItems  
+    taskRoutine(Child)  
+    recurseItems(Child, depth + 1, taskRoutine)  
+   Next  
+  End If  
+ End Sub  
+
+End Module  
+`  
+</pre>
