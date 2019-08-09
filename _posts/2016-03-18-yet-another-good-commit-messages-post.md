@@ -18,6 +18,7 @@ Some guidance for writing better commit messages:
 *   [http://chris.beams.io/posts/git-commit/](http://chris.beams.io/posts/git-commit/)
     more along similar lines (I'm not fussed about point 5), and wrapping is a
     git thing not a tfs thing.
+* <https://gds-way.cloudapps.digital/standards/git.html>
 *   A list of highlights of changes in bullets is often nice to add, makes it
     easier to spot the key changes in a large diff
 *   Also remember your code and your commits can last a veeeeeery long time,
