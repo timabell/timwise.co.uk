@@ -13,4 +13,39 @@ blogger_id: tag:blogger.com,1999:blog-5082828566240519947.post-43719852208138507
 blogger_orig_url: https://timwise.blogspot.com/2008/03/stop-motion-animation-on-linux.html
 ---
 
-A quick howto...<br /><ol><li>Take a series of photos on your digital camera.</li><li>Copy them onto your linux box.</li><li>shrink the photos to a more managable size:<br /><code>mogrify -verbose -resize 600x400 -quality 60% *.JPG</code></li><li>Preview the animation with animate:<br /><code>animate -delay 8 *</code></li><li>Optionally rotate the image to match the exif information from your camera (mine was sideways):<br /><code>exiftran -ai *</code></li><li>Convert the jpg files to png:<br />mogrify -format png *.JPG<br /></li><li>Create the flash animation from the PNG files:<br /><code>png2swf -r 15 -o flower2.swf -v -X 399 -Y 600 *.png</code></li><li>Create an html file to hold the animation containing the following:<br /><pre>&lt;object&gt;<br />&lt;param name=&quot;movie&quot; value=&quot;flower2.swf&quot; /&gt;<br />&lt;param name=&quot;loop&quot; value=&quot;true&quot; /&gt;<br />&lt;param name=&quot;quality&quot; value=&quot;high&quot; /&gt;<br />&lt;embed src=&quot;flower2.swf&quot; width=&quot;399&quot; height=&quot;600&quot; /&gt;<br />&lt;/object&gt;<br /></pre></li><li><span style="font-family:Georgia,serif;">Write a blog article to tell everyone about it ;-)<br />"history" is a handy command for reviewing your activities for writing up your achievements.<br /></span></li></ol>And here it is, providing I've kept up with my hosting fees and not been slashodotted:<br /><object><br /><param name="movie" value="http://timwise.co.uk/photos/flower2.swf"><br /><param name="loop" value="true"><br /><param name="quality" value="high"><br /><embed src="http://timwise.co.uk/images/blog/flower2.swf" height="600" width="399"></embed><br /></object>
+A quick howto...  
+
+1.  Take a series of photos on your digital camera.
+2.  Copy them onto your linux box.
+3.  shrink the photos to a more managable size:  
+    `mogrify -verbose -resize 600x400 -quality 60% *.JPG`
+4.  Preview the animation with animate:  
+    `animate -delay 8 *`
+5.  Optionally rotate the image to match the exif information from your camera (mine was sideways):  
+    `exiftran -ai *`
+6.  Convert the jpg files to png:  
+    mogrify -format png *.JPG  
+
+7.  Create the flash animation from the PNG files:  
+    `png2swf -r 15 -o flower2.swf -v -X 399 -Y 600 *.png`
+8.  Create an html file to hold the animation containing the following:  
+
+    <pre><object>  
+    <param name="movie" value="flower2.swf" />  
+    <param name="loop" value="true" />  
+    <param name="quality" value="high" />  
+    <embed src="flower2.swf" width="399" height="600" />  
+    </object>  
+    </pre>
+
+9.  <span style="font-family:Georgia,serif;">Write a blog article to tell everyone about it ;-)  
+    "history" is a handy command for reviewing your activities for writing up your achievements.  
+    </span>
+
+And here it is, providing I've kept up with my hosting fees and not been slashodotted:  
+<object>  
+<param name="movie" value="http://timwise.co.uk/photos/flower2.swf">  
+<param name="loop" value="true">  
+<param name="quality" value="high">  
+<embed src="http://timwise.co.uk/images/blog/flower2.swf" width="399" height="600">  
+</object>
