@@ -11,7 +11,12 @@ blogger_orig_url: https://timwise.blogspot.com/2007/03/bad-geek-joke-bourne-shel
 ---
 
 Here's one I made earlier (19 Oct 2006 according to my pc):  
-[![bourneshell.png](http://farm1.static.flickr.com/160/439217204_a7ef9867ea_o.png)](http://www.flickr.com/photos/7463254@N02/439217204/ "Photo Sharing")  
+
+<div class="flickr-pic">
+<a href="https://www.flickr.com/photos/7463254@N02/439217204/"><img
+src="https://live.staticflickr.com/160/439217204_ddcd1306e6.jpg" alt="bourneshell.png"></a>
+</div>
+
 It's modified from [http://thebourneidentity.com/](http://thebourneidentity.com/), which is incidentally a film I very much like.  
 
 For those who don't know, this is the bourne shell:  
