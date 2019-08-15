@@ -17,7 +17,7 @@ I don't believe in selling good news only and robbing people I work with of the 
 *   No. - opportunity to take corrective action by those with the authority to make sweeping changes
 *   Yes (a lie) - temporary happiness followed by reality catching up and being in an even worse situation
 
-Great episode on the matter: The Startup Chat with Steli and Hiten: 288: Startup Lies https://thestartupchat.com/ep288/
+Great episode on the matter: The Startup Chat with Steli and Hiten: 288: Startup Lies <https://thestartupchat.com/ep288/>
 
 ## Strong Opinions, Weakly Held
 
@@ -25,7 +25,12 @@ Which means I have strong opinions about what the right thing to do is based on 
 
 ## Continuous Personal Improvement
 
-I read the [7 habits of highly effective people](http://amzn.to/2FBTBJc) by Covey many years ago, and it is truly life changing because it changes your thinking from fatalistic "this is how I am" to "I can become a better person", and gives you some great mental tools for doing so. I have practised this consciously ever since. I particularly liked the quote I heard recently "_What would you tell your younger self? Nothing, they wouldn't be able to understand what I know now, I'm a different person_" (or words to that effect). https://www.flickr.com/photos/tim_abell/40044785284/
+I read the [7 habits of highly effective people](http://amzn.to/2FBTBJc) by Covey many years ago, and it is truly life changing because it changes your thinking from fatalistic "this is how I am" to "I can become a better person", and gives you some great mental tools for doing so. I have practised this consciously ever since. I particularly liked the quote I heard recently "_What would you tell your younger self? Nothing, they wouldn't be able to understand what I know now, I'm a different person_" (or words to that effect).
+
+<div class="flickr-pic">
+<a href="https://www.flickr.com/photos/tim_abell/40044785284/"><img
+src="https://live.staticflickr.com/4786/40044785284_22f105fa2d.jpg" alt="IMG_20171229_114959"></a>
+</div>
 
 ## Follow Programming Best Practice
 
@@ -57,22 +62,22 @@ These are things I've read that have guided my thinking towards where it is toda
 
 ### Refactoring and technical debt
 
-*   https://ronjeffries.com/xprog/articles/refactoring-not-on-the-backlog/
-*   https://medium.com/@kellan/towards-an-understanding-of-technical-debt-ae0f97cc0553
+*   <https://ronjeffries.com/xprog/articles/refactoring-not-on-the-backlog/>
+*   <https://medium.com/@kellan/towards-an-understanding-of-technical-debt-ae0f97cc0553>
 
 ### Compassion
 
-*   https://jml.io/pages/your-code-sucks-and-i-hate-you.html
+*   <https://jml.io/pages/your-code-sucks-and-i-hate-you.html>
 
 ### Technical details
 
-*   http://endoflineblog.com/gitflow-considered-harmful/
+*   <http://endoflineblog.com/gitflow-considered-harmful/>
 
 ### New thinking
 
 Things that I've recently come across that I wish to share / promote
 
-*   https://simpleprogrammer.com/agile-is-dead-code-review/
+*   <https://simpleprogrammer.com/agile-is-dead-code-review/>
 
 * * *
 
