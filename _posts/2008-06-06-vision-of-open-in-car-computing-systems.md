@@ -45,7 +45,7 @@ ecosystem in the way that only open systems can. And so, my vision is a range
 of affordable flexible and most importantly open computing devices for your
 car.  
 
-![front view of voompc case](/assets/carpc-case.jpb)
+![front view of voompc case](/assets/carpc-case.jpg)
 
 And so, I introduce to you in the above photo, the mark one of my in-car pc. It
 has no name, and the software and hardware needs some work to say the least,
