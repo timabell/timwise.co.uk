@@ -27,11 +27,12 @@ allows for a complete mess, which then is a pain to import cleanly.
 
 > "And they want to make snapshots of smaller subdirectories of the filesystem.
 > After all, it's not so easy to remember that release 1.0 of a piece of
-> software is a particular subdirectory of revision 4822."  --   **Argh!**
-> Terrible "feature", if you're using this feature then _you're doing source
-> control wrong_! (Quote taken from
-> [http://svnbook.red-bean.com/en/1.7/svn.branchmerge.tags.html](http://svnbook.red-bean.com/en/1.7/svn.branchmerge.tags.html)
-> )
+> software is a particular subdirectory of revision 4822."
+>
+> ~ [http://svnbook.red-bean.com/en/1.7/svn.branchmerge.tags.html](http://svnbook.red-bean.com/en/1.7/svn.branchmerge.tags.html)
+
+**Argh!** Terrible "feature", if you're using this feature then _you're doing
+source control wrong_!
 
 I could just grab a tarball and start from there, however there is new code
 upstream since their last release (v1.2.2), and that means testing two
