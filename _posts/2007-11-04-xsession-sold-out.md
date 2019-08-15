@@ -10,4 +10,4 @@ blogger_id: tag:blogger.com,1999:blog-5082828566240519947.post-21947565339976553
 blogger_orig_url: https://timwise.blogspot.com/2007/11/xsession-sold-out.html
 ---
 
-My web host <a href="http://xsession.com/">xsession</a> has been bought by <a href="http://www.names.co.uk/">namesco</a>, and promptly put domain renewal prices up from £8 to £17. Time for a new web host.
+My web host [xsession](http://xsession.com/) has been bought by [namesco](http://www.names.co.uk/), and promptly put domain renewal prices up from £8 to £17\. Time for a new web host.
