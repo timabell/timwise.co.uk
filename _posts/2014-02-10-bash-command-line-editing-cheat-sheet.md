@@ -22,8 +22,9 @@ blogger_orig_url: https://timwise.blogspot.com/2014/02/bash-command-line-editing
 
 *   start with **alt-minus** to go backwards
 
-<div>Just a few notes I threw together for my own benefit. I finally got around to learning a bit more about editing commands on the Linux shell / terminal.  
+Just a few notes I threw together for my own benefit. I finally got around to learning a bit more about editing commands on the Linux shell / terminal.  
 
+<div class="flickr-pic">
+<a href="https://www.flickr.com/photos/tim_abell/11937840106/"><img
+src="https://live.staticflickr.com/3808/11937840106_51c5d9f170_k.jpg" alt="Photo of flooded River Thames at Henley, half-submerging the benches of the Angel pub"></a>
 </div>
-
-<div style="text-align: center;">[![](https://farm4.staticflickr.com/3808/11937840106_fcbbddf793_n.jpg)](https://secure.flickr.com/photos/tim_abell/11937840106/)</div>
