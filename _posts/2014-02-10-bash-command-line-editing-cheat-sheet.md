@@ -14,6 +14,7 @@ blogger_orig_url: https://timwise.blogspot.com/2014/02/bash-command-line-editing
 *   **ctrl-a/e** start/end of line
 *   **alt-f/b** forward/back a word
 *   **ctrl-w/alt-d** delete to start/end of word
+*   **alt-.** add argument from previous command (repeat to cycle) - love this one
 *   **ctrl-shift-_** undo (i.e. ctrl-underscore)
 *   **ctrl-y** paste (yank) deleted text  
 
