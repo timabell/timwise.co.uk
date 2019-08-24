@@ -22,7 +22,7 @@ I have some sympathy with this idea and can see how it can allow for more robust
 src="https://live.staticflickr.com/8337/8278346178_3bcf551666.jpg" alt="Photo of fungus on a tree"></a>
 </div>
 
-When I've been in control of the API I've been tempted to always through runtime exceptions and avoid the problem entirely, however this time whilst working on someone else's class I came across a call to an external library that threw an `IOException` which I couldn't change. This made me think a bit harder about the problem. I initially thought my options were to immediately catch and rethrow as a runtime exception or to add `throws IOException` / `throws Exception` to every piece of the call chain.
+When I've been in control of the API I've been tempted to always throw runtime exceptions and avoid the problem entirely, however this time whilst working on someone else's class I came across a call to an external library that threw an `IOException` which I couldn't change. This made me think a bit harder about the problem. I initially thought my options were to immediately catch and rethrow as a runtime exception or to add `throws IOException` / `throws Exception` to every piece of the call chain.
 
 I tried the latter approach of propagating the `throws` up through many layers, which although messy did work; right up until I hit a call within a `toString()` method, which is defined by `Object` and doesn't allow you to change the API of the method (by adding a checked exception). Incidentally I think that having toString() rely on code that could throw a file system exception like this did is a dodgy design, but that wasn't my code and would have been a large rewrite.
 
