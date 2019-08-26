@@ -24,25 +24,51 @@ src="https://live.staticflickr.com/8337/8278346178_3bcf551666.jpg" alt="Photo of
 
 When I've been in control of the API I've been tempted to always throw runtime exceptions and avoid the problem entirely, however this time whilst working on someone else's class I came across a call to an external library that threw an `IOException` which I couldn't change. This made me think a bit harder about the problem. I initially thought my options were to immediately catch and rethrow as a runtime exception or to add `throws IOException` / `throws Exception` to every piece of the call chain.
 
-I tried the latter approach of propagating the `throws` up through many layers, which although messy did work; right up until I hit a call within a `toString()` method, which is defined by `Object` and doesn't allow you to change the API of the method (by adding a checked exception). Incidentally I think that having toString() rely on code that could throw a file system exception like this did is a dodgy design, but that wasn't my code and would have been a large rewrite.
+I tried the latter approach of propagating the `throws` up through many layers, which although messy did work; right up until I hit a call within a `toString()` method, which is defined by `Object` and doesn't allow you to change the API of the method (by adding a checked exception).
+Incidentally I think that having `toString()` rely on code that could throw a file system exception like this did is a dodgy design, but that wasn't my code and would have been a large rewrite.
 
-So after a bit of grumbling to myself I looked more closely at the fault line between the checked exception being thrown and the rest of the codebase. The existing code was just ignore the error with `catch {}` (shudder) and returning null, making it hard to troubleshoot a failing JUnit test.
+So after a bit of grumbling to myself I looked more closely at the fault line between the checked exception being thrown and the rest of the codebase.
+The existing code was just ignoring the error with `catch {}` (shudder) and returning null, making it hard to troubleshoot a failing JUnit test.
 
 I think the answer to the conundrum is that for each method in the chain you have to decide if callers of the method could usefully handle the error condition, or whether they could add any useful information to the stack trace to assist troubleshooting. Here's roughly the approach I've taken which I think should be illustrative:
 
 Method that throws
 
-    String getSomething(string filename) throws IOException {    // do some file IO    return someData;}
+    String getSomething(string filename) throws IOException
+    {
+        // do some file IO
+        return someData;
+    }
 
 Next method up. Doesn't compile as checked exception not handled, what to do?
 
-    String loadFoo() {    String foo = getSomething("this.txt");    return foo;}
+    String loadFoo()
+    {
+        String foo = getSomething("this.txt");
+        return foo;
+    }
 
 In this case I don't think `getSomething` should be the last point in the chain as it doesn't know _why_ it was performing the operation it was. `loadFoo` however knows both the resource being accessed and what the intent was, so can report an exception message that should point someone troubleshooting immediately to the source of the problem and inform them what the program was trying to achieve. Having `loadFoo()` declare that it `throws IOException` doesn't make sense as the caller shouldn't need to know how `loadFoo` gets its data, it's just the kind of noise that programmers dislike Java for. So the answer in my opinion is because `loadFoo()` is best placed to give all the useful information needed to fix the problem, it should catch the checked exception, wrap it in a runtime exception, add a useful message and rethrow it. This saves callers from needing to handle exceptions that they can't usefully deal with, whilst still providing good troubleshooting information. And yet there's still a use for the checked exceptions as `getSomething()` was able to declare that it new an `IOException` was possible but that it wasn't in a position to give enough useful information.
 
 So the final code I ended up with looked something like this:
 
-    String getSomething(string filename) throws IOException {    // do some file IO    return someData;}String loadFoo() {    String filename = "this.txt";    try {        String foo = getSomething(filename);        return foo;    } catch (IOException ex) {        throw new RuntimeException("Failed to read foo from '" + fileName + "'", ex);    }}
+    String getSomething(string filename) throws IOException
+    {
+        // do some file IO
+        return someData;
+    }
+    
+    String loadFoo()
+    {
+        String filename = "this.txt";
+        try
+        {
+            String foo = getSomething(filename);
+            return foo;
+        } catch (IOException ex) {
+            throw new RuntimeException("Failed to read foo from '" + fileName + "'", ex);
+        }
+    }
 
 ## Inversion of control (IoC)
 
