@@ -57,6 +57,12 @@ ln -s ~/Documents/tomboy
 
 * Trello card number addon: <https://userstyles.org/styles/79880/trello-card-ids-small> (with stylish plugin, installed by firefox sync)
 
+## Ruby setup
+
+	cd some-project
+	asdf install
+	gem install bundler
+
 ## todo
 
 * remove firefox tabs - because I use [Tree Style Tabs](https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/)
