@@ -54,6 +54,14 @@ ln -s ~/Documents/tomboy
 * rest of dotmatrix things
 * [install asdf version manager](https://asdf-vm.com/#/core-manage-asdf-vm?id=install-asdf-vm) for all the things (ruby, node, golang etc.)
 
+* Setup touchpad
+
+![Screenshot of mint touchpad settings with customisations](/assets/mouse-and-touchpad.png)
+
+* Setup terminal colours and turn off transparency
+
+![Screenshot mint terminal colours set to solarized](/assets/terminal-colours.png)
+
 # See also
 
 * <https://github.com/thoughtbot/laptop>
