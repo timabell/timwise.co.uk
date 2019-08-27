@@ -56,6 +56,7 @@ ln -s ~/Documents/tomboy
 ![Screenshot mint terminal colours set to solarized](/assets/terminal-colours.png)
 
 * Trello card number addon: <https://userstyles.org/styles/79880/trello-card-ids-small> (with stylish plugin, installed by firefox sync)
+* Pomodoro timer in task bar: <https://cinnamon-spices.linuxmint.com/applets/view/131>
 
 ## Ruby setup
 
