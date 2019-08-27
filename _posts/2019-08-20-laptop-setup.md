@@ -47,13 +47,6 @@ ln -s ~/Documents/tomboy
 * Customize time in task bar to `| %H:%M:%S %p | %e %b %Y |`
 * Lock scren with `Win+L` - start > keyboard > system > lock screen (Windows user habits)
 * Switch to z-shell `chsh -s /usr/bin/zsh` - <https://askubuntu.com/questions/131823/how-to-make-zsh-the-default-shell/131838#131838>
-
-## todo
-
-* remove firefox tabs - because I use [Tree Style Tabs](https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/)
-* rest of dotmatrix things
-* [install asdf version manager](https://asdf-vm.com/#/core-manage-asdf-vm?id=install-asdf-vm) for all the things (ruby, node, golang etc.)
-
 * Setup touchpad
 
 ![Screenshot of mint touchpad settings with customisations](/assets/mouse-and-touchpad.png)
@@ -61,6 +54,15 @@ ln -s ~/Documents/tomboy
 * Setup terminal colours and turn off transparency
 
 ![Screenshot mint terminal colours set to solarized](/assets/terminal-colours.png)
+
+* Trello card number addon: <https://userstyles.org/styles/79880/trello-card-ids-small> (with stylish plugin, installed by firefox sync)
+
+## todo
+
+* remove firefox tabs - because I use [Tree Style Tabs](https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/)
+  * hide normal tabs <https://superuser.com/questions/1268732/how-to-hide-tab-bar-tabstrip-in-firefox-57-quantum#1268734>
+* rest of dotmatrix things
+* [install asdf version manager](https://asdf-vm.com/#/core-manage-asdf-vm?id=install-asdf-vm) for all the things (ruby, node, golang etc.)
 
 # See also
 
