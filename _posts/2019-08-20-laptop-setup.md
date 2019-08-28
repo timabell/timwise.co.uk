@@ -64,6 +64,18 @@ ln -s ~/Documents/tomboy
 	asdf install
 	gem install bundler
 
+## XPS firmware updates
+
+```
+fwupdmgr get-devices
+fwupdmgr get-updates
+fwupdmgr update
+```
+
+refs:
+
+* <https://fwupd.org/lvfs/docs/users>
+
 ## todo
 
 * remove firefox tabs - because I use [Tree Style Tabs](https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/)
