@@ -75,6 +75,12 @@ ln -s ~/Documents/tomboy
 Keyring because nodejs packages are signed and validated
 <https://github.com/asdf-vm/asdf-nodejs#install>
 
+## Postgres
+
+   sudo apt install postgresql
+
+Setup my user, see <https://github.com/timabell/schema-explorer/blob/master/pg/setup-me.sh>
+
 ## XPS firmware updates
 
 ```
