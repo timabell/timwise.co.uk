@@ -45,7 +45,7 @@ ln -s ~/Documents/tomboy
 
 * Install [jetbrains toolbox](https://www.jetbrains.com/toolbox/app/)
 * Customize time in task bar to `| %H:%M:%S %p | %e %b %Y |`
-* Lock scren with `Win+L` - start > keyboard > system > lock screen (Windows user habits)
+* Lock screen with `Win+L` - start > keyboard > system > lock screen (Windows user habits)
 * Switch to z-shell `chsh -s /usr/bin/zsh` - <https://askubuntu.com/questions/131823/how-to-make-zsh-the-default-shell/131838#131838>
 * Setup touchpad
 
