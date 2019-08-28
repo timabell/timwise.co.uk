@@ -57,6 +57,7 @@ ln -s ~/Documents/tomboy
 
 * Trello card number addon: <https://userstyles.org/styles/79880/trello-card-ids-small> (with stylish plugin, installed by firefox sync)
 * Pomodoro timer in task bar: <https://cinnamon-spices.linuxmint.com/applets/view/131>
+* Turn off all the system sounds and turn the volume down to 0%
 
 ## Ruby setup
 
