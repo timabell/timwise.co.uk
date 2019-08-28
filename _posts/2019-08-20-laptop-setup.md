@@ -65,6 +65,16 @@ ln -s ~/Documents/tomboy
 	asdf install
 	gem install bundler
 
+## NodeJs setup
+
+	asdf plugin-add nodejs
+	bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
+	asdf install nodejs 8.16.1
+	node -v
+
+Keyring because nodejs packages are signed and validated
+<https://github.com/asdf-vm/asdf-nodejs#install>
+
 ## XPS firmware updates
 
 ```
