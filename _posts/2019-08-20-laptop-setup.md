@@ -89,6 +89,15 @@ fwupdmgr get-updates
 fwupdmgr update
 ```
 
+* inotify increase for:
+  * RubyMine
+  * Guard - <https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers>
+  * Syncthing
+
+```
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+```
+
 refs:
 
 * <https://fwupd.org/lvfs/docs/users>
