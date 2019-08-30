@@ -102,6 +102,10 @@ refs:
 
 * <https://fwupd.org/lvfs/docs/users>
 
+## Fix shutter edit
+
+* <https://itsfoss.com/shutter-edit-button-disabled/>
+
 ## todo
 
 * remove firefox tabs - because I use [Tree Style Tabs](https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/)
