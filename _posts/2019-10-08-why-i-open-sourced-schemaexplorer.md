@@ -18,7 +18,7 @@ a possible extension or next step from time-for-money contract-programming
 services.
 
 The idea was that if I could get enough yearly subscribers to the software then
-I caould get balsamiq-like success and focus on making it better and better for
+I could get balsamiq-like success and focus on making it better and better for
 the people using it.
 
 # Why open source now?
@@ -34,7 +34,7 @@ enough to risk any political capital to get it, even for a pretty insignificant
 amount of money.  I then had a coaching call with [Justin
 Jackson](https://justinjackson.ca/) and as part of that he suggested putting it
 to one side. Up to this point I'd been unable to leave the idea alone; it had
-been something I really wanted to exists. I've always worked with relational
+been something I really wanted to exist. I've always worked with relational
 databases, and this seemed like a painful gap. At this point I had finally
 added every feature that I'd ever dreamed it should have, and the intrinsic
 motivation to just build for the sake of building was waning, and without the
