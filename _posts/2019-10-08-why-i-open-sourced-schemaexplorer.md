@@ -24,26 +24,26 @@ the people using it.
 # Why open source now?
 
 I got plenty of interest and interactions by my standards, more than I've ever
-had for something I've published; but I nevr got more than one good friend paid
+had for something I've published; but I never got more than one good friend paid
 up beyond a generous trial. The conversations I had with people were full of
 enthusiasm for the idea but not for parting with money to buy it. One
 particular conversation was very positive until the idea of putting the
 theoretical purchase in front of the manager was raised and then suddenly it
 didn't seem viable at all; which I think speaks volumes. Useful, but not useful
-enough to risk any political capital to get it, even for a pretty insignifcant
+enough to risk any political capital to get it, even for a pretty insignificant
 amount of money.  I then had a coaching call with [Justin
 Jackson](https://justinjackson.ca/) and as part of that he suggested putting it
 to one side. Up to this point I'd been unable to leave the idea alone; it had
 been something I really wanted to exists. I've always worked with relational
 databases, and this seemed like a painful gap. At this point I had finally
-added every feature that I'd ever dreamed it should have, and the intrinisic
+added every feature that I'd ever dreamed it should have, and the intrinsic
 motivation to just build for the sake of building was waning, and without the
 demands from paying users for more features it's hard to justify continuing to
 pour hours in even if it is on the train.
 
 At this point there were 100 people on the mailing list (drip sent my first
 bill!), one paying user/fan (Hello David! Many thanks!), and zero MRR (monthly
-recurring revenue). I'd spent a bit of money on hostiing (I'm still paying
+recurring revenue). I'd spent a bit of money on hosting (I'm still paying
 digital ocean to keep the [demo site](http://demo.schemaexplorer.io/) up).
 
 I didn't want to let down the few people who had really liked it by having it
@@ -65,7 +65,7 @@ Here's some things I've been using schema explorer for to help my contracting cl
 * Analysing data in tables and sharing screenshots with the teams
 * Sharing screenshots of the generated diagrams to improve team understanding
 * Using it as a tool for discussing database design
-* Findning records needed for troubleshooting and debugging
+* Finding records needed for troubleshooting and debugging
 * Improving my mental model of the database structure
 
 # Tell me more
