@@ -1,5 +1,5 @@
 ---
-title: Why I open-sourced SQL Schema Explorer
+title: Why I made SQL Schema Explorer open source
 layout: post
 ---
 
