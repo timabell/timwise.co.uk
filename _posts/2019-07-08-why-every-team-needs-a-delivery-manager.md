@@ -111,3 +111,4 @@ still think cuts to best thing about it:
 * <https://www.greatsampleresume.com/job-responsibilities/delivery-manager-responsibilities/>
 * <https://work.chron.com/job-description-service-delivery-manager-24247.html>
 * <https://www.quora.com/Whats-the-difference-between-a-delivery-manager-and-a-project-manager>
+* <https://melissaperri.com/blog/2017/06/29/product-manager-vs-product-owner>
