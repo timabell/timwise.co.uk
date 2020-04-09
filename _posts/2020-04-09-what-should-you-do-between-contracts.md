@@ -1,6 +1,8 @@
 ---
 title: What you should do between contracts
 layout: post
+redirect_from:
+  - /2020/04/06/what-should-you-do-between-contracts/
 ---
 
 # Strange times with Covid-19
