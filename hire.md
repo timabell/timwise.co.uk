@@ -2,6 +2,8 @@
 layout: page
 title: Hire Me
 permalink: /hire/
+redirect_from:
+  - /hire-me/
 ---
 <h2>Availability</h2>
 For current availability, more information and updates <a href="https://www.linkedin.com/in/timabell/">find me on LinkedIn</a>.
