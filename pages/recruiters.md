@@ -98,10 +98,12 @@ recruiters!).
 
 ## My public key
 
-My current public key for *tim@timwise.co.uk* is available on the public
-keyservers, or you can download it: [my public key on
-dropbox](https://www.dropbox.com/s/2abgnkfff4gceru/Tim%20Abell%20tim%40timwise.co.uk%20%280x28CDF8EA%29%20pub.asc.txt?dl=0).
-Primary key fingerprint: 74D4 2A4C 9055 07C5 4A7E  3C9C 26C6 E087 **28CD F8EA**.
+My current public key `28CD F8EA` for `tim@timwise.co.uk` is [available on the
+public
+keyservers](http://keys.gnupg.net/pks/lookup?op=index&search=tim%40timwise.co.uk&fingerprint=on),
+or directly from my website: [public-key.txt](/public-key.txt)
+
+Primary key fingerprint: `74D4 2A4C 9055 07C5 4A7E  3C9C 26C6 E087 28CD F8EA`.
 
 ## Technical details
 
