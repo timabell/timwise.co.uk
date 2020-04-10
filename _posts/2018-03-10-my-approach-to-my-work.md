@@ -63,7 +63,7 @@ These are things I've read that have guided my thinking towards where it is toda
 ### Refactoring and technical debt
 
 *   <https://ronjeffries.com/xprog/articles/refactoring-not-on-the-backlog/>
-*   <https://medium.com/@kellan/towards-an-understanding-of-technical-debt-ae0f97cc0553>
+*   <http://laughingmeme.org/2016/01/10/towards-an-understanding-of-technical-debt/>
 
 ### Compassion
 
