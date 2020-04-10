@@ -14,17 +14,31 @@ on a contract basis.
 
 ## About Me (Tim Abell)
 
-I specialize in C# / ASP.NET MVC projects, both legacy & greenfield. I bring
-full-stack skills, with an emphasis on back-end technologies.
+I provide programming  and consultancy services for clients with primarily C# /
+ASP.NET MVC projects. I focus on providing quality long-term solutions to the
+problems at hand, making sure the work being done is aligned with the
+priorities and values of the client. I have full-stack web development
+capabilities, with an emphasis on back-end systems. I can lead, mentor and can
+communicate with all stakeholders.
 
-I’ve focussed on programming projects and roles since graduating in 2000 with a
-degree in Cybernetics & Control Engineering from Reading University, I shifted
-from permanent jobs to contracting in 2012.
+My core values in my work are: honesty, continual learning, applying best
+practices, quality, elegance, practicality, avoiding dogmatism, emergent
+architecture, YAGNI, agility, customer focus, continuous process & code
+improvement.
+[Read more about my approach to work](/2018/03/10/my-approach-to-my-work/).
 
-Some of the principles I bring to my work are: honesty (even when it’s hard),
-best practices, communication, quality, elegance, practicality and continuous
-improvement.  [Read more about my approach to
-work](/2018/03/10/my-approach-to-my-work/).
+
+I’ve focussed on software engineering roles & projects since graduating in 2000
+with a degree in Cybernetics & Control Engineering from Reading University.
+I’ve had the opportunity work in organisations of all sizes which has allowed
+me to gain broad knowledge and skills, from team leadership to server
+administration.
+
+As the tech industry never stands still I've recently been broadening my
+skillset by adding GoLang to my existing full-stack C# / ASP.NET web
+development skills. My latest side-project (written in GoLang) is
+<http://schemaexplorer.io/>, this has been helping me improve my marketing skills
+as well as broadening my programming skills.
 
 [![pluralsight scores](/assets/pluralsight_scores.png)](https://app.pluralsight.com/profile/timabell)
 
