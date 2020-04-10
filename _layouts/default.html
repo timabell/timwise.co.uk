@@ -53,5 +53,11 @@
     </div>
 
     {% include analytics.html %}
+
+    <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+    <script>
+       anchors.options.placement = 'left';
+       anchors.add('.entry h1, .entry h2, .entry h3, .entry h4, .entry h5, .entry h6');
+    </script>
   </body>
 </html>
