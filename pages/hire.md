@@ -37,7 +37,7 @@ Consultants can bring along a laptop with Visual Studio 2017 Professional if req
 
 <hr />
 
-To learn about my approach to protecting against duplicate recruiter submissions see my <a href="http://blog.timwise.co.uk/recruiters/">Recruiters</a> page.
+To learn about my approach to protecting against duplicate recruiter submissions see my <a href="/recruiters/">recruiters</a> page.
 
  
 
