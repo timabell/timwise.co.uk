@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Subscribe
+permalink: /subscribe/
 ---
 <p style="text-align: center;">
 Get extra content that's just for my list.
