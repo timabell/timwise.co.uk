@@ -1,9 +1,11 @@
 /* give the subscribe box some space and a background to differentiate from post and disqus on blog post footers */
-.post #subscribe {
+#subscribe {
     background-color: #eee;
     margin: 1em 0 2em 0;
+		padding: 0 0.5em;
+		text-align: center;
 }
-.post #subscribe #mc_embed_signup {
+#subscribe #mc_embed_signup {
     background: inherit;
 }
 
