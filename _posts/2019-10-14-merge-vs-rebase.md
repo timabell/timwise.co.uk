@@ -70,9 +70,6 @@ git push --force-with-lease
 * Makes resultant history in `master` much easier to follow
 * Reflects the intention more clearly of "merge these commits into master" as
   opposed to "here's how I flailed my way to a working thing"
-* Could in somewhat rare circumstances retrospectively [introduce bugs and test
-  failures into commits that used to be
-valid](https://medium.com/@fredrikmorken/why-you-should-stop-using-git-rebase-5552bee4fed1)
 
 ### Rebase - the bad
 
@@ -81,6 +78,9 @@ valid](https://medium.com/@fredrikmorken/why-you-should-stop-using-git-rebase-55
 * Loses chronological order of creation of code (personally I think this is
   less important than a series of clean intentional patches to be applied to
 	the codebase when merged to `master`)
+* Could in somewhat rare circumstances retrospectively [introduce bugs and test
+  failures into commits that used to be
+valid](https://medium.com/@fredrikmorken/why-you-should-stop-using-git-rebase-5552bee4fed1)
 
 # Heuristics to use
 
