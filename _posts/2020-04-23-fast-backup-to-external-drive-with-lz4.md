@@ -4,7 +4,7 @@ layout: post
 ---
 
 The simplest backup is to just tar-gz your home directory, but it's painfully
-slow. [A friend](http://blog.luxagen.com) put me on to [lz4](https://lz4.github.io/lz4/) which isn't installed by default in ubuntu &
+slow. [A friend](http://blog.luxagen.com/2016/build-backups-an-unexpected-journey/) put me on to [lz4](https://lz4.github.io/lz4/) which isn't installed by default in ubuntu &
 mint, it moves the bottleneck from the compressor to disk i/o for my spinning
 rust usb disks.
 
