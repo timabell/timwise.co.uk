@@ -4,7 +4,9 @@ description: Clean install to functioning workhorse
 layout: post
 ---
 
-This is mostly for my benefit. Things to go from blank machine to fully functioning work laptop.
+This is mostly for my benefit.
+
+Things to go from blank machine to fully functioning work laptop.
 
 * [Download mint cinnamon x64 torrent](https://linuxmint.com/download.php)
 * Burn to USB stick
@@ -18,6 +20,7 @@ Like this (don't laugh/cringe):
     curl https://raw.githubusercontent.com/timabell/dotmatrix/master/bin/bootstrap.sh | sh
 
 This installs my [usual package list](https://github.com/timabell/dotmatrix/blob/master/bin/packages.txt)
+
 
 * Run updates
 * Configure nemo file manager to always use list view
@@ -33,7 +36,10 @@ This installs my [usual package list](https://github.com/timabell/dotmatrix/blob
 ![firewall config screenshot](/assets/firewall-config-syncthing.png)
 
 * Tell new and old devices about each other in syncthing, watch `~/Documents` etc magically sync
-* Install slack (flatpak, in software manager), sign in. - slack promote the snap version but that's not installed by default.
+* [Install slack with
+  flatpak](https://flathub.org/apps/details/com.slack.Slack), (available via
+the software manager), sign in. - slack promote the snap version but that's not
+installed by default.
 * Install dotfiles by running [dotmatrix/bin/install](https://github.com/timabell/dotmatrix/blob/master/bin/install) (repo clone already pulled across with syncthing)
 * Generate ssh key `ssh-keygen`, [add key to github](https://github.com/settings/keys)
 * Link tomboy to sync'd notes (I use syncthing, not the built-in tomboy sync)
@@ -41,6 +47,13 @@ This installs my [usual package list](https://github.com/timabell/dotmatrix/blob
 ```
 cd ~/.local/share
 ln -s ~/Documents/tomboy
+```
+
+* Symlink ~/bin to a sync'd folder
+
+```
+cd ~
+ln -s ~/Documents/programs/bin
 ```
 
 * Install [jetbrains toolbox](https://www.jetbrains.com/toolbox/app/)
@@ -55,31 +68,18 @@ ln -s ~/Documents/tomboy
 
 ![Screenshot mint terminal colours set to solarized](/assets/terminal-colours.png)
 
-* Trello card number addon: <https://userstyles.org/styles/79880/trello-card-ids-small> (with stylish plugin, installed by firefox sync)
 * Pomodoro timer in task bar: <https://cinnamon-spices.linuxmint.com/applets/view/131>
 * Turn off all the system sounds and turn the volume down to 0%
 
-## Ruby setup
+## Firefox
 
-	cd some-project
-	asdf install
-	gem install bundler
-
-## NodeJs setup
-
-	asdf plugin-add nodejs
-	bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
-	asdf install nodejs 8.16.1
-	node -v
-
-Keyring because nodejs packages are signed and validated
-<https://github.com/asdf-vm/asdf-nodejs#install>
+* Open firefox, sign-in to sync
+* Remove firefox tabs (because I use [Tree Style Tabs](https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/))
+  * Hide normal tabs <https://superuser.com/questions/1268732/how-to-hide-tab-bar-tabstrip-in-firefox-57-quantum#1268734>
 
 ## Postgres
 
-   sudo apt install postgresql
-
-Setup my user, see <https://github.com/timabell/schema-explorer/blob/master/pg/setup-me.sh>
+[Use a docker image](https://hackernoon.com/dont-install-postgres-docker-pull-postgres-bee20e200198)
 
 ## XPS firmware updates
 
@@ -89,30 +89,46 @@ fwupdmgr get-updates
 fwupdmgr update
 ```
 
+refs:
+
+* <https://fwupd.org/lvfs/docs/users>
+
+## inotify
+
 * inotify increase for:
   * RubyMine
   * Guard - <https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers>
-  * Syncthing
+  * Syncthing - <https://docs.syncthing.net/users/faq.html#inotify-limits>
 
 ```
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 ```
 
-refs:
+## Shutter
 
-* <https://fwupd.org/lvfs/docs/users>
+* Fix shutter edit <https://itsfoss.com/shutter-edit-button-disabled/>
+* Change default save location to `~/Documents/screenshots/shutter`
 
-## Fix shutter edit
+## asdf
 
-* <https://itsfoss.com/shutter-edit-button-disabled/>
-
-## todo
-
-* remove firefox tabs - because I use [Tree Style Tabs](https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/)
-  * hide normal tabs <https://superuser.com/questions/1268732/how-to-hide-tab-bar-tabstrip-in-firefox-57-quantum#1268734>
-* rest of dotmatrix things
 * [install asdf version manager](https://asdf-vm.com/#/core-manage-asdf-vm?id=install-asdf-vm) for all the things (ruby, node, golang etc.)
 
-# See also
+### NodeJs setup
+
+	asdf plugin-add nodejs
+	bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
+	asdf install nodejs 8.16.1
+	node -v
+
+Keyring because nodejs packages are signed and validated
+<https://github.com/asdf-vm/asdf-nodejs#install>
+
+### Ruby setup if needed
+
+	cd some-project
+	asdf install
+	gem install bundler
+
+## See also
 
 * <https://github.com/thoughtbot/laptop>
