@@ -78,6 +78,10 @@ ln -s ~/Documents/programs/bin
 * Remove firefox tabs (because I use [Tree Style Tabs](https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/))
   * Hide normal tabs <https://superuser.com/questions/1268732/how-to-hide-tab-bar-tabstrip-in-firefox-57-quantum#1268734>
 
+## Docker
+
+* compose <https://docs.docker.com/compose/install/>
+
 ## Postgres
 
 [Use a docker image](https://hackernoon.com/dont-install-postgres-docker-pull-postgres-bee20e200198)
