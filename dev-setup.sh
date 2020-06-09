@@ -10,3 +10,5 @@ asdf install
 
 # show versions in use
 asdf current
+
+bundle install
