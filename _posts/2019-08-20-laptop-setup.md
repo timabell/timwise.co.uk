@@ -76,7 +76,12 @@ ln -s ~/Documents/programs/bin
 
 * Open firefox, sign-in to sync
 * Remove firefox tabs (because I use [Tree Style Tabs](https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/))
-  * Hide normal tabs <https://superuser.com/questions/1268732/how-to-hide-tab-bar-tabstrip-in-firefox-57-quantum#1268734>
+  * `cd ~/.mozilla/firefox/..../`
+  * `mkdir chrome`
+  * `echo '#TabsToolbar { visibility: collapse !important; }' >> userChrome.css`
+  * about:config > `toolkit.legacyUserProfileCustomizations.stylesheets` > `true`
+  * restart firefox
+  * Reference: <https://superuser.com/questions/1268732/how-to-hide-tab-bar-tabstrip-in-firefox-57-quantum#1268734>
 
 ## Docker
 
