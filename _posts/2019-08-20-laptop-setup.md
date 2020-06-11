@@ -139,6 +139,12 @@ Keyring because nodejs packages are signed and validated
 	asdf install
 	gem install bundler
 
+## Auto lock
+
+* Configure BlueProximity to run at startup
+* Set the locking command to `/usr/bin/gdbus call --session --dest org.cinnamon.ScreenSaver --object-path /org/cinnamon/ScreenSaver --method org.cinnamon.ScreenSaver.Lock 'AFK call me on xxx'`
+* ref: <http://www.webupd8.org/2011/05/blueproximity-use-bluetooth-device-to.html>
+
 ## See also
 
 * <https://github.com/thoughtbot/laptop>
