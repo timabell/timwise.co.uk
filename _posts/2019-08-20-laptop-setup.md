@@ -26,13 +26,15 @@ This installs my [usual package list](https://github.com/timabell/dotmatrix/blob
 * Turn on automatic updates in update manager preferences, and automatic obsolete kernal removal
 * Configure nemo file manager to always use list view
 * Run syncthing-gtk from system menu (auto-installs syncthing binary)
-    * Configure syncthing not to route over internet (no relay, no public discovery, no NAT traversal)
-* [Configure firewall-config](https://firewalld.org/documentation/utilities/firewall-config.html) to allow syncthing
-    * Add manual service syncthing
-    * Allow tcp 22000 and 21027 udp
-    * Make home network use home zone
-    * Add syncthing to home zone
-    * Runtime to permanent
+  * [Configure syncthing](http://localhost:8080/) not to route over internet
+    (no relay, no public discovery, no NAT traversal)
+* [Configure firewall-config](https://firewalld.org/documentation/utilities/firewall-config.html)
+  to allow syncthing
+  * Add manual service syncthing
+  * Allow tcp 22000 and 21027 udp
+  * Make home network use home zone
+  * Add syncthing to home zone
+  * Runtime to permanent
 
 ![firewall config screenshot](/assets/firewall-config-syncthing.png)
 
