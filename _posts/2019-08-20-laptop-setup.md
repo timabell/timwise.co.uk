@@ -66,6 +66,7 @@ ln -s ~/Documents/programs/bin
 
 * Pomodoro timer in task bar: <https://cinnamon-spices.linuxmint.com/applets/view/131>
 * Turn off all the system sounds and turn the volume down to 0%
+* [Install `fzf`](https://github.com/timabell/dotmatrix/blob/master/bin/install-fzf.sh)
 
 ## Firefox
 
