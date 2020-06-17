@@ -129,7 +129,7 @@ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo s
 Keyring because nodejs packages are signed and validated
 <https://github.com/asdf-vm/asdf-nodejs#install>
 
-### Ruby setup if needed
+### Ruby
 
 	asdf plugin add ruby
 	cd some-project
