@@ -131,6 +131,7 @@ Keyring because nodejs packages are signed and validated
 
 ### Ruby setup if needed
 
+	asdf plugin add ruby
 	cd some-project
 	asdf install
 	gem install bundler
