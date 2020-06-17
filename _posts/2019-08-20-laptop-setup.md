@@ -45,13 +45,6 @@ the software manager), sign in. - slack promote the snap version but that's not
 installed by default.
 * Install dotfiles by running [dotmatrix/bin/install](https://github.com/timabell/dotmatrix/blob/master/bin/install) (repo clone already pulled across with syncthing)
 * Generate ssh key `ssh-keygen`, [add key to github](https://github.com/settings/keys)
-* Link tomboy to sync'd notes (I use syncthing, not the built-in tomboy sync)
-
-```
-cd ~/.local/share
-ln -s ~/Documents/tomboy
-```
-
 * Symlink ~/bin to a sync'd folder
 
 ```
