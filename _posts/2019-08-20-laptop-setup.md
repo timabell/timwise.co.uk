@@ -82,6 +82,7 @@ ln -s ~/Documents/programs/bin
 ## Docker
 
 * compose <https://docs.docker.com/compose/install/>
+* `sudo adduser $USER docker` then reboot to avoid need for root
 
 ## Postgres
 
