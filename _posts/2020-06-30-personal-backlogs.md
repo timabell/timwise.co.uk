@@ -38,6 +38,10 @@ Here's an example board <https://trello.com/b/cxRXPgcb/personal-backlogs-example
 
 [Let me know](tim@timwise.co.uk) if you use this approach and if it works for you or not.
 
+## What about normal feature development?
+
+You could theoretically have the product owner manage all the forthcoming product features in their column. I think it is better for them to continue to manage the product's feature backlog in the existing jira/trello/github project system, which will now be beautifully free from tech debt, random ideas and other clutter. This is what we did and it worked great.
+
 ## Bonus ideas
 
 * Add a label "next sprint", and get people to tag the cards they think should happen next.
