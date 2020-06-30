@@ -1,2 +1,2 @@
-#!/bin/sh
-bundle exec jekyll s
+#!/bin/sh -v
+bundle exec jekyll s $@
