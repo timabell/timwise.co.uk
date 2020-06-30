@@ -3,7 +3,7 @@ layout: post
 title: Personal backlogs
 ---
 
-## What's wrong with out current backlog / icebucket / todo list?
+## What's wrong with our current backlog / icebucket / todo list?
 
 Do you have a backlog of doom? A bottomless bucket full of probably unimportant things you possibly should do, interspersed with the occasional really import thing that will bite you hard if you don't do it? Do you spend time repeatedly refining the list to make sure you don't miss the important things? Or do you just ignore it and hope luck will save you from the things you let slip?
 
