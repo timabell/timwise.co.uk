@@ -55,3 +55,7 @@ This setup worked superbly for us as a team and I'd recommend it to anyone who'l
 We no longer have the overhead of a product owner losing the will to live trying to understand cryptic tech debt cards left by a previous developer, wondering if they were trivial or pending catastrophes.
 
 When someone leaves, the new person or others on the team can look over their cards and decide what to move into their own column.
+
+## Also available on the podcast
+
+If you like this, you might want to have a listen to me and David talking about this and other lessons learned in [episode 8 of software should be free - Hiding from Covid-19 and the end of 2 years at DfE](https://pod.timwise.co.uk/8).
