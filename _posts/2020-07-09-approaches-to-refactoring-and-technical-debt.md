@@ -73,6 +73,36 @@ Martin Fowler shows that you can categorize debt by whether it is reckless or pr
 
 It's well worth reading a lot more of Martin Fowler's writing, there's so much to learn about programming good practice, written in a very human and accessible style.
 
+## The audio version from Codurance
+
+[Codurance](https://codurance.com/) hosted an insightful round-table podcast episode with a group of people who are clearly very experienced. You can listen here: <https://codurance.com/podcasts/2019-01-21-legacy-code/> and will doubtless be inspired by some things in there. The conversation takes a little while to build momentum but it's worth the wait.
+
+These are the things that I learnt about from the show, that I think are worth highlighting:
+
+### The Book
+
+* [Working Effectively with Legacy Code by Michael C. Feathers](https://www.amazon.co.uk/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052/) is *the* book to read on the subject.
+
+### Named techniques and related libraries
+
+* [Characterization testing](https://michaelfeathers.silvrback.com/characterization-testing) is the idea of creating tests to probe and demonstrate the existing behaviour of previously untested code.
+	* Related to this is "approval tests" which allow you to easily incorporate snapshots of output (json, xml, logs etc) into your tests in order to capture existing behaviour and be able to spot any variations that pop up during refactoring.
+	* [ApprovalTests.net](https://github.com/approvals/ApprovalTests.Net) is a dotnet library for implementing approval tests.
+* Introducing [seams](http://wiki.c2.com/?SoftwareSeam) into software can be a useful technique for breaking down untestable monoliths into testable chunks on the way to better code.
+* [Mutation testing (wikipedia)](https://en.wikipedia.org/wiki/Mutation_testing) (more info on [mutation testing at csharp academy](http://csharp.academy/mutation-testing/)) is a useful way of checking how good your test coverage really is. It is the idea of making (almost) random changes to the code under test to see what whether your tests spot the change in behaviour.
+	* For dotnet this can be done with [Stryker.net](https://github.com/stryker-mutator/stryker-net)
+
+### Approaches from hard-won experience
+
+* Make as few changes as possible to get untested production code under test, first cut of tests will likely be fragile.
+* It's more important that legacy in production continues to behave as is it currently does than that it behaves as originally specified. People and downstream systems may now rely on that "incorrect" behaviour.
+* Does the organisation (culture, systems, pressures etc.) cause bad code to be created? If you don't fix that then you will always get more "legacy" code.
+* The importance of competent technical leadership within an organisation.
+* Quantify the cost of problems with code. E.g. you are losing 1/5 dev days to coping with the bad.
+* Have the hard conversations with the business about the cost of fixing the mess.
+* Doing a rewrite is (almost) always the wrong answer.
+* Get small wins, even if you are facing a huge challenge.
+
 ## Thanks, now I'm even less sure what to do
 
 Are you wrestling with something you don't like in a codebase you have to deal with? I'm guessing that's why you're here. Or maybe someone sent you this along with a rant about the tech debt in the codebase you own.
