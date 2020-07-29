@@ -1,5 +1,5 @@
 ---
-title: Approaches to refactoring and technical debt
+title: Approaches to refactoring, technical debt and legacy code
 layout: post
 ---
 
