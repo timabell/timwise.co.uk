@@ -92,6 +92,13 @@ These are the things that I learnt about from the show, that I think are worth h
 * [Mutation testing (wikipedia)](https://en.wikipedia.org/wiki/Mutation_testing) (more info on [mutation testing at csharp academy](http://csharp.academy/mutation-testing/)) is a useful way of checking how good your test coverage really is. It is the idea of making (almost) random changes to the code under test to see what whether your tests spot the change in behaviour.
 	* For dotnet this can be done with [Stryker.net](https://github.com/stryker-mutator/stryker-net)
 
+### Maybe modelling is the problem
+
+Something that looks like bad code could be that way because of a failure to properly model the real world.
+
+Domain Driven Design (DDD) has much to teach on the matter, and this is a great video on the why modelling could be the problem:
+[Technical debt isn't technical - Einar Høst - DDD Europe 2019 - YouTube](https://youtu.be/d2Ddo8OV7ig)
+
 ### Approaches from hard-won experience
 
 * Make as few changes as possible to get untested production code under test, first cut of tests will likely be fragile.
