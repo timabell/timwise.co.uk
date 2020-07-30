@@ -12,10 +12,10 @@ layout: default
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
       <div>
-        <p class="post_date">{{ post.date | date: "%B %e, %Y" }}</p>
+        <div class="post_date">{{ post.date | date: "%B %e, %Y" }}</div>
         {% assign words=post.content %}
         {% include calc-reading-time.html %}
-        <p class="reading_time" title="{{num_words}} words">Reading time: {{reading_time}}</p>
+        <div class="reading_time" title="{{num_words}} words">Reading time: {{reading_time}}</div>
      </div>
 
       <div class="entry">
@@ -27,15 +27,13 @@ layout: default
   {% endfor %}
 
   <h1>Older posts</h1>
-  <ul>
-    {% for post in site.posts offset:excerpt_limit %}
-      {% assign words=post.content %}
-      {% include calc-reading-time.html %}
-      <li>
-        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br/>
-          <span class="post_date">{{ post.date | date: "%B %e, %Y" }}</span>
-          <span class="reading_time" title="{{num_words}} words">({{reading_time}})</p>
-      </li>
-    {% endfor %}
-  </ul>
+  {% for post in site.posts offset:excerpt_limit %}
+    {% assign words=post.content %}
+    {% include calc-reading-time.html %}
+    <div>
+      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br/>
+        <span class="post_date">{{ post.date | date: "%B %e, %Y" }}</span>
+        <span class="reading_time" title="{{num_words}} words">({{reading_time}})</p>
+    </div>
+  {% endfor %}
 </div>
