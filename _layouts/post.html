@@ -11,7 +11,9 @@ layout: default
     <p class="author_title" datetime="{{ page.last_modified_at | date_to_xmlschema }}">(Updated: {{ page.last_modified_at | date: "%b %-d, %Y" }})</p>
     {% endif %}
 
-		{% include reading-time.html %}
+    {% assign words=page.content %}
+    {% include calc-reading-time.html %}
+    <p class="reading_time" title="{{num_words}} words">Reading time: {{reading_time}}</p>
 
     <div class="post-tags">
       {% if post %}
