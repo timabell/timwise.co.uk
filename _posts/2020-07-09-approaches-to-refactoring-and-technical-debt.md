@@ -27,7 +27,7 @@ I recommend reading the whole article here: [Refactoring -- Not on the backlog! 
 
 ### Technical Debt
 
-> "Tech debt": an overloaded term. There are at least 5 distinct things we mean we say “technical debt”.
+> "Tech debt": an overloaded term. There are at least 5 distinct things we mean [when] we say “technical debt”.
 >
 > 1. Maintenance work
 > 2. Features of the codebase that resist change
