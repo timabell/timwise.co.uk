@@ -5,10 +5,10 @@ layout: post
 
 Sometimes a codebase has an overwhelming amount of "terrible" stuff that as a developer you almost can't help but just diving in and fixing it. Doing this without thinking too hard can result in many variations of failure, such as:
 
-* Upsetting the people paying your wage while you do something they don't consider important.
+* Upsetting the people paying you because you are doing something they don't consider important.
 * Never finishing the mammoth rewrite you took on, resulting in a mess of two different styles of code.
 * Personal burnout.
-* Fixing things that maybe weren't actually that important even if they make you cry.
+* Fixing things that maybe weren't actually that important (even if they make you cry whenever you have to look at their source code), at the expense of failing to fix more urgent problems or building useful features.
 
 ## Must-read articles
 
@@ -71,13 +71,15 @@ Martin Fowler shows that you can categorize debt by whether it is reckless or pr
 >
 > ~ [The Technical Debt Quadrant by Martin Fowler](https://martinfowler.com/bliki/TechnicalDebtQuadrant.html)
 
-It's well worth reading a lot more of Martin Fowler's writing, there's so much to learn about programming good practice, written in a very human and accessible style.
+These are useful definitions that can help clearly communicate complex issues with the code to people not directly involved in the code.
+
+It's well worth reading much more of Martin Fowler's writing. There's so much to learn from Martin about programming good practice; the articles are all written in a very human and accessible style.
 
 ## The audio version from Codurance
 
 [Codurance](https://codurance.com/) hosted an insightful round-table podcast episode with a group of people who are clearly very experienced. You can listen here: <https://codurance.com/podcasts/2019-01-21-legacy-code/> and will doubtless be inspired by some things in there. The conversation takes a little while to build momentum but it's worth the wait.
 
-These are the things that I learnt about from the show, that I think are worth highlighting:
+Here some highlights of what I learnt from listening to the show:
 
 ### The Book
 
@@ -94,11 +96,11 @@ These are the things that I learnt about from the show, that I think are worth h
 
 ### Approaches from hard-won experience
 
-* Make as few changes as possible to get untested production code under test, first cut of tests will likely be fragile.
-* It's more important that legacy in production continues to behave as is it currently does than that it behaves as originally specified. People and downstream systems may now rely on that "incorrect" behaviour.
+* Make as few changes as possible to get untested production code under test. The first cut of tests will likely be fragile.
+* It's more important that legacy code that is already in production continues to behave as it currently does than that it behaves as originally specified. People and downstream systems may now rely on that "incorrect" behaviour.
 * Does the organisation (culture, systems, pressures etc.) cause bad code to be created? If you don't fix that then you will always get more "legacy" code.
-* The importance of competent technical leadership within an organisation.
-* Quantify the cost of problems with code. E.g. you are losing 1/5 dev days to coping with the bad.
+* The importance of competent technical leadership within an organisation for preventing the build up of catastrophic levels of technical debt.
+* When communicating, quantify the cost of problems with the legacy code. E.g. "you are losing 1 in 5 developer-days to coping with bugs introduced due to the lack of automated regression tests".
 * Have the hard conversations with the business about the cost of fixing the mess.
 * Doing a rewrite is (almost) always the wrong answer.
 * Get small wins, even if you are facing a huge challenge.
