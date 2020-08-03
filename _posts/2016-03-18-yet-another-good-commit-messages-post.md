@@ -24,6 +24,7 @@ There's not much for me to add on what's already been written, so read these art
 * <https://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message>
 * <http://chris.beams.io/posts/git-commit/>
 * <https://gds-way.cloudapps.digital/standards/git.html>
+* <https://mislav.net/2014/02/hidden-documentation/>
 
 My personal additions to this list:
 
