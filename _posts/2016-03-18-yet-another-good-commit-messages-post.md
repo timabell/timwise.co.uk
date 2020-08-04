@@ -25,6 +25,7 @@ There's not much for me to add on what's already been written, so read these art
 * <http://chris.beams.io/posts/git-commit/>
 * <https://gds-way.cloudapps.digital/standards/git.html>
 * <https://mislav.net/2014/02/hidden-documentation/>
+* [Pull Request Etiquette gist by mikepea](https://gist.github.com/mikepea/863f63d6e37281e329f8) - covers pull request quality as well as individual commits
 
 My personal additions to this list:
 
