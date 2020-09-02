@@ -64,7 +64,7 @@ valid](https://medium.com/@fredrikmorken/why-you-should-stop-using-git-rebase-55
 
 ### Should You Rebase?
 
-A rebase onto from master is done like this:
+A rebase onto master is done like this:
 
 ```
 git fetch
