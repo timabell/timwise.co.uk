@@ -85,6 +85,12 @@ Here some highlights of what I learnt from listening to the show:
 
 * [Working Effectively with Legacy Code by Michael C. Feathers](https://www.amazon.co.uk/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052/) is *the* book to read on the subject.
 
+Feathers defines legacy code as code without tests.
+
+> "Preserving behaviour is a large challenge. When we need to make changes and preserve behaviour, it can involve considerable risk."
+>
+> ~ Michael C. Feathers
+
 ### Named techniques and related libraries
 
 * [Characterization testing](https://michaelfeathers.silvrback.com/characterization-testing) is the idea of creating tests to probe and demonstrate the existing behaviour of previously untested code.
