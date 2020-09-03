@@ -85,6 +85,7 @@ git push --force-with-lease
 
 * 👎 Can confuse less experienced git users if they are working with you on the
   branch (the answer is usually for them to run `git pull --rebase`)
+* 👎 Results in [resolving conflicts multiple times (screencast)](https://youtu.be/5b-vNpSw6R8)
 * 👎 Loses chronological order of creation of code (personally I think this is
   less important than a series of clean intentional patches to be applied to
 	the codebase when merged to `master`)
