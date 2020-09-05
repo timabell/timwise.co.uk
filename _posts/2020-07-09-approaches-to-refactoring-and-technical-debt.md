@@ -91,6 +91,8 @@ Feathers defines legacy code as code without tests.
 >
 > ~ Michael C. Feathers
 
+This book is heavily geared towards unpicking the difficulties in getting untested code under test in object-oriented static typed languages such as Java, C# and C++, and modifying it safely.
+
 ### Named techniques and related libraries
 
 * [Characterization testing](https://michaelfeathers.silvrback.com/characterization-testing) is the idea of creating tests to probe and demonstrate the existing behaviour of previously untested code.
