@@ -156,8 +156,9 @@ The template contains:
 
 * Preconfigured columns,
 * Labels,
-* Some example cards
-* A full instruction list in the inbox for daily processing
+* Some example cards,
+* A full instruction list in the inbox for daily processing,
+* A butler action button for moving to "someday".
 
 I reckon using this ready-made template will save you at least an half-an-hour of your time just fiddling with Trello to get going. It'd also be a nice way of saying thanks if you found this article useful.
 
@@ -175,7 +176,7 @@ Go to stripe to pay securely:
   role="link"
   type="button"
 >
-  Buy Template for £5
+  Buy My GTD Template For £5
 </button>
 </p>
 
@@ -203,7 +204,7 @@ Registered address: Unit 4, Vista Place, Coy Pond Business Park, Ingworth Road, 
       // a successful payment.
       // Instead use one of the strategies described in
       // https://stripe.com/docs/payments/checkout/fulfillment
-      successUrl: 'https://timwise.co.uk/pay/success/',
+      successUrl: 'https://timwise.co.uk/pay/success-gtd/',
       cancelUrl: 'https://timwise.co.uk/pay/cancelled/',
     })
     .then(function (result) {
