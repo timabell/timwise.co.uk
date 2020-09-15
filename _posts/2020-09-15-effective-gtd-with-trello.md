@@ -65,6 +65,8 @@ Install [AddToAny](https://www.addtoany.com/) to send any webpage from Firefox t
 #### Documents, physical objects, pictures, screenshots
 Install the Trello app and use the native share buttons to share pictures, web pages etc to your GTD inbox. Use this to take photos of paper documents and physical things you need to deal with and send the picture straight to your GTD inbox on Trello.
 
+![Screenshot: sharing picture to trello in android](/assets/gtd-android-share.jpg)
+
 #### Verbal todos
 
 Open up Trello on your phone or laptop and add a card. Or if it's easier write an email to your GTD board!
