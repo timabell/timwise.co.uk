@@ -44,6 +44,10 @@ Neither GTD or Trello can give you more hours in the day, help you focus, get yo
 
 ## My GTD Method
 
+Here's my actual GTD board (minus details) to give you an idea of what it looks like. You might be able to see I have far too much in Inbox and Action items as is often the case, but it doesn't take too long to clear down when I actually focus on it.
+
+![Blurry screenshot of my actual GTD board](/assets/gtd-real-trello.png)
+
 First you need to get everything you might have to do into your GTD board. Don't think too hard at this point, just ping everything to Trello and deal with it efficiently at your next GTD moment:
 
 ### Getting Everything to the Board
