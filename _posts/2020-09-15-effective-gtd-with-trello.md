@@ -180,11 +180,13 @@ Go to stripe to pay securely:
 </button>
 </p>
 
-<p>
+If you are in any way dissatisfied then let me know within 30 days and I will refund you, no questions asked.
+
+### Business details
+
 Payment will go to Charm Consulting Ltd., which is my wholly owned contracting company.
-<br/>
+
 Registered address: Unit 4, Vista Place, Coy Pond Business Park, Ingworth Road, Poole, BH12 1JY
-</p>
 
 <div id="error-message"></div>
 
