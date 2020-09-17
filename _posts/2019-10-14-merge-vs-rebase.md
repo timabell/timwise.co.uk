@@ -152,3 +152,12 @@ There are many other articles on the merge/rebase topic such as
 <https://derekgourlay.com/blog/git-when-to-merge-vs-when-to-rebase/> but I
 couldn't see anything that matched my heuristic for tackling feature branch
 updates so I wrote this one.
+
+## Get in touch
+
+Hey there! Thanks for reading!
+
+This post gets far more traffic than anything else on my blog. I'd love to know what brought you here and if the above was helpful.
+
+Please take a moment to fire an email to me at [tim@timwise.co.uk](mailto:tim@timwise.co.uk?subject=merge-rebase-article) and tell me a bit about yourself.
+
