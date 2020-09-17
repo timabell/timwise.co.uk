@@ -19,7 +19,7 @@ The point of GTD is to eliminate all the other places that you might have hidden
 * phone notes
 * bits of paper
 * phone screenshots
-* Trello
+* other unstructured todo lists (Trello, Evernote etc. let me know what you use now that isn't working for you and I'll add it to the list)
 
 And then to make your todo list something that you can almost mindlessly churn through, eliminating huge task switching costs caused by badly defined and variably sized tasks.
 ## Trello + GTD
