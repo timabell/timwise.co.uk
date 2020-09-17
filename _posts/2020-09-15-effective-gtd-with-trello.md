@@ -71,13 +71,21 @@ Install the Trello app and use the native share buttons to share pictures, web p
 
 ![Screenshot: sharing picture to trello in android](/assets/gtd-android-share.jpg)
 
-#### Verbal todos
+#### Verbally Received Tasks
+
+For when someone just says to you "oh, can you do this for me?" and you don't want to be that person that lets them down by forgetting.
+
+If you think you are "the forgetful type" (you aren't, that's just a negative self-label compounded by habits), then you can fix it forever by just being more organised, no-one will ever know it was GTD, they just think you remembered for them.
 
 Open up Trello on your phone or laptop and add a card. Or if it's easier write an email to your GTD board!
+
+#### Using Alexa/Siri etc
 
 For advanced magic teach your Siri/Alexa/Google to email to GTD by mere voice command
 
 > Hey google, email gtd ...
+
+Or maybe set up a custom action. (If anyone's done this send me some details and I'll expand out this section. PRs welcome!)
 
 ### GTDing
 
