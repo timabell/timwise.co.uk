@@ -68,6 +68,8 @@ See <https://www.howtogeek.com/122641/how-to-forward-ports-to-a-virtual-machine-
 
 This makes the emulator appear as if it was running on the Linux host.
 
+(Note there are replica ports that need mapping too, see the dotnet-core section below).
+
 
 ### Connect with Storage Explorer
 
@@ -151,6 +153,7 @@ RequestStartTime: 2020-09-17T20:00:16.8868999Z, RequestEndTime: 2020-09-17T20:00
 ResponseTime: 2020-09-17T20:00:16.9400284Z, StoreResult: StorePhysicalAddress: rntbd://10.0.2.15:10253/apps/DocDbApp/services/DocDbServer15/partitions/a4cb495b-38c8-11e6-8106-8cdcd42c33be/replicas/1p/, LSN: -1, GlobalCommittedLsn: -1, PartitionKeyRangeId: , IsValid: False, StatusCode: 410, SubStatusCode: 0, RequestCharge: 0, ItemLSN: -1, SessionToken: , UsingLocalLSN: True, TransportException: A client transport error occurred: Failed to connect to the remote endpoint. (Time: 2020-09-17T20:00:16.9221735Z, activity ID: 2dfaf5dc-0d5a-4ed7-828d-c16cdcd117a3, error code: ConnectFailed [0x0005], base error: socket error ConnectionRefused [0x0000274D], URI: rntbd://10.0.2.15:10253/, connection: <not connected> -> rntbd://10.0.2.15:10253/, payload sent: False, CPU history: not available, CPU count: 8), ResourceType: Document, OperationType: Query
 ```
 
+Add these ports to the VirtualBox port mapping configuration for your VM.
 
 In the VM in a powershell or command prompt run `ipconfig` to get the machine's IP address.
 
