@@ -12,7 +12,7 @@ There is a docker image but it only runs on docker-for-windows so it's no help h
 1. Grab a Windows VM, install the emulator.
 2. Copy the emulator SSL cert to the host.
 3. Map the ports.
-4. Redirect the VM ip back to localhost with iptables.
+4. Redirect the VM IP back to localhost with iptables.
 
 ## Steps
 
@@ -66,12 +66,12 @@ In the VirtualBox network settings for the VM, click advanced and add a port map
 
 See <https://www.howtogeek.com/122641/how-to-forward-ports-to-a-virtual-machine-and-use-it-as-a-server/>
 
-This makes the emulator appear as if it was running on the linux host.
+This makes the emulator appear as if it was running on the Linux host.
 
 
 ### Connect with Storage Explorer
 
-Install the Azure Storage Explorer on your linux host, either with the .tar.gz or from the snap store
+Install the Azure Storage Explorer on your Linux host, either with the .tar.gz or from the snap store
 
 <https://azure.microsoft.com/en-us/features/storage-explorer/>
 
@@ -83,10 +83,15 @@ You should now be able to create collections and add documents, and then view th
 
 ### Connecting from dotnet-core
 
-There are two problems connecting from core that don't appear with storage explorer:
+Problems connecting from core that I didn't encounter with storage explorer:
 
-Firstly, the SSL certificate is rejected:
+1. The SSL certificate is rejected.
+2. CosmosDB sets the [`ReadEndpoint`](https://docs.microsoft.com/en-us/dotnet/api/microsoft.azure.documents.client.documentclient.readendpoint) to be the VM's IP address, which isn't accessible from the host because we are using NAT and port mapping. (oddly this wasn't consistently the interal IP address.
+3. The replicas listen on additional ports which also need mapping.
 
+#### Accepting the emulator SSL certificate
+
+This is the error you get trying to connect to the CosmosDB emulator from dotnet core on Linux without adding the certificate to the Linux host's certificate authority (CA) list:
 ```
 System.Net.Http.HttpRequestException:
 The SSL connection could not be established,
@@ -96,15 +101,11 @@ The remote certificate is invalid according to the validation procedure.
 	ProtocolToken message, AsyncProtocolRequest asyncRequest, ExceptionDispatchInfo exception)
 ```
 
-And secondly, CosmosDB sets the [`ReadEndpoint`](https://docs.microsoft.com/en-us/dotnet/api/microsoft.azure.documents.client.documentclient.readendpoint) to be the VM's ip address, which isn't accessible from the host because we are using NAT and port mapping.
-
-#### Accepting the emulator SSL certificate
-
 Export the emulator's public SSL certificate "DocumentDbEmulatorCertificate" as base64 X509.
 
 Reference: <https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator-export-ssl-certificates#how-to-export-the-azure-cosmos-db-tlsssl-certificate>
 
-Copy the exported file to your linux host.
+Copy the exported file to your Linux host.
 
 Add the certificate to the trusted certificates on your machine (these instructions are for Ubuntu/Mint):
 
@@ -115,24 +116,56 @@ sudo update-ca-certificates --verbose
 
 Reference: <https://stackoverflow.com/questions/44159793/trusted-root-certificates-in-dotnet-core-on-linux-rhel-7-1/44160125#44160125>
 
-Note the change in file extension from `.cer` to `.crt` between export and import.
+Note the change in file extension from `.cer` to `.crt` between export and import (I'm not 100% sure if this matters).
+
+*Note that the certificate is regenerated on emulator startup* so you'll either have to do this every time or pass the emulator a predefined certificate to use.
+
+If you want to validate the certificate has been installed, see <https://unix.stackexchange.com/questions/97244/list-all-available-ssl-ca-certificates>
 
 #### Redirecting ReadEndpoint traffic
 
-In the VM in a powershell or command prompt run `ipconfig` to get the machine's ip address.
+In the VM in a powershell or command prompt run `ipconfig` to get the machine's IP address.
 
-Tell iptables to redirect all requests for the VM's ip address back to localhost:
+Tell `iptables` to redirect all requests for the VM's IP address back to `localhost`:
 
 ```bash
 sudo iptables -t nat -I OUTPUT --dst 10.0.2.XXX -p tcp --dport 8081 -j REDIRECT --to-ports 8081
 ```
 
-Where `XXX` is the ip of your VM.
+Where `XXX` is the IP of your VM.
+
+As per: <https://unix.stackexchange.com/questions/441182/how-to-map-an-ip-address-to-localhost>
+
+#### Mapping replica port(s)
+
+On the VM run `netstat -a |findstr LISTENING`
+
+You'll see a bunch of ports in the 10,000-20,000 range. These are the replicas
+
+I found out which ports to map by running the client code and looking at the exception when it failed to connect. It was only port `10253` for me so far. Here's the error for a failure:
+
+```
+Microsoft.Azure.Documents.ServiceUnavailableException: Service is currently unavailable.
+ActivityId: 2dfaf5dc-0d5a-4ed7-828d-c16cdcd117a3, 
+RequestStartTime: 2020-09-17T20:00:16.8868999Z, RequestEndTime: 2020-09-17T20:00:46.7777188Z, Number of regions attempted: 1
+ResponseTime: 2020-09-17T20:00:16.9400284Z, StoreResult: StorePhysicalAddress: rntbd://10.0.2.15:10253/apps/DocDbApp/services/DocDbServer15/partitions/a4cb495b-38c8-11e6-8106-8cdcd42c33be/replicas/1p/, LSN: -1, GlobalCommittedLsn: -1, PartitionKeyRangeId: , IsValid: False, StatusCode: 410, SubStatusCode: 0, RequestCharge: 0, ItemLSN: -1, SessionToken: , UsingLocalLSN: True, TransportException: A client transport error occurred: Failed to connect to the remote endpoint. (Time: 2020-09-17T20:00:16.9221735Z, activity ID: 2dfaf5dc-0d5a-4ed7-828d-c16cdcd117a3, error code: ConnectFailed [0x0005], base error: socket error ConnectionRefused [0x0000274D], URI: rntbd://10.0.2.15:10253/, connection: <not connected> -> rntbd://10.0.2.15:10253/, payload sent: False, CPU history: not available, CPU count: 8), ResourceType: Document, OperationType: Query
+```
+
+
+In the VM in a powershell or command prompt run `ipconfig` to get the machine's IP address.
+
+Tell `iptables` to redirect all requests for the VM's IP address back to `localhost`:
+
+```bash
+sudo iptables -t nat -I OUTPUT --dst 10.0.2.XXX -p tcp --dport 10253 -j REDIRECT --to-ports 10253
+```
+
+Where `XXX` is the IP of your VM and `10253` is the replica port.
 
 As per: <https://unix.stackexchange.com/questions/441182/how-to-map-an-ip-address-to-localhost>
 
 ## ~ End ~
 
-With all of the above I was then able to connect a dotnet-core application on linux to a CosmosDB emulator.
+With all of the above I was then able to connect a dotnet-core application on Linux to a CosmosDB emulator.
 
 If you need to import data then use data migration tool from <https://docs.microsoft.com/en-us/azure/cosmos-db/import-data#Install>
