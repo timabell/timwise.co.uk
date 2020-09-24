@@ -16,3 +16,20 @@
     max-width: 600px;
     max-height: 400px;
 }
+
+
+@keyframes site-avatar {
+  0% {
+		opacity: 0;
+  }
+  50% {
+		transform: translateX(-300px) rotate(-400deg);
+		opacity: 0;
+  }
+  100% {
+		transform: translateX(0px) rotate(0deg);
+		opacity: 1;
+  }
+}
+
+.site-avatar { animation: site-avatar 2s linear; }
