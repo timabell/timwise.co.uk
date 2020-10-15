@@ -75,6 +75,19 @@ These are useful definitions that can help clearly communicate complex issues wi
 
 It's well worth reading much more of Martin Fowler's writing. There's so much to learn from Martin about programming good practice; the articles are all written in a very human and accessible style.
 
+### Legacy tests
+
+Now that TDD is widely adopted we're faced with cleaning up the output of those who [cargo-culted](https://en.wikipedia.org/wiki/Cargo_cult_programming) test coverage, or had well meaning but ultimately badly formed attempts at adding tests to their code, sometimes with prodigious volumes of test code.
+
+I think "Legacy tests" is a useful term to describe these problematic tests. Nat Pryce outlines some useful hints that you have legacy tests on your hands:
+
+> "Symptoms of legacy tests I have encountered include:  
+> ...  
+> Tests are named after issue identifiers in the company's issue tracker.  
+> Bonus points if the issue tracker no longer exists."
+> 
+> ~ Nat Pryce, [Working Effectively with Legacy Tests](http://natpryce.com/articles/000813.html)
+
 ## The audio version from Codurance
 
 [Codurance](https://codurance.com/) hosted an insightful round-table podcast episode with a group of people who are clearly very experienced. You can listen here: <https://codurance.com/podcasts/2019-01-21-legacy-code/> and will doubtless be inspired by some things in there. The conversation takes a little while to build momentum but it's worth the wait.
