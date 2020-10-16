@@ -144,3 +144,7 @@ Practically, that might mean if you have a user story, ticket or trello card for
 To keep your stress levels down make it a shared team problem, have a bit of a laugh about it, take regular breaks in the great outdoors, and support each other.
 
 Good luck!
+
+I'll leave you with this little song I found on youtube about bugs:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kuJI4hmvY8c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
