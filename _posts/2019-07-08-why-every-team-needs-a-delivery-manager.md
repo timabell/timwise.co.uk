@@ -17,6 +17,10 @@ In short the team looks something like this:
 * Content Designer(s)
 * Interaction Designer(s)
 
+At the top of the whole thing there's a "Service Owner".
+
+Involved from the very early stages, but a bit less in the daily grind of building technical solutions, you'll find a "Service Designer".
+
 It's a very flat structure. It's a group of peers who all bring their own
 strengths to the team, but with no hard boundaries, we all muck in with
 everything now and then. I particularly like helping with user research as it
@@ -30,7 +34,7 @@ Digital Service
 The kind of structure I've more commonly see in the private sector is something like this:
 
 * Project Manager
-* Business Analyist (BA)
+* Business Analyst (BA)
 * SCRUM Master (in title if not in deed)
 * Developer(s)
 * Testers(s) / QA (Quality Assurance)
@@ -55,7 +59,7 @@ is prioritization of work.
 The role I want to focus on here (though they are all awesome) is Delivery
 Manager as it's the most uncommon in my experience.
 
-In any organisation beyond about 20 people the bureaucracy starts to sneek in,
+In any organisation beyond about 20 people the bureaucracy starts to sneak in,
 layers of rules are added as a business tries to avoid repeating previous
 mistakes, and as you hit enterprise scale it's positively stifling, to the
 point that people issues and an inability to even open Microsoft Word (TM) (R)
@@ -63,7 +67,7 @@ point that people issues and an inability to even open Microsoft Word (TM) (R)
 impossible. The thing is, a dev team is usually building something that hasn't
 been built before, maybe as part of a major change to how the organisation
 functions. Web development is more than just taking your sales brochures and
-putting them online, if that was all we wanted I'd give you a copy of Wordpress
+putting them online, if that was all we wanted I'd give you a copy of WordPress
 and find something else to build. Sometimes you can hide the team away in a
 [skunkworks](https://en.wikipedia.org/wiki/Skunk_Works) project, but that can't
 last forever and eventually the old meets the new and sparks fly. The
@@ -72,11 +76,18 @@ unable to deliver anything. This is where a **Delivery Manager** role is golden,
 they deal with making sure the organisation's goals to have this new service /
 system / product / software are able to be progressed, conversations & endless
 meetings had, finance obtained, hardware procured, forms filled, security
-audits managed sensibly, pile-on demands defended ... the list is endless. By
+audits managed sensibly, pile-on demands defended … the list is endless. By
 having this role the team can focus on building and shipping, comfortable that
 they won't be sidetracked or blocked.
 
-The approach is not new, Joel wrote this in 2000:
+You'll also find the Delivery Manager doing inward-looking work similar to the
+role of "SCRUM Master". This includes setting up the right agile environment
+(which may SCRUM, Kanban, or something else), tackling any dysfunction and poor
+team performance that has built up, keeping in touch with all the team to make
+sure they are happy and productive, running team retrospective sessions, and
+sometimes hiring-and-firing to get the best team in place.
+
+The approach is not new, back in the year 2000 Joel Spolsky wrote:
 
 > Compare this to Microsoft, where things are done at the lowest level, and
 > most managers act like their most important job is to run around the room,
@@ -85,9 +96,9 @@ The approach is not new, Joel wrote this in 2000:
 > ~ Joel Spolsky -
 > <https://www.joelonsoftware.com/2000/03/19/two-stories/>
 
-but I've personally never seen it called out as a specific role like this
-outside of my work for "Digital" teams in UK Government. I hope this becomes
-more common everywhere.
+I've personally never seen delivery management called out as a specific named
+role outside of my work for "Digital" teams in UK Government. I hope this role
+becomes more common everywhere.
 
 As a developer on an Agile team working inside a government team (not for the
 first time), I am eternally grateful for all the things I *don't* have to worry
@@ -95,8 +106,8 @@ about because we have a DM. It's not that I'm not capable, I'll happily turn my
 hand to the biggest problem of the day for a team at any time, but the code
 won't write itself and that's what I was hired to be a pro at. Having a DM lets
 me focus more creating software that actually does a job for our users. I like
-the way the wonderful Mark 'Stanners' Stanley put it many years ago that I
-still think cuts to best thing about it:
+the way the wonderful Mark 'Stanners' Stanley put it back in 2012. I still
+think this cuts to best thing about it:
 
 > The delivery manager is there to remove any and all things that are hindering
 > or ‘blocking’ them, so the team can deliver the product.
