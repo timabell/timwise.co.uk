@@ -148,3 +148,11 @@ Good luck!
 I'll leave you with this little song I found on youtube about bugs:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kuJI4hmvY8c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Further Reading
+
+If you want to avoid the task at hand by reading the whole internet in the hope that it will help, start here:
+
+* A lengthy set of opinions on what to do with a huge 10 year old untested pile of spaghetti code:  <https://softwareengineering.stackexchange.com/questions/416242/is-it-the-correct-practice-to-keep-more-than-10-years-old-spaghetti-legacy-code>
+
+* I'm still digesting some great content from this podcast episode: [Software Delivery in Small Batches: Automated Testing with Jason Swett](https://share.transistor.fm/s/a5ca21cb) which talks a lot about practical approaches to legacy code, including the idea that you actually can't always avoid writing some more untested code because of the cost-benefit trade-off.
