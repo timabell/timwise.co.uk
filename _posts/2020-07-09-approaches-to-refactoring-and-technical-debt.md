@@ -77,7 +77,7 @@ It's well worth reading much more of Martin Fowler's writing. There's so much to
 
 ### Legacy tests
 
-Now that TDD is widely adopted we're faced with cleaning up the output of those who [cargo-culted](https://en.wikipedia.org/wiki/Cargo_cult_programming) test coverage, or had well meaning but ultimately badly formed attempts at adding tests to their code, sometimes with prodigious volumes of test code.
+Now that TDD is widely adopted we're faced with cleaning up the output of those who [cargo-culted](https://en.wikipedia.org/wiki/Cargo_cult_programming) test-coverage, or had well meaning but ultimately badly formed attempts at adding tests to their code, sometimes with prodigious volumes of test code.
 
 I think "Legacy tests" is a useful term to describe these problematic tests. Nat Pryce outlines some useful hints that you have legacy tests on your hands:
 
@@ -94,7 +94,7 @@ I think "Legacy tests" is a useful term to describe these problematic tests. Nat
 
 Here some highlights of what I learnt from listening to the show:
 
-### The Book
+### The Feathers Book
 
 * [Working Effectively with Legacy Code by Michael C. Feathers](https://www.amazon.co.uk/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052/) is *the* book to read on the subject.
 
@@ -106,13 +106,17 @@ Feathers defines legacy code as code without tests.
 
 This book is heavily geared towards unpicking the difficulties in getting untested code under test in object-oriented static typed languages such as Java, C# and C++, and modifying it safely.
 
+It is a detailed and thorough treatment of all the tactics available to bring untested object-oriented code under test, specifically sprawling and smelly classes and methods. It won't help you with larger scale problems such as poor structuring of microservice architecture, message bus systems etc.
+
+This [article summarizing the Feathers' Legacy Code book](https://understandlegacycode.com/blog/key-points-of-working-effectively-with-legacy-code/) has some of the tactics detailed and gives a good flavour of the book so you can decide whether to dive deeper.
+
 ### Named techniques and related libraries
 
 * [Characterization testing](https://michaelfeathers.silvrback.com/characterization-testing) is the idea of creating tests to probe and demonstrate the existing behaviour of previously untested code.
 	* Related to this is "approval tests" which allow you to easily incorporate snapshots of output (json, xml, logs etc) into your tests in order to capture existing behaviour and be able to spot any variations that pop up during refactoring.
 	* [ApprovalTests.net](https://github.com/approvals/ApprovalTests.Net) is a dotnet library for implementing approval tests.
 * Introducing [seams](http://wiki.c2.com/?SoftwareSeam) into software can be a useful technique for breaking down untestable monoliths into testable chunks on the way to better code.
-* [Mutation testing (wikipedia)](https://en.wikipedia.org/wiki/Mutation_testing) (more info on [mutation testing at csharp academy](http://csharp.academy/mutation-testing/)) is a useful way of checking how good your test coverage really is. It is the idea of making (almost) random changes to the code under test to see what whether your tests spot the change in behaviour.
+* [Mutation testing (wikipedia)](https://en.wikipedia.org/wiki/Mutation_testing) (more info on [mutation testing at csharp academy](http://csharp.academy/mutation-testing/)) is a useful way of checking how good your test-coverage really is. It is the idea of making (almost) random changes to the code under test to see what whether your tests spot the change in behaviour.
 	* For dotnet this can be done with [Stryker.net](https://github.com/stryker-mutator/stryker-net)
 
 ### Approaches from hard-won experience
@@ -132,20 +136,55 @@ Something that looks like bad code could be that way because of a failure to pro
 
 Domain Driven Design (DDD) has much to teach on the matter, and this is a great video on the why modelling could be the problem:
 [Technical debt isn't technical - Einar Høst - DDD Europe 2019 - YouTube](https://youtu.be/d2Ddo8OV7ig)
+## Small Batches Automated Testing Podcast Episode
+
+Podcast episode [Software Delivery in Small Batches: Automated Testing with Jason Swett](https://share.transistor.fm/s/a5ca21cb) talks about practical approaches to legacy code, including the idea that you actually can't always avoid writing some more untested code because of the cost-benefit trade-off.
+
+> "You can’t just slap a test on any change that you make because the underlying functionality might be really complex"
+
+The episode describes the evolution of our industry in learning the importance of test-coverage for avoiding known risks in software development, and declares that you cannot truly call yourself a professional developer if you are not writing tests.
+
+> "I always recommend starting with the easiest most trivial stuff, adding some tests in those areas and then working up to the bigger areas"
+
+Some relevant thoughts from the episode:
+
+* Good test-coverage is a pre-requisite to any higher-level automation such as continuous-deployment. (1:35)
+* To add tests to a project that has no coverage you have to retrofit test tooling and infrastructure (CI, data management etc). "That can be very non-trivial, even for someone very experienced, ... it's going to be a huge challenge to add that stuff retroactively." (3:10)
+* With regards to the idea of "Declaring that we are going to write tests for every PR from now on." (7:10)
+	* "You can't just slap a test on any change that you make because the underlying functionality might be really complex. In order to write a test you might have to have certain setup data to create the state required for that test might be extremely complicated. To expect somebody to include a test with every PR is not realistic. For some features your change might be 10 minutes of work but to get the test setup, that might be weeks of work in order to take the 20-minutes to write the test."
+	* "I always recommend starting with the easiest most trivial stuff, adding some tests in those areas and then working up to the bigger areas. It seems that you should start with the most important stuff but that's not realistic because the most important stuff is also the hardest to test."
+* A useful step might be to just get tests in place on your own machine without worrying about CI initially (they were talking about training a developer, but it's a useful thought for being efficient tackling legacy projects) (9:30)
+* "Having high quality code is almost impossible without good test-coverage. Test-coverage enables refactoring. If you can't refactor your code it's really hard to keep it in good shape." (17:15)
+* As you flush out bugs by adding more and more coverage: "The type of issues you find over time, the complexity goes up, because they're not really related to the interplay of something known, they're usually related to more and more complications; instead of just one unit of code interacting... [it's] 5 or 10 or 200; these larger components and permutations that you never considered in the first place, because some customer hit it for the first time." Moments where you go "woah I never even knew that was possible" (25:50)
+* "It all comes down to managing risk, risk of the software in question being correct" (30:20)
+	* "There's a risk of producing incorrect software, but there's also a risk to the business that the engineers will not be able to keep pace with the business if they have to spend so much extra time just verifying the software, there's a mistake in thinking that writing tests takes more time, the reality is that if you have automated tests then you will be able to work much faster than if you didn't"
+* On a project that had tests once - "...at some point tests had stopped passing", should you "blow them away or fix them?". (32:22)
+	* For an "application that's been developed for two years with no tests with this big team and they don't have the skills; that's going to be a big up front investment, it's going to be a year or two before [adding test-coverage] starts to pay off."
+	* "... at some point tests had stopped passing and they were never updated - okay do I trust these or not? If they're not passing, do I blow them away or fix them." - In this case blew them away and spent three months writing tests such that he could build new features. "Even now [the project has] low test-coverage. This has been a multi-year effort."
+	* "This is one of the real problems when it comes to testing, is that if for some reason the people who start the project don't do testing, and the project is successful enough to go on for X number of years without it, then the effort required to add testing after the fact is an order of magnitude than it would have been at the beginning." ... "the can gets kicked down the road."
+	* "Frustrated by the attitude of 'let's not spend time making this code high quality because what if this startup fails' but what if this startup succeeds? Yes it may be possible you only survive by cutting corners but not convinced, think it might be a delusion."
+		* "The only way to go fast is to go well." ~ Bob Martin
+* "Why is good code good? It's fast to work with. I prefer to say 'the code is understandable' because that makes it more clear. Good/bad sounds like inward looking practicing of a craft. 'Not Understandable' is more tangible - that means it's time-consuming and expensive to work with. Understandable code is faster and less expensive to work with." (35:20)
+
+> "It all comes down to managing risk"
+
+The people on the episode are Ruby developers, but the lessons they talk of apply regardless of language.
+
+(Some of the quotations above are paraphrased)
 
 ## Thanks, now I'm even less sure what to do
 
 Are you wrestling with something you don't like in a codebase you have to deal with? I'm guessing that's why you're here. Or maybe someone sent you this along with a rant about the tech debt in the codebase you own.
 
-Either way, I suggest slowing down a bit, sitting down together (while maintaining social distancing), and considering how all the things that bother you about the code in front of you fit in to the various taxonomies detailed above. Then use that assessement to make a calm and rational plan about roughly where you want to get to. Then decide on the *one* next thing you will do towards that. Use the Ron Jeffries approach to get you there without wasting time on things that don't really matter.
+Either way, I suggest slowing down a bit, sitting down together (while maintaining social distancing), and considering how all the things that bother you about the code in front of you fit in to the various taxonomies detailed above. Then use that assessment to make a calm and rational plan about roughly where you want to get to. Then decide on the *one* next thing you will do towards that. Use the Ron Jeffries approach to get you there without wasting time on things that don't really matter.
 
-Practically, that might mean if you have a user story, ticket or trello card for a feature, it might take longer to do as you include the work to "pay down" some of that badness along the way, knowing that it will improve your overall velocity over time. Be wary of pulling out separate "debt" stories to do, though that can work if the team dynamic is right.
+Practically, that might mean if you have a user story, ticket or Trello card for a feature, it might take longer to do as you include the work to "pay down" some of that badness along the way, knowing that it will improve your overall velocity over time. Be wary of pulling out separate "debt" stories to do, though that can work if the team dynamic is right.
 
 To keep your stress levels down make it a shared team problem, have a bit of a laugh about it, take regular breaks in the great outdoors, and support each other.
 
 Good luck!
 
-I'll leave you with this little song I found on youtube about bugs:
+I'll leave you with this little song I found on YouTube about bugs:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kuJI4hmvY8c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -155,4 +194,3 @@ If you want to avoid the task at hand by reading the whole internet in the hope 
 
 * A lengthy set of opinions on what to do with a huge 10 year old untested pile of spaghetti code:  <https://softwareengineering.stackexchange.com/questions/416242/is-it-the-correct-practice-to-keep-more-than-10-years-old-spaghetti-legacy-code>
 
-* I'm still digesting some great content from this podcast episode: [Software Delivery in Small Batches: Automated Testing with Jason Swett](https://share.transistor.fm/s/a5ca21cb) which talks a lot about practical approaches to legacy code, including the idea that you actually can't always avoid writing some more untested code because of the cost-benefit trade-off.
