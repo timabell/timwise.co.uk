@@ -167,8 +167,27 @@ Where `XXX` is the IP of your VM and `10253` is the replica port.
 
 As per: <https://unix.stackexchange.com/questions/441182/how-to-map-an-ip-address-to-localhost>
 
-## ~ End ~
+## Importing data
+
+If you need to import data then use data migration tool from <https://docs.microsoft.com/en-us/azure/cosmos-db/import-data#Install>
+
+## Success
 
 With all of the above I was then able to connect a dotnet-core application on Linux to a CosmosDB emulator.
 
-If you need to import data then use data migration tool from <https://docs.microsoft.com/en-us/azure/cosmos-db/import-data#Install>
+## Emulator failures
+
+After a while and some unrecorded fiddling, the emulator then gave up the ghost, resulting in the Azure Storage Explorer reporting the apparently meaningless error message "Unable to retrieve child resources."
+
+According to the internet this error could mean anything. <https://social.technet.microsoft.com/wiki/contents/articles/53393.azure-storage-explorer-troubleshooting-unable-to-retrieve-child-resources-or-the-request-action-could-not-be-completed.aspx>
+
+I might just blow the whole VM away and start again...
+
+## Should you use CosmosDB?
+
+CosmosDB comes with significantly increased costs:
+
+* I gather it's very expensive to run in production
+* Development is painful
+
+As a result you should only choose CosmosDB for your solution if you *really* need something it offers that you can't get from a more straight-forward SQL or DocumentDB solution and your domain is a good match for the document-database (aka NoSQL) model.
