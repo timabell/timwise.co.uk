@@ -191,3 +191,7 @@ CosmosDB comes with significantly increased costs:
 * Development is painful
 
 As a result you should only choose CosmosDB for your solution if you *really* need something it offers that you can't get from a more straight-forward SQL or DocumentDB solution and your domain is a good match for the document-database (aka NoSQL) model.
+
+## Further reading
+
+* [Azure Development using CosmosDB offline Emulator by Matt Thankachan](https://medium.com/faun/comosdb-offline-emulator-78559ae91cd1)
