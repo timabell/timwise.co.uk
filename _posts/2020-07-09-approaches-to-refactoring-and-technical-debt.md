@@ -77,7 +77,7 @@ It's well worth reading much more of Martin Fowler's writing. There's so much to
 
 ### Legacy tests
 
-Now that TDD is widely adopted we're faced with cleaning up the output of those who [cargo-culted](https://en.wikipedia.org/wiki/Cargo_cult_programming) test-coverage, or had well meaning but ultimately badly formed attempts at adding tests to their code, sometimes with prodigious volumes of test code.
+Now that TDD is widely adopted we're faced with cleaning up the output of those who [cargo-culted](https://en.wikipedia.org/wiki/Cargo_cult_programming) test coverage, or had well meaning but ultimately badly formed attempts at adding tests to their code, sometimes with prodigious volumes of test code.
 
 I think "Legacy tests" is a useful term to describe these problematic tests. Nat Pryce outlines some useful hints that you have legacy tests on your hands:
 
@@ -116,7 +116,7 @@ This [article summarizing the Feathers' Legacy Code book](https://understandlega
 	* Related to this is "approval tests" which allow you to easily incorporate snapshots of output (json, xml, logs etc) into your tests in order to capture existing behaviour and be able to spot any variations that pop up during refactoring.
 	* [ApprovalTests.net](https://github.com/approvals/ApprovalTests.Net) is a dotnet library for implementing approval tests.
 * Introducing [seams](http://wiki.c2.com/?SoftwareSeam) into software can be a useful technique for breaking down untestable monoliths into testable chunks on the way to better code.
-* [Mutation testing (wikipedia)](https://en.wikipedia.org/wiki/Mutation_testing) (more info on [mutation testing at csharp academy](http://csharp.academy/mutation-testing/)) is a useful way of checking how good your test-coverage really is. It is the idea of making (almost) random changes to the code under test to see what whether your tests spot the change in behaviour.
+* [Mutation testing (wikipedia)](https://en.wikipedia.org/wiki/Mutation_testing) (more info on [mutation testing at csharp academy](http://csharp.academy/mutation-testing/)) is a useful way of checking how good your test coverage really is. It is the idea of making (almost) random changes to the code under test to see what whether your tests spot the change in behaviour.
 	* For dotnet this can be done with [Stryker.net](https://github.com/stryker-mutator/stryker-net)
 
 ### Approaches from hard-won experience
@@ -142,25 +142,25 @@ Podcast episode [Software Delivery in Small Batches: Automated Testing with Jaso
 
 > "You can’t just slap a test on any change that you make because the underlying functionality might be really complex"
 
-The episode describes the evolution of our industry in learning the importance of test-coverage for avoiding known risks in software development, and declares that you cannot truly call yourself a professional developer if you are not writing tests.
+The episode describes the evolution of our industry in learning the importance of test coverage for avoiding known risks in software development, and declares that you cannot truly call yourself a professional developer if you are not writing tests.
 
 > "I always recommend starting with the easiest most trivial stuff, adding some tests in those areas and then working up to the bigger areas"
 
 Some relevant thoughts from the episode:
 
-* Good test-coverage is a pre-requisite to any higher-level automation such as continuous-deployment. (1:35)
+* Good test coverage is a pre-requisite to any higher-level automation such as continuous-deployment. (1:35)
 * To add tests to a project that has no coverage you have to retrofit test tooling and infrastructure (CI, data management etc). "That can be very non-trivial, even for someone very experienced, ... it's going to be a huge challenge to add that stuff retroactively." (3:10)
 * With regards to the idea of "Declaring that we are going to write tests for every PR from now on." (7:10)
 	* "You can't just slap a test on any change that you make because the underlying functionality might be really complex. In order to write a test you might have to have certain setup data to create the state required for that test might be extremely complicated. To expect somebody to include a test with every PR is not realistic. For some features your change might be 10 minutes of work but to get the test setup, that might be weeks of work in order to take the 20-minutes to write the test."
 	* "I always recommend starting with the easiest most trivial stuff, adding some tests in those areas and then working up to the bigger areas. It seems that you should start with the most important stuff but that's not realistic because the most important stuff is also the hardest to test."
 * A useful step might be to just get tests in place on your own machine without worrying about CI initially (they were talking about training a developer, but it's a useful thought for being efficient tackling legacy projects) (9:30)
-* "Having high quality code is almost impossible without good test-coverage. Test-coverage enables refactoring. If you can't refactor your code it's really hard to keep it in good shape." (17:15)
+* "Having high quality code is almost impossible without good test coverage. Test coverage enables refactoring. If you can't refactor your code it's really hard to keep it in good shape." (17:15)
 * As you flush out bugs by adding more and more coverage: "The type of issues you find over time, the complexity goes up, because they're not really related to the interplay of something known, they're usually related to more and more complications; instead of just one unit of code interacting... [it's] 5 or 10 or 200; these larger components and permutations that you never considered in the first place, because some customer hit it for the first time." Moments where you go "woah I never even knew that was possible" (25:50)
 * "It all comes down to managing risk, risk of the software in question being correct" (30:20)
 	* "There's a risk of producing incorrect software, but there's also a risk to the business that the engineers will not be able to keep pace with the business if they have to spend so much extra time just verifying the software, there's a mistake in thinking that writing tests takes more time, the reality is that if you have automated tests then you will be able to work much faster than if you didn't"
 * On a project that had tests once - "...at some point tests had stopped passing", should you "blow them away or fix them?". (32:22)
-	* For an "application that's been developed for two years with no tests with this big team and they don't have the skills; that's going to be a big up front investment, it's going to be a year or two before [adding test-coverage] starts to pay off."
-	* "... at some point tests had stopped passing and they were never updated - okay do I trust these or not? If they're not passing, do I blow them away or fix them." - In this case blew them away and spent three months writing tests such that he could build new features. "Even now [the project has] low test-coverage. This has been a multi-year effort."
+	* For an "application that's been developed for two years with no tests with this big team and they don't have the skills; that's going to be a big up front investment, it's going to be a year or two before [adding test coverage] starts to pay off."
+	* "... at some point tests had stopped passing and they were never updated - okay do I trust these or not? If they're not passing, do I blow them away or fix them." - In this case blew them away and spent three months writing tests such that he could build new features. "Even now [the project has] low test coverage. This has been a multi-year effort."
 	* "This is one of the real problems when it comes to testing, is that if for some reason the people who start the project don't do testing, and the project is successful enough to go on for X number of years without it, then the effort required to add testing after the fact is an order of magnitude than it would have been at the beginning." ... "the can gets kicked down the road."
 	* "Frustrated by the attitude of 'let's not spend time making this code high quality because what if this startup fails' but what if this startup succeeds? Yes it may be possible you only survive by cutting corners but not convinced, think it might be a delusion."
 		* "The only way to go fast is to go well." ~ Bob Martin
