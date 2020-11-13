@@ -19,7 +19,7 @@ So here's a typical example of the throw vs throw ex thing:
 [https://stackoverflow.com/questions/730250/is-there-a-difference-between-throw-and-throw-ex](https://stackoverflow.com/questions/730250/is-there-a-difference-between-throw-and-throw-ex)
 
 Basically it revolves around either messing up the line numbers in your stack
-trace (`throw ex;`) or losing an chunk of your stack entirely (`throw;`) -
+trace (`throw ex;`) or losing a chunk of your stack entirely (`throw;`) -
 exception1 and 2 respectively in this nice clear answer:
 [http://stackoverflow.com/a/776756/10245](http://stackoverflow.com/a/776756/10245)
 
@@ -65,5 +65,5 @@ Full example with output at
 [https://gist.github.com/timabell/78610f588961bd0a0b95](https://gist.github.com/timabell/78610f588961bd0a0b95)
 
 This makes life much easier when tracking down bugs / state problems later on.
-Particularly if you string.format() the new message and add some useful state
+Particularly if you `string.Format()` the new message and add some useful state
 info.
