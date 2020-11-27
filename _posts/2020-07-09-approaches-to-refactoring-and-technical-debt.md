@@ -193,4 +193,18 @@ I'll leave you with this little song I found on YouTube about bugs:
 If you want to avoid the task at hand by reading the whole internet in the hope that it will help, start here:
 
 * A lengthy set of opinions on what to do with a huge 10 year old untested pile of spaghetti code:  <https://softwareengineering.stackexchange.com/questions/416242/is-it-the-correct-practice-to-keep-more-than-10-years-old-spaghetti-legacy-code>
-
+* Pluralsight have written an excellent long-form article on the subject: <https://www.pluralsight.com/blog/software-development/erasing-tech-debt>
+* The Engineering Manager on technical debt: <https://www.theengineeringmanager.com/growth/how-to-argue-the-space-to-tackle-technical-debt/>
+* <https://adevait.com/software/technical-debt>
+* <https://medium.com/@adamberlinskyschine/wtf-is-technical-debt-b9e9d5f89d9>
+* <https://wtfismyengineertalkingabout.com/2017/03/18/wtf-is-technical-debt/>
+* <https://codingsans.com/blog/technical-debt>
+* <https://builtin.com/software-engineering-perspectives/technical-debt>
+* <https://www.bmc.com/blogs/technical-debt-explained-the-complete-guide-to-understanding-and-dealing-with-technical-debt/>
+* <https://dzone.com/articles/what-technical-debt-it-and-how-to-calculate-it>
+* <https://bigrivertech.com/technical_debt_assessment/>
+* <https://www.cutter.com/consulting/technical-debt-assessment-and-valuation>
+* <https://martinfowler.com/tags/technical%20debt.html>
+* <https://codeclimate.com/blog/10-point-technical-debt-assessment/>
+* <http://thinkapps.com/blog/development/technical-debt-calculation/>
+* <https://www.productplan.com/glossary/technical-debt/>
