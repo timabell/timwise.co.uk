@@ -1,2 +1,6 @@
-cd _drafts
-./new
+#!/bin/sh
+name="${1:-todo}" # default name
+newfile=_posts/`date +"%Y-%m-%d"`-$name.md
+cp _drafts/template.md "$newfile"
+echo "$newfile created"
+vim "$newfile"
