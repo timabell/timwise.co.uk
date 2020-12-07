@@ -10,6 +10,11 @@ Sometimes a codebase has an overwhelming amount of "terrible" stuff that as a de
 * Personal burnout.
 * Fixing things that maybe weren't actually that important (even if they make you cry whenever you have to look at their source code), at the expense of failing to fix more urgent problems or building useful features.
 
+---
+⏩ If you want the executive summary, head over to my [Leaders guide to technical debt - aka "why can't we ship anything!?"](https://charmconsulting.co.uk/2020/11/27/leaders-guide-to-technical-debt/) 🧐. For the technical details read on below.
+
+---
+
 ## Must-read articles
 
 Here's a couple of must-read articles on the subject:
