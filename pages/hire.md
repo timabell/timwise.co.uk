@@ -37,15 +37,13 @@ administration.
 As the tech industry never stands still I've recently been broadening my
 skillset by adding GoLang to my existing full-stack C# / ASP.NET web
 development skills. My latest side-project (written in GoLang) is
-<http://schemaexplorer.io/>, this has been helping me improve my marketing skills
+[SQL Schema Explorer](https://timabell.github.io/schema-explorer/), this has been helping me improve my marketing skills
 as well as broadening my programming skills.
 
 [![pluralsight scores](/assets/pluralsight_scores.png)](https://app.pluralsight.com/profile/timabell)
 
 I have a broad interest in programming and business and am always doing
-something beyond client work. I recently completed <a
-href="http://schemaexplorer.io/">http://schemaexplorer.io/</a> which is a
-side-project written in GoLang.
+something beyond client work.
 
 ---
 
