@@ -11,7 +11,8 @@ layout: post
 * [RedGate Deploy](https://www.red-gate.com/products/redgate-deploy/)
 * [RedGate SQL Change Automation](https://documentation.red-gate.com/sca/developing-databases/concepts/migrations/migration-scripts)
 * [Flyway by RedGate](https://flywaydb.org/)
-* ? hit me up on twitter if you know of any more options
+* [SqlHawk](http://timabell.github.io/sqlHawk/) (I wrote this years ago, forked from the excellent [SchemaSpy](http://schemaspy.org/))
+* ? [hit me up on twitter](https://twitter.com/tim_abell) if you know of any more options
 
 Note that the excellent [ReadyRoll got bought by
 RedGate](https://www.realwire.com/releases/Redgate-acquires-database-migrations-and-deployment-tool-ReadyRoll)
