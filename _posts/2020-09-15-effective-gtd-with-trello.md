@@ -114,13 +114,18 @@ I've learned to do more of this in the Trello app when I have five idle minutes 
 
 I add some Trello labels to the cards so that I can tell whether a card is something I can pick up in any particular situation (do I need the laptop? good phone signal? good internet? do I need to be somewhere in particular?) The situational ones are all black with an `@` prefix, e.g. `@home` or `@good-internet`.
 
-#### Projects / Waiting (Weekly)
+#### Projects (Weekly)
 
 Go through each project
 
 * Do I still need this project (move to someday, or just archive the card if not).
-* Create next action card - the "convert checklist item to card" feature is useful for this
-* Chase when waiting on someone (maybe fire off an email or WhatsApp
+* Create next action card - use the "convert checklist item to card" feature of Trello.
+
+#### Waiting (Weekly)
+
+* Set due dates on the cards so that they'll get highlighted if they are due chasing next time you  review.
+* Chase up if no action from others and past the due date (maybe fire off an email or WhatsApp).
+* Archive if dealt with, or move back to inbox if it's thrown up other issues.
 
 #### Rules - Thou Shall Not Scroll
 
