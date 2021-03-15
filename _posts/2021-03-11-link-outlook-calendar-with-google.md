@@ -5,6 +5,8 @@ layout: post
 
 If you have a Google/GSuite calendar and a Microsoft Teams/Office365/Outlook calendar you can get the Microsoft Outlook calendar to pull in all the events from your Google calendar which is handy when you want to know if you have any gaps or conflicts.
 
+Amazingly if you move google entries around in the outlook calendar they changes are pushed back to the google calendar.
+
 ## Link the Google calendar into the Outlook calendar
 
 * Go to your Teams calendar
