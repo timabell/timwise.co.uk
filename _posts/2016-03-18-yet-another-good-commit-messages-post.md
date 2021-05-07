@@ -31,6 +31,7 @@ My personal additions to this list:
 
 * A list of highlights of changes in bullets is often nice to add, think of it as a tourist's guide to your patch. It makes it easier to spot the key changes in a large diff, and can make code-reviews more effective.
 * Hard-wrapping lines shouldn't be required, that should be an editor/display concern but unfortunately the git tooling doesn't agree so doesn't wrap anything so you might have to hard-wrap.
+## Presentations on why good history matters
 
 Remember, your code and your commits can last a veeeeeery long time and you never know what poor soul will have to understand what you did and why years later... when you have time watch this video:
 
