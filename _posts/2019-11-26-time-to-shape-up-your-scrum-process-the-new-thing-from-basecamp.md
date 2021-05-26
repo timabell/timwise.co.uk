@@ -65,3 +65,6 @@ debt paydown, plan new things etc.
 If you'd like to hear a bit more about ShapeUp, have a listen to
 <https://pod.timwise.co.uk/5> where I go over their process in a bit more
 detail with regular co-host David.
+
+I've also written up a nice approach to avoiding a "backlog of doom" in my
+[personal backlogs post](/2020/06/30/personal-backlogs/).
