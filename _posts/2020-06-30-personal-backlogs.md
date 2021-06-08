@@ -22,6 +22,8 @@ This solution...
 * and adds the ability to collaborate.
 * is ridiculously simple
 
+### Trello
+
 Set it up as follows: Set up a new trello board, name it "shared backlog" or similar, create a list (column) for every team member with their name (and optionally role) as the list title.
 
 ![screenshot of shared backlog board in trello](/assets/shared-backlog.png)
@@ -35,6 +37,14 @@ On a regular basis, (say fortnightly during a sprint planning session or similar
 Simple eh?
 
 Here's an example board <https://trello.com/b/cxRXPgcb/personal-backlogs-example>, you can use it as a template if you wish.
+
+### Jira
+
+If you're using Jira you can achieve the same effect by abusing the "sprint" feature. Just create some extra sprints with the "Create spring" button and instead of calling them "sprint 25" etc, call them "Tech backlog", "Design Backlog", "Customer Service Backlog" etc. Then you can nicely group each role's needs and they can manage their own priorities within their own backlog. The actual "backlog" in Jira can now be just for true user stories / product features.
+
+![screenshot of using sprints as personal backlogs in Jira](/assets/jira-personal-backlogs.png)
+
+### Useful?
 
 [Let me know](tim@timwise.co.uk) if you use this approach and if it works for you or not.
 
