@@ -15,13 +15,13 @@ This post is here to explain to you with kindness why posting multiple messages 
 
 It seems harmless to just post another couple of messages, right?
 
-Slack in any active organisation can quickly become a firehose of information that can be quite hard to keep up with. It takes some effort from all involved to protect everyone's focus and flow time. As an aside if you want an insight into just how damaging distractions can be I recommend diving into Cal Newport's writings <https://www.calnewport.com/books/>, particularly "Deep Work". Some of us have the luxury of turning of slack for most of the day, but some people need to keep up more actively than that.
+Slack in any active organisation can quickly become a firehose of information that can be quite hard to keep up with. It takes some effort from all involved to protect everyone's focus and flow time. As an aside if you want an insight into just how damaging distractions can be I recommend diving into Cal Newport's writings <https://www.calnewport.com/books/>, particularly "Deep Work". Some of us have the luxury of turning off slack for most of the day, but some people need to keep up more actively than that.
 
 ### Notifications and unread messages
 
 Slack allows you to carefully manage what notifications you receive, but for a channel it basically comes down to notifications on or off for channel messages.
 
-If you have a channel that you want (or need) to keep up to date with in a timely manner then when someone sends a new channel message you will have intrusive notifications and as shown below an "unread channel" in bold and white sat glaring at you waiting to be read:
+If you have a channel that you want (or need) to keep up to date with in a timely manner then when someone sends a new channel message you will have intrusive notifications and as shown below an "unread channel" in bold-and-white sat glaring at you waiting to be read:
 
 ![unread slack channel](/images/blog/slack/slack-unread-channel.png)
 
@@ -29,23 +29,27 @@ If you use the convenient "All unread" feature then that will also sit glaring a
 
 ![unread messages](/images/blog/slack/slack-unread.png)
 
-The problem with multiple related channel messages in this case, is that if someone gets your first message, decides that it's not a conversation relevant to them and then goes back to trying to concentrate, your second message will set off all their notifications once again and send them back to having unread messages to worry about.
+The problem with multiple related channel messages in this case is that if someone gets your first message, decides that it's not a conversation relevant to them and then goes back to trying to concentrate your second message will set off all their notifications once again and send them back to having unread messages to worry about.
 
-If you had instead used the above alternatives of editing or threads then there would be no new notifications and no new unread messages when you edit your message or add to the thread.
+If you had instead used the below alternatives of editing or threads then there would be no new notifications and no new unread messages when you edit your message or add to the thread.
 
 ### Deciding what conversations to follow
 
 As someone who is trying to avoid slack-overwhelm the ability to follow and unfollow threads is a very useful feature. Slack will automatically give new notifications for threads where you have been mentioned with an `@` or have added a message of your own to the thread.
 
+To follow/unfollow a thread, hover over the top message in the thread, click the dots, and click "turn off notifications for replied" as shown below:
+
 ![unfollowing a thread](/images/blog/slack/unfollow-thread.png)
 
-To follow/unfollow a thread, hover over the top message in the thread, click the dots, and click "turn off notifications for replied" as shown above.
+If people are not correctly using threads to group themes of discussion then this feature becomes mostly useless.
 
-If people are not correctly using threads to group themes of discussion then this feature becomes mostly useless. As an aside this applies just as much to *not* starting a new thread when discussion changes topic as it does to failing to use threads in the first place.
+As an aside this applies just as much to failure to start a new thread when the discussion changes topic as it does to failing to use threads in the first place.
 
 ### Catching up with a channel
 
-Sometimes you will join a channel and then mute it because you want to be able to keep up to date on your own schedule, say daily or weekly.
+Sometimes you will join a channel and then mute it (right-click, mute) because you want to be able to keep up to date on your own schedule, say daily or weekly.
+
+![muting a channel](/images/blog/slack/mute-channel.png)
 
 When people in the channel have conversations in the form of channel messages you can easily end up having to read 1000 messages to just know what's been going on for a day and catch up on anything important.
 
@@ -89,9 +93,13 @@ This is particularly important to avoid ending up with multiple threads on diffe
 
 ## Offering gentle reminders with an emoji
 
-If your team knows to do this but forgets sometimes then why not add `:start_a_thread:` as an emoji to easily remind people when they forget.  (Image source: <https://slackmojis.com/>)
+If your team knows to do this but forgets sometimes then add `:start_a_thread:` as an emoji (under "customize workspace) to easily remind people when they forget.
 
-[![reply in thread animation gif](/images/blog/slack/start_a_thread.gif)](https://emojis.slackmojis.com/emojis/images/1551460453/5427/start_a_thread.gif)
+![reply in thread animation gif](/images/blog/slack/start_a_thread.gif)
+
+(Thread gif image source: <https://slackmojis.com/>)
+
+![customize slack](/images/blog/slack/customize.png)
 
 ## Summary
 
