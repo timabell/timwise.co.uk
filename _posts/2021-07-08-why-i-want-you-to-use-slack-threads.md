@@ -71,6 +71,8 @@ This allows you to add further context etc for those interested without writing 
 
 ![replying to your own thread](/images/blog/slack/reply-to-own-thread.png)
 
+See also <https://slack.com/intl/en-gb/help/articles/115000769927-Use-threads-to-organise-discussions->
+
 ### Edit your existing message
 
 Did you just forget to mention something? You can edit the message you've already posted to make corrections or add more information.
@@ -81,6 +83,8 @@ Hover over the message and then press the "more actions" dots:
 
 ![edit message menu](/images/blog/slack/slack-edit-message.png)
 
+See also <https://slack.com/intl/en-gb/help/articles/202395258-Edit-or-delete-messages>
+
 ### Delete your subsequent messages
 
 If you've already posted more than one channel message and then realise your mistake, you can delete the extra messages before converting to a thread or edit, leaving the channel nice and tidy for anyone who shows up later to read.
@@ -90,6 +94,8 @@ If you've already posted more than one channel message and then realise your mis
 This is particularly important to avoid ending up with multiple threads on different channel messages (on the same topic) as other people reply to different bits of your message resulting in confusion and a disjointed conversation.
 
 ![multiple threads](/images/blog/slack/multiple-threads.png)
+
+See also <https://slack.com/intl/en-gb/help/articles/202395258-Edit-or-delete-messages>
 
 ## Offering gentle reminders with an emoji
 
