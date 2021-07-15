@@ -31,7 +31,7 @@ that always the answer with git?! "It depends!")
 
 ### Should You Merge?
 
-A merge is from master is done like this:
+A merge from `master` is done like this:
 
 ```
 git fetch
