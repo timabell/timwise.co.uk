@@ -3,11 +3,10 @@ title: Should you rebase or merge to update feature branches in git?
 layout: post
 ---
 
-You have a "feature branch" in git that you've been working on for a while but now
-`master` (or `main`) has moved on.
- (or `main`)
-You know of `merge` and `rebase`, but which one should you use? And what can
-you do to avoid being in this position in the first-place?
+You have a "feature branch" in git that you've been working on for a while but
+now `main` or `master` has moved on.  You know of `merge` and `rebase`, but
+which one should you use? And what can you do to avoid being in this position
+in the first-place?
 
 ## TLDR
 
