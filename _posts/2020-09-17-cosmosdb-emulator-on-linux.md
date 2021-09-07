@@ -3,6 +3,10 @@ title: Running the CosmosDB emulator on Linux
 layout: post
 ---
 
+Update: microsoft have released a linux compatible docker image it seems, let me know if it actually works and I'll update this post. <https://docs.microsoft.com/en-us/azure/cosmos-db/linux-emulator>
+
+----
+
 Unfortunately even though "Microsoft 🖤 Linux" the CosmosDB team seem less keen. This is not fun, pretty or stable, but at least it works which is something.
 
 There is a docker image but it only runs on docker-for-windows so it's no help here.
