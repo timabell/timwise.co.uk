@@ -18,10 +18,6 @@ Things to go from blank machine to fully functioning work laptop.
 	* Full disk encryption (LUKS), default whole disk partitioning
 * Run updates and reboot `sudo apt update && sudo apt upgrade`
 
-## Hardware
-
-* Disable nvidia GPU in favour of intel card
-
 ## Hibernate / hybrid sleep
 
 Not working at moment, needs more research.
@@ -49,6 +45,14 @@ curl https://raw.githubusercontent.com/timabell/dotmatrix/master/bin/bootstrap.s
 ```
 
 This installs my [usual package list](https://github.com/timabell/dotmatrix/blob/master/bin/packages.txt)
+
+## Hardware
+
+* Disable nvidia GPU in favour of intel card
+
+```
+sudo prime-select intel
+```
 
 ## SSH
 
