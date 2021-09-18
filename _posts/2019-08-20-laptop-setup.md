@@ -56,11 +56,12 @@ sudo prime-select intel
 
 ## `~/bin`
 
-* Symlink ~/bin
+* Symlink bin and scripts
 
 ```
 cd ~
 ln -s ~/Documents/programs/bin
+ln -s ~/repo/scripts
 ```
 
 ## zsh
