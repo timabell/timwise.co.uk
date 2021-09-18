@@ -54,10 +54,6 @@ This installs my [usual package list](https://github.com/timabell/dotmatrix/blob
 sudo prime-select intel
 ```
 
-## SSH
-
-* Generate ssh key `ssh-keygen`, [add key to github](https://github.com/settings/keys)
-
 ## `~/bin`
 
 * Symlink ~/bin
@@ -132,6 +128,11 @@ Ref: <https://askubuntu.com/questions/131823/how-to-make-zsh-the-default-shell/1
   * about:config > `toolkit.legacyUserProfileCustomizations.stylesheets` > `true`
   * restart firefox
   * Reference: <https://superuser.com/questions/1268732/how-to-hide-tab-bar-tabstrip-in-firefox-57-quantum#1268734>
+
+## SSH
+
+* Generate ssh key `ssh-keygen`
+* [Add public key to github](https://github.com/settings/keys)
 
 ## Docker
 
