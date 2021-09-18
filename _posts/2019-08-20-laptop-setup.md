@@ -54,16 +54,6 @@ This installs my [usual package list](https://github.com/timabell/dotmatrix/blob
 sudo prime-select intel
 ```
 
-## `~/bin`
-
-* Symlink bin and scripts
-
-```
-cd ~
-ln -s ~/Documents/programs/bin
-ln -s ~/repo/scripts
-```
-
 ## zsh
 
 * Switch to z-shell `chsh -s /usr/bin/zsh`
@@ -88,6 +78,14 @@ Ref: <https://askubuntu.com/questions/131823/how-to-make-zsh-the-default-shell/1
 * Remove old install machine name from syncthing network
 * Tell new and old devices about each other in syncthing
 * watch `~/Documents` etc. magically sync (amazing)
+
+## Symlink bin and scripts
+
+```
+cd ~
+ln -s ~/Documents/programs/bin
+ln -s ~/repo/scripts
+```
 
 ## Non-apt program installations
 
