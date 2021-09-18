@@ -38,10 +38,10 @@ Not working at moment, needs more research.
 
 ## Dotmatrix
 
-* Bootstrap my dotmatrix package list [my bootstrap file](https://github.com/timabell/dotmatrix/blob/master/bin/bootstrap.sh) like this (don't laugh/cringe):
+* Bootstrap my dotmatrix package list [my bootstrap file](https://github.com/timabell/dotmatrix/blob/master/software/bootstrap.sh) like this (don't laugh/cringe):
 
 ```
-curl https://raw.githubusercontent.com/timabell/dotmatrix/master/bin/bootstrap.sh | sh
+curl https://raw.githubusercontent.com/timabell/dotmatrix/master/software/bootstrap.sh | sh
 ```
 
 This installs my [usual package list](https://github.com/timabell/dotmatrix/blob/master/bin/packages.txt)
