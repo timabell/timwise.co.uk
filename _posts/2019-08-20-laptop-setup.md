@@ -36,7 +36,7 @@ Not working at moment, needs more research.
 * <https://askubuntu.com/questions/12383/how-to-go-automatically-from-suspend-into-hibernate>
 * <https://www.reddit.com/r/linuxmint/comments/93ta9u/enable_hibernation_in_linux_mint_19_tara/>
 
-## Dotmatrix
+## Packaged software install
 
 * Bootstrap my dotmatrix package list [my bootstrap file](https://github.com/timabell/dotmatrix/blob/master/software/bootstrap.sh) like this (don't laugh/cringe):
 
@@ -79,12 +79,14 @@ Ref: <https://askubuntu.com/questions/131823/how-to-make-zsh-the-default-shell/1
 * Tell new and old devices about each other in syncthing
 * watch `~/Documents` etc. magically sync (amazing)
 
-## Symlink bin and scripts
+## All the things from dotmatrix
 
 ```
-cd ~
-ln -s ~/Documents/programs/bin
-ln -s ~/repo/scripts
+cd repo/dotmatrix/
+bin/symlinks.sh
+bin/install
+software/delta.sh
+# etc
 ```
 
 ## Non-apt program installations
