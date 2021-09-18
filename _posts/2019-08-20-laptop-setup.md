@@ -60,6 +60,17 @@ sudo prime-select intel
 
 Ref: <https://askubuntu.com/questions/131823/how-to-make-zsh-the-default-shell/131838#131838>
 
+## inotify
+
+* inotify increase for:
+  * RubyMine
+  * Guard - <https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers>
+  * Syncthing - <https://docs.syncthing.net/users/faq.html#inotify-limits>
+
+```
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+```
+
 ## File sync with syncthing
 
 * Run syncthing-gtk from system menu (auto-installs syncthing binary)
@@ -155,17 +166,6 @@ fwupdmgr update
 refs:
 
 * <https://fwupd.org/lvfs/docs/users>
-
-## inotify
-
-* inotify increase for:
-  * RubyMine
-  * Guard - <https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers>
-  * Syncthing - <https://docs.syncthing.net/users/faq.html#inotify-limits>
-
-```
-echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
-```
 
 ## Shutter
 
