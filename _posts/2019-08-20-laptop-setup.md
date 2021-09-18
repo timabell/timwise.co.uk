@@ -167,7 +167,6 @@ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo s
 
 ## Shutter
 
-* Fix shutter edit <https://itsfoss.com/shutter-edit-button-disabled/>
 * Change default save location to `~/Documents/screenshots/shutter`
 
 ## asdf
