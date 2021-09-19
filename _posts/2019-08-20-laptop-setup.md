@@ -100,14 +100,6 @@ software/delta.sh
 # etc
 ```
 
-## Non-apt program installations
-
-* Pomodoro timer in task bar: <https://cinnamon-spices.linuxmint.com/applets/view/131>
-* [Install slack with flatpak](https://flathub.org/apps/details/com.slack.Slack), (available via
-	the software manager), sign in. - slack promote the snap version but that's not
-	installed by default.
-* Install [jetbrains toolbox](https://www.jetbrains.com/toolbox/app/)
-
 ## Desktop/system config
 
 * Setup touchpad
@@ -126,10 +118,6 @@ software/delta.sh
 * Turn on automatic updates in update manager preferences, and automatic obsolete kernal removal
 * Configure nemo file manager to always use list view
 
-## FZF (The fuzzy finder)
-
-* [Install `fzf`](https://github.com/timabell/dotmatrix/blob/master/bin/install-fzf.sh)
-
 ## Firefox
 
 * Open firefox, sign-in to sync
@@ -141,15 +129,17 @@ software/delta.sh
   * restart firefox
   * Reference: <https://superuser.com/questions/1268732/how-to-hide-tab-bar-tabstrip-in-firefox-57-quantum#1268734>
 
+## Non-apt program installations
+
+* Use Applets config to download and add [Pomodoro timer](https://cinnamon-spices.linuxmint.com/applets/view/131) in task bar.
+* [Install slack with flatpak](https://flathub.org/apps/details/com.slack.Slack) from the software manager & sign in. - Slack promote the snap version but that's not installed by default.
+* Install [jetbrains toolbox](https://www.jetbrains.com/toolbox/app/)
+* Docker Compose <https://docs.docker.com/compose/install/>
+
 ## SSH
 
 * Generate ssh key `ssh-keygen`
 * [Add public key to github](https://github.com/settings/keys)
-
-## Docker
-
-* compose <https://docs.docker.com/compose/install/>
-* `sudo adduser $USER docker` then reboot to avoid need for root
 
 ## Postgres
 
