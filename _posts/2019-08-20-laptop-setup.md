@@ -120,14 +120,16 @@ software/delta.sh
 
 ## Firefox
 
-* Open firefox, sign-in to sync
+* Sign-in to sync
+
 * Remove firefox tabs (because I use [Tree Style Tabs](https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/))
-  * `cd ~/.mozilla/firefox/..../`
+  * `cd ~/.mozilla/firefox/<profile_id_folder>/`
   * `mkdir chrome`
-  * `echo '#TabsToolbar { visibility: collapse !important; }' >> userChrome.css`
+  * `echo '#TabsToolbar { visibility: collapse !important; }' >> chrome/userChrome.css`
   * about:config > `toolkit.legacyUserProfileCustomizations.stylesheets` > `true`
   * restart firefox
-  * Reference: <https://superuser.com/questions/1268732/how-to-hide-tab-bar-tabstrip-in-firefox-57-quantum#1268734>
+
+Reference: <https://superuser.com/questions/1268732/how-to-hide-tab-bar-tabstrip-in-firefox-57-quantum#1268734>
 
 ## Non-apt program installations
 
@@ -160,6 +162,10 @@ refs:
 ## Shutter
 
 * Change default save location to `~/Documents/screenshots/shutter`
+
+## Thunderbird
+
+* Restore recent backup (from data sync)
 
 ## asdf
 
