@@ -134,8 +134,13 @@ Reference: <https://superuser.com/questions/1268732/how-to-hide-tab-bar-tabstrip
 ## Non-apt program installations
 
 * Use Applets config to download and add [Pomodoro timer](https://cinnamon-spices.linuxmint.com/applets/view/131) in task bar.
-* [Install slack with flatpak](https://flathub.org/apps/details/com.slack.Slack) from the software manager & sign in. - Slack promote the snap version but that's not installed by default.
 * Install [jetbrains toolbox](https://www.jetbrains.com/toolbox/app/)
+* Software manager:
+	* [Slack with flatpak](https://flathub.org/apps/details/com.slack.Slack)
+		* sign in
+		* (Slack promote the snap version but that's not installed by default)
+	* Telegram desktop (flatpak)
+	* Signal (flatpak)
 
 ## SSH
 
