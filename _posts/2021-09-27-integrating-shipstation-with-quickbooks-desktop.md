@@ -31,6 +31,7 @@ Here's two pieces of software that can connect the two systems together:
 * <https://www.syncwithconnex.com/>
 * Connex is a bit like Codeless BPA in that it enables a flow of orders, but specific to QuickBooks rather than having many connectors on both sides.
 * This page lists exactly what pieces of data will be transferred: <https://help.syncwithconnex.com/hc/getting-started-with-shipstation>
+* [ShipStation help page on Connex for QuickBooks](https://help.shipstation.com/hc/en-us/articles/360026142191#UUID-b13db029-1f01-b9b8-52f3-71e0c4caa0be)
 * The [base price for Connex is $199/month](https://www.syncwithconnex.com/products-2/) at time of writing.
 
 ## Codeless BPA
@@ -47,6 +48,29 @@ setting up, so choosing which to go with is going to come down to which option
 fits your businesses needs better now and in the longer term. Connex will solve
 the immediate problem, but Codeless has more connections you can use in the
 future.
+
+## DBSync
+
+* <https://www.mydbsync.com/workflow/shipstation-quickbooks-integration>
+* Cloud and On-Premise offerings.
+* "Chat for pricing"
+
+## Unify by Webgility
+
+* ShipStation integration: <https://www.webgility.com/integrations/shipstation>
+* QuickBooks desktop integration: <https://www.webgility.com/integrations/quickbooks>
+* [From $39/month billed annually](https://www.webgility.com/pricing) at time of writing.
+* [ShipStation integration help page](https://help.shipstation.com/hc/en-us/articles/360025856492-Unify-by-Webgility?queryID=2ab3382fc895786ba9cda0cfbc556a5b).
+
+## Automate.io
+
+* <https://automate.io/integration/quickbooks/shipstation>
+* [From free to $159/month](https://automate.io/pricing)
+
+## TradeGecko (retired)
+
+* This is [being retired](https://www.tradegecko.com/sunset), but mentioned for completeness.
+* <https://support.tradegecko.com/hc/en-us/articles/201825933-ShipStation-Integration-Setup-Guide>
 
 ## To integrate now, or to change technology?
 
