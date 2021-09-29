@@ -140,8 +140,9 @@ Reference: <https://superuser.com/questions/1268732/how-to-hide-tab-bar-tabstrip
 	* [Slack with flatpak](https://flathub.org/apps/details/com.slack.Slack)
 		* sign in
 		* (Slack promote the snap version but that's not installed by default)
-	* Telegram desktop (flatpak)
-	* Signal (flatpak)
+	* Telegram desktop (flatpak) - connect phone
+	* Signal (flatpak) - connect phone
+	* Zoom (flatpak) - sign in
 
 ## SSH
 
