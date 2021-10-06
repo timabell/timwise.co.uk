@@ -239,3 +239,9 @@ Registered address: Unit 4, Vista Place, Coy Pond Business Park, Ingworth Road, 
   });
 })();
 </script>
+
+## Beyond GTD
+
+I still struggle with what to do *today* even with GTD in place. I've found the (paid) [Sunsama](https://sunsama.com/) app to be a game changer, especially as I transition to full business owner from sole contractor. You could do it without, but having an app that continuously reminds you what you planned to do today & this week makes sticking to priorities so much easier.
+
+![Sunsama app asking "what do you want to get done today?"](/assets/gtd-sunsama.png)
