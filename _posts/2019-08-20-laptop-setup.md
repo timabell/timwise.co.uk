@@ -143,6 +143,7 @@ Reference: <https://superuser.com/questions/1268732/how-to-hide-tab-bar-tabstrip
 	* Telegram desktop (flatpak) - connect phone
 	* Signal (flatpak) - connect phone
 	* Zoom (flatpak) - sign in
+	* [Give flatpak access wider home folder access](https://askubuntu.com/questions/1086529/how-to-give-a-flatpak-app-access-to-a-directory/1247345#1247345) (for sending pics) with [flatseal](https://flathub.org/apps/details/com.github.tchx84.Flatseal)
 
 ## SSH
 
