@@ -160,6 +160,7 @@ Reference: <https://superuser.com/questions/1268732/how-to-hide-tab-bar-tabstrip
 * Install [jetbrains toolbox](https://www.jetbrains.com/toolbox/app/)
 * [Install flatpak apps from dotmatrix](https://github.com/timabell/dotmatrix/blob/master/software/flatpaks.sh), sign in to them all
 	* [Give flatpak access wider home folder access](https://askubuntu.com/questions/1086529/how-to-give-a-flatpak-app-access-to-a-directory/1247345#1247345) (for sending pics) with [flatseal](https://flathub.org/apps/details/com.github.tchx84.Flatseal)
+* Install all the other things in [dotmatrix/software](https://github.com/timabell/dotmatrix/tree/master/software)
 
 ## SSH
 
