@@ -154,9 +154,12 @@ Reference: <https://superuser.com/questions/1268732/how-to-hide-tab-bar-tabstrip
 	* [Slack with flatpak](https://flathub.org/apps/details/com.slack.Slack)
 		* sign in
 		* (Slack promote the snap version but that's not installed by default)
-	* Telegram desktop (flatpak) - connect phone
-	* Signal (flatpak) - connect phone
-	* Zoom (flatpak) - sign in
+	* [Telegram desktop (flatpak)](https://flathub.org/apps/details/org.telegram.desktop)
+    * connect to phone
+	* [Signal desktop (flatpak)](https://flathub.org/apps/details/org.signal.Signal)
+    * connect to phone
+	* [Zoom (flatpak)](https://flathub.org/apps/details/us.zoom.Zoom)
+    * sign in
 	* [Give flatpak access wider home folder access](https://askubuntu.com/questions/1086529/how-to-give-a-flatpak-app-access-to-a-directory/1247345#1247345) (for sending pics) with [flatseal](https://flathub.org/apps/details/com.github.tchx84.Flatseal)
 
 ## SSH
