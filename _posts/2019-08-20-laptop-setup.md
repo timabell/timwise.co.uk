@@ -100,6 +100,13 @@ software/delta.sh
 # etc
 ```
 
+## Link local git config
+
+```
+cd ~
+ln -s ~/Documents/config/.gitconfig.local
+```
+
 ## Desktop/system config
 
 * Setup touchpad
