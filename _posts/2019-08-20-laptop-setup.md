@@ -184,7 +184,7 @@ refs:
 
 ## Shutter
 
-* Change default save location to `~/Documents/screenshots/shutter`
+* Change default save location to `~/tmp/shutter` (new folder)
 
 ## Thunderbird
 
