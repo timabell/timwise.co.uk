@@ -8,6 +8,14 @@ This is mostly for my benefit YMMV. Used for XPS13 and XPS15. Last run with Linu
 
 Things to go from blank machine to fully functioning work laptop.
 
+## Why not use machine images?
+
+Because when you want to upgrade your OS image you have to do this anyway.
+
+## But this will break!
+
+Indeed, and it does, a continuous labour of love. Ideas welcome!
+
 ## OS install
 
 * [Download mint cinnamon x64 torrent](https://linuxmint.com/download.php)
