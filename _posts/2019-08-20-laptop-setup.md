@@ -139,6 +139,13 @@ ln -s ~/Documents/config/.gitconfig.local
 
 Reference: <https://superuser.com/questions/1268732/how-to-hide-tab-bar-tabstrip-in-firefox-57-quantum#1268734>
 
+## Startup list
+
+* Menu > Startup Applications
+* Adjust to current tastes
+* Add additional startup apps:
+  * Syncthing GTK
+
 ## Non-apt program installations
 
 * Use Applets config to download and add [Pomodoro timer](https://cinnamon-spices.linuxmint.com/applets/view/131) in task bar.
