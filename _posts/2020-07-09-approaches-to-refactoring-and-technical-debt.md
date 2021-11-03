@@ -213,3 +213,4 @@ If you want to avoid the task at hand by reading the whole internet in the hope 
 * <https://codeclimate.com/blog/10-point-technical-debt-assessment/>
 * <http://thinkapps.com/blog/development/technical-debt-calculation/>
 * <https://www.productplan.com/glossary/technical-debt/>
+* <https://leadership.garden/tips-on-prioritizing-tech-debt>
