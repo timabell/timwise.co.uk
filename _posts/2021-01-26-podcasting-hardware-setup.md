@@ -3,8 +3,6 @@ title: Podcasting hardware setup
 layout: post
 ---
 
-Because you asked.
-
 ## Current recording/playback setup
 
 * [Samson Q2U cardiod XLR/USB Microphone](https://www.amazon.co.uk/gp/product/B001R747SG/) ~ £90
@@ -23,6 +21,8 @@ Because you asked.
 I started with a [Jabra Evolve 65 wireless headset](https://www.amazon.co.uk/gp/product/B074BPJRBW/) (~£130 because covid prices) but that heavily processes voice so while it's great for conference calls it's not good for anything beyond your third episode as people will unsubscribe just for the sound quality. Still use them for on the go conference calls and phone calls, and occasionally music (though my phone's bluetooth is currently borked).
 
 I tried a [Blue Microphones Snowball USB Microphone](https://www.amazon.co.uk/gp/product/B002OO18NS/) (~£75) next, but that picks up *everything* even in it's alleged cardioid mode.
+
+## Out of my price range
 
 Some of my friends who take it more seriously splashed out on a [Shure SM7B XLR Mic](https://www.shure.com/en-GB/products/microphones/sm7b) at a mere £389, and you have to by an XLR mixer to run it. I have to say they sound lurvely, and when they knock it you hardly hear it so it's got excellent vibration isolation built in.
 
