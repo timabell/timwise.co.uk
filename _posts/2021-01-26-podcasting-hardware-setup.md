@@ -26,6 +26,9 @@ I tried a [Blue Microphones Snowball USB Microphone](https://www.amazon.co.uk/gp
 
 Some of my friends who take it more seriously splashed out on a [Shure SM7B XLR Mic](https://www.shure.com/en-GB/products/microphones/sm7b) at a mere £389, and you have to by an XLR mixer to run it. I have to say they sound lurvely, and when they knock it you hardly hear it so it's got excellent vibration isolation built in.
 
-## Webcam
+## Video
 
-I also have the [Logitech C920 HD Pro Webcam](https://www.amazon.co.uk/gp/product/B006A2Q81M/) (now at ~£105 because of covid lockdown demand for webcams) which I have running to chat to co-hosts, but don't bother recording or uploading anywhere.
+Lately I've started [streaming the recording](https://www.youtube.com/watch?v=5KBFcuRWQ5s&t=1107s) of the show so it's worth mentioning the video (also for videoconferencing and work)
+
+* [Logitech C920 HD Pro Webcam](https://www.amazon.co.uk/gp/product/B006A2Q81M/) ~ £60
+* [Neewer USB lights x2](https://www.amazon.co.uk/gp/product/B07YFY7H7J) ~ £51
