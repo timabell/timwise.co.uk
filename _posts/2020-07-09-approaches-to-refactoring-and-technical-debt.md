@@ -3,6 +3,8 @@ title: Approaches to refactoring, technical debt and legacy code
 layout: post
 ---
 
+![word cloud from article](/assets/debt-cloud.png)
+
 Sometimes a codebase has an overwhelming amount of "terrible" stuff that as a developer you almost can't help but just diving in and fixing it. Doing this without thinking too hard can result in many variations of failure, such as:
 
 * Upsetting the people paying you because you are doing something they don't consider important.
