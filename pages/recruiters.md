@@ -98,12 +98,17 @@ recruiters!).
 
 ## My public key
 
-My current public key `28CD F8EA` for `tim@timwise.co.uk` is [available on the
-public
-keyservers](http://keys.gnupg.net/pks/lookup?op=index&search=tim%40timwise.co.uk&fingerprint=on),
-or directly from my website: [public-key.txt](/public-key.txt)
+My current public key `28CD F8EA` for `tim@timwise.co.uk`.
 
-Primary key fingerprint: `74D4 2A4C 9055 07C5 4A7E  3C9C 26C6 E087 28CD F8EA`.
+You can obtain the key for verifying from:
+
+* My website: [public-key.txt](/public-key.txt)
+* [keyserver.ubuntu.com](http://keyserver.ubuntu.com/pks/lookup?search=tim%40timwise.co.uk&fingerprint=on&op=index) (synchronised with other key servers)
+* [keys.opengpg.org](https://keys.openpgp.org/search?q=tim@timwise.co.uk)
+
+Full primary key fingerprint: `74D4 2A4C 9055 07C5 4A7E  3C9C 26C6 E087 28CD F8EA`.
+
+Learn more about the state of sharing gpg keys: <https://superuser.com/questions/227991/where-to-upload-pgp-public-key-are-keyservers-still-surviving>
 
 ## Technical details
 
