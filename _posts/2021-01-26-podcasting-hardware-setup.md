@@ -35,6 +35,7 @@ Lately I've started [streaming the recording](https://www.youtube.com/watch?v=5K
 * [Microsoft sidewinder X4 keyboard](https://www.amazon.co.uk/Microsoft-JQD-00006-Sidewinder-X4-Keyboard/dp/B0037KLSS8)
 * [Logitech M570 trackball](https://www.amazon.co.uk/gp/product/B0042BBR2S) - I find the continuous thumb+finger grip needed for a mouse uncomfortable.
 * [HP M477fdw laserjet + sheet feed scanner](https://www.amazon.co.uk/gp/product/B0151VIQLW) because life's too short for manually scanning one page at a time. Configured to automatically send scans to server over smb, then sync'd to all devices with syncthing. Win.
+* [Cocoon security camera](https://www.amazon.co.uk/Cocoon-Security-Multi-Room-Protection-Compatible/dp/B0120BP0V0) - one of the few with no monthly fee, not sure there's a future in this one
 * Giant mug for enough tea for an hour or two
 
 ## Pics
