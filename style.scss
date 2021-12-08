@@ -21,10 +21,10 @@ html {
 
 body {
   background: #fff;
-  font-family: 'FuturaPTLight';
+  font-family: $helveticaNeue;
   color: #555;
   line-height: 1.7;
-  font-size: 15pt;
+  font-size: 12pt;
 }
 
 .container {
@@ -35,9 +35,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'FuturaPTLight';
+  font-family: $helveticaNeue;
   color: $darkerGray;
-  font-weight: bold;
 
   line-height: 1.7;
   margin: 1em 0 15px;
