@@ -16,7 +16,7 @@ Personally I dislike the "**rebase**" and "**squash**" buttons on GitHub because
 
 ## GitHub flow: good
 
-My preferred workflow is to use the normal "merge" button every time. This is sometimes know as "[Git Flow](https://guides.github.com/introduction/flow/)".
+My preferred workflow is to use the normal "merge" button every time. This is sometimes know as "[GitHub Flow](https://guides.github.com/introduction/flow/)".
 
 In my view you should generate your commits, sha-1 and all, exactly as they will be merged into `main`, and then as a separate merge commit those should be combined into `main`.
 
