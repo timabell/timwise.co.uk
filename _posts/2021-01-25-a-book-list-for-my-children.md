@@ -12,6 +12,9 @@ I've added a note to each explaining why you should read it, and when you might 
 1. [The 7 habits of highly effective people; Stephen Covey](https://www.amazon.co.uk/Habits-Highly-Effective-People/dp/0684858398)
 	* Why? It's important to know you can change who you are and be a better person, and know how to do so. You can be better with relationships and those around you. This book is an inspiration in personal growth.
 	* When to read: as a young adult, and again when you're older and wiser. Or right now if you're already both of those.
+1. [Daring Greatly by Brené Brown](https://www.amazon.co.uk/Daring-Greatly-Courage-Vulnerable-Transforms-ebook/dp/B00APRW2WC)
+	* Why? Our society teaches all the wrong lessons around guilt, shame and vulnerability. Our default responses to that are self-destructive. Brené shows us how to be brave enough to accept the challenges of life without hurting others to protect ourselves. The difference between guilt ("I did something that was wrong and regret it") and shame ("I'm a bad person") is often misunderstood or ignored entirely. When you think clearly about this it becomes clear that guilt is good and shame is bad.
+	* When to read: As early as you can, and maybe again if you find yourself falling into the traps of self-shaming, shaming others or not having the courage to do hard things for fear of failure.
 1. [Nonviolent Communication; Marshall Rosenberg](https://www.amazon.co.uk/Nonviolent-Communication-Create-Relationships-Harmony/dp/B00TIWFAV0/)
 	* Why? Somewhat surprisingly perhaps the calm and empathic approach to communication is superior; but that's easier said than done with our brains evolved for times gone by.
 	* When to read: As soon as you argue with someone and wonder what it achieved or it cost you dearly. Ideally before that happens.
