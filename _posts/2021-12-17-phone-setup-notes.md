@@ -167,7 +167,7 @@ I have run a [google nexus](https://en.wikipedia.org/wiki/Google_phone) 4 previo
 
 Someone told me that a particular Sony phone was flashable, I researched it, found instructions on flashing it, ordered one... and couldn't flash it. Discussing with Sony support it transpired that that precise model was sometimes flashable and sometimes not, and the only way to find out was to order one and look at the serial number. Fuck you Sony. They never have understood the open source movement and look like they still don't. They always treated their kit like appliances not a blend of hardware and software (or firmware) with everything that means for the long term management of the software. It's a shame because they do make nice hardware. I'd still buy a dumb Sony audio amplifier but not much else of theirs. Returned and refunded, try again...
 
-### OnePlus (yay)
+### OnePlus (yay, no wait, boo)
 
 This is my choice for the new [OnePlus 9 Pro](https://www.oneplus.com/uk/9-pro) I'm trying to set up, and the [OnePlus 5T](https://www.oneplus.com/uk/support/spec/oneplus-5t) I've been using for more than a couple of years now.
 
@@ -181,6 +181,19 @@ I now have had the OnePlus 9 Pro sat in a drawer for two months waiting for me t
 
 The OnePlus comes with OxygenOS (an android derivative) preinstalled, but not rooted and with a locked bootloader. To get root you have to wipe the phone which means it's important to do it before you start using it. It's caused me no end of pain that you can't use [titanium backup](https://www.titaniumtrack.com/titanium-backup.html) to backup all your data without root, and you can't get root without losing your files. I understand why (so you can't just unlock a phone to steal all the data) but that doesn't make it less of a pain in the arse. Bonus points for operating system updates (over the air / OTA or just normal updates) de-root the phone.
 
+[XDA Developers detailed page on the OnePlus 9 including pro](https://www.xda-developers.com/oneplus-9/)
+
+---
+
+But wait, there's trouble in paradise.
+
+The founder [Carl Pei left OnePlus in 2020](https://techcrunch.com/2020/10/16/oneplus-co-founder-carl-pei-confirms-he-has-left-the-company/) after 7 years at the company.
+
+[OnePlus was funded by an existing phone company called Oppo](https://www.androidauthority.com/oneplus-oppo-design-894687/). (And [both OnePlus and Oppo are part of BBK](https://www.androidauthority.com/oneplus-oppo-1177898/))
+
+It seems that [OnePlus is basically now dead in the water](https://www.androidauthority.com/oneplus-oppo-complete-opinion-3025477/) as a brand if not a company in its own right and will be sucked back into whatever the mothership has to offer, breaking everything along the way by trying to merge Oppo's colorOS with OnePlus's OxygenOS into an unholy mess.
+
+Fuck.
 
 ## So what OS options does that leave?
 
@@ -204,13 +217,27 @@ I've got more to learn/research here so I'll expand this section as and when I l
 
 I now need to look into the below and decide what to run (maybe with some trial flashing). Once that's done it'll be on to the slog of setting up the actual device how I want it.
 
-#### OxygenOS
+#### OxygenOS from OnePlus - used to be good, now dying a painful death
+
+See the section on OnePlus hardware above. The company and OS are in trouble now the founder has left and the operating system has been merged with Oppo's colorOS (read "fucked")
 
 * <https://www.oneplus.com/uk/oxygenos>
 
 This is the default for the OnePlus device I have, which means it's the most likely to make the hardware perform at its best.
 
-After a wobble on data reporting (which I'm not too bothered about) they seem to have largely sorted out their privacy game... apart from being full of google services just like the rest of the mainstream android devices. To play or not to play...
+After a [wobble on data reporting](https://www.theverge.com/circuitbreaker/2017/10/11/16457954/oneplus-phones-collecting-sensitive-data) (which I'm not too bothered about) they seem to have largely sorted out their privacy game... apart from being full of google services just like the rest of the mainstream android devices. To play or not to play...
+
+Here's [the original article disclosing OnePlus silently sending data home](https://www.chrisdcmoore.co.uk/post/oneplus-analytics/).
+
+It seems the latest news is that Oxygen is falling apart. [XDA Developers: "OxygenOS 12 for the OnePlus 9 series is littered with bugs"](https://www.xda-developers.com/oneplus-9-oxygenos-12-stable-update-bugs/)
+
+> "It was shit after merge with #Oppo and getting worst day by day. I really like #OnePlus device but #OxygenOS is dead now." ~ [@rahulawanjari, 9 Dec 2021, twitter](https://twitter.com/rahulawanjari/status/1468885793691168771?s=20)
+
+Crap, there goes another good option. As if the mobile phone space wasn't horrific enough already.
+
+In fact OxygenOS 12 was so bad, that they've just [OnePlus pulled the plug on the entire OxygenOS 12 upgrade!!](https://www.androidpolice.com/oneplus-is-pulling-its-oxygenos-12-update-for-the-op-9-and-9-pro/)
+
+Bonus points for the anti-competitive practice of [actively denying access to hardware features (secondary cameras)](https://www.gizmochina.com/2021/12/13/oxygenos-12-blocks-access-to-auxiliary-cameras-on-third-party-camera-apps/). I hope the courts slap them down for this clearly anti-competitive behaviour.
 
 #### LineageOS
 
@@ -249,3 +276,4 @@ After a wobble on data reporting (which I'm not too bothered about) they seem to
 ## End... for now
 
 That's as far as I've got today, I'll be editing this post as I progress with the install so do come and look again. Also suggestions and questions welcome.
+
