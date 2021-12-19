@@ -46,7 +46,7 @@ iOS certainly does have some unique advantages that I will be sad to miss out on
 
 "So you must be an android dude then" you say. Well no because frankly android isn't much better these days. Ever heard of [AOSP? (The Android Open Source Project)](https://source.android.com/) Well that's an ever-shrinking piece of what people call Android these days. Piece by piece [google have been replacing open-source android with proprietary rewrites](https://arstechnica.com/gadgets/2018/07/googles-iron-grip-on-android-controlling-open-source-by-any-means-necessary/). Combine that with proprietary drivers for the endless churn in hardware. If you can even install ASOP on a device good luck getting much to work. The idea of android being "the open source one" in the true spirit of the GPL is a distant and fading memory.
 
-### Something other than iOS/Android?
+### Something other than iOS or Android and its derivatives?
 
 It's all about the apps.
 
@@ -86,9 +86,9 @@ After many years of being the goto android-variant mobile OS for non-conformists
 
 #### Promising futures
 
-Two currently active non-android physical phone projects, and several more ongoing linux based (i.e. non-android) mobile-friendly operating system efforts. Although these will never cross the radar of most people just like linux didn't for many years) these are important foundational projects.
+Two currently active non-android physical phone projects, and several more ongoing Linux based (i.e. non-android) mobile-friendly operating system efforts. Although these will never cross the radar of most people just like Linux didn't for many years) these are important foundational projects.
 
-##### Purism's Librem 5 Phone running PureOS (Linux)
+##### Purism's Librem 5 phone hardware running PureOS (Linux)
 
 * [Librem 5 phone](https://shop.puri.sm/shop/librem-5/)
 * [PureOS](https://pureos.net/)
@@ -103,13 +103,15 @@ Because of the "app" problem I'm not ready to make the jump to a Linux based sma
 
 Personally I'm happy with the OnePlus compromise of specification plus apps versus openness for now, but I'm very glad to see Purism pushing the frontier of openness and maybe I'll join their users one day.
 
-##### PinePhone Pro
+##### PinePhone Pro phone hardware (Linux, for now)
 
-The [PinePhone Pro](https://www.pine64.org/pinephonepro/) is a low spec but very open linux phone. A follow up to the original PinePhone.
+The [PinePhone Pro](https://www.pine64.org/pinephonepro/) is a low spec but very open Linux phone. A follow up to the original PinePhone.
 
 "pre-orders from developers on October 15, 2021, and expect to have them delivered by December"
 
 Phones like this are important in building momentum in the capability of non iOS/Android software even though they will never be mainstream phones themselves.
+
+This is a Linux phone, though in theory [GloDroid](https://glodroid.github.io/) will provide a build of Android (AOSP) for it, but don't hold your breath. - [OmgUbuntu article on PinePhone+GloDroid](https://www.omgubuntu.co.uk/2020/07/glodroid-android-for-pinephone-allwinner).
 
 ##### UBPorts Ubuntu Phone (Linux)
 
@@ -123,7 +125,11 @@ Learn more about [Plasma on Wikipedia](https://en.wikipedia.org/wiki/Plasma_Mobi
 
 ##### Mobian - debian linux for phones
 
-[Mobian](https://mobian-project.org/) is encouraging to see. Debian linux's strenth has always been its governance and stability. Debian has been a rock in the stormy seas of open source even as different people have passed through its team. This is because debian has a strong set of organisational rules that are above and beyond any individual contributor. The fact that they are working on a mobile variant is very encouraging.
+[Mobian](https://mobian-project.org/) is encouraging to see. Debian Linux's strenth has always been its governance and stability. Debian has been a rock in the stormy seas of open source even as different people have passed through its team. This is because debian has a strong set of organisational rules that are above and beyond any individual contributor. The fact that they are working on a mobile variant is very encouraging.
+
+##### PostmarketOS (Linux)
+
+[PostmarketOS](https://postmarketos.org/) is an Alpine Linux (i.e. very small) variation designed to breath life into otherwise obsolete hardware. I expect this will become more useful as phone hardware stops becoming utterly obsolete due to major changes in basic expectations and environment. 
 
 ## Secure boot
 
@@ -131,7 +137,7 @@ There's the secure boot chain and device locking. This can be a good thing or a 
 
 It is true that your device is less "secure" with the bootloader unlocked (as the phone likes to scream at you every time you boot it up), at least to attackers with physical access to your device, however I think that's worth the trade for full control of your device (that you paid for and "own").
 
-[Security is not an absolute](https://www.isaca.org/resources/isaca-journal/issues/2021/volume-6/evidence-based-prioritization-of-cybersecurity-threats). You have to consider cost, inconvenience, human behaviour, the value of an attack target, the motivations of different actors (state, organised crime, hackers, opportunist thieves, trolling friends etc). For me an encrypted data partition and a passcode will do for physical security. In theory you can get full secure boot chain for custom operating systems but even on a linux laptop this is non-trivial currently.
+[Security is not an absolute](https://www.isaca.org/resources/isaca-journal/issues/2021/volume-6/evidence-based-prioritization-of-cybersecurity-threats). You have to consider cost, inconvenience, human behaviour, the value of an attack target, the motivations of different actors (state, organised crime, hackers, opportunist thieves, trolling friends etc). For me an encrypted data partition and a passcode will do for physical security. In theory you can get full secure boot chain for custom operating systems but even on a Linux laptop this is non-trivial currently.
 
 There's an important difference here between google/apple considering the security of their entire device eco-system in the hands of every kind of user, and the security of an individual's device customised to suit them. If google turn off secure boot for everyone then it makes it that much more likely that someone will successfully develop and spread an android virus that corrupts the boot chain. If I turn it of it's a rounding error on the probability, and a marginal difference to the "security" of my own device.
 
@@ -189,12 +195,12 @@ It's worth mentioning that some (most/all?) phone manufacturers make customizati
 
 I don't follow this stuff all the time so I had to do some googling ([duckduckgo](https://duckduckgo.com/)-ing). Here's some useful comparisons I turned up:
 
-* [It's FOSS, Open Source Mobile OS Alternatives To Android](https://itsfoss.com/open-source-alternatives-android/) - mostly pure linux things that don't have the android app ecosystem
+* [It's FOSS, Open Source Mobile OS Alternatives To Android](https://itsfoss.com/open-source-alternatives-android/) - mostly pure Linux things that don't have the android app ecosystem
 * [PC Magazine, Break Away From Android: 7 Free Open-Source Mobile OSes to Try](https://uk.pcmag.com/linux/131295/break-away-from-android-7-free-open-source-mobile-oses-to-try)
 
 I've got more to learn/research here so I'll expand this section as and when I learn more. Think of this as a [bliki](https://www.webopedia.com/definitions/bliki/). There's a full history in git (link at end).
 
-### Alternatives to iOS and stock Android
+### Android derivative options
 
 I now need to look into the below and decide what to run (maybe with some trial flashing). Once that's done it'll be on to the slog of setting up the actual device how I want it.
 
