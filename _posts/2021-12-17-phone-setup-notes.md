@@ -189,7 +189,8 @@ It's worth mentioning that some (most/all?) phone manufacturers make customizati
 
 I don't follow this stuff all the time so I had to do some googling ([duckduckgo](https://duckduckgo.com/)-ing). Here's some useful comparisons I turned up:
 
-* <https://itsfoss.com/open-source-alternatives-android/> - mostly pure linux things that don't have the android app ecosystem
+* [It's FOSS, Open Source Mobile OS Alternatives To Android](https://itsfoss.com/open-source-alternatives-android/) - mostly pure linux things that don't have the android app ecosystem
+* [PC Magazine, Break Away From Android: 7 Free Open-Source Mobile OSes to Try](https://uk.pcmag.com/linux/131295/break-away-from-android-7-free-open-source-mobile-oses-to-try)
 
 I've got more to learn/research here so I'll expand this section as and when I learn more. Think of this as a [bliki](https://www.webopedia.com/definitions/bliki/). There's a full history in git (link at end).
 
