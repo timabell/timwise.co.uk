@@ -239,6 +239,10 @@ In fact OxygenOS 12 was so bad, that they've just [OnePlus pulled the plug on th
 
 Bonus points for the anti-competitive practice of [actively denying access to hardware features (secondary cameras)](https://www.gizmochina.com/2021/12/13/oxygenos-12-blocks-access-to-auxiliary-cameras-on-third-party-camera-apps/). I hope the courts slap them down for this clearly anti-competitive behaviour.
 
+---
+
+So after discovering that shit-show-in-paradise from OnePlus I could potentially skip OxygenOS 12 and stick to the less f*cked OxygenOS 11, but that doesn't seem like much of a plan so it looks like I'll be skipping any fancy hardware capability and looking for a more open and less broken Android variant. Yet more proof that corporations can't be trusted as guardians of our software for the long term without GPL or at least MIT to stop them from hurting their users sooner or later. Did I mention my podcast is called "Software Should Be Free". Does this horror show give you a hint as to why it's called that?
+
 #### LineageOS
 
 * <https://lineageos.org/>
