@@ -243,27 +243,46 @@ Bonus points for the anti-competitive practice of [actively denying access to ha
 
 So after discovering that shit-show-in-paradise from OnePlus I could potentially skip OxygenOS 12 and stick to the less f*cked OxygenOS 11, but that doesn't seem like much of a plan so it looks like I'll be skipping any fancy hardware capability and looking for a more open and less broken Android variant. Yet more proof that corporations can't be trusted as guardians of our software for the long term without GPL or at least MIT to stop them from hurting their users sooner or later. Did I mention my podcast is called "Software Should Be Free". Does this horror show give you a hint as to why it's called that?
 
-#### LineageOS
+#### LineageOS (yep)
 
-* <https://lineageos.org/>
+[LineageOS](https://lineageos.org/) is the successor to the now defunct CyanogenMod. [See the history of LineageOS and it's relationship to CyanogenMod here on Wikipedia](https://en.wikipedia.org/wiki/LineageOS).
 
-#### Replicant
+CyanogenMod was a bastian of freedom and innovation. I hope Lineage has managed to continue that.
 
-* <https://replicant.us/>
+There does appear to be [a build of LineageOS for the OnePlus 9 pro](https://download.lineageos.org/lemonadep) - I think this is worth trying out.
 
-#### `/e/` (aka Eelo)
+#### Replicant (not yet)
 
-* <https://en.wikipedia.org/wiki//e/_(operating_system)>
-* <https://e.foundation/>
-* <https://itsfoss.com/eelo-mobile-os/>
+"[Replicant](https://replicant.us/) is a fully free Android distribution running on several devices"
+I'm glad this freedom is here but I'm not quite ready to give up every last proprietary thing until there's a bit less of a gap.
 
-#### GrapheneOS
+[Supported devices](https://redmine.replicant.us/projects/replicant/wiki#Supported-devices) shows purely Samsung Galaxy devices currently.
 
-* <https://grapheneos.org/>
+#### /e/ (aka Eelo) (nope)
 
-#### Calyxos
+What a bizarre name! Good luck googling this.
 
-* <https://calyxos.org/>
+> "We build desirable, open source, privacy-enabled smartphone operating systems."
+
+This Android derivative is focussed on privacy; eliminating as much data collection as possible. Laudable but not my main focus right now.
+
+* [Main site: e.foundation](https://e.foundation/)
+* [/e/ on wikipedia](https://en.wikipedia.org/wiki//e/_(operating_system))
+* [itsfoss.com/eelo-mobile-os](https://itsfoss.com/eelo-mobile-os/)
+
+#### GrapheneOS (nope)
+
+> "[GrapheneOS](https://grapheneos.org/) - The private and secure mobile operating system with Android app compatibility. Developed as a non-profit open source project."
+
+[GrapheneOS only officially supports Pixel phones](https://grapheneos.org/faq#supported-devices)
+
+#### CalyxOS (nope)
+
+> [CalyxOX](https://calyxos.org/) - "Your Phone Should Be Private Everyone needs a phone. Not everyone wants to be spied on. Reclaim your privacy with CalyxOS."
+
+Supports Pixel devices and one Xiaomi phone (never heard of it).
+
+Seems to be pushing Signal and Tor so is super-privacy focussed.
 
 ## Todo
 
