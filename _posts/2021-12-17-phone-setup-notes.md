@@ -46,6 +46,23 @@ iOS certainly does have some unique advantages that I will be sad to miss out on
 
 "So you must be an android dude then" you say. Well no because frankly android isn't much better these days. Ever heard of [AOSP? (The Android Open Source Project)](https://source.android.com/) Well that's an ever-shrinking piece of what people call Android these days. Piece by piece [google have been replacing open-source android with proprietary rewrites](https://arstechnica.com/gadgets/2018/07/googles-iron-grip-on-android-controlling-open-source-by-any-means-necessary/). Combine that with proprietary drivers for the endless churn in hardware. If you can even install ASOP on a device good luck getting much to work. The idea of android being "the open source one" in the true spirit of the GPL is a distant and fading memory.
 
+#### Root and backups
+
+One of the big drivers I've had for getting a non-standard phone setup is that I don't want to rely on on google to backup everything on my phone in case it dies, but because Android is by default locked in by secure boot and doesn't give the user any root access or ability to get root access that's a bit of a problem for the normal method of backing up a device.
+
+A laptop backup is a question of backing up `/home` plus a [dotmatrix/bootstrap](https://github.com/timabell/dotmatrix) setup for regaining interesting configuration etc.
+
+Android is a bit more complex because it has a couple of storage areas:
+
+* an [emulated] 'sdcard' this is kinda like `/home` on a laptop and has things like downloaded files; some of the apps use this to save things to
+* storage for every individual app (I learned about the existence of this by losing all my app data)
+
+Every app on android runs under a separate userId, which allows Android to ensure that apps can't read each other's data. This is a good thing for security, but that means if you install a "backup app" it can't read any of the data you actually want backed up. And it can't get root because that's not available to you as a user or to any non-system apps.
+
+So that means to backup independently of google, you need root, and to get root you need to unlock the whole boot chain.
+
+I did have root on my OnePlus 5t, but an operating system update helpfully removed that for me... breaking my backups... and root access couldn't be restored without wiping the phone... including the data I didn't have backed up because it had broken my backups. Gah. Off the back of that experience I want to make sure that I'm not set up to fight some bloody vendor that doesn't believe I should have root.
+
 ### Something other than iOS or Android and its derivatives?
 
 It's all about the apps.
