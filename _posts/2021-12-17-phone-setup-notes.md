@@ -151,6 +151,10 @@ Android also secure their boot chain by default, however whether you can unlock 
 
 This means choose your device and provider carefully if you wish to unlock without wasting your time trying to jailbreaking a locked device.
 
+### Artificial app limitations when unlocked
+
+Android has a system that allows apps to hide or limit functionality called [SafetyNet](https://www.lineageos.org/Safetynet/). For apps like NetFlix that won't even show in the play store for unlocked phones we're into the mega-discussion that is [DRM](https://en.wikipedia.org/wiki/Digital_rights_management). In short if a content creator wants to lock their device to a locked-down platform that's fine be me but I won't be using those platforms for my main computing, instead I might have them as throw-away additional appliances like the google chromecast, or samsung TV's built in junk. What really matters here is what alternatives you have available to you. For google pay, I'm very slightly sad to miss out but my contactless debit card still works fine so I'll live.
+
 ## Hardware choices
 
 Given the "app" problem, any devices not capable of running Android or a derivative are currently out of the running (sad times).
