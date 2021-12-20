@@ -140,7 +140,7 @@ Canonical killed the Ubuntu Phone and the [Ubuntu Touch](https://en.wikipedia.or
 
 Learn more about [Plasma on Wikipedia](https://en.wikipedia.org/wiki/Plasma_Mobile)
 
-##### Mobian - debian linux for phones
+##### Mobian - (Debian Linux for phones)
 
 [Mobian](https://mobian-project.org/) is encouraging to see. Debian Linux's strenth has always been its governance and stability. Debian has been a rock in the stormy seas of open source even as different people have passed through its team. This is because debian has a strong set of organisational rules that are above and beyond any individual contributor. The fact that they are working on a mobile variant is very encouraging.
 
