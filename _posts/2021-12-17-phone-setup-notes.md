@@ -195,6 +195,12 @@ It seems that [OnePlus is basically now dead in the water](https://www.androidau
 
 Fuck.
 
+---
+
+As if that wasn't enough:
+
+> "OnePlus is adding artificial limitations and breaking features via software updates, and there are no indications that they'll improve." ~ GCam Hub, <https://www.celsoazevedo.com/files/android/google-camera/f/post-05/>
+
 ## So what OS options does that leave?
 
 So not iOS and preferably not Android either.
@@ -210,6 +216,7 @@ I don't follow this stuff all the time so I had to do some googling ([duckduckgo
 
 * [It's FOSS, Open Source Mobile OS Alternatives To Android](https://itsfoss.com/open-source-alternatives-android/) - mostly pure Linux things that don't have the android app ecosystem
 * [PC Magazine, Break Away From Android: 7 Free Open-Source Mobile OSes to Try](https://uk.pcmag.com/linux/131295/break-away-from-android-7-free-open-source-mobile-oses-to-try)
+* [GetDroidTips has some more ROMs I haven't looked at](https://www.getdroidtips.com/best-custom-rom-oneplus-9-pro/)
 
 I've got more to learn/research here so I'll expand this section as and when I learn more. Think of this as a [bliki](https://www.webopedia.com/definitions/bliki/). There's a full history in git (link at end).
 
@@ -251,6 +258,10 @@ CyanogenMod was a bastian of freedom and innovation. I hope Lineage has managed 
 
 There does appear to be [a build of LineageOS for the OnePlus 9 pro](https://download.lineageos.org/lemonadep) - I think this is worth trying out.
 
+LineageOS has it's own recovery image, so no need to run TWRP as well.
+
+[Review of LineageOS on XDA Developers](https://www.xda-developers.com/lineageos-18-1-review/)
+
 #### Replicant (not yet)
 
 "[Replicant](https://replicant.us/) is a fully free Android distribution running on several devices"
@@ -284,19 +295,116 @@ Supports Pixel devices and one Xiaomi phone (never heard of it).
 
 Seems to be pushing Signal and Tor so is super-privacy focussed.
 
+## Recovery images
+
+### TWRP (great but not needed)
+
+Previously I've used TWRP, and I got as far as flashing it before discovering [Lineage has it's own recovery image](https://www.xda-developers.com/lineageos-18-1-review/)
+* Unlock bootloader <https://www.getdroidtips.com/oneplus-9-pro-unlock-bootloader/>
+* Download TWRP for lemonadep <https://twrp.me/oneplus/oneplus9pro.html> - [3.6 twrp download for lemonadep](https://eu.dl.twrp.me/lemonadep/twrp-3.6.0_11-0-lemonadep.img.html)
+* Get twrp public gpg/pgp public key to be able to verify `.asc` files <https://twrp.me/faq/pgpkeys.html>
+* Flash TWRP (TeamWin Recovery Project?) <https://twrp.me/>
+	* Power off the phone
+	* Hold down volume-down and power buttons
+	* Select english
+	* select reboot to fastboot
+	* connect the usb cable (usb-c to usb-c doesn't work on my dell xps, use the bigger usb 3 A to usb-c cable)
+	* run `fastboot devices` on the laptop (connected over usb), you should see your phone listed
+	* boot the phone from the local twrp image `fastboot boot twrp-3.6.0_11-0-lemonadep.img`, phone boots up into twrp gui
+	* advanced > flash current twrp
+	* there's a note about bootloops, but the options isn't there so skipping that
+	* reboot > power off (says current slot: A, just for the record)
+	* power on with volume-down held again, boots straight to twrp this time
+
+### LineageOS's recovery image
+
+Came across this here, need to investigate further: <https://www.xda-developers.com/lineageos-18-1-review/>
+
+## Installing LineageOS on OnePlus 9 Pro
+
+It begins. [LineageOS](https://lineageos.org/).
+
+The oneplus 9 pro device is codename `lemonadep`.
+
+Useful howtos:
+
+* [LineageOS official installation wiki page for OnePlus 9 pro lemonadep](https://wiki.lineageos.org/devices/lemonadep/install)
+* [How-To Geek: How to Install LineageOS on Android](https://www.howtogeek.com/348545/how-to-install-lineageos-on-android/)
+* [Android Authority: Beginner’s guide to installing LineageOS on your Android device](https://www.androidauthority.com/lineageos-install-guide-893303/) - lots more context and screenshots
+* [LineageOSROMS (unofficial)](https://lineageosroms.com/install-lineageos/) - a very short 8 step guide
+	* [LineageOSROMS (unofficial) full guide](https://lineageosroms.com/lemonadep/)
+* [GetDroidTips](https://www.getdroidtips.com/lineage-os-18-1-oneplus-9-9-pro/) - not sure there's much extra useful here
+* 
+
+[XDADevelopers coverage of Lineage support for OnePlus 9 pro](https://www.xda-developers.com/lineageos-18-builds-oneplus-9-pro-razer-phone-2-lenovo-p2/)
+
+The steps:
+
+* Download latest nightly (there's no stable/unstable on this): <https://download.lineageos.org/lemonadep> - this has both the ROM (OS image) and the recovery image.
+* Download copy-partitions <https://androidfilehost.com/?fid=2188818919693768129> (as per wiki)
+	* The sha256 for the copy I have is `200877dfd0869a0e628955b807705765a91e34dff3bfeca9f828e916346aa85f  copy-partitions-20210323_1922.zip`
+* Verify all the sha256 sums: `sha256sum -c *.sha256`
+* Boot to fastboot
+* flash the lineage recovery:
+	```
+	tim@max:~/Downloads/oneplus9pro/LineageOS
+	$ fastboot flash boot lineage-18.1-20211214-recovery-lemonadep.img
+	Sending 'boot_a' (196608 KB)                       OKAY [  6.113s]
+	Writing 'boot_a'                                   OKAY [  0.655s]
+	Finished. Total time: 6.985s
+	```
+* copy partitions as instructed
+	* boot into recovery (vol-down + power)
+	* "apply update" > "apply from adb" (aka sideload)
+	* `adb sideload copy-partitions-20210323_1922.zip`
+	* Ignore unknown sig and "continue"
+* wipe
+	* boot into recovery (vol-down + power) if not already in it
+	* "format data / factory reset"
+* OS install
+	* boot into recovery (vol-down + power) if not already in it
+	* "apply update" > "apply from adb" (aka sideload)
+		```
+		tim@max:~/Downloads/oneplus9pro/LineageOS
+		$ adb sideload lineage-18.1-20211214-nightly-lemonadep-signed.zip
+		serving: 'lineage-18.1-20211214-nightly-lemonadep-signed.zip'  (~47%)
+		    adb: failed to read command: Success
+		```
+		apparently this is normal, but the failed to flash error on the phone is not, and rebooting drops me back into the existing Oxygen install. Dammit.... Try again
+	* Second attempt ran fine
+    	* step 1/2
+		* step 2/2
+		* then recovery logo comes back up and it just sits there
+		* volume up to the back arrow at the top, power to press it
+		* *then* it says "install complete with status 0" (zero being unix-speak for no-issues)
+		* but it doesn't ever get past the lineage logo when booting, maybe because of the boot of oxygen. hmm
+		* [hard-power-off](https://www.youtube.com/watch?v=y2yB2dRrXiA) by holding down volume-up and power button
+	* take 3,
+		* back to recovery
+		* re-wipe (factory reset)
+		* reboot
+		* this time it booted... briefly
+		* it got to setup screen, then before I did anything rebooted into some kind of recovery failsafe and prompted to factory reset again, which I did. This time it rebooted and stayed up while I zipped through the wizard.
+* go take a look - ignore the warning about doing gapps etc first just so we can see what vanilla Lineage looks like. We can always wipe & reflash
+	* wonderfully empty app list!
+	* basic main camera & selfie cam works
+	* flashlight works
+	* odd android verify notification, didn't seem to work
+	* top shelf only available on lockscreen, odd
+	* no sim yet and wifi not connected yet, so not much else to test
+	* vol-down + power still takes screenshots
+
+
 ## Todo
 
-* Unlock bootloader (done)
-* Flash custom recovery [Team Win Recovery Project TWRP](https://twrp.me/) - this let's you backup/restore/flash etc (done)
-* Flash an OS (again)
 * GET ROOT
 * setup [adb](https://developer.android.com/studio/command-line/adb) access (always handy in case you kill the phone screen to be able to adb from a laptop)
 * Backup/restore with titanium
 * Restore google things with google backup (app installs, wallpaper, some settings, contacts)
 * 2FA (already on the backup-able andOTP) (is it 2FA if you log in on your phone web browser using a 2FA app on the same phone??)
 * Sync with syncthing (photos, rest of SD card)
+* better camera support? <https://www.xda-developers.com/google-camera-port-hub/>
 
 ## End... for now
 
-That's as far as I've got today, I'll be editing this post as I progress with the install so do come and look again. Also suggestions and questions welcome.
-
+That's as far as I've got so far. I'll be editing this post as I progress with the install so do come and look again. Also suggestions and questions welcome.
