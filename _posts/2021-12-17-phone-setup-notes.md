@@ -46,6 +46,13 @@ iOS certainly does have some unique advantages that I will be sad to miss out on
 
 "So you must be an android dude then" you say. Well no because frankly android isn't much better these days. Ever heard of [AOSP? (The Android Open Source Project)](https://source.android.com/) Well that's an ever-shrinking piece of what people call Android these days. Piece by piece [google have been replacing open-source android with proprietary rewrites](https://arstechnica.com/gadgets/2018/07/googles-iron-grip-on-android-controlling-open-source-by-any-means-necessary/). Combine that with proprietary drivers for the endless churn in hardware. If you can even install ASOP on a device good luck getting much to work. The idea of android being "the open source one" in the true spirit of the GPL is a distant and fading memory.
 
+There is a cartel of industry players called the [Open Handset Alliance](https://en.wikipedia.org/wiki/Open_Handset_Alliance) <http://www.openhandsetalliance.com/index.html>. These industry groups can be good but I think in this case they are a barrier to innovation and openness.
+
+> "OHA members are contractually forbidden from producing devices that are based on competing forks of Android"  
+> ~ [Wikipedia on OHA](https://en.wikipedia.org/wiki/Open_Handset_Alliance)
+
+[Ars Technica: "Google’s iron grip on Android: Controlling open source by any means necessary"](https://arstechnica.com/gadgets/2018/07/googles-iron-grip-on-android-controlling-open-source-by-any-means-necessary/)
+
 #### Root and backups
 
 One of the big drivers I've had for getting a non-standard phone setup is that I don't want to rely on on google to backup everything on my phone in case it dies, but because Android is by default locked in by secure boot and doesn't give the user any root access or ability to get root access that's a bit of a problem for the normal method of backing up a device.
