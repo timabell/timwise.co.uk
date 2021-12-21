@@ -539,8 +539,10 @@ The steps:
 
 * On the phone enable adb
 	* settings > about phone > tap "build number" repeatedly
-	* settings > system > advanced (grrrr) > developer options > usb debugging [on]
-	* settings > system > advanced (grrrr) > developer options > rooted debugging [on]
+	* settings > system > advanced (grrrr) > developer options
+		* usb debugging [on]
+		* rooted debugging [on]
+		* disable adb authorization timeout [on]
 	* connect usb cable to laptop
 	* phone prompts "Allow USB Debugging?"
 		* tick "always allow"
@@ -621,8 +623,8 @@ The instructions for Magisk just say you need `boot.img`, leaving know clues how
 
 It turns out it's embedded in the Lineage system image `lineage-18.1-20211214-nightly-lemonadep-signed.zip` that we've already downloaded.
 
-I haven't tried it yet but thee's another payload extractor that's probably worth a try, especially if you don't already have python: [payload-dumper-go](https://github.com/ssut/payload-dumper-go)
- | [payload-dumper-go downloads](https://github.com/ssut/payload-dumper-go/releases/latest)
+There's another payload extractor with easier dependencies that's worth a try, especially if you don't already have python: [payload-dumper-go](https://github.com/ssut/payload-dumper-go)
+ | [payload-dumper-go downloads](https://github.com/ssut/payload-dumper-go/releases/latest). I've now tested this and it works great. You don't even have to unzip the zip.
 
 Extract the `payload.bin` file from the `lineage-18.1-20211214-nightly-lemonadep-signed.zip` to the same folder as the python script.
 
@@ -755,12 +757,30 @@ Steps for this are above.
 	* "apply update" > "apply from adb" (aka sideload)
 	* `adb sideload lineage-18.1-20211220-microG-lemonadep.zip`
 * reboot
+* skip all the guided setup steps
 * open the microG app
 * run the self check (all green ticks for me, woo)
 
 So now I have a clean LineageOS install with a FOSS re-implementation of google's proprietary shared services. Win.
 
 Now re-run magisk sideload from above to get root again.
+
+* re-enable adb as before
+* re-enable advance power button menu
+* `adb install Magisk-v23.0.apk`
+* grab a [payload-dumper-go binary release](https://github.com/ssut/payload-dumper-go/releases/latest)
+* `payload-dumper-go_1.2.0_linux_amd64/payload-dumper-go lineage-18.1-20211220-microG-lemonadep.zip`
+* `adb push extracted_20211221_231517/boot.img /sdcard/Download/`
+* run the patch in the phone Magisk UI (under "install")
+* get the filename to pull: `adb shell ls /sdcard/Download`
+* `adb pull /sdcard/Download/magisk_patched-23000_d5mu3.img`
+* reboot to fastboot
+* `fastboot flash boot magisk_patched-23000_d5mu3.img`
+* "reboot system now" in lineage fastboot menu
+
+Success, now I have root *and* microG.
+
+Next, see if Aurora does the job, and if not how do I get google play on top of microG, if that's even possible. Till next time...
 
 ## Customisations
 
@@ -778,6 +798,7 @@ Now re-run magisk sideload from above to get root again.
 * better camera support? <https://www.xda-developers.com/google-camera-port-hub/>
 * see if android pay etc will work with magisk magic mask pretending we haven't unlocked anything
 * find an alternative to titanium backup <https://forum.xda-developers.com/t/farewell-to-titanium-backup-looking-for-alternative.3932814/>
+* contribute to lineage to link to golang extractor, maybe with step by step instructions
 
 ## OS Updates (for next time)
 
