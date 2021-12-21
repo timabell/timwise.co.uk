@@ -618,6 +618,13 @@ I consider this an important backup access to the phone. If the screen fails the
 
 Steps for this are above.
 
+
+### F-Droid app store
+
+[F-Droid](https://f-droid.org/) is an app store for android like google play but without all the googlyness.
+
+This a bit pointless if you install play because all the open source apps are available in both, and the closed ones are only in play. I think I'll skip this for now but I'm glad it exists.
+
 ## Customisations
 
 * Turn on all the power button options:
@@ -625,13 +632,14 @@ Steps for this are above.
 
 ## Todo
 
-* Backup/restore with titanium
 * Restore google things with google backup (app installs, wallpaper, some settings, contacts)
 	* GApps <https://wiki.lineageos.org/gapps>
+* Backup/restore with titanium
 * 2FA (already on the backup-able andOTP) (is it 2FA if you log in on your phone web browser using a 2FA app on the same phone??)
 * Sync with syncthing (photos, rest of SD card)
 * better camera support? <https://www.xda-developers.com/google-camera-port-hub/>
 * see if android pay etc will work with magisk magic mask pretending we haven't unlocked anything
+* find an alternative to titanium backup <https://forum.xda-developers.com/t/farewell-to-titanium-backup-looking-for-alternative.3932814/>
 
 ## End... for now
 
