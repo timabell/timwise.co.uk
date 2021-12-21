@@ -314,6 +314,18 @@ LineageOS has it's own recovery image, so no need to run TWRP as well.
 
 [Review of LineageOS on XDA Developers](https://www.xda-developers.com/lineageos-18-1-review/)
 
+#### Lineage for microG (maybe?)
+
+* <https://lineage.microg.org/>
+* <https://github.com/lineageos4microg>
+
+This is a fork of lineage with microG already set up properly and a patch that lineage wouldn't allow that let's them spoof google signatures in order to trick apps into believing they are using the real google play services
+
+> Q: "Why do we need a custom build of LineageOS to have microG? Can't I install microG on the official LineageOS?"  
+>  
+> A: "MicroG requires a patch called "signature spoofing", which allows the microG's apps to spoof themselves as Google Apps. LineageOS' developers refused (multiple times) to include the patch, forcing us to fork their project."  
+> ~ [Lineage for microG faq](https://lineage.microg.org/#faq)
+
 #### Replicant (not yet)
 
 "[Replicant](https://replicant.us/) is a fully free Android distribution running on several devices"
@@ -346,6 +358,80 @@ This Android derivative is focussed on privacy; eliminating as much data collect
 Supports Pixel devices and one Xiaomi phone (never heard of it).
 
 Seems to be pushing Signal and Tor so is super-privacy focussed.
+
+## Google Apps and Services
+
+There are two major parts to this:
+
+1. Google play - the app store for downloading apk files to install (plus ratings, reviews, screenshots etc)
+2. Google services - these provide services that many apps want to use to avoid multiple implementations such as location information, push notification etc.
+
+There's a few ways of getting the google play store and related prioprietary horrors:
+
+* Open GApps - pulls down the proprietary apps and writes them to the image
+* MindTheGapps? - pulls down the proprietary apps and writes them to the image
+* microG - open source re-implementation of the services
+
+[For Lineage 18.1 (Android 11) the Lineage wiki links to MindTheGaps](https://wiki.lineageos.org/gapps), and [XDA Developers says "Always Use the GApps Package Recommended by your ROM Developer"](https://www.xda-developers.com/gapps-package-recommended-rom-developer/)
+
+I don't mind proprietary software as long as there's choice out there, and the apple app store + google play duopoly on apps is not choice. F-Droid is fine but doesn't have a single big name vendor's apps, so it's probably enough for google to dodge an anti-competitive lawsuit but not enough to produce any real competition.
+
+Comparisons:
+
+* <https://www.reddit.com/r/LineageOS/comments/8358p0/mindthegapps_vs_opengapps/>
+* <https://www.reddit.com/r/degoogle/comments/olsv4c/i_am_very_confused_by_opengapps_mindthegapps/>
+
+### Open GApps
+
+Installer for google's proprietary services.
+
+* GApps <https://wiki.lineageos.org/gapps>
+* <https://github.com/opengapps/opengapps>
+* <https://opengapps.org/>
+
+Q: Why is this such a pain? A: Licensing...
+
+> "Due to licensing restrictions, these apps do not come pre-installed with ROMs others than those from vendors that are part of the [Open Handset Alliance](http://www.openhandsetalliance.com/index.html) and must be installed as a sideload package by the user themselves." ~ <https://github.com/opengapps/opengapps/wiki/FAQ>
+
+We're lucky they let us do this at all, google could take their toys away from us at any time.
+
+For Open GApps pico looks sufficient <https://github.com/opengapps/opengapps/wiki/Package-Comparison>, Lineage recommends nano and no bigger.
+
+### MindTheGapps
+
+Installer for google's proprietary services.
+
+* <https://www.getdroidtips.com/mindthegapps-8-1-0/>
+* <https://forum.xda-developers.com/t/change-opengapps-for-mindthegapps-afterthought.3837816/>
+
+### microG
+
+<https://github.com/microg>
+
+A free software implementation of shared services provided by the proprietary google services (such as location and push messaging used by many apps).
+
+Doesn't work properly when flashed to lineage according to the faq so they made their own fork of Lineage "Lineage for microG" (see above)
+
+### Aurora - play store proxy
+
+Download apks (installation files) from the google play store without any googleness.
+
+* <https://aurora-store.en.uptodown.com/android>
+* <https://f-droid.org/packages/com.aurora.store/>
+
+### Yalp - play store proxy
+
+<https://yalp-store.en.uptodown.com/android>
+
+### F-Droid app store (another day)
+
+[F-Droid](https://f-droid.org/) is an app store for android like google play but without all the googlyness.
+
+This a bit pointless if you install play because all the open source apps are available in both, and the closed ones are only in play. I think I'll skip this for now but I'm glad it exists.
+
+### Playmaker - play store / f-droid integration
+
+<https://github.com/NoMore201/playmaker>
 
 ## Recovery images
 
@@ -637,62 +723,6 @@ I consider this an important backup access to the phone. If the screen fails the
 
 Steps for this are above.
 
-
-### F-Droid app store (another day)
-
-[F-Droid](https://f-droid.org/) is an app store for android like google play but without all the googlyness.
-
-This a bit pointless if you install play because all the open source apps are available in both, and the closed ones are only in play. I think I'll skip this for now but I'm glad it exists.
-
-### Google Apps
-
-There's a few ways of getting the google play store and related prioprietary horrors:
-
-* Open GApps
-* MindTheGapps?
-* microG
-* etc
-
-[For Lineage 18.1 (Android 11) the Lineage wiki links to MindTheGaps](https://wiki.lineageos.org/gapps), and [XDA Developers says "Always Use the GApps Package Recommended by your ROM Developer"](https://www.xda-developers.com/gapps-package-recommended-rom-developer/)
-
-I don't mind proprietary software as long as there's choice out there, and the apple app store + google play duopoly on apps is not choice. F-Droid is fine but doesn't have a single big name vendor's apps, so it's probably enough for google to dodge an anti-competitive lawsuit but not enough to produce any real competition.
-
-Comparisons:
-
-* <https://www.reddit.com/r/LineageOS/comments/8358p0/mindthegapps_vs_opengapps/>
-* <https://www.reddit.com/r/degoogle/comments/olsv4c/i_am_very_confused_by_opengapps_mindthegapps/>
-
-#### Open GApps
-
-GApps <https://wiki.lineageos.org/gapps>
-
-Q: Why is this such a pain? A: Licensing...
-
-> "Due to licensing restrictions, these apps do not come pre-installed with ROMs others than those from vendors that are part of the [Open Handset Alliance](http://www.openhandsetalliance.com/index.html) and must be installed as a sideload package by the user themselves." ~ <https://github.com/opengapps/opengapps/wiki/FAQ>
-
-We're lucky they let us do this at all, google could take their toys away from us at any time.
-
-For Open GApps pico looks sufficient <https://github.com/opengapps/opengapps/wiki/Package-Comparison>, Lineage recommends nano and no bigger.
-
-#### MindTheGapps
-
-#### microG
-
-A free software implementation of shared services provided by the proprietary google services (such as location and push messaging used by many apps).
-
-doesn't work properly when flashed to lineage according to the faq
-
-##### Lineage for microG
-
-https://lineage.microg.org/
-
-fork of lineage with microG already set up properly and a patch that lineage wouldn't allow that let's them spoof google signatures in order to trick apps into believing they are using the real google play services
-
-#### Aurora
-
-Download apks (installation files) from the google play store without any googleness.
-
-<https://aurora-store.en.uptodown.com/android>
 
 ## Customisations
 
