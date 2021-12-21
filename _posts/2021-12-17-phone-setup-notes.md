@@ -519,6 +519,9 @@ The instructions for Magisk just say you need `boot.img`, leaving know clues how
 
 It turns out it's embedded in the Lineage system image `lineage-18.1-20211214-nightly-lemonadep-signed.zip` that we've already downloaded.
 
+I haven't tried it yet but thee's another payload extractor that's probably worth a try, especially if you don't already have python: [payload-dumper-go](https://github.com/ssut/payload-dumper-go)
+ | [payload-dumper-go downloads](https://github.com/ssut/payload-dumper-go/releases/latest)
+
 Extract the `payload.bin` file from the `lineage-18.1-20211214-nightly-lemonadep-signed.zip` to the same folder as the python script.
 
 Some instructions on using python to extract the boot image: <https://forum.xda-developers.com/t/guide-how-to-extract-payload-bin-from-ota.3830962/> (ignore the file it's older than the github one)
