@@ -8,10 +8,6 @@
 {% else %}
     {% assign minutes = minutes_i %}
 {% endif %}
-{% if minutes <= 1 %}
-    {% assign reading_time = '1' | append: ' minute' %}
-{% else %}
-    {% assign reading_time = minutes | append: ' minutes' %}
-{% endif %}
+{% assign reading_time = minutes | append: ' minute read' %}
 
 

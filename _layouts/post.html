@@ -13,7 +13,7 @@ layout: default
 
     {% assign words=page.content %}
     {% include calc-reading-time.html %}
-    <p class="reading_time" title="{{num_words}} words">Reading time: {{reading_time}}</p>
+    <p class="reading_time" title="{{num_words}} words">{{reading_time}}</p>
 
     <div class="post-tags">
       {% if post %}

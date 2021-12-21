@@ -15,7 +15,7 @@ layout: default
         <div class="post_date">{{ post.date | date: "%B %e, %Y" }}</div>
         {% assign words=post.content %}
         {% include calc-reading-time.html %}
-        <div class="reading_time" title="{{num_words}} words">Reading time: {{reading_time}}</div>
+        <div class="reading_time" title="{{num_words}} words">{{reading_time}}</div>
      </div>
 
       <div class="entry">
