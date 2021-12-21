@@ -610,6 +610,14 @@ Using Magisk:
 	* bug - shows logs
 	* jigsaw piece - shows modules, activate, deactivate & install
 
+### adb
+
+[adb](https://developer.android.com/studio/command-line/adb)
+
+I consider this an important backup access to the phone. If the screen fails then this allows you to pull any important files off over usb.
+
+Steps for this are above.
+
 ## Customisations
 
 * Turn on all the power button options:
@@ -617,7 +625,6 @@ Using Magisk:
 
 ## Todo
 
-* setup [adb](https://developer.android.com/studio/command-line/adb) access (always handy in case you kill the phone screen to be able to adb from a laptop)
 * Backup/restore with titanium
 * Restore google things with google backup (app installs, wallpaper, some settings, contacts)
 	* GApps <https://wiki.lineageos.org/gapps>
