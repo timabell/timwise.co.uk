@@ -354,7 +354,9 @@ Previously I've used TWRP, and I got as far as flashing it before discovering [L
 
 ### LineageOS's recovery image
 
-Came across this here, need to investigate further: <https://www.xda-developers.com/lineageos-18-1-review/>
+Came across this here: <https://www.xda-developers.com/lineageos-18-1-review/>
+
+Works well, flashed no problem and have used both recovery and fastboot modes with no issues. You'll see it as part of the steps below.
 
 ## Installing LineageOS on OnePlus 9 Pro
 
