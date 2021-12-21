@@ -3,6 +3,15 @@ title: Phone setup notes
 layout: post
 ---
 
+This is epic, so here's a table of contents:
+
+* This list will be replaced by table of contents. https://kramdown.gettalong.org/converter/html.html#toc
+{:toc}
+
+---
+
+## About
+
 Well this makes a good counterpart to the [laptop setup post](/2019/08/20/laptop-setup/). Similar idea, it's just a place for me to keep track of all the things involved in building a new phone from scratch. This one also explains to people who look at me like I'm mad why I don't just "do what everyone else does".
 
 ## Why don't you just...?
