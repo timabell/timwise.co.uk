@@ -415,17 +415,203 @@ The steps:
 	* no sim yet and wifi not connected yet, so not much else to test
 	* vol-down + power still takes screenshots
 
+## Connect adb, see if we get root shell
+
+<https://developer.android.com/studio/command-line/adb#Enabling>
+
+* On the phone enable adb
+	* settings > about phone > tap "build number" repeatedly
+	* settings > system > advanced (grrrr) > developer options > usb debugging [on]
+	* settings > system > advanced (grrrr) > developer options > rooted debugging [on]
+	* connect usb cable to laptop
+	* phone prompts "Allow USB Debugging?"
+		* tick "always allow"
+		* press "allow"
+* On the laptop `adb devices` should now show the phone
+
+Success with non-root:
+```
+$ adb shell
+OnePlus9Pro:/ $ ^D
+```
+
+Root denied without flipping the "rooted" option:
+```
+$ adb root 
+ADB Root access is disabled by system setting - enable in Settings -> System -> Developer options
+```
+After enabling rooted debugging as above:
+```
+$ adb root  
+restarting adbd as root
+$ adb shell
+OnePlus9Pro:/ # whoami
+root
+```
+
+
+## Getting root back
+
+### Grumble
+
+It really annoys me that on a laptop this isn't even a step, yet on Android this is a whole additional drama. But I may have already mentioned that. Understanding the reasons doesn't mean I have to like it.
+
+### adb root shell
+
+According to <https://www.xda-developers.com/lineageos-dropping-superuser-addonsu-implementation-favor-magisk-manager/> adb root shell is the official LineageOS way of getting root access to "mess with important files".
+
+```
+$ adb root  
+restarting adbd as root
+$ adb shell
+OnePlus9Pro:/ # whoami
+root
+```
+Worth knowing but not much help for running titanium backup as root.
+
+### Magisk
+
+According to <https://www.xda-developers.com/lineageos-dropping-superuser-addonsu-implementation-favor-magisk-manager/> Magisk is the only real option now. I guess SuperSU still works but lacks the masking that allows you to fool android pay etc.
+
+#### ⚠️ Beware of fake Magisk sites !! ⚠️
+
+Github is the official home for Magisk and it's downloads: <https://github.com/topjohnwu/Magisk>
+
+[**Beware of clone sites**](https://www.xda-developers.com/psa-magiskmanager-com-not-official-website-magisk/amp/) especially ones offering downloads.  `MagiskManager.com` is not legit or authorised and may host malware at some point. I've seen a few others too. They look like SEO optimised clones that could potentially be feeding some or all visitors malware.
+
+It's worth being extra-careful with things like recovery images and rooters because by definition they have full control of your device, malicious or malign.
+
+#### Magisk root install
+
+LineageOS said not to boot before doing installing GApps, I'm not sure if that applies to Magisk too. I already have booted up. Not sure if a factory reset plus wipe will be enough or whether the image will have to be reflashed. I'll try with just an install, if that doesn't work I'll try the reset and see what happens, and if *that* doesn't work I'll try a full reinstall.
+
+* Look at readme at <https://github.com/topjohnwu/Magisk>
+* Follow instructions <https://topjohnwu.github.io/Magisk/install.html>
+* Download latest release <https://github.com/topjohnwu/Magisk/releases/latest>
+* install the app with adb (with the phone on, and booted to LineageOS as per normal use)
+	* <https://www.droidviews.com/install-apk-files-using-adb-commands/>
+	```
+	$ adb install Magisk-v23.0.apk 
+	Performing Streamed Install
+	Success
+	```
+	* On the phone, swipe up for the full app list (drawer), and there is a Magisk icon!
+
+##### Getting boot.img
+
+The instructions for Magisk just say you need `boot.img`, leaving know clues how to get it.
+
+It turns out it's embedded in the Lineage system image `lineage-18.1-20211214-nightly-lemonadep-signed.zip` that we've already downloaded.
+
+Extract the `payload.bin` file from the `lineage-18.1-20211214-nightly-lemonadep-signed.zip` to the same folder as the python script.
+
+Some instructions on using python to extract the boot image: <https://forum.xda-developers.com/t/guide-how-to-extract-payload-bin-from-ota.3830962/> (ignore the file it's older than the github one)
+
+The `payload_dumper` file appears to be from <https://github.com/vm03/payload_dumper> assuming my googling is accurate.
+
+I didn't need to do the pip install.
+
+I did change the python to python3 at the top of the py file and make it executable.
+
+```
+tim@max:~/Downloads/oneplus9pro/payload_dumper
+$ ./payload_dumper.py payload.bin 
+boot
+dtbo
+odm
+product
+system
+system_ext
+vbmeta
+vbmeta_system
+vendor
+vendor_boot
+tim@max:~/Downloads/oneplus9pro/payload_dumper
+$ ll output 
+total 5.6G
+-rw-rw-r-- 1 tim tim 192M Dec 20 23:20 boot.img
+-rw-rw-r-- 1 tim tim  24M Dec 20 23:20 dtbo.img
+-rw-rw-r-- 1 tim tim 2.8M Dec 20 23:20 odm.img
+-rw-rw-r-- 1 tim tim 1.3G Dec 20 23:21 product.img
+-rw-rw-r-- 1 tim tim 267M Dec 20 23:21 system_ext.img
+-rw-rw-r-- 1 tim tim 2.5G Dec 20 23:21 system.img
+-rw-rw-r-- 1 tim tim 8.0K Dec 20 23:21 vbmeta.img
+-rw-rw-r-- 1 tim tim 4.0K Dec 20 23:21 vbmeta_system.img
+-rw-rw-r-- 1 tim tim 192M Dec 20 23:22 vendor_boot.img
+-rw-rw-r-- 1 tim tim 1.3G Dec 20 23:22 vendor.img
+```
+
+Hurrah, now we have a `boot.img` to give to Magisk.
+
+##### Magisk rooting
+
+Copy the `boot.img` across:
+
+```
+tim@max:~/Downloads/oneplus9pro/payload_dumper
+$ adb push output/boot.img /sdcard/ 
+output/boot.img: 1 file pushed, 0 skipped. 177.5 MB/s (201326592 bytes in 1.082s)
+```
+
+* Press install on the Magisk app.
+* "Select and Patch a File"
+* hamburger in file browser > "OnePlus 9 Pro" (obviously, duh) > `boot.img`
+* "let's go ->"
+* Magisk shows steps then" output file is written to..." and a path to download folder
+
+```
+tim@max:~/Downloads/oneplus9pro/payload_dumper
+$ adb shell
+OnePlus9Pro:/ # ls -lh /sdcard/Download/
+total 96M
+-rwx------ 1 u0_a163 u0_a163 192M 2021-12-14 13:21 magisk_patched-23000_BYMDt.img
+```
+
+* pull the file back to the laptop `adb pull /sdcard/Download/magisk_patched-23000_BYMDt.img`
+* Now flash the file to the phone:
+	* (the vol-up + power didn't work for me, just did a normal boot, vol-down + power is reccovery not fastboot)
+	* Settings > system > advanced (ffs) > gestures (wtf?) > power menu > advanced restart [on]
+	* power button (hold) > power > restart > fastboot
+
+```
+tim@max:~/Downloads/oneplus9pro/payload_dumper
+$ fastboot flash boot magisk_patched-23000_BYMDt.img 
+Sending 'boot_b' (196608 KB)                       OKAY [  6.035s]
+Writing 'boot_b'                                   OKAY [  0.639s]
+Finished. Total time: 6.853s
+```
+
+* power off
+* power on
+* open up the Magisk app - it shows installed version number now, hurrah
+
+Using Magisk:
+
+* Click the cog (top right) to optionally turn on "MagiskHide"
+* Along the bottom are four icons
+	* Home
+	* Shield - shows root requests
+	* bug - shows logs
+	* jigsaw piece - shows modules, activate, deactivate & install
+
+## Customisations
+
+* Turn on all the power button options:
+	* Settings > system > advanced (ffs) > gestures (wtf?) > power menu > advanced restart [on]
 
 ## Todo
 
-* GET ROOT
 * setup [adb](https://developer.android.com/studio/command-line/adb) access (always handy in case you kill the phone screen to be able to adb from a laptop)
 * Backup/restore with titanium
 * Restore google things with google backup (app installs, wallpaper, some settings, contacts)
+	* GApps <https://wiki.lineageos.org/gapps>
 * 2FA (already on the backup-able andOTP) (is it 2FA if you log in on your phone web browser using a 2FA app on the same phone??)
 * Sync with syncthing (photos, rest of SD card)
 * better camera support? <https://www.xda-developers.com/google-camera-port-hub/>
+* see if android pay etc will work with magisk magic mask pretending we haven't unlocked anything
 
 ## End... for now
 
 That's as far as I've got so far. I'll be editing this post as I progress with the install so do come and look again. Also suggestions and questions welcome.
+
+I really do hope one day I can de-google my phone just like I de-microsofted my laptop, but today is not that day for me.
