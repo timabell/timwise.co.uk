@@ -723,6 +723,44 @@ I consider this an important backup access to the phone. If the screen fails the
 
 Steps for this are above.
 
+## Installing "Lineage for microG"
+
+* <https://lineage.microg.org/> has install and download links
+* Download image from <https://download.lineage.microg.org/lemonadep/>
+	* check sha: `sha256sum -c lineage-18.1-20211220-microG-lemonadep.zip.sha256sum`
+	* run update_verifier python script:
+		* download (or clone) [python update_verifier](https://github.com/lineageos4microg/update_verifier) - <https://github.com/lineageos4microg/update_verifier/archive/refs/heads/master.zip>
+		* setup python3 with [asdf-vm](https://asdf-vm.com/) (I had python 3 but no pip, and I like to use adsf)
+		* extract the zip, open terminal in extracted folder
+		* `asdf plugin add python`
+		* `asdf install python 3.10.1`
+		* `asdf local python 3.10.1`
+		* `pip install -r requirements.txt`
+		* `python update_verifier.py lineageos4microg_pubkey ../lineage-18.1-20211220-microG-lemonadep.zip`
+		* output: `verified successfully`
+* Go back to lineage install instructions <https://wiki.lineageos.org/devices/lemonadep/install>
+* Boot to fastboot
+* flash the lineage-microG recovery: `fastboot flash boot lineage-18.1-20211220-microG-lemonadep-recovery.img`
+* copy partitions as instructed
+	* boot into recovery (vol-down + power)
+		*  or "enter recovery" from lineage fastboot
+	* "apply update" > "apply from adb" (aka sideload)
+	* `adb sideload ../LineageOS/copy-partitions-20210323_1922.zip`
+	* Ignore unknown sig and "continue"
+* wipe
+	* boot into recovery (vol-down + power) if not already in it
+	* "format data / factory reset"
+* OS install
+	* boot into recovery (vol-down + power) if not already in it
+	* "apply update" > "apply from adb" (aka sideload)
+	* `adb sideload lineage-18.1-20211220-microG-lemonadep.zip`
+* reboot
+* open the microG app
+* run the self check (all green ticks for me, woo)
+
+So now I have a clean LineageOS install with a FOSS re-implementation of google's proprietary shared services. Win.
+
+Now re-run magisk sideload from above to get root again.
 
 ## Customisations
 
