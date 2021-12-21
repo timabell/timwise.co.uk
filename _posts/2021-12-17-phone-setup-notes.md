@@ -372,7 +372,6 @@ Useful howtos:
 * [LineageOSROMS (unofficial)](https://lineageosroms.com/install-lineageos/) - a very short 8 step guide
 	* [LineageOSROMS (unofficial) full guide](https://lineageosroms.com/lemonadep/)
 * [GetDroidTips](https://www.getdroidtips.com/lineage-os-18-1-oneplus-9-9-pro/) - not sure there's much extra useful here
-* 
 
 [XDADevelopers coverage of Lineage support for OnePlus 9 pro](https://www.xda-developers.com/lineageos-18-builds-oneplus-9-pro-razer-phone-2-lenovo-p2/)
 
@@ -410,11 +409,11 @@ The steps:
 		```
 		apparently this is normal, but the failed to flash error on the phone is not, and rebooting drops me back into the existing Oxygen install. Dammit.... Try again
 	* Second attempt ran fine
-    	* step 1/2
-		* step 2/2
+		* output: `step 1/2`
+		* output: `step 2/2`
 		* then recovery logo comes back up and it just sits there
 		* volume up to the back arrow at the top, power to press it
-		* *then* it says "install complete with status 0" (zero being unix-speak for no-issues)
+		* *then* it says "`install complete with status 0`" (zero being unix-speak for no-issues)
 		* but it doesn't ever get past the lineage logo when booting, maybe because of the boot of oxygen. hmm
 		* [hard-power-off](https://www.youtube.com/watch?v=y2yB2dRrXiA) by holding down volume-up and power button
 	* take 3,
@@ -432,7 +431,7 @@ The steps:
 	* no sim yet and wifi not connected yet, so not much else to test
 	* vol-down + power still takes screenshots
 
-## Connect adb, see if we get root shell
+### Connect adb, see if we get root shell
 
 <https://developer.android.com/studio/command-line/adb#Enabling>
 
@@ -467,13 +466,13 @@ root
 ```
 
 
-## Getting root back
+### Getting root back
 
-### Grumble
+#### Grumble
 
 It really annoys me that on a laptop this isn't even a step, yet on Android this is a whole additional drama. But I may have already mentioned that. Understanding the reasons doesn't mean I have to like it.
 
-### adb root shell
+#### adb root shell
 
 According to <https://www.xda-developers.com/lineageos-dropping-superuser-addonsu-implementation-favor-magisk-manager/> adb root shell is the official LineageOS way of getting root access to "mess with important files".
 
@@ -486,11 +485,11 @@ root
 ```
 Worth knowing but not much help for running titanium backup as root.
 
-### Magisk
+#### Magisk
 
 According to <https://www.xda-developers.com/lineageos-dropping-superuser-addonsu-implementation-favor-magisk-manager/> Magisk is the only real option now. I guess SuperSU still works but lacks the masking that allows you to fool android pay etc.
 
-#### ⚠️ Beware of fake Magisk sites !! ⚠️
+##### ⚠️ Beware of fake Magisk sites !! ⚠️
 
 Github is the official home for Magisk and it's downloads: <https://github.com/topjohnwu/Magisk>
 
@@ -498,7 +497,7 @@ Github is the official home for Magisk and it's downloads: <https://github.com/t
 
 It's worth being extra-careful with things like recovery images and rooters because by definition they have full control of your device, malicious or malign.
 
-#### Magisk root install
+##### Magisk root install
 
 LineageOS said not to boot before doing installing GApps, I'm not sure if that applies to Magisk too. I already have booted up. Not sure if a factory reset plus wipe will be enough or whether the image will have to be reflashed. I'll try with just an install, if that doesn't work I'll try the reset and see what happens, and if *that* doesn't work I'll try a full reinstall.
 
@@ -514,7 +513,7 @@ LineageOS said not to boot before doing installing GApps, I'm not sure if that a
 	```
 	* On the phone, swipe up for the full app list (drawer), and there is a Magisk icon!
 
-##### Getting boot.img
+###### Getting boot.img
 
 The instructions for Magisk just say you need `boot.img`, leaving know clues how to get it.
 
@@ -560,7 +559,7 @@ total 5.6G
 
 Hurrah, now we have a `boot.img` to give to Magisk.
 
-##### Magisk rooting
+###### Magisk rooting
 
 Copy the `boot.img` across:
 
