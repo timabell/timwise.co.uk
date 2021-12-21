@@ -226,10 +226,11 @@ As if that wasn't enough:
 
 So not iOS and preferably not Android either.
 
-It's worth mentioning that some (most/all?) phone manufacturers make customizations to Android or even complete [forks](https://en.wikipedia.org/wiki/Fork_(software_development)) that you may or may not want.
+Unfortunately the apps mean that I'm stuck with Android and its derivatives for the time being.
 
-* Samsung (for the Galaxy line of phones) replaces the "launcher" with the ["Samsung Experience"](https://en.wikipedia.org/wiki/Samsung_Experience)
-* OnePlus of Shenzhen ship their phones with [OxygenOS](https://www.oneplus.com/uk/oxygenos), this is as I understand it a customization (fork if you will) of Android. [More about OxygenOS on Wikipedia](https://en.wikipedia.org/wiki/OxygenOS)
+It seems the best hope for salvation is the Linux based options discussed above eventually getting sufficient app coverage to make the jump more bearable, or maybe even some kind of android emulation allowing them to run android apps sufficiently well. The path from Windows to Linux for me included a mix of dual-boot, virtualization and wine (an api compatibility layer, not an emulator)
+
+It's worth mentioning that some (most/all?) phone manufacturers make proprietary customizations to Android or even complete [forks](https://en.wikipedia.org/wiki/Fork_(software_development)) that you may or may not want. Samsung for example (for the Galaxy line of phones) replaces the "launcher" with the ["Samsung Experience"](https://en.wikipedia.org/wiki/Samsung_Experience). I'm going for more open rather than less, so I'm not interested in trading slickness for losing even more control. I just want a platform that runs the apps I care about and is as open as possible.
 
 ### Researching the options
 
@@ -240,6 +241,20 @@ I don't follow this stuff all the time so I had to do some googling ([duckduckgo
 * [GetDroidTips has some more ROMs I haven't looked at](https://www.getdroidtips.com/best-custom-rom-oneplus-9-pro/)
 
 I've got more to learn/research here so I'll expand this section as and when I learn more. Think of this as a [bliki](https://www.webopedia.com/definitions/bliki/). There's a full history in git (link at end).
+
+### Towering stacks of patches
+
+The below are probably the most realistic alternatives to stock Android and iOS for those who want more openness but don't want to give up all the modern conveniences in the name of openness and/or privacy. They are however all customizations of Android and that brings a very real problem.
+
+The core open "Android Open Source Project (AOSP)" is run by google for google's benefit and for their own Android ecosystem. There is significant engineering effort continually poured in to this, with major releases made on remarkably short timelines.
+
+Any project that makes a customization to AOSP such as LineageOS and keeps track of it in their own fork is constantly at the mercy of changes to the foundation it has been based on, a foundation which really has no reason to care about them.
+
+This creates a never ending challenge that stunts innovation outside the Android/iOS duopoly. If you build a significant customization, it will sooner or later be broken and need re-engineering because of changes in AOSP, or maybe even be impossible to resurrect. The more you innovate and customize, the more engineering fire-power is required just to stand still on the treadmill of change in the platform.
+
+While we have good tools for managing all this complexity (git, gerrit) this is a fundamental and unavoidable problem with building on a platform that doesn't care about you.
+
+Contrast that with the Linux ecosystem where the platforms people are building on (consisting of many many layers and teams) are much more interested in supporting downstream projects and allowing choice. Projects that run on Linux can often run with minimal modification for decades. Linux is also not built for the benefit of some particular vendor like google with their own agenda, it is instead run by a foundation with far more broad interests and pressures.
 
 ### Android derivative options
 
