@@ -16,14 +16,24 @@ Well this makes a good counterpart to the [laptop setup post](/2019/08/20/laptop
 
 ## Why don't you just...?
 
-Most people don't think their phone install deserves a blog post, or even a lot of thought beyond a visit to the Apple "genius" bar (lol) so they can push the "copy everything to my new phone button". I'm not most people. I've been running Linux since approximately [Ubuntu 5.04 Hoary Hedgehog](https://en.wikipedia.org/wiki/Ubuntu_version_history#Ubuntu_5.04_(Hoary_Hedgehog)) in 2005 (the brown one). Even while being a ".NET developer", back when [Microsoft were still trying to simultaneously ignore and destroy Linux](https://en.wikipedia.org/wiki/Halloween_documents). What strange times we live in now, has the leopard changed its spots?
+Most people don't think their phone install deserves a blog post, or even a lot of thought beyond a visit to the Apple "genius" bar (lol) so they can push the "copy everything to my new phone button". I'm not most people. I've been running Linux since approximately [Ubuntu 5.04 Hoary Hedgehog](https://en.wikipedia.org/wiki/Ubuntu_version_history#Ubuntu_5.04_(Hoary_Hedgehog)) in 2005 (the brown one). Even while being a ".NET developer", back when [Microsoft were still trying to simultaneously ignore and destroy Linux](https://en.wikipedia.org/wiki/Halloween_documents). What strange times we live in now with dotnet being open source and cross-platform, has the leopard changed its spots?
 
 There are many factors in this battle for the phone in your pocket.
 
-* The GPL's fundamental truth is that there is a tension for control over your devices between the creators of software and the users of that software. iOS and Android both believe that the users can't be trusted with full control over their device because "security".
+* The GPL's fundamental truth is that there is a tension for control over your devices between the creators of software and the users of that software. iOS and Android both believe that the users can't be trusted with full control over their device because "security". I believe this balance of power is important. Too far in either direction and things start to go badly:
+  * All the power in the hands of vendors at the expense of users results in exploitation, unfair pricing, anti-competitive practices, monopolies, duopolies (google+apple), cartels, and lack of innovation and quality due to lack of competition.
+  * On the flip side all the power in the hands of "users" (or at least user-developers) as per the pure GPL and it becomes difficult or impossible for capitalist processes to fund innovation and engineering effort due to the inability to capture generated value.
 * The apps matter, I do actually want to use a phone for useful things, and increasingly web applications are a poor cousin to their equivalent apps. (Facebook, horror that it is, oscillates between making a browser unusable and making it just about possible to read and interact, they *really* want all that juicy extra data that you can get from being an installed app).
 
 > iOS and Android both believe that users can't be trusted with full control over their device
+
+This time in smartphones is a moment like my first linux install around the year 2006. I hated the main operating system (Windows) that I was locked in to. All the app[lication]s that I relied on (outlook, visual studio etc) were locked to the operating system I hated. And now in 2021 all the proprietary apps on phones are locked to android / iOS (gmail, authenticator, waze, google maps, banking apps, whatsapp etc.)
+
+I could just install OpenGApps or similar to get the google play store on top of a slightly more free android variant; then install all the proprietary apps again, or I could see just how much I can do without google services by using microG and open source alternative apps like k9mail and maps.me. I've already started this journey by trying out many free alternatives and think it's worth pushing ahead. Running a build with no google services will be a good acid-test of how far I've got even if I have to go running back to the proprietary google services.
+
+In my switch to Linux from Windows I just tried to do as much as I could with free software such as the gimp and thunderbird, often still installed on Windows, and then bit by bit I needed to fire up Windows less and less often as I found alternative apps and ways of doing things.
+
+Any progress I can make here will make the jump to a fully free phone OS less painful in the future, and I'm increasingly confident that day will come just like I don't think twice about running Linux Mint even for work these days.
 
 ### Why not just Apple iOS?
 
