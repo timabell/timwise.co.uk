@@ -792,6 +792,65 @@ Success, now I have root *and* microG.
 
 Next, see if Aurora does the job, and if not how do I get google play on top of microG, if that's even possible. Till next time...
 
+### Getting apps
+
+#### F-Droid
+
+F-Droid is preinstalled (stared blankly at app list for a while before spotting it!) so that was easy, this can install *many* open source apps, and warns about "anti-features" which is a nice touch.
+
+Used F-Droid to install andOTP as a test (alternative to google authenticator 2FA app). Worked well.
+
+#### Apps from play store - Aurora
+
+Found Aurora in f-droid with a search, installed no problems, opened it up.
+
+First thing it does is prompt for install type which is confusing and lacks enough context to know what it means. The four types are explained further here: <https://auroraoss.com/faq/#how-does-aurora-store-install-apps> thought I'm still not really sure. I don't know what a plit apk is yet, and I don't see if there's a difference between root and services as I could do either and they both say they do the same thing.
+
+* Session - recommended but not clear why, I think it's saying it's like "Aurora Services" but with more something-or-other
+* Native - doesn't support split apks, that sounds bad, see below for what they are (see below for split apk research)
+* Root - auto install when downloaded
+* Aurora Services - auto install when downloaded
+
+How to choose?  I guess I'll go with the recommendation.
+
+Couple of theme questions. Meh.
+
+Installer question: "Select a suitable installer"
+
+* External Storage Access [grant] - pops and allow dialog, clicked "allow"
+* External Storage Manager [grant] - required on R+ (aka android 11), which we are running, guess I'll need that, - opened permissions screen, toggled to allow
+* Installer Permission [grant] - opened permissions screen, toggled to allow
+
+"Finish"
+
+Log in using:
+
+* Google
+* Anonymous
+
+It seems from what I've read in the FAQ and terms that using the real login is best because the anon accounts end up with random locales and app restrictions depending on where the login was generated.
+
+[install keepassdroid and push my kdb across with adb to get the google login, eventually the kdb will be sync'd with syncthing]
+
+... log in with google ...
+
+And we're in, app listing showing. Disconcerting to see disney+ etc in "free" app store on a "free" phone.
+
+WhatsApp isn't available in f-droid so let's try that as an experiment... It's in the list... it installed... it opened... it worked! (And logged me out of the phone, fucking whatsapp).
+
+##### What's a split APK?
+
+* APK splitting - <https://developer.android.com/studio/build/configure-apk-splits>
+* Android App Bundles - defers apk generatoin to play store <https://developer.android.com/guide/app-bundle>
+* Feature delivery - partial app additions and updates <https://developer.android.com/guide/playcore/feature-delivery>
+* Old unsupported app "SAI" split apk installer:
+	* <https://forum.xda-developers.com/t/guide-split-apk-installation.3934631/>
+	* <https://github.com/Aefyr/SAI>
+* <https://www.reddit.com/r/androiddev/comments/cenuvs/what_is_it_with_publishing_split_apks_on_google/>
+* <https://www.reddit.com/r/androiddev/comments/ci4a7r/confused_about_split_apk/>
+
+
+
 ## Customisations
 
 * Turn on all the power button options:
