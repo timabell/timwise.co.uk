@@ -629,7 +629,7 @@ LineageOS said not to boot before doing installing GApps, I'm not sure if that a
 
 ###### Getting boot.img
 
-The instructions for Magisk just say you need `boot.img`, leaving know clues how to get it.
+The instructions for Magisk just say you need `boot.img`, leaving know clues how to get it. [I've proposed explaining how to extract them in this pull request](https://github.com/topjohnwu/Magisk/pull/5132)
 
 It turns out it's embedded in the Lineage system image `lineage-18.1-20211214-nightly-lemonadep-signed.zip` that we've already downloaded.
 
