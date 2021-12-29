@@ -35,6 +35,10 @@ In my switch to Linux from Windows I just tried to do as much as I could with fr
 
 Any progress I can make here will make the jump to a fully free phone OS less painful in the future, and I'm increasingly confident that day will come just like I don't think twice about running Linux Mint even for work these days.
 
+### Nursing Homes and Neighbourhoods
+
+I highly recommend reading this article - [Purism, The Future of Computers: The Neighborhood and The Nursing Home](https://puri.sm/posts/the-future-of-computers-the-neighborhood-and-the-nursing-home/). It wonderfully illustrates the binary choice between the apple/google duopoly and the DIY open source and privacy movement with the rather apt analogy of nursing homes (apple etc where your needs are met but you give up control of your environment) and neighbourhoods (open source where it's up to you not let the wrong people in to renovate your house).
+
 ### Why not just Apple iOS?
 
 Yes I know the iPhone crowd can just push a button on the new phone and have it look like the old phone, but iOS is the polar opposite of what I want my technology to be: under *my* control. That means root. That means open source. That means GPL.
