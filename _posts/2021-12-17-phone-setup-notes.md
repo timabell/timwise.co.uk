@@ -877,6 +877,8 @@ Surprisingly two out of three of the banking apps I'd like to use actually worke
 
 One of the apps logged my out of my other phone. The other functioning app offered to transfer a "digital key" to the new device, and without that allowed me to use the first phone to generate a login code and use that to poke around. I didn't try transferring the key.
 
+More worrying was the realisation that I'd been locked in to running a google/iOS locked-down device by one of the banks as they are an "app-first" bank. You can't even use the online banking without the phone app, and the phone app requires a locked and signed phone. It's only by going on this very journey of actually trying to set up a phone that I control that I'd even noticed this insidious creeping embrace of platform-lockin. So now to truly escape the platform, I have to change banks as well.
+
 #### Google calendar (mostly working)
 
 I'm afraid I still use google's calendar, and there's a high cost of change as I've got my other half using a shared calendar. The calendar worked fine, although oddly the "widget" (view of calendar that can be placed on the phone's desktop when unlocked) was blank until I left the phone in the drawer with wifi off for two days. For who-knows-what reason when I got it out the drawer it has started working.
@@ -917,12 +919,72 @@ The "minimum screen refresh rate" setting was set to 60Hz. There's also a develo
 
 There's also a smooth-scroll option that I turned on that seems to produce a nicer effect.
 
+## Using adb to do backups
+
+It might be possible to backup a locked down phone without root by using adb's backup capabilities. I haven't looked into this much or tried it yet but here's some quick research notes:
+
+* [gist: Backup android app, data included, no root needed, with adb](https://gist.github.com/AnatomicJC/e773dd55ae60ab0b2d6dd2351eb977c1)
+* <https://net2.com/how-to-backup-and-restore-your-android-device-with-adb-on-ubuntu/>
+* <https://www.paulligocki.com/backup-restore-android-with-adb/>
+* <https://stackpointer.io/mobile/android-adb-backup-extract-restore-repack/372/>
+* <https://stackoverflow.com/questions/19225467/backing-up-android-device-using-adb>
+* <https://android.stackexchange.com/questions/69567/what-all-does-adb-backup-and-how-do-i-restore-part-of-it>
+
+This might give me a way of rescuing some of my data from my old phone that de-rooted itself in an OS upgrade and fucked my titanium backups (still bitter).
+
+Oh but wait...
+
+> [Devs can set the ALLOW_BACKUP flag to "No"](https://android.stackexchange.com/questions/69567/what-all-does-adb-backup-and-how-do-i-restore-part-of-it#comment125038_69576)
+
+Argh, what is wrong with this platform.
+
 ## Customisations
 
 * Turn on all the power button options:
 	* Settings > system > advanced (ffs) > gestures (wtf?) > power menu > advanced restart [on]
 
-## Todo
+## Options - what now?
+
+That's been an enlightening exercise in "is this even possible". I've learned a huge amount about the current state of the phone ecosystem. I'm in equal measure dismayed and hopeful, there are some unpleasant trends and circumstances, and some really encouraging signs of hope for the open ecosystem.
+
+There really isn't a clear answer for me for where to go from here. There are downsides and challenges in every direction.
+
+The options available seem to be in increasing order of freedom and somewhat decreasing order of utility:
+
+* Get an iPhone and abandon my principles and control, go live in a digital nursing home. - YeahNo.
+	* get banking apps galore
+	* never get root again
+	* trust apple to administer the correct dosage of backups
+	* forever more fight the divide between iOS and my linux laptops
+* Install Oxygen 11, relock the bootloader, live without root, have no upgrade path because Oxygen is dead. - No.
+	* possibly brick the phone trying to lock it
+	* get banking apps
+	* never get root again
+	* never have decent backups
+	* forever more fight the divide between iOS and my linux laptops
+* Install lineage and one of the google apps installers
+	* still no bank
+	* probably get reliable google goodness
+	* get stalked by google (no change there, I dno't mind as much as some about this)
+	* unknown time-to-failure
+	* I think this is probably the most "mainstream" of the subversive options so is most likely to continue to have a forward path for the next few years
+	* worry about security of unlocked evenrything and the security of lineage - I think it's probably no worse than linux at this point but who knows
+* Install lineage-for-microG (current experiment)
+	* no bank, no voice-to-text
+	* worry more about the security of build servers for this niche option
+	* I don't know how sustainable this project is, it's certainly noble
+* go all in and run a linux distro
+	* definitely no apps for you
+	* get to take the moral high ground
+	* lose touch with everyone who is on whatsapp
+
+It would be nice to think that by choosing to run the most open thing I can I am in some way helping, but I think the truth is users really don't make much difference to projects like this unless they come in enough numbers to sway app vendors like WhatsCrapp to support more obscure platforms. It's only the hackers and those who can financially fund projects who really make a difference here. So while I want to run the most open thing I can it doesn't really matter a hill of beans outside of my own brain whether I do or not.
+
+I think having written down the options I'm swinging towards lineage + proprietary google services. This seems to solve the immediate problem of getting unlocked and rooted and getting working backups again without losing everything that's useful to me in the process.
+
+I'm glad I've tried the microG version, and hope we see open source slowly chip away at the power of the two giants just like Linux did in the desktop space over decades.
+
+## Todo once I have an OS I'm happy with
 
 * firmware update: <https://wiki.lineageos.org/devices/lemonadep/fw_update>
 * Restore google things with google backup (app installs, wallpaper, some settings, contacts)
@@ -935,7 +997,7 @@ There's also a smooth-scroll option that I turned on that seems to produce a nic
 * find an alternative to titanium backup <https://forum.xda-developers.com/t/farewell-to-titanium-backup-looking-for-alternative.3932814/>
 * contribute to lineage to link to golang extractor, maybe with step by step instructions
 
-## OS Updates (for next time)
+### OS Updates (for next time)
 
 <https://wiki.lineageos.org/devices/lemonadep/update>
 
