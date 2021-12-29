@@ -391,7 +391,7 @@ Comparisons:
 * <https://www.reddit.com/r/LineageOS/comments/8358p0/mindthegapps_vs_opengapps/>
 * <https://www.reddit.com/r/degoogle/comments/olsv4c/i_am_very_confused_by_opengapps_mindthegapps/>
 
-### Open GApps
+### Open GApps (installer)
 
 Installer for google's proprietary services.
 
@@ -407,14 +407,14 @@ We're lucky they let us do this at all, google could take their toys away from u
 
 For Open GApps pico looks sufficient <https://github.com/opengapps/opengapps/wiki/Package-Comparison>, Lineage recommends nano and no bigger.
 
-### MindTheGapps
+### MindTheGapps (installer)
 
 Installer for google's proprietary services.
 
 * <https://www.getdroidtips.com/mindthegapps-8-1-0/>
 * <https://forum.xda-developers.com/t/change-opengapps-for-mindthegapps-afterthought.3837816/>
 
-### microG
+### microG (open source reimplementation)
 
 <https://github.com/microg>
 
@@ -433,11 +433,11 @@ Download apks (installation files) from the google play store without any google
 
 <https://yalp-store.en.uptodown.com/android>
 
-### F-Droid app store (another day)
+### F-Droid app store
 
 [F-Droid](https://f-droid.org/) is an app store for android like google play but without all the googlyness.
 
-This a bit pointless if you install play because all the open source apps are available in both, and the closed ones are only in play. I think I'll skip this for now but I'm glad it exists.
+This a bit pointless if you install play because all the open source apps are available in both, and the closed ones are only in play. I think I'll skip this for now but I'm glad it exists... Though it is pre-installed in lineage-for-microG so I have poked around and installed a few things.
 
 ### Playmaker - play store / f-droid integration
 
@@ -470,7 +470,7 @@ Came across this here: <https://www.xda-developers.com/lineageos-18-1-review/>
 
 Works well, flashed no problem and have used both recovery and fastboot modes with no issues. You'll see it as part of the steps below.
 
-## Installing LineageOS on OnePlus 9 Pro
+## Installing LineageOS on OnePlus 9 Pro (abandoned)
 
 It begins. [LineageOS](https://lineageos.org/).
 
@@ -735,7 +735,7 @@ I consider this an important backup access to the phone. If the screen fails the
 
 Steps for this are above.
 
-## Installing "Lineage for microG"
+## Installing "Lineage for microG" (currently testing)
 
 * <https://lineage.microg.org/> has install and download links
 * Download image from <https://download.lineage.microg.org/lemonadep/>
@@ -849,7 +849,69 @@ WhatsApp isn't available in f-droid so let's try that as an experiment... It's i
 * <https://www.reddit.com/r/androiddev/comments/cenuvs/what_is_it_with_publishing_split_apks_on_google/>
 * <https://www.reddit.com/r/androiddev/comments/ci4a7r/confused_about_split_apk/>
 
+### The state of the system
 
+What's working and what isn't.
+
+#### Google voice to text (dead)
+
+The keyboard has a little mic button which allows you to use google's services to enter text anywhere you like by typing. This is useful as I hate phone keyboards. I use it quite a lot. Unsurprisingly with the microG setup that's not working at all. The button is there but it does nothing.
+
+#### Bluetooth (working)
+
+Headphones connected and played no problem.
+
+### The state of the apps
+
+What's working and what isn't.
+
+#### Banking apps (mixed)
+
+Let's start with the big one. This is most likely to sink an open source effort as they try to protect themselves by joining in the lockdown.
+
+Surprisingly two out of three of the banking apps I'd like to use actually worked on the rooted custom ROM with an unlocked bootloader. I had not turned on the magisk hide capability at this point. One banking app behaved as if nothing was different, one popped a warning but allowed the app to continue and one flat out refused to run. I'm not going to name the banks involved on the public internet as I don't want to encourage anyone to test the security of my banking.
+
+One of the apps logged my out of my other phone. The other functioning app offered to transfer a "digital key" to the new device, and without that allowed me to use the first phone to generate a login code and use that to poke around. I didn't try transferring the key.
+
+#### Google calendar (mostly working)
+
+I'm afraid I still use google's calendar, and there's a high cost of change as I've got my other half using a shared calendar. The calendar worked fine, although oddly the "widget" (view of calendar that can be placed on the phone's desktop when unlocked) was blank until I left the phone in the drawer with wifi off for two days. For who-knows-what reason when I got it out the drawer it has started working.
+
+Oddly the events have shown up but reminders are missing. This is a bit of a problem as I use them a lot. It's not that they're local to my other phone because they show on the google calendar web interface too.
+
+#### Amazon things (working)
+
+The amazon shopping app worked no problem.
+
+To my surprise the amazon primve video app worked and played content as normal. I rather expected some kind of DRM smackdown to kick in on a rooted device.
+
+Audible worked and played no problem.
+
+#### Spotify (working)
+
+Again pleasingly working with no quibbling or warnings. This is more important to me at the moment than perhaps it should be.
+
+#### Whatscrapp (working)
+
+Much as I hate WhatsApp and it being owned by Facebook/Meta .... thanks to network effect I kinda still need it. I've managed to get some of my contacts over to telegram/signal but not everyone.
+
+WhatsApp worked but signed me out of the other phone (ffs). Bonus points for receiving an important message from someone I haven't heard from in about a year on the wrong phone. Ugh.
+
+So on the plus side I've learned of another reason to dislike WhatsApp.
+
+### Hiding the unlock & root
+
+Magisk has in its settings a "hide" option. This had no noticeable effect on the "SafteyNet" test (still three of three tests fail for me) built in to Magisk. I didn't notice any change in app behaiour in my limited poking.
+
+### WiFi-based location (turn on)
+
+Understandably from a freedom-warrior point of view the wifi-based loction services are off by default, but this is a bit of a pain because if you've ever used pure GPS positioning you'll know it's shit at doing it in houses, offices and built up areas, takes ages to get a lock, and is a bit hit and miss in cars. The accuracy you normally see is much more a function of the ubiquity of wifi in our urban lives.
+
+### Screen refresh rate 60/120Hz (increase)
+
+The "minimum screen refresh rate" setting was set to 60Hz. There's also a developer option for showing the current rate. In my experiment it sat at 60Hz all the time. This is fine till you scroll up and down, then you notice how much smoother the text scrolls at 120Hz. I upped the minimum to 120Hz which seemd to work.
+
+There's also a smooth-scroll option that I turned on that seems to produce a nicer effect.
 
 ## Customisations
 
