@@ -1046,6 +1046,23 @@ I now have the lineage bootloader so the steps to get into recovery etc are a bi
 			/dev/block/dm-2 0.9G  0.9G  3.0M 100% /mnt/system
 			```
 			That is indeed quite full. Annoyingly the installer doesn't say which partition is full.
+		1. Some ideas here <https://forum.xda-developers.com/t/q-insufficient-storage-space-in-system-partition.3018464/>
+		1. Try format & reboot to recovery, nope.
+		1. hint that it could be slot related <https://www.reddit.com/r/LineageOS/comments/fuykda/lineage_os_171_opengapps_error_not_sufficient/>
+		1. let's try a swap slot as per <https://www.reddit.com/r/LineageOS/comments/fqashj/difficulty_installing_gapps_after_lineage_os/fluhd8s/?context=3>
+		1. enter fastboot
+		```
+		tim@max:~/Downloads/oneplus9pro/MindTheGapps
+		$ fastboot set_active other
+		Setting current slot to 'b'                        OKAY [  0.043s]
+		Finished. Total time: 0.044s
+		```
+		1. enter recovery
+		1. re-run the sideload 
+		1. "apply update" > "apply from adb" (aka sideload)
+		1. `adb sideload MindTheGapps-11.0.0-arm64-20210920_084011.zip`
+		1. ignore signature warning (the price of escaping a closed ecosystem)
+		1. same space error. sigh
 
 And that's as far as I've got... to be continued with much googling.
 
