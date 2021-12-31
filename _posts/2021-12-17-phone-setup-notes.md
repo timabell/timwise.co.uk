@@ -474,7 +474,7 @@ Came across this here: <https://www.xda-developers.com/lineageos-18-1-review/>
 
 Works well, flashed no problem and have used both recovery and fastboot modes with no issues. You'll see it as part of the steps below.
 
-## Installing LineageOS on OnePlus 9 Pro (abandoned)
+## Installing LineageOS on OnePlus 9 Pro (this one)
 
 It begins. [LineageOS](https://lineageos.org/).
 
@@ -739,7 +739,7 @@ I consider this an important backup access to the phone. If the screen fails the
 
 Steps for this are above.
 
-## Installing "Lineage for microG" (currently testing)
+## Installing "Lineage for microG" (tried, rejected for now)
 
 * <https://lineage.microg.org/> has install and download links
 * Download image from <https://download.lineage.microg.org/lemonadep/>
