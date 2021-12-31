@@ -380,13 +380,13 @@ There are two major parts to this:
 1. Google play - the app store for downloading apk files to install (plus ratings, reviews, screenshots etc)
 2. Google services - these provide services that many apps want to use to avoid multiple implementations such as location information, push notification etc.
 
-There's a few ways of getting the google play store and related prioprietary horrors:
+There's a few ways of getting the google play store and related proprietary horrors:
 
 * Open GApps - pulls down the proprietary apps and writes them to the image
 * MindTheGapps? - pulls down the proprietary apps and writes them to the image
 * microG - open source re-implementation of the services
 
-[For Lineage 18.1 (Android 11) the Lineage wiki links to MindTheGaps](https://wiki.lineageos.org/gapps), and [XDA Developers says "Always Use the GApps Package Recommended by your ROM Developer"](https://www.xda-developers.com/gapps-package-recommended-rom-developer/)
+[For Lineage 18.1 (Android 11) the Lineage wiki links to MindTheGaps](https://wiki.lineageos.org/gapps#mobile), and [XDA Developers says "Always Use the GApps Package Recommended by your ROM Developer"](https://www.xda-developers.com/gapps-package-recommended-rom-developer/)
 
 I don't mind proprietary software as long as there's choice out there, and the apple app store + google play duopoly on apps is not choice. F-Droid is fine but doesn't have a single big name vendor's apps, so it's probably enough for google to dodge an anti-competitive lawsuit but not enough to produce any real competition.
 
@@ -415,8 +415,20 @@ For Open GApps pico looks sufficient <https://github.com/opengapps/opengapps/wik
 
 Installer for google's proprietary services.
 
+Really haven't found much information about this.
+
+#### About
+
+* <https://gitlab.com/MindTheGapps/vendor_gapps> - I think this is probably the official source
+	* There's no download link, as mentioned in this issue: <https://gitlab.com/MindTheGapps/vendor_gapps/-/issues/1>
+	* <https://github.com/MindTheGapps/vendor_gapps> appears to be a stale copy, maybe they moved hosting to gitlab
 * <https://www.getdroidtips.com/mindthegapps-8-1-0/>
 * <https://forum.xda-developers.com/t/change-opengapps-for-mindthegapps-afterthought.3837816/>
+
+#### Installation
+
+
+* This wasn't a lot of help but basically said just flash it: <https://www.getdroidtips.com/mindthegapps-8-1-0/>
 
 ### microG (open source reimplementation)
 
@@ -474,7 +486,7 @@ Came across this here: <https://www.xda-developers.com/lineageos-18-1-review/>
 
 Works well, flashed no problem and have used both recovery and fastboot modes with no issues. You'll see it as part of the steps below.
 
-## Installing LineageOS on OnePlus 9 Pro (this one)
+## Installing LineageOS on OnePlus 9 Pro (take 1)
 
 It begins. [LineageOS](https://lineageos.org/).
 
@@ -983,6 +995,59 @@ It would be nice to think that by choosing to run the most open thing I can I am
 I think having written down the options I'm swinging towards lineage + proprietary google services. This seems to solve the immediate problem of getting unlocked and rooted and getting working backups again without losing everything that's useful to me in the process.
 
 I'm glad I've tried the microG version, and hope we see open source slowly chip away at the power of the two giants just like Linux did in the desktop space over decades.
+
+## Installing LineageOS + google services on OnePlus 9 Pro (take 2)
+
+I now have the lineage bootloader so the steps to get into recovery etc are a bit different than with stock or TWRP.
+
+"Note: If you want the Google Apps add-on on your device, you must follow this step before booting into LineageOS for the first time!" ~ <https://wiki.lineageos.org/devices/lemonadep/install#installing-lineageos-from-recovery>
+
+1. Download latest nightly (there's no stable/unstable on this): <https://download.lineageos.org/lemonadep> - this has both the ROM (OS image) and the recovery image.
+1. Download copy-partitions <https://androidfilehost.com/?fid=2188818919693768129> (as per wiki)
+	1. The sha256 for the copy I have is `200877dfd0869a0e628955b807705765a91e34dff3bfeca9f828e916346aa85f  copy-partitions-20210323_1922.zip`
+1. Verify all the sha256 sums: `sha256sum -c *.sha256`
+1. Boot to fastboot
+1. flash the lineage recovery: `fastboot flash boot lineage-18.1-20211228-recovery-lemonadep.img`
+	1. don't reboot yet
+1. copy partitions as instructed
+	1. switch to recovery
+	1. "apply update" > "apply from adb" (aka sideload)
+	1. `adb sideload copy-partitions-20210323_1922.zip`
+	1. Ignore unknown sig and "continue"
+	1. come back out of recovery menu (don't reboot yet)
+	1. don't reboot yet
+1. "factory reset" > "wipe all data"
+	1. don't reboot yet
+1. flash OS:
+	1. "apply update" > "apply from adb" (aka sideload)
+	1. `adb sideload lineage-18.1-20211228-nightly-lemonadep-signed.zip`
+	1. don't reboot yet
+1. MindTheGapps - I haven't found any instructions for this anywhere
+	1. check the arch (it's `arm64`) here <https://wiki.lineageos.org/devices/lemonadep/>
+	1. Download the arm64 build from <https://androidfilehost.com/?w=files&flid=322935>
+		1. or the "mirror" <http://downloads.codefi.re/jdcteam/javelinanddart/gapps>
+	1. Given there's no shas anywhere I downloaded from several mirrors and cross-checked the hashes. `85481cb98c8a8692f52c033ead1db436870af385498a917701fcd8c6182e145c  MindTheGapps-11.0.0-arm64-20210920_084011.zip`
+	1. "apply update" > "apply from adb" (aka sideload)
+	1. `adb sideload MindTheGapps-11.0.0-arm64-20210920_084011.zip`
+	1. ignore signature warning (the price of escaping a closed ecosystem)
+	1. error shown on phone, roughly:
+		```
+		low resource device detected, removing large extras
+		not enough space for gapps! aborting
+		...
+		error in /sideload/package.zip (status 1)
+		```
+		1. [patch that adds error message](https://gitlab.com/MindTheGapps/vendor_gapps/-/commit/0f6b4560288267b644c49de0fdc538fa30980708)
+		1. [current message on `sigma` branch](https://gitlab.com/MindTheGapps/vendor_gapps/-/blob/de0847802034654d63150c3de3ca05f1af326316/build/meta/com/google/android/update-binary#L38)
+		1. In lineage recovery, mount `sytsem` and enable adb, run df:
+			```
+			OnePlus9Pro:/ # df -h /mnt/system                                                                                            
+			Filesystem      Size  Used Avail Use% Mounted on
+			/dev/block/dm-2 0.9G  0.9G  3.0M 100% /mnt/system
+			```
+			That is indeed quite full. Annoyingly the installer doesn't say which partition is full.
+
+And that's as far as I've got... to be continued with much googling.
 
 ## Todo once I have an OS I'm happy with
 
