@@ -143,6 +143,8 @@ Even though I accidentally led a couple of teams early in my contracting career 
 
 By alternating roles you take on between individual contributor (coder) and team lead roles you can keep the experience of coal-face high-pace shipping fresh whilst also giving more value by helping whole teams succeed.
 
+<https://charity.wtf/2017/05/11/the-engineer-manager-pendulum/>
+
 #### The non-critical-path task
 
 I tried picking up a story from the sprint when I was leading a team once. It didn't go well but I didn't know any better. Because my primary goal was team enablement and my time was interrupt-driven I'd end up with the team waiting for my piece to get done. Not a great help to the team's delivery speed. I also found with the team being full time on code an me less than full time I was always just that little bit behind on current thinking in the heart of the codebase, and you don't have to be much out of step to be much less productive or cause more problems than you solve.
