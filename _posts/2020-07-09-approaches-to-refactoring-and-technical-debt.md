@@ -216,3 +216,4 @@ If you want to avoid the task at hand by reading the whole internet in the hope 
 * <http://thinkapps.com/blog/development/technical-debt-calculation/>
 * <https://www.productplan.com/glossary/technical-debt/>
 * <https://leadership.garden/tips-on-prioritizing-tech-debt>
+* <https://www.steveonstuff.com/2022/01/27/no-such-thing-as-clean-code>
