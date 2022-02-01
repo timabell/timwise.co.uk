@@ -71,6 +71,23 @@ Here's a useful list that you could use as a source of leads as well as a way
 of filtering all the inbound email into a folder
 <https://github.com/alexmbird/uk-it-recruiter-domains/blob/master/domains.txt>
 
+## People you know (your "network")
+
+Possibly with the assistance of LinkedIn, WhatsApp, Telegram, Signal, Facebork etc.
+
+I don't like to mention this as the idea of "networking" always made me cringe,
+but the truth is who you know matters and can get you an "in" where you might
+not have before, and indeed in the past I've won contracts through friends of
+friends and repeat business.
+
+It doesn't seem very actionable, and when you need it it's probably too late to
+build a "network" of trust, but you can still reach out to the people you do
+know with a friendly message and make it clear you're looking (and be clear
+about what you're looking for - to trigger what [Jonathan Stark calls "Rolodex
+Moments"](https://jonathanstark.com/daily/20170127-dogfooding---rolodex-moments))
+
+This is also a reminder to leave a trail of positive experiences with everyone you meet, go the extra mile, and invest a little regularly in your relationships whether you "need" them in the moment or not.
+
 ## Others
 
 These are ones I've come across that you might want to cover if you are looking
