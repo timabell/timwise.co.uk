@@ -49,6 +49,13 @@ It's worth being careful if you are looking before leaving. I tend to not look
 till I've finished the previous contract and had some time to refresh so that
 hasn't been an issue for me.
 
+### LinkedIn job hunt status
+
+You can now set your "open to work" status to everyone, recruiters etc so be
+sure to set that. I've definitely had inbound interest from that, albeit
+relatively low quality. It also adds an overlay to your profile image which your
+network might see when you post things.
+
 ## Recruiters
 
 It's probably worth reaching out to recruiters directly.
