@@ -56,6 +56,10 @@ sure to set that. I've definitely had inbound interest from that, albeit
 relatively low quality. It also adds an overlay to your profile image which your
 network might see when you post things.
 
+### LinkedIn Hiring groups
+
+* [Outside IR35 contracts board](https://www.linkedin.com/groups/9031918/) group. - I can do invites if you want them. Let me know.
+
 ## Recruiters
 
 It's probably worth reaching out to recruiters directly.
