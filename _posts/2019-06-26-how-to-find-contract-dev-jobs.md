@@ -4,13 +4,25 @@ layout: post
 categories: [contracting,resources]
 ---
 
+## Handling recruiters
+
 Before you dive in, you might want to look at my [page on dealing with
 recruiters](/recruiters/), especially if you are going to be dealing with
 multiple recruiters at once.
 
+## Rate research with ITJobsWatch.co.uk
+
+[IT JobsWatch](https://www.itjobswatch.co.uk/contracts/uk/developer.do) is a great guide to market prices. You can see numbers, graphs, trends, compare tech, and see what appears together.
+
+It's also a useful source of ideas for considering what might be a good investment in saleable skills.
+
+Note the volume as well as the price, for example C# is massively higher volume than Ruby.
+
+## Lead sources
+
 In rough order of the success I've had with them over the 7 years of contracting:
 
-## JobServe
+### JobServe
 
 <https://www.jobserve.com/gb/en/Job-Search/>
 
@@ -30,7 +42,7 @@ advertised role, but what this does do is let recruiters that specialize in
 your particular skills know you are actively looking, which is a lot easier for
 them to make use of than hoping to tempt someone who isn't.
 
-## StackOverflow jobs
+### StackOverflow jobs
 
 <https://stackoverflow.com/jobs?j=contract>
 
@@ -39,7 +51,7 @@ contracts through this, and made a good friend who I'm still in touch with
 after a fair few years. I'd say the quality of companies on here is generally
 higher than average.
 
-## LinkedIn
+### LinkedIn
 
 By posting regularly the progress of my search and asking contacts for help I
 have had some luck getting referrals. I've never used LinkedIn's proper job
@@ -49,18 +61,18 @@ It's worth being careful if you are looking before leaving. I tend to not look
 till I've finished the previous contract and had some time to refresh so that
 hasn't been an issue for me.
 
-### LinkedIn job hunt status
+#### LinkedIn job hunt status
 
 You can now set your "open to work" status to everyone, recruiters etc so be
 sure to set that. I've definitely had inbound interest from that, albeit
 relatively low quality. It also adds an overlay to your profile image which your
 network might see when you post things.
 
-### LinkedIn Hiring groups
+#### LinkedIn Hiring groups
 
 * [Outside IR35 contracts board](https://www.linkedin.com/groups/9031918/) group. - I can do invites if you want them. Let me know.
 
-## Recruiters
+### Recruiters
 
 It's probably worth reaching out to recruiters directly.
 
@@ -71,7 +83,7 @@ Here's a useful list that you could use as a source of leads as well as a way
 of filtering all the inbound email into a folder
 <https://github.com/alexmbird/uk-it-recruiter-domains/blob/master/domains.txt>
 
-## People you know (your "network")
+### People you know (your "network")
 
 Possibly with the assistance of LinkedIn, WhatsApp, Telegram, Signal, Facebork etc.
 
@@ -88,7 +100,7 @@ Moments"](https://jonathanstark.com/daily/20170127-dogfooding---rolodex-moments)
 
 This is also a reminder to leave a trail of positive experiences with everyone you meet, go the extra mile, and invest a little regularly in your relationships whether you "need" them in the moment or not.
 
-## Others
+### Others
 
 These are ones I've come across that you might want to cover if you are looking
 to not miss anything, but I haven't either used or succeeded with these myself.
@@ -109,7 +121,7 @@ a PR](https://github.com/timabell/timwise.co.uk/edit/master/_posts/2019-06-26-ho
 * <https://www.contractspy.co.uk/>
 * <https://wellpaid.io/>
 
-## Places to find even more
+### Places to find even more
 
 * <https://www.quora.com/What-are-the-best-job-boards-for-software-engineers>
 
