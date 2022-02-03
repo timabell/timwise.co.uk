@@ -42,6 +42,8 @@ Trello is great for GTD because:
 
 Neither GTD or Trello can give you more hours in the day, help you focus, get you to do things you really don't want to do, or make your tax return go away. This still requires putting the work in. Having said that, at least you will know you haven't just forgotten anything really important, it's just a bit stuck on your list. Personally with life as it is for me now I never get close to the weekly/daily GTD schedule laid out below, but that doesn't make it less valuable.
 
+If you are looking at GTD for the same reasons as I did then beware ["the efficiency trap"](https://www.wsj.com/articles/escaping-the-efficiency-trapand-finding-some-peace-of-mind-11628262751)
+
 ## My GTD Method
 
 Here's my actual GTD board (minus details) to give you an idea of what it looks like. You might be able to see I have far too much in Inbox and Action items as is often the case, but it doesn't take too long to clear down when I actually focus on it.
