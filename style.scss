@@ -80,6 +80,40 @@ h4 {
   color: $gray;
 }
 
+.entry table {
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+	margin: 1em 0;
+	border-width: 0 1px;
+	border-color: #bac4cb;
+	border-style: solid;
+	border-radius:6px;
+	border-collapse:separate;
+}
+.entry table {
+	th {
+		color: #fff;
+		background-color: #555;
+	}
+	th:first-child {
+		border-radius:6px 0 0 0;
+	}
+	th:last-child {
+		border-radius:0 6px 0 0;
+	}
+}
+.entry table td {
+	border-width: 1px 0 0 0;
+}
+.entry table {
+	td, th {
+		padding: 0.5em 1em;
+		border-color: #bac4cb;
+		border-style: solid;
+		text-align: left;
+	}
+}
+
+
 p {
   margin: 15px 0;
 }
