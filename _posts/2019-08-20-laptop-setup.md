@@ -186,6 +186,7 @@ refs:
 ## Shutter
 
 * Change default save location to `~/tmp/shutter` (new folder)
+* change filename to `shutter_%Y%-m-%d_%NN`
 
 ## Thunderbird
 
