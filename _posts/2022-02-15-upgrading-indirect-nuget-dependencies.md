@@ -5,6 +5,8 @@ layout: post
 
 The state of the art for dependency management in dotnet land. Having used ruby bundler and npm this makes me cry.
 
+I really hope I'm massively wrong about the following information. Please do tell me if I'm wrong and NuGet dependency management is not actually as bad as this!
+
 ## Paket, a NuGet alternative
 
 If you have the option then look into replacing nuget with [paket](https://fsprojects.github.io/Paket/) for your projects as I gather this has the below problems solved.
