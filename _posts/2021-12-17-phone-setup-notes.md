@@ -852,7 +852,7 @@ It seems from what I've read in the FAQ and terms that using the real login is b
 
 And we're in, app listing showing. Disconcerting to see disney+ etc in "free" app store on a "free" phone.
 
-WhatsApp isn't available in f-droid so let's try that as an experiment... It's in the list... it installed... it opened... it worked! (And logged me out of the phone, fucking whatsapp).
+WhatsApp isn't available in f-droid so let's try that as an experiment... It's in the list... it installed... it opened... it worked! (And logged me out of the other phone, fucking whatsapp).
 
 ##### What's a split APK?
 
@@ -887,7 +887,7 @@ Let's start with the big one. This is most likely to sink an open source effort 
 
 Surprisingly two out of three of the banking apps I'd like to use actually worked on the rooted custom ROM with an unlocked bootloader. I had not turned on the magisk hide capability at this point. One banking app behaved as if nothing was different, one popped a warning but allowed the app to continue and one flat out refused to run. I'm not going to name the banks involved on the public internet as I don't want to encourage anyone to test the security of my banking.
 
-One of the apps logged my out of my other phone. The other functioning app offered to transfer a "digital key" to the new device, and without that allowed me to use the first phone to generate a login code and use that to poke around. I didn't try transferring the key.
+One of the apps logged me out of my other phone. The other functioning app offered to transfer a "digital key" to the new device, and without that allowed me to use the first phone to generate a login code and use that to poke around. I didn't try transferring the key.
 
 More worrying was the realisation that I'd been locked in to running a google/iOS locked-down device by one of the banks as they are an "app-first" bank. You can't even use the online banking without the phone app, and the phone app requires a locked and signed phone. It's only by going on this very journey of actually trying to set up a phone that I control that I'd even noticed this insidious creeping embrace of platform-lockin. So now to truly escape the platform, I have to change banks as well.
 
@@ -1000,7 +1000,7 @@ I'm glad I've tried the microG version, and hope we see open source slowly chip 
 
 I now have the lineage bootloader so the steps to get into recovery etc are a bit different than with stock or TWRP.
 
-"Note: If you want the Google Apps add-on on your device, you must follow this step before booting into LineageOS for the first time!" ~ <https://wiki.lineageos.org/devices/lemonadep/install#installing-lineageos-from-recovery>
+> "Note: If you want the Google Apps add-on on your device, you must follow this step before booting into LineageOS for the first time!" ~ <https://wiki.lineageos.org/devices/lemonadep/install#installing-lineageos-from-recovery>
 
 1. Download latest nightly (there's no stable/unstable on this): <https://download.lineageos.org/lemonadep> - this has both the ROM (OS image) and the recovery image.
 1. Download copy-partitions <https://androidfilehost.com/?fid=2188818919693768129> (as per wiki)
