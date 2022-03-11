@@ -3,7 +3,11 @@ title: Why I want you to use slack threads
 layout: post
 ---
 
-Someone has probably sent you a link to this blog post in response to you posting multiple messages in a slack channel on the same topic. Don't worry, we're not angry with you, we just want to help.
+Someone has probably sent you a link to this blog post in response to you posting multiple messages in a slack channel on the same topic.
+
+Don't worry, we're not angry with you, we just want to help. We also know that the slack interface can be a bit confusing, especially on mobile, and it's easy to accidentally respond in channel instead on a thread.
+
+This post is not intended to shame or berate you, just to share information on how we can all make slack a nicer and less distracting thing to use for everyone.
 
 ![two messages in a slack channel](/images/blog/slack/slack-two-channel-messages.png)
 
