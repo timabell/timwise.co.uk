@@ -113,5 +113,5 @@ If your team knows to do this but forgets sometimes then add `:start_a_thread:` 
 
 ## Summary
 
-So in summary, please give a thought to others before you send a second message. It may be quick for you but if there are 50 people in the slack room then you are costing them much more time and attention than it saves you by not using taking time construct a clean message or thread.
+So in summary, please give a thought to others before you send a second message. It may be quick for you but if there are 50 people in the slack room then you are costing them much more time and attention than it saves you by not taking the time to construct a clean message or thread.
 
