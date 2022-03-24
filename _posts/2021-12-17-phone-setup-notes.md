@@ -1104,6 +1104,65 @@ I *think* it's the same signing that you have to do to `apk` files, and `apk` is
 	* <https://stackoverflow.com/questions/3994035/what-is-aligned-memory-allocation>
 * <https://www.androidcentral.com/installing-android-sdk-windows-mac-and-linux-tutorial>
 
+### Let's try TWRP+Lineage+MindTheGapps
+
+#### Install TWRP
+
+<https://www.getdroidtips.com/replace-lineageos-recovery-twrp/>
+
+1. Reboot phone to fastboot or something (the built-in one where the volume key changes options), leave it in that state
+1. `fastboot devices` on linux should show the phone
+1. `fastboot boot twrp.img` (already downloaded and symlinked above)
+1. Phone reboots into twrp temporarily
+1. Advanced > flash current twrp
+1. Reboot (ok the no-OS warning)
+1. Yay, booted into twrp, comforting
+
+#### Install LineageOS (yet again)
+
+* Well, let's get a new nightly
+* Instructions say check model...
+  * Reboot to twrp (recovery) with USB connected to laptop
+  * Laptop pops window for new mount `mtp://OnePlus_LE2123_dade278d/`
+  * Yep, LE2123 is in the supported list. Phew.
+* Skip all the "recovery" steps in <https://wiki.lineageos.org/devices/lemonadep/install>
+* I'm guessing I don't need to run "copy partitions" again because that's to avoid only having one working slot, and I already have to having done this before. Tell me if I'm wrong!
+* Give up waiting for new image download (~1GB), continue with older image...
+* Factory reset
+  * TWRP > Wipe > Swipe for factory reset
+  * back
+  * Format Data (button)
+  * type yes to continue (wiping all apps & data)
+  * back to main menu (android back button lots of times)
+* Flash lineage
+  * Still in TWRP
+  * Advanced > ADB Sideload
+  * Tick the wipe boxes ("Dalvik cache" + "cache")
+  * Swipe to sart sideload
+  * `adb sideload lineage-18.1-20211228-nightly-lemonadep-signed.zip`
+  * back
+  * Don't reboot yet
+* Add MindTheGaps
+  * still in TWRP
+  * ADB Sideload
+  * swipe (cache wipe still selected)
+  * `adb sideload MindTheGapps-11.0.0-arm64-20210920_084011.zip`
+  * fail. log:
+
+```
+**********************
+MindTheGapps installer
+**********************
+Extracting files
+Setting up environment
+Mounting partitions
+Could not mount /mnt/system! Aborting
+Updater process ended with ERROR: 1
+```
+For goodness sake.
+
+Fuck it, let's try the other gapps even though it says not to....
+
 ### To be continued...
 
 And that is as far as I've got for now... to be continued with much googling and experimenting.
