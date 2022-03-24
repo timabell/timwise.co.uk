@@ -996,7 +996,7 @@ I think having written down the options I'm swinging towards lineage + proprieta
 
 I'm glad I've tried the microG version, and hope we see open source slowly chip away at the power of the two giants just like Linux did in the desktop space over decades.
 
-## Installing LineageOS + google services on OnePlus 9 Pro (take 2)
+## Installing LineageOS + google services on OnePlus 9 Pro (take 2) - fail
 
 I now have the lineage bootloader so the steps to get into recovery etc are a bit different than with stock or TWRP.
 
@@ -1076,7 +1076,7 @@ I now have the lineage bootloader so the steps to get into recovery etc are a bi
 1. Ruled Out: [Wrong/stale slot in use](https://www.reddit.com/r/LineageOS/comments/fuykda/lineage_os_171_opengapps_error_not_sufficient/) - tried swap slot (above), no change.
 1. Ruled out: Booting phone before gapps install (didn't do this so not this).
 
-### Patching the installer
+### Patching the installer - abandoned
 
 It seems to me having read around that the error message is hiding useful information on the state of the device and what exactly failed. (Which partition is out of space? Is it just read only or something?). I'n not feeling like playing with partitioning given the warnings I saw on a forum of potentially bricking a device
 
@@ -1104,7 +1104,7 @@ I *think* it's the same signing that you have to do to `apk` files, and `apk` is
 	* <https://stackoverflow.com/questions/3994035/what-is-aligned-memory-allocation>
 * <https://www.androidcentral.com/installing-android-sdk-windows-mac-and-linux-tutorial>
 
-### Let's try TWRP+Lineage+MindTheGapps
+### Let's try TWRP+Lineage+MindTheGapps - fail
 
 #### Install TWRP
 
@@ -1162,6 +1162,67 @@ Updater process ended with ERROR: 1
 For goodness sake.
 
 Fuck it, let's try the other gapps even though it says not to....
+
+Reboot just to have a look... Lineage running fine, no sign of any gapps.
+
+
+### Let's try TWRP+Lineage+OpenGApps - fail
+
+* Power off
+* power + vol-down - ended up in lineage recovery, wat?? swap slot??
+* reboot to bootloader? no that's the built-in pixelated bright green "START" thing, oh actually that's fine, that's the fastboot thing.
+* switch slot as above
+
+```
+fastboot set_active other
+Setting current slot to 'b'
+... OKAY [  0.048s]
+Finished. Total time: 0.056s
+```
+* reboot to recovery
+* back in TWRP
+
+That's cool! I have lineage recovery in slot `a` and TWRP in slot `b`.
+
+Okay, back to the plan.
+
+#### Lineage (again again again...)
+
+* Repeat the lineage intall steps above (no idea if that's really necessary but *shrug*)
+
+#### OpenGApps install - fail
+
+* Download <https://opengapps.org/?api=11.0&variant=nano> - ARM64 / 11 / nano
+  * (manually changed from 10 to 11 from link on <https://wiki.lineageos.org/gapps>)
+  * download the md5 too
+  * `md5sum -c *.md5` to validate...
+* Back to ADB Sideload in TWRP (cache wipe ticked x2), swipe to start
+* `adb sideload open_gapps-arm64-11.0-nano-20220215.zip`
+* cross fingers
+* bah. failed, basically same error.
+
+```
+- Performing system space calculations
+
+Insufficient storage space available in
+System partition. ...
+...
+Error Code: 70
+```
+
+grap logs as instructed: `adb pull /sdcard/open_gapps_log.txt` - success 
+
+[gist of log file open_gapps_log.txt](https://gist.github.com/timabell/c4f16fd656f3faf8a16d06aa113e0346)
+
+Important bit here is that there is **ZERO** space, so choosing smaller install is not going to work.
+
+```
+...
+Current Free Space |         0
+...
+```
+
+Well on the plus side the diagnostics are muuuuch better in OpenGApps so that's saved me fucking around trying to patch MindTheGaps' installer.
 
 ### To be continued...
 
