@@ -1064,7 +1064,49 @@ I now have the lineage bootloader so the steps to get into recovery etc are a bi
 		1. ignore signature warning (the price of escaping a closed ecosystem)
 		1. same space error. sigh
 
-And that's as far as I've got... to be continued with much googling.
+### Possible cause of space error
+
+1. [Partition not mounted at all](https://forum.xda-developers.com/t/q-insufficient-storage-space-in-system-partition.3018464/post-76072942)
+1. [LineageOS image has partitions that are too small](https://forum.xda-developers.com/t/q-insufficient-storage-space-in-system-partition.3018464/#post-84651523) to fit extra g-apps in.
+	* Maybe use [TWRP BigSys](https://forum.xda-developers.com/t/dev-kernel-4-4-android-8-0-oreo.3688948/) to get bigger partitions??
+	* Manually re-partition? Alegedly dangerous.
+		* <https://android.stackexchange.com/questions/216123/android-how-to-increase-system-partition-and-decrease-data-partition#comment276924_216123> warning of brickability if you touch wrong device
+		* <https://www.reddit.com/r/Android/comments/2o8lvf/why_cant_we_resize_partitions_on_android_but_on/>
+1. [Incompatibility with Lineage bootloader - use TWRP instead](https://www.reddit.com/r/LineageOS/comments/fu70jg/linageos_171_unable_to_install_gapps/) - worth a try I think, probably the next thing I'll try.
+1. Ruled Out: [Wrong/stale slot in use](https://www.reddit.com/r/LineageOS/comments/fuykda/lineage_os_171_opengapps_error_not_sufficient/) - tried swap slot (above), no change.
+1. Ruled out: Booting phone before gapps install (didn't do this so not this).
+
+### Patching the installer
+
+It seems to me having read around that the error message is hiding useful information on the state of the device and what exactly failed. (Which partition is out of space? Is it just read only or something?). I'n not feeling like playing with partitioning given the warnings I saw on a forum of potentially bricking a device
+
+There's links to the source above and I did start fiddling with this, but you have to figure out how to re-sign the zip to get it to install at which point I fell down an android-sized rabbit hole.
+
+#### Signing zips and apks
+
+Here's what I found so far, I haven't got it working yet.
+
+I *think* it's the same signing that you have to do to `apk` files, and `apk` is just a special shaped `zip` file. Off into learning-android-sdk-land I went...
+
+* There's some kind of strange android app that can sign zips called [ZipSigner](https://f-droid.org/forums/topic/zipsigner/)
+  * [ZipSigner is missing source code](https://code.google.com/archive/p/zip-signer/issues/3) so you are relying on random binaries. Dodgy but probably well intentioned.
+* <https://android.stackexchange.com/questions/222262/how-to-create-manually-create-my-own-%e1%b4%8f%e1%b4%9b%e1%b4%80-update-file-to-be-used-for-adb-sideload>
+* <https://android.stackexchange.com/questions/95425/update-zip-just-for-fixing-file-permissions-possible>
+* <https://forum.xda-developers.com/t/tutorial-the-updater-script-completely-explained.2377695/>
+* <https://www.bettermobileapp.com/article/10558021/Updater-script>
+* <https://android.stackexchange.com/questions/191043/edditing-updater-script>
+* <https://androidforums.com/threads/custom-rom-updater-scipt-troubleshooting.701752/>
+* <https://android.stackexchange.com/questions/35600/how-to-create-an-update-zip-file-that-can-copy-rename-a-file>
+* <https://developer.android.com/studio/command-line/zipalign>
+* <https://developer.android.com/studio/publish/app-signing#opt-out>
+* <https://developer.android.com/studio/command-line/apksigner>
+* <https://www.addictivetips.com/mobile/what-is-zipalign-in-android-and-how-it-works-complete-guide/>
+	* <https://stackoverflow.com/questions/3994035/what-is-aligned-memory-allocation>
+* <https://www.androidcentral.com/installing-android-sdk-windows-mac-and-linux-tutorial>
+
+### To be continued...
+
+And that is as far as I've got for now... to be continued with much googling and experimenting.
 
 ## Todo once I have an OS I'm happy with
 
