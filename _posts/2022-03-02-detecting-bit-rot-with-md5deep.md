@@ -66,10 +66,10 @@ repo/rust-kata/.idea/workspace.xml: Known file not used
 
 I have a monthly calendar reminder to run backups. When that goes off I:
 
+1. Run `verify-hashes.sh` and search the output for "Known file not used" to find any rot or churn.
+1. Run `rehash.sh` to update the hashes.
 1. Plug a backup HDD in and run back-in-time to update the backup
-2. Run `verify-hashes.sh` and search the output for "Known file not used" to find any rot or churn.
-3. Run `rehash.sh` to update the hashes.
-4. Sleep easy.
+1. Sleep easy.
 
 I run one hash file for all folders. I started with one per top level folder but that meant the verify couldn't spot things moved between folders and it reported them as missing.
 
