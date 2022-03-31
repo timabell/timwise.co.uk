@@ -147,7 +147,7 @@ By alternating roles you take on between individual contributor (coder) and team
 
 #### The non-critical-path task
 
-I tried picking up a story from the sprint when I was leading a team once. It didn't go well but I didn't know any better. Because my primary goal was team enablement and my time was interrupt-driven I'd end up with the team waiting for my piece to get done. Not a great help to the team's delivery speed. I also found with the team being full time on code an me less than full time I was always just that little bit behind on current thinking in the heart of the codebase, and you don't have to be much out of step to be much less productive or cause more problems than you solve.
+I tried picking up a story from the sprint when I was leading a team once. It didn't go well but I didn't know any better. Because my primary goal was team enablement and my time was interrupt-driven I'd end up with the team waiting for my piece to get done. Not a great help to the team's delivery speed. I also found with the team being full time on code and me less than full time I was always just that little bit behind on current thinking in the heart of the codebase, and you don't have to be much out of step to be much less productive or cause more problems than you solve.
 
 Since then I've seen two great approaches implemented by others:
 
