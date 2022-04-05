@@ -47,6 +47,16 @@ I see the push towards today and tomorrow's "best practice" more as giving permi
 4. Communicating to those involved in line management / supplier management the concerns with not meeting the standards the rest of the team are able to achieve. Discussing additional ways of providing support to enable the individual to level-up.
 5. Finally and this is not a preferred option due to the disruption it causes make the call to formally put someone on a formal improvement plan or move them on.
 
+#### The coaching ladder
+
+Inspired by [Developing Leadership podcast episode 19 about a strong engineering leadership culture](https://www.developingleadership.co/episode/episode-19-transitioning-from-a-holacracy-to-a-strong-engineering-leadership-culture-with-katie-wilde-from-ambassador-labs#).
+
+Different people, cultures and neurological wiring need different ways of setting out expectations. A two-pronged approach of gentle coaching + clear expectation & consequence setting seems to cover all bases.
+
+1. Listening mode - make sure people are heard in groups and one-on-one
+2. Gently coach expectations - "have you thought about doing x?" / "I observe that your PR descriptions average 10 words" / "here's how writing clear PR descriptions helps your valuable ideas be recognised by the team"
+3. Set out consequences of not meeting expectations - "We require excellent communication in pull requests to the standard of [example]" / "this standard is a requirement of continuing to be a senior engineer here"
+
 #### One-minute manager
 
 Where course correction is needed (when operating more as a line-manager) [The (new) One Minute Manager](https://www.amazon.co.uk/New-One-Minute-Manager/dp/0008128049) offers some great advice on keeping it simple and clear for all involved. This suggests that one-to-one interactions take the form of:
@@ -59,7 +69,7 @@ If doing only three minutes of this means they can be done more often and more r
 
 ### Current "Best Practice" and Lofty Goals
 
-Things we should strive towards doing/having:
+Things we should strive towards doing/having.
 
 * Great test coverage
 	* 100% unit test coverage (in meaning not just in line count)
