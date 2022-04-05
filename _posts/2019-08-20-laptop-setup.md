@@ -128,7 +128,7 @@ ln -s ~/Documents/config/.gitconfig.local
 ![Screenshot mint terminal colours set to solarized](/assets/terminal-colours.png)
 
 * Turn off all the system sounds and turn the volume down to 0%.
-* Customize time in task bar to `| %H:%M:%S %p | %a %e %b %Y |`.
+* Customize time in task bar to `  📅 %a %e %b %Y   🕓 %H:%M:%S `.
 * Lock screen with `Win+L` - start > keyboard > system > lock screen (Windows user habits).
 * Turn on automatic updates in update manager preferences, and automatic obsolete kernal removal.
 * Configure nemo file manager to always use list view.
