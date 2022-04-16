@@ -1,12 +1,12 @@
 /* give the subscribe box some space and a background to differentiate from post and disqus on blog post footers */
-#subscribe {
-    background-color: #eee;
-    margin: 1em 0 2em 0;
-		padding: 0 0.5em;
-		text-align: center;
+#subscribe_text {
+	padding-bottom: 1em;
 }
-#subscribe #mc_embed_signup {
-    background: inherit;
+#subscribe {
+	background-color: #eee;
+	margin: 1em 0 2em 0;
+	padding: 1em 1em 0.5em 1em;
+	text-align: center;
 }
 
 .flickr-pic {
