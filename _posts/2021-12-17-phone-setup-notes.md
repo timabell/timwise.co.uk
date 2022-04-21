@@ -252,6 +252,10 @@ As if that wasn't enough:
 
 > "OnePlus is adding artificial limitations and breaking features via software updates, and there are no indications that they'll improve." ~ GCam Hub, <https://www.celsoazevedo.com/files/android/google-camera/f/post-05/>
 
+---
+
+It turns out that the founder of OnePlus, Carl Pei, has set up a new company called "[Nothing](https://nothing.tech/)" (enjoy googling that one), which did just make headphones (unexciting), but who have just announced a phone. So maybe this is the true successor to the likely dead OnePlus brand. <https://www.theverge.com/2022/3/23/22992424/nothing-phone-1-smartphone-carl-pei-apple-ecosystem>
+
 ## So what OS options does that leave?
 
 So not iOS and preferably not Android either.
