@@ -1228,11 +1228,7 @@ Current Free Space |         0
 
 Well on the plus side the diagnostics are muuuuch better in OpenGApps so that's saved me fucking around trying to patch MindTheGaps' installer.
 
-### To be continued...
-
-And that is as far as I've got for now... to be continued with much googling and experimenting.
-
-## Todo once I have an OS I'm happy with
+## Todo once I have an Android OS I'm happy with
 
 * firmware update: <https://wiki.lineageos.org/devices/lemonadep/fw_update>
 * Restore google things with google backup (app installs, wallpaper, some settings, contacts)
@@ -1250,6 +1246,45 @@ And that is as far as I've got for now... to be continued with much googling and
 <https://wiki.lineageos.org/devices/lemonadep/update>
 
 Watch out for de-rooting, make sure backups are up to date first.
+
+## Two-phone-Timmy - the burner phone
+
+Having spent some time completely stumped by the space issue and giving it some thought I realize that this battle with Android will never end. Trying to get an unholy mix of Libre and proprietary to mix is like oil and water.
+
+I can opt out of that battle by running two phones.
+
+1. A "primary" phone that I use as much as possible, running the Free-est thing I can muster. This would get the sim card. This would be the OnePlus 9 pro, ideally running PureOS as per the Librem 5 phone, but if not that then Lineage without the GApps that I couldn't get to work.
+2. A burner phonee that's basically stock Android so that I can fall back to this for everything that can't or won't work on a free-er & unlocked base OS. (My existing OnePlus 5t for now while it lasts, reset to stock OxygenOS). This one can the get internet by tethering to the primary. I don't think any of the apps actually require the sim to be present. I guess we'll see.
+
+### The primary (9 Pro)
+
+The idea here is to get the free-est possible base layer (i.e. operating system), and then get maximum functionality within that. Anything that doesn't work or I can't find a working alternative to gets punted to the burner phone while we wait for hell to freeze over again. This will be the compromise for now.
+
+* Research trying PureOS, see what the app ecosystem is like - done - nope
+  * research done, doesn't seem to be possible to install on the OnePlus. Next...
+* Continue with Lineage (I left the phone with a working but empty install of this)
+* **Don't install proprietary google play services or play store at all.** - This is the line in the sand. I would have accepted it for now, but given I couldn't install it, I'll take it as the new battle line for free vs proprietary.
+* Install microG for re-implementation of shared services (i.e. location, polling for updates from servers etc)
+* Install Aurora play store proxy again to be able to try out app store apps
+* See how close I can get to a usable phone.
+
+### The burner (5t)
+
+* Factory reset the 5t
+* Install just what I couldn't get to work on the primary
+* Cry because the backups were shit and now I've lost access to something I care about (I predict)
+
+## Conclusion: inconclusive
+
+The main thing I've learned from this is the long-standing duopoly of iOS+Android has caused deep and hard to reverse problems in the phone software ecosystem. It's a crying shame really because there is so much opportunity for innovation now that phone hardware is basically done, but instead we get stagnation, pointless features, anti-features and down-right user-hostile behaviour from both we-know-best camps. It really reminds me of the dark years of the browser and operating system wars. Particularly when internet explorer became dominant and website (i.e. app) developers targeted proprietary IE APIs, locking everyone in and nearly killing the competition. The same for windows in its prime (when Balmer shouted developers-developers-developers he knew the apps created platform-vendor lock-in that he so desired).
+
+There are some promising signs: Ubuntu so nearly made a phone, and then didn't hit their funding target (the ubuntu phone operating system lives on in obscurity), The Librem looks like it might be a sustainable Linux based phone & business (Android is *not* Linux remember).
+
+For me I think I'll do the closest thing I can to dual-boot and VMs which is to have a second burner phone to run prioprietary crap, but have a primary phone that's as open as I can make it, just like I did with Linux and Windows around 2005-2010.
+
+Every person that takes this route is a vote for change. User numbers matter, especially when it comes to app vendors; they won't invest in dead platforms, but they can't and don't ignore growing market share, and if that's free and open it gets supported. Just look at Microsoft rewriting their *entire* dotnet ecosystem from scratch to be cross platform.
+
+Open source moves slowly, but like an iceberg it's hard to stop when it's claimed the land.
 
 ## End... for now
 
