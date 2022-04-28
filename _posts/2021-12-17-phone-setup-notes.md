@@ -1274,6 +1274,65 @@ The idea here is to get the free-est possible base layer (i.e. operating system)
 * Install just what I couldn't get to work on the primary
 * Cry because the backups were shit and now I've lost access to something I care about (I predict)
 
+## Primary setup - experimenting
+
+Fired up the lineage (minus all google stuff) that I'd installed and then failed to get any gapps on (space issue above, no longer care).
+
+Went through language prompt, was looking at time prompt in setup wizard when the phone rebooted with some kind of couldn't read data error. Disturbing. Rebooted, selected "try again" and it didn't do it this time.
+
+### Setup wizard
+
+  - selected UK location,
+  - GMT timezone.
+  - Put in wifi password (incorrectly)
+  - set up pin
+  - set up fingerprint
+  - booted into OS (yay, pleasing to see Lineage in action)
+
+### OS update with on-phone updater
+
+settings > advanced > updater
+
+shows list of OS updates. hit refresh, nothing new. latest is 18.1 26th Apr 2022
+
+tap download ....
+
+tap intall (even longer pause ... installing ... finalising package installation ...) ..
+
+reboot (press button that's presented)
+
+### todo
+
+* replacement contact management (currently using google)
+* replacement calendar management (currently using google)
+* insert sim
+
+### already google-free
+
+* email (fastmail domain + k9mail app)
+* broswer - firefox
+* search - duckduckgo
+* OTP - andOTP
+* maps/satnav (partially) - could use waze + maps.me (google maps is a decent car satnav, not found a perfect equivalent)
+
+## burner phone
+
+No sim in this one, use wifi and/or bluetooth tethering to get internet on it.
+
+Things I can't escape the googly jail for
+
+* google maps?
+* apps for clients
+  * microsoft outlook
+  * securid (vpn stuff)
+  * google authenticator (use andOTP instead wherever possible)
+  * microsoft authenticator (yuck, what's wrong with the OTP standard?!?!)
+  * digidentity
+* (some) banking apps
+* google pay (never used it, just use an actual card)
+
+To my horror I have discovered that android allows apps to force remote admin privs so that IT departments can snoop on your BYOD. Hello Microsoft Outlook + Active Directory. Yet more erosion of user rights in the name of security. There's no way in hell I'm allowing a client to be an admin on my primary phone so this is burner phone territory if at all necessary; though I just won't install any of that junk at all and will be uncontactable within their network unless on their supplied devices. Shrug.
+
 ## Conclusion: inconclusive
 
 The main thing I've learned from this is the long-standing duopoly of iOS+Android has caused deep and hard to reverse problems in the phone software ecosystem. It's a crying shame really because there is so much opportunity for innovation now that phone hardware is basically done, but instead we get stagnation, pointless features, anti-features and down-right user-hostile behaviour from both we-know-best camps. It really reminds me of the dark years of the browser and operating system wars. Particularly when internet explorer became dominant and website (i.e. app) developers targeted proprietary IE APIs, locking everyone in and nearly killing the competition. The same for windows in its prime (when Balmer shouted developers-developers-developers he knew the apps created platform-vendor lock-in that he so desired).
