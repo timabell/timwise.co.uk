@@ -1301,6 +1301,13 @@ tap intall (even longer pause ... installing ... finalising package installation
 
 reboot (press button that's presented)
 
+### config
+
+* turn off annoying sounds
+  * settings > sound > advanced
+    * screen locking sound - off
+    * touch sounds - off
+
 ### todo
 
 * replacement contact management (currently using google)
