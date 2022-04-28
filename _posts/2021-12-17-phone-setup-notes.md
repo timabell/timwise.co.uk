@@ -1813,13 +1813,15 @@ all:
 Finished. Total time: 1.181s
 ```
 
-fuck. again. tbc
+Fuck. Again. ... TBC. AGAIN. how many more yaks are left to shave one wonders.
 
-todo;
+todo:
 
 * skip all the guided setup steps
 * open the microG app
-* run the self check (all green ticks for me, woo)
+* run the self check
+* magisk root if needed
+* everything else
 
 ### config
 
