@@ -1340,6 +1340,499 @@ Things I can't escape the googly jail for
 
 To my horror I have discovered that android allows apps to force remote admin privs so that IT departments can snoop on your BYOD. Hello Microsoft Outlook + Active Directory. Yet more erosion of user rights in the name of security. There's no way in hell I'm allowing a client to be an admin on my primary phone so this is burner phone territory if at all necessary; though I just won't install any of that junk at all and will be uncontactable within their network unless on their supplied devices. Shrug.
 
+## Primary phone - microG
+
+Re-run setup in section: Installing “Lineage for microG”
+
+* OS install
+	* power off
+	* boot into lineage recovery (vol-down + power) (currently slot "b" is active)
+	* "apply update" > "apply from adb" (aka sideload)
+	* `adb sideload lineage-18.1-20211220-microG-lemonadep.zip`
+	* ignore signature warning
+	* accept downgrade warning
+	* completed
+	* back back
+	* factory reset
+	* reboot
+	* drops to bootloader thing
+	* "start" (power button to accept)
+	* loops back to bootloader thing. damn.
+	* vol down vol down - Recovery - power button to accept
+	* starts lineage recovery - "Active slot: a" - hmmm
+
+
+try swap slot
+```
+$ fastboot set_active other
+Setting current slot to 'b'                        (bootloader) Changing the active slot with a snapshot applied may cancel the update.
+OKAY [  0.038s]
+Finished. Total time: 0.040s
+```
+
+power off, power on
+
+that worked, now enters the lineage setup steps
+
+oh but it's back to the blank OS, the apr 2022 version!.
+
+guess there's a slot for two OSes!
+
+swap slot again, back to the bootloader loop. interesting.
+
+let's try installing again
+
+```
+fastboot set_active other
+Setting current slot to 'a'                        OKAY [  0.060s]
+Finished. Total time: 0.061s
+```
+
+```
+tim@max:~/Downloads/oneplus9pro/lineage-for-microG      
+$ adb sideload lineage-18.1-20211220-microG-lemonadep.zip                                                                     
+serving: 'lineage-18.1-20211220-microG-lemonadep.zip'  (~21%)
+```
+
+factory reset
+
+reboot
+
+cross fingers. nope. still just drops back to bootloader
+
+recovery > factory reset > reboot
+
+nope still fooked
+reboot to bootloader which says "Active slot: b" which is a bit odd. Maybe it does a swap slot automatically after flashing?
+
+so at this point slot b has a fooked lineage-microG (maybe) and slot a has a functioning but blank vanilla lineage. I think.
+
+<https://www.reddit.com/r/GooglePixel/comments/8cz6m9/google_pixel_bootslot_b_brick/>
+
+grab the vars with `fastboot getvar all 2>&1 | sort > fastboot-getvar.txt`
+
+output (sensitive things redacted with XXXX) - interesting but not super helpful:
+
+```
+all: 
+(bootloader) battery-voltage:0
+(bootloader) cpu-abi:arm64-v8a
+(bootloader) current-slot:b
+(bootloader) dynamic-partition:true
+(bootloader) first-api-level:30
+(bootloader) has-slot:abl_log:no
+(bootloader) has-slot:abl:yes
+(bootloader) has-slot:ALIGN_TO_128K_1:no
+(bootloader) has-slot:ALIGN_TO_128K_2:no
+(bootloader) has-slot:android_log:no
+(bootloader) has-slot:aop:yes
+(bootloader) has-slot:apdp_full:no
+(bootloader) has-slot:apdp:no
+(bootloader) has-slot:bluetooth:yes
+(bootloader) has-slot:boot:yes
+(bootloader) has-slot:carrier:no
+(bootloader) has-slot:cdt:no
+(bootloader) has-slot:connsec:no
+(bootloader) has-slot:cpucp:yes
+(bootloader) has-slot:ddr:no
+(bootloader) has-slot:devcfg:yes
+(bootloader) has-slot:devinfo:no
+(bootloader) has-slot:dinfo:no
+(bootloader) has-slot:dip:no
+(bootloader) has-slot:DRIVER:no
+(bootloader) has-slot:dsp:yes
+(bootloader) has-slot:dtbo:yes
+(bootloader) has-slot:engineering_cdt:yes
+(bootloader) has-slot:featenabler:yes
+(bootloader) has-slot:frp:no
+(bootloader) has-slot:fsc:no
+(bootloader) has-slot:fsg:no
+(bootloader) has-slot:hyp_log:no
+(bootloader) has-slot:hyp:yes
+(bootloader) has-slot:imagefv:yes
+(bootloader) has-slot:kernel_log:no
+(bootloader) has-slot:keymaster:yes
+(bootloader) has-slot:keystore:no
+(bootloader) has-slot:limits-cdsp:no
+(bootloader) has-slot:limits:no
+(bootloader) has-slot:logdump:no
+(bootloader) has-slot:logfs:no
+(bootloader) has-slot:mdcompress:no
+(bootloader) has-slot:mdtpsecapp:yes
+(bootloader) has-slot:mdtp:yes
+(bootloader) has-slot:metadata:no
+(bootloader) has-slot:misc:no
+(bootloader) has-slot:modemdump:no
+(bootloader) has-slot:modemst1:no
+(bootloader) has-slot:modemst2:no
+(bootloader) has-slot:modem:yes
+(bootloader) has-slot:multiimgoem:yes
+(bootloader) has-slot:ocdt:no
+(bootloader) has-slot:odm_b-cow:no
+(bootloader) has-slot:odm:yes
+(bootloader) has-slot:oplusdycnvbk:no
+(bootloader) has-slot:opluslog:no
+(bootloader) has-slot:oplusreserve1:no
+(bootloader) has-slot:oplusreserve2:no
+(bootloader) has-slot:oplusreserve3:no
+(bootloader) has-slot:oplusreserve4:no
+(bootloader) has-slot:oplusreserve5:no
+(bootloader) has-slot:oplus_sec:yes
+(bootloader) has-slot:oplusstanvbk:yes
+(bootloader) has-slot:param:no
+(bootloader) has-slot:persist_bkp:no
+(bootloader) has-slot:persist:no
+(bootloader) has-slot:product_b-cow:no
+(bootloader) has-slot:product:yes
+(bootloader) has-slot:qmcs:no
+(bootloader) has-slot:qsee_log:no
+(bootloader) has-slot:qupfw:yes
+(bootloader) has-slot:qweslicstore:yes
+(bootloader) has-slot:rawdump:no
+(bootloader) has-slot:rtice:no
+(bootloader) has-slot:sda:no
+(bootloader) has-slot:sdb:no
+(bootloader) has-slot:sdc:no
+(bootloader) has-slot:sdd:no
+(bootloader) has-slot:sde:no
+(bootloader) has-slot:sdf:no
+(bootloader) has-slot:secdata:no
+(bootloader) has-slot:shrm:yes
+(bootloader) has-slot:splash:yes
+(bootloader) has-slot:spunvm:no
+(bootloader) has-slot:ssd:no
+(bootloader) has-slot:storsec:no
+(bootloader) has-slot:super:no
+(bootloader) has-slot:system_b-cow:no
+(bootloader) has-slot:system_ext_b-cow:no
+(bootloader) has-slot:system_ext:yes
+(bootloader) has-slot:system:yes
+(bootloader) has-slot:tzsc:no
+(bootloader) has-slot:tz:yes
+(bootloader) has-slot:uefisecapp:yes
+(bootloader) has-slot:uefivarstore:no
+(bootloader) has-slot:userdata:no
+(bootloader) has-slot:vbmeta_system:yes
+(bootloader) has-slot:vbmeta_vendor:yes
+(bootloader) has-slot:vbmeta:yes
+(bootloader) has-slot:vendor_b-cow:no
+(bootloader) has-slot:vendor_boot:yes
+(bootloader) has-slot:vendor:yes
+(bootloader) has-slot:vm-bootsys:yes
+(bootloader) has-slot:vm-data:no
+(bootloader) has-slot:xbl_config:yes
+(bootloader) has-slot:xbl:yes
+(bootloader) hw-revision:0
+(bootloader) is-logical:abl_a:no
+(bootloader) is-logical:abl_b:no
+(bootloader) is-logical:abl_log:no
+(bootloader) is-logical:ALIGN_TO_128K_1:no
+(bootloader) is-logical:ALIGN_TO_128K_2:no
+(bootloader) is-logical:android_log:no
+(bootloader) is-logical:aop_a:no
+(bootloader) is-logical:aop_b:no
+(bootloader) is-logical:apdp_full:no
+(bootloader) is-logical:apdp:no
+(bootloader) is-logical:bluetooth_a:no
+(bootloader) is-logical:bluetooth_b:no
+(bootloader) is-logical:boot_a:no
+(bootloader) is-logical:boot_b:no
+(bootloader) is-logical:carrier:no
+(bootloader) is-logical:cdt:no
+(bootloader) is-logical:connsec:no
+(bootloader) is-logical:cpucp_a:no
+(bootloader) is-logical:cpucp_b:no
+(bootloader) is-logical:ddr:no
+(bootloader) is-logical:devcfg_a:no
+(bootloader) is-logical:devcfg_b:no
+(bootloader) is-logical:devinfo:no
+(bootloader) is-logical:dinfo:no
+(bootloader) is-logical:dip:no
+(bootloader) is-logical:DRIVER:no
+(bootloader) is-logical:dsp_a:no
+(bootloader) is-logical:dsp_b:no
+(bootloader) is-logical:dtbo_a:no
+(bootloader) is-logical:dtbo_b:no
+(bootloader) is-logical:engineering_cdt_a:no
+(bootloader) is-logical:engineering_cdt_b:no
+(bootloader) is-logical:featenabler_a:no
+(bootloader) is-logical:featenabler_b:no
+(bootloader) is-logical:frp:no
+(bootloader) is-logical:fsc:no
+(bootloader) is-logical:fsg:no
+(bootloader) is-logical:hyp_a:no
+(bootloader) is-logical:hyp_b:no
+(bootloader) is-logical:hyp_log:no
+(bootloader) is-logical:imagefv_a:no
+(bootloader) is-logical:imagefv_b:no
+(bootloader) is-logical:kernel_log:no
+(bootloader) is-logical:keymaster_a:no
+(bootloader) is-logical:keymaster_b:no
+(bootloader) is-logical:keystore:no
+(bootloader) is-logical:limits-cdsp:no
+(bootloader) is-logical:limits:no
+(bootloader) is-logical:logdump:no
+(bootloader) is-logical:logfs:no
+(bootloader) is-logical:mdcompress:no
+(bootloader) is-logical:mdtp_a:no
+(bootloader) is-logical:mdtp_b:no
+(bootloader) is-logical:mdtpsecapp_a:no
+(bootloader) is-logical:mdtpsecapp_b:no
+(bootloader) is-logical:metadata:no
+(bootloader) is-logical:misc:no
+(bootloader) is-logical:modem_a:no
+(bootloader) is-logical:modem_b:no
+(bootloader) is-logical:modemdump:no
+(bootloader) is-logical:modemst1:no
+(bootloader) is-logical:modemst2:no
+(bootloader) is-logical:multiimgoem_a:no
+(bootloader) is-logical:multiimgoem_b:no
+(bootloader) is-logical:ocdt:no
+(bootloader) is-logical:odm_b-cow:yes
+(bootloader) is-logical:odm_b:yes
+(bootloader) is-logical:oplusdycnvbk:no
+(bootloader) is-logical:opluslog:no
+(bootloader) is-logical:oplusreserve1:no
+(bootloader) is-logical:oplusreserve2:no
+(bootloader) is-logical:oplusreserve3:no
+(bootloader) is-logical:oplusreserve4:no
+(bootloader) is-logical:oplusreserve5:no
+(bootloader) is-logical:oplus_sec_a:no
+(bootloader) is-logical:oplus_sec_b:no
+(bootloader) is-logical:oplusstanvbk_a:no
+(bootloader) is-logical:oplusstanvbk_b:no
+(bootloader) is-logical:param:no
+(bootloader) is-logical:persist_bkp:no
+(bootloader) is-logical:persist:no
+(bootloader) is-logical:product_b-cow:yes
+(bootloader) is-logical:product_b:yes
+(bootloader) is-logical:qmcs:no
+(bootloader) is-logical:qsee_log:no
+(bootloader) is-logical:qupfw_a:no
+(bootloader) is-logical:qupfw_b:no
+(bootloader) is-logical:qweslicstore_a:no
+(bootloader) is-logical:qweslicstore_b:no
+(bootloader) is-logical:rawdump:no
+(bootloader) is-logical:rtice:no
+(bootloader) is-logical:sda:no
+(bootloader) is-logical:sdb:no
+(bootloader) is-logical:sdc:no
+(bootloader) is-logical:sdd:no
+(bootloader) is-logical:sde:no
+(bootloader) is-logical:sdf:no
+(bootloader) is-logical:secdata:no
+(bootloader) is-logical:shrm_a:no
+(bootloader) is-logical:shrm_b:no
+(bootloader) is-logical:splash_a:no
+(bootloader) is-logical:splash_b:no
+(bootloader) is-logical:spunvm:no
+(bootloader) is-logical:ssd:no
+(bootloader) is-logical:storsec:no
+(bootloader) is-logical:super:no
+(bootloader) is-logical:system_b-cow:yes
+(bootloader) is-logical:system_b:yes
+(bootloader) is-logical:system_ext_b-cow:yes
+(bootloader) is-logical:system_ext_b:yes
+(bootloader) is-logical:tz_a:no
+(bootloader) is-logical:tz_b:no
+(bootloader) is-logical:tzsc:no
+(bootloader) is-logical:uefisecapp_a:no
+(bootloader) is-logical:uefisecapp_b:no
+(bootloader) is-logical:uefivarstore:no
+(bootloader) is-logical:userdata:no
+(bootloader) is-logical:vbmeta_a:no
+(bootloader) is-logical:vbmeta_b:no
+(bootloader) is-logical:vbmeta_system_a:no
+(bootloader) is-logical:vbmeta_system_b:no
+(bootloader) is-logical:vbmeta_vendor_a:no
+(bootloader) is-logical:vbmeta_vendor_b:no
+(bootloader) is-logical:vendor_b-cow:yes
+(bootloader) is-logical:vendor_boot_a:no
+(bootloader) is-logical:vendor_boot_b:no
+(bootloader) is-logical:vendor_b:yes
+(bootloader) is-logical:vm-bootsys_a:no
+(bootloader) is-logical:vm-bootsys_b:no
+(bootloader) is-logical:vm-data:no
+(bootloader) is-logical:xbl_a:no
+(bootloader) is-logical:xbl_b:no
+(bootloader) is-logical:xbl_config_a:no
+(bootloader) is-logical:xbl_config_b:no
+(bootloader) is-userspace:yes
+(bootloader) max-download-size:0x10000000
+(bootloader) partition-size:abl_a:0x800000
+(bootloader) partition-size:abl_b:0x800000
+(bootloader) partition-size:abl_log:0xFD0000
+(bootloader) partition-size:ALIGN_TO_128K_1:0x1A000
+(bootloader) partition-size:ALIGN_TO_128K_2:0x1A000
+(bootloader) partition-size:android_log:0xFD0000
+(bootloader) partition-size:aop_a:0x80000
+(bootloader) partition-size:aop_b:0x80000
+(bootloader) partition-size:apdp:0x40000
+(bootloader) partition-size:apdp_full:0x40000
+(bootloader) partition-size:bluetooth_a:0x200000
+(bootloader) partition-size:bluetooth_b:0x200000
+(bootloader) partition-size:boot_a:0xC000000
+(bootloader) partition-size:boot_b:0xC000000
+(bootloader) partition-size:carrier:0x4000000
+(bootloader) partition-size:cdt:0x20000
+(bootloader) partition-size:connsec:0x20000
+(bootloader) partition-size:cpucp_a:0x100000
+(bootloader) partition-size:cpucp_b:0x100000
+(bootloader) partition-size:ddr:0x100000
+(bootloader) partition-size:devcfg_a:0x20000
+(bootloader) partition-size:devcfg_b:0x20000
+(bootloader) partition-size:devinfo:0x1000
+(bootloader) partition-size:dinfo:0x4000
+(bootloader) partition-size:dip:0x100000
+(bootloader) partition-size:DRIVER:0x2000000
+(bootloader) partition-size:dsp_a:0x4000000
+(bootloader) partition-size:dsp_b:0x4000000
+(bootloader) partition-size:dtbo_a:0x1800000
+(bootloader) partition-size:dtbo_b:0x1800000
+(bootloader) partition-size:engineering_cdt_a:0x100000
+(bootloader) partition-size:engineering_cdt_b:0x100000
+(bootloader) partition-size:featenabler_a:0x20000
+(bootloader) partition-size:featenabler_b:0x20000
+(bootloader) partition-size:frp:0x80000
+(bootloader) partition-size:fsc:0x20000
+(bootloader) partition-size:fsg:0x300000
+(bootloader) partition-size:hyp_a:0x800000
+(bootloader) partition-size:hyp_b:0x800000
+(bootloader) partition-size:hyp_log:0xFD0000
+(bootloader) partition-size:imagefv_a:0x200000
+(bootloader) partition-size:imagefv_b:0x200000
+(bootloader) partition-size:kernel_log:0xFD0000
+(bootloader) partition-size:keymaster_a:0x80000
+(bootloader) partition-size:keymaster_b:0x80000
+(bootloader) partition-size:keystore:0x80000
+(bootloader) partition-size:limits:0x1000
+(bootloader) partition-size:limits-cdsp:0x1000
+(bootloader) partition-size:logdump:0x4000000
+(bootloader) partition-size:logfs:0x800000
+(bootloader) partition-size:mdcompress:0x1400000
+(bootloader) partition-size:mdtp_a:0x2000000
+(bootloader) partition-size:mdtp_b:0x2000000
+(bootloader) partition-size:mdtpsecapp_a:0x400000
+(bootloader) partition-size:mdtpsecapp_b:0x400000
+(bootloader) partition-size:metadata:0x1000000
+(bootloader) partition-size:misc:0x100000
+(bootloader) partition-size:modem_a:0x14A00000
+(bootloader) partition-size:modem_b:0x14A00000
+(bootloader) partition-size:modemdump:0x12C00000
+(bootloader) partition-size:modemst1:0x300000
+(bootloader) partition-size:modemst2:0x300000
+(bootloader) partition-size:multiimgoem_a:0x8000
+(bootloader) partition-size:multiimgoem_b:0x8000
+(bootloader) partition-size:ocdt:0x20000
+(bootloader) partition-size:odm_b:0x2BD000
+(bootloader) partition-size:odm_b-cow:0x2C1000
+(bootloader) partition-size:oplusdycnvbk:0xA00000
+(bootloader) partition-size:opluslog:0x10000000
+(bootloader) partition-size:oplusreserve1:0x800000
+(bootloader) partition-size:oplusreserve2:0x10000000
+(bootloader) partition-size:oplusreserve3:0x4000000
+(bootloader) partition-size:oplusreserve4:0x2000000
+(bootloader) partition-size:oplusreserve5:0x4000000
+(bootloader) partition-size:oplus_sec_a:0xA00000
+(bootloader) partition-size:oplus_sec_b:0xA00000
+(bootloader) partition-size:oplusstanvbk_a:0xA00000
+(bootloader) partition-size:oplusstanvbk_b:0xA00000
+(bootloader) partition-size:param:0x800000
+(bootloader) partition-size:persist:0x2000000
+(bootloader) partition-size:persist_bkp:0x2000000
+(bootloader) partition-size:product_b:0x1652F000
+(bootloader) partition-size:product_b-cow:0x16696000
+(bootloader) partition-size:qmcs:0x1E00000
+(bootloader) partition-size:qsee_log:0xFD0000
+(bootloader) partition-size:qupfw_a:0x14000
+(bootloader) partition-size:qupfw_b:0x14000
+(bootloader) partition-size:qweslicstore_a:0x40000
+(bootloader) partition-size:qweslicstore_b:0x40000
+(bootloader) partition-size:rawdump:0x8000000
+(bootloader) partition-size:rtice:0x80000
+(bootloader) partition-size:sda:0x3A10800000
+(bootloader) partition-size:sdb:0x800000
+(bootloader) partition-size:sdc:0x800000
+(bootloader) partition-size:sdd:0x2000000
+(bootloader) partition-size:sde:0x180000000
+(bootloader) partition-size:sdf:0x2000000
+(bootloader) partition-size:secdata:0x7000
+(bootloader) partition-size:shrm_a:0x20000
+(bootloader) partition-size:shrm_b:0x20000
+(bootloader) partition-size:splash_a:0x20A4000
+(bootloader) partition-size:splash_b:0x20A4000
+(bootloader) partition-size:spunvm:0x2000000
+(bootloader) partition-size:ssd:0x2000
+(bootloader) partition-size:storsec:0x20000
+(bootloader) partition-size:super:0x29B000000
+(bootloader) partition-size:system_b:0x406A4000
+(bootloader) partition-size:system_b-cow:0x40AAC000
+(bootloader) partition-size:system_ext_b:0xDF3A000
+(bootloader) partition-size:system_ext_b-cow:0xE01B000
+(bootloader) partition-size:tz_a:0x400000
+(bootloader) partition-size:tz_b:0x400000
+(bootloader) partition-size:tzsc:0x20000
+(bootloader) partition-size:uefisecapp_a:0x200000
+(bootloader) partition-size:uefisecapp_b:0x200000
+(bootloader) partition-size:uefivarstore:0x80000
+(bootloader) partition-size:userdata:0x3751FB3000
+(bootloader) partition-size:vbmeta_a:0x10000
+(bootloader) partition-size:vbmeta_b:0x10000
+(bootloader) partition-size:vbmeta_system_a:0x10000
+(bootloader) partition-size:vbmeta_system_b:0x10000
+(bootloader) partition-size:vbmeta_vendor_a:0x10000
+(bootloader) partition-size:vbmeta_vendor_b:0x10000
+(bootloader) partition-size:vendor_b:0x50520000
+(bootloader) partition-size:vendor_b-cow:0x50A27000
+(bootloader) partition-size:vendor_boot_a:0xC000000
+(bootloader) partition-size:vendor_boot_b:0xC000000
+(bootloader) partition-size:vm-bootsys_a:0x10625000
+(bootloader) partition-size:vm-bootsys_b:0x10625000
+(bootloader) partition-size:vm-data:0x20A4000
+(bootloader) partition-size:xbl_a:0x600000
+(bootloader) partition-size:xbl_b:0x600000
+(bootloader) partition-size:xbl_config_a:0x80000
+(bootloader) partition-size:xbl_config_b:0x80000
+(bootloader) product:OnePlus9Pro
+(bootloader) secure:yes
+(bootloader) security-patch-level:2021-12-05
+(bootloader) serialno:XXXXXXX
+(bootloader) slot-count:2
+(bootloader) snapshot-update-status:snapshotted
+(bootloader) super-partition-name:super
+(bootloader) system-fingerprint:OnePlus/OnePlus9Pro_EEA/OnePlus9Pro:11/RKQ1.201105.002/2111112053:user/release-keys
+(bootloader) treble-enabled:true
+(bootloader) unlocked:yes
+(bootloader) vendor-fingerprint:OnePlus/OnePlus9Pro_EEA/OnePlus9Pro:11/RKQ1.201105.002/2111112053:user/release-keys
+(bootloader) version:0.4
+(bootloader) version-baseband:
+(bootloader) version-bootloader:unknown
+(bootloader) version-os:11
+(bootloader) version-vndk:30
+Finished. Total time: 1.181s
+```
+
+fuck. again. tbc
+
+todo;
+
+* skip all the guided setup steps
+* open the microG app
+* run the self check (all green ticks for me, woo)
+
+### config
+
+* settings
+  * sound
+    * advanced
+      * screen locking sound - off
+      * touch sounds - off
+  * system
+    * advanced
+      * gestures
+        * power menu
+          * advanced restart - on
+
 ## Conclusion: inconclusive
 
 The main thing I've learned from this is the long-standing duopoly of iOS+Android has caused deep and hard to reverse problems in the phone software ecosystem. It's a crying shame really because there is so much opportunity for innovation now that phone hardware is basically done, but instead we get stagnation, pointless features, anti-features and down-right user-hostile behaviour from both we-know-best camps. It really reminds me of the dark years of the browser and operating system wars. Particularly when internet explorer became dominant and website (i.e. app) developers targeted proprietary IE APIs, locking everyone in and nearly killing the competition. The same for windows in its prime (when Balmer shouted developers-developers-developers he knew the apps created platform-vendor lock-in that he so desired).
