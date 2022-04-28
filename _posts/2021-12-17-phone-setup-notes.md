@@ -824,7 +824,7 @@ Used F-Droid to install andOTP as a test (alternative to google authenticator 2F
 
 Found Aurora in f-droid with a search, installed no problems, opened it up.
 
-First thing it does is prompt for install type which is confusing and lacks enough context to know what it means. The four types are explained further here: <https://auroraoss.com/faq/#how-does-aurora-store-install-apps> thought I'm still not really sure. I don't know what a plit apk is yet, and I don't see if there's a difference between root and services as I could do either and they both say they do the same thing.
+First thing it does is prompt for install type which is confusing and lacks enough context to know what it means. The four types are explained further here: <https://auroraoss.com/faq/#how-does-aurora-store-install-apps> thought I'm still not really sure. I don't know what a "split apk" is yet, and I don't see if there's a difference between root and services as I could do either and they both say they do the same thing.
 
 * Session - recommended but not clear why, I think it's saying it's like "Aurora Services" but with more something-or-other
 * Native - doesn't support split apks, that sounds bad, see below for what they are (see below for split apk research)
