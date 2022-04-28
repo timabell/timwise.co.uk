@@ -1349,6 +1349,7 @@ Re-run setup in section: Installing “Lineage for microG”
 	* boot into lineage recovery (vol-down + power) (currently slot "b" is active)
 	* "apply update" > "apply from adb" (aka sideload)
 	* `adb sideload lineage-18.1-20211220-microG-lemonadep.zip`
+		* it seems this is flashed to slot a and then slot is automatically swapped
 	* ignore signature warning
 	* accept downgrade warning
 	* completed
@@ -1405,7 +1406,7 @@ recovery > factory reset > reboot
 nope still fooked
 reboot to bootloader which says "Active slot: b" which is a bit odd. Maybe it does a swap slot automatically after flashing?
 
-so at this point slot b has a fooked lineage-microG (maybe) and slot a has a functioning but blank vanilla lineage. I think.
+so at this point slot a has a fooked lineage-microG (maybe) and slot b has a functioning but blank vanilla lineage. I think.
 
 <https://www.reddit.com/r/GooglePixel/comments/8cz6m9/google_pixel_bootslot_b_brick/>
 
