@@ -1836,6 +1836,162 @@ todo:
         * power menu
           * advanced restart - on
 
+### microG again
+
+Let's try downloading the latest and flashing again.
+
+<https://download.lineage.microg.org/lemonadep/?sort=time&order=asc>
+
+```
+tim@max:~/Downloads/oneplus9pro/lineage-for-microG
+$ ll lineage-18.1-2022040*
+-rw-rw-r-- 1 tim tim 192M Apr 30 20:38 lineage-18.1-20220401-microG-lemonadep-recovery.img
+-rw-rw-r-- 1 tim tim 1.1G Apr 30 20:39 lineage-18.1-20220405-microG-lemonadep.zip
+-rw-rw-r-- 1 tim tim 3.9K Apr 30 20:37 lineage-18.1-20220405-microG-lemonadep.zip.prop
+-rw-rw-r-- 1 tim tim  109 Apr 30 20:37 lineage-18.1-20220405-microG-lemonadep.zip.sha256sum
+$ sha256sum -c lineage-18.1-20220405-microG-lemonadep.zip.sha256sum
+lineage-18.1-20220405-microG-lemonadep.zip: OK
+tim@max:~/Downloads/oneplus9pro/lineage-for-microG
+$ cd update_verifier-master 
+tim@max:~/Downloads/oneplus9pro/lineage-for-microG/update_verifier-master
+$ python update_verifier.py lineageos4microg_pubkey ../lineage-18.1-20220405-microG-lemonadep.zip     
+verified successfully
+```
+
+We'll do a swap slot again so that it won't overwrite the currently working lineage install.
+
+Vol-down + power button to enter recovery (from powered off).
+
+Lineage recovery says "Active slot: b" at the top. Let's boot it, check what we have, swap, boot again to see the other...
+
+* slot b: broken install - drops to bootloader
+* slot a: also broken ...., erm I swear I booted that. wtf. phones.
+
+so that means I should swap slot so that "a" is active, so that fastboot flashes over the broken "b" and then swaps to it without touching the currently working "a" slot.
+
+Use lineage bootloader to format the system just to see if that fixes the broken install. .... Nope. Both slots still fubar.
+
+Right, well, flashing time either way.
+
+put phone into recover "update > apply from adb" mode
+
+`adb sideload lineage-18.1-20220405-microG-lemonadep.zip`
+
+long pause...
+
+back > reboot system
+
+hurrah, a lineage boot animation
+
+rattle through setup steps again, did wifi, nothing else
+
+todo: fingerprint and pin
+
+todo: re-root with magisk before doing anything else
+
+new things compared to plain lineage: f-droid & microG apps
+
+installed andOTP & vespucci (OSM editor) from f-droid
+
+---
+
+enable developer options (system > about phone, tap lots of times)
+
+system > advanced > developer options > usb debugging ON  + Disable adb authorisation timeout (so that if my screen fails or the software misbehaves I can get my files over a usb cable)
+
+Install Magisk by John Wu via F-Droid instead of adb this time
+
+Extract the updated payload:
+
+```
+tim@max:~/Downloads/oneplus9pro/lineage-for-microG
+$ cd payload 
+tim@max:~/Downloads/oneplus9pro/lineage-for-microG/payload
+$ ../../payload-dumper-go/payload-dumper-go_1.2.0_linux_amd64/payload-dumper-go ../lineage-18.1-20220405-microG-lemonadep.zip
+Please wait while extracting payload.bin from the archive.
+payload.bin: /tmp/payload_208101762.bin
+Payload Version: 2
+Payload Manifest Length: 94295
+Payload Manifest Signature Length: 267
+Found partitions:
+boot (201 MB), dtbo (25 MB), odm (2.9 MB), product (378 MB), system (1.1 GB), system_ext (234 MB), vbmeta (8.2 kB), vbmeta_system (4.1 kB), vendor (1.3 GB), vendor_boot (201 MB)
+Number of workers: 4
+odm (2.9 MB)            [==============================================================================================] 100 %
+boot (201 MB)           [==============================================================================================] 100 %
+dtbo (25 MB)            [==============================================================================================] 100 %
+product (378 MB)        [==============================================================================================] 100 %
+system (1.1 GB)         [==============================================================================================] 100 %
+system_ext (234 MB)     [==============================================================================================] 100 %
+vbmeta (8.2 kB)         [==============================================================================================] 100 %
+vbmeta_system (4.1 kB)  [==============================================================================================] 100 %
+vendor (1.3 GB)         [==============================================================================================] 100 %
+vendor_boot (201 MB)    [==============================================================================================] 100 %
+tim@max:~/Downloads/oneplus9pro/lineage-for-microG/payload
+$ ll
+total 4.0K
+drwxr-xr-x 2 tim tim 4.0K Apr 30 21:34 extracted_20220430_213414
+tim@max:~/Downloads/oneplus9pro/lineage-for-microG/payload
+$ ll extracted_20220430_213414 
+total 3.3G
+-rwxr-xr-x 1 tim tim 192M Apr 30 21:34 boot.img
+-rwxr-xr-x 1 tim tim  24M Apr 30 21:34 dtbo.img
+-rwxr-xr-x 1 tim tim 2.8M Apr 30 21:34 odm.img
+-rwxr-xr-x 1 tim tim 361M Apr 30 21:34 product.img
+-rwxr-xr-x 1 tim tim 224M Apr 30 21:34 system_ext.img
+-rwxr-xr-x 1 tim tim 1.1G Apr 30 21:34 system.img
+-rwxr-xr-x 1 tim tim 8.0K Apr 30 21:34 vbmeta.img
+-rwxr-xr-x 1 tim tim 4.0K Apr 30 21:34 vbmeta_system.img
+-rwxr-xr-x 1 tim tim 192M Apr 30 21:34 vendor_boot.img
+-rwxr-xr-x 1 tim tim 1.3G Apr 30 21:35 vendor.img
+```
+
+send to phone:
+```
+tim@max:~/Downloads/oneplus9pro/lineage-for-microG/payload
+$ adb push extracted_20220430_213414/boot.img /sdcard/Download/
+extracted_20220430_213414/boot.img: 1 file pushed, 0 skipped. 192.7 MB/s (201326592 bytes in 0.996s)
+```
+
+run the patch in the phone Magisk UI (under “install”)
+
+get the patched file back:
+
+```
+im@max:~/Downloads/oneplus9pro/lineage-for-microG/payload
+$ patched=`adb shell ls /sdcard/Download/magisk_patched*`
+tim@max:~/Downloads/oneplus9pro/lineage-for-microG/payload
+$ adb pull $patched
+/sdcard/Download/magisk_patched-24300_v4xhs.img: 1 file pulled, 0 skipped. 34.7 MB/s (201326592 bytes in 5.532s)
+```
+
+turn on advanced reboot again in settings
+
+reboot to fastboot
+
+```
+tim@max:~/Downloads/oneplus9pro/lineage-for-microG/payload
+$ fastboot flash boot magisk_patched-24300_v4xhs.img 
+Sending 'boot_a' (196608 KB)                       OKAY [  6.597s]
+Writing 'boot_a'                                   OKAY [  0.611s]
+Finished. Total time: 7.387s
+```
+
+"reboot now"
+
+success. open up magisk, shows as installed (v24.3)
+
+
+## F-Droid app list
+
+* Vespucci (open-streetmap (OSM) editor)
+* andOTP (one time password generator with backup/restore capability)
+
+## Play store app list
+
+Only things not available in f-droid
+
+* maps.me
+
 ## Conclusion: inconclusive
 
 The main thing I've learned from this is the long-standing duopoly of iOS+Android has caused deep and hard to reverse problems in the phone software ecosystem. It's a crying shame really because there is so much opportunity for innovation now that phone hardware is basically done, but instead we get stagnation, pointless features, anti-features and down-right user-hostile behaviour from both we-know-best camps. It really reminds me of the dark years of the browser and operating system wars. Particularly when internet explorer became dominant and website (i.e. app) developers targeted proprietary IE APIs, locking everyone in and nearly killing the competition. The same for windows in its prime (when Balmer shouted developers-developers-developers he knew the apps created platform-vendor lock-in that he so desired).
