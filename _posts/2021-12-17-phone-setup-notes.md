@@ -1335,12 +1335,14 @@ Things I can't escape the googly jail for
   * google authenticator (use andOTP instead wherever possible)
   * microsoft authenticator (yuck, what's wrong with the OTP standard?!?!)
   * digidentity
-* (some) banking apps
+* banking apps that don't work on the primary phone (not naming because haxxors)
 * google pay (never used it, just use an actual card)
 
 To my horror I have discovered that android allows apps to force remote admin privs so that IT departments can snoop on your BYOD. Hello Microsoft Outlook + Active Directory. Yet more erosion of user rights in the name of security. There's no way in hell I'm allowing a client to be an admin on my primary phone so this is burner phone territory if at all necessary; though I just won't install any of that junk at all and will be uncontactable within their network unless on their supplied devices. Shrug.
 
 ## Primary phone - microG
+
+### lineage+microG - failed install
 
 Re-run setup in section: Installing “Lineage for microG”
 
@@ -1836,7 +1838,7 @@ todo:
         * power menu
           * advanced restart - on
 
-### microG again
+### Lineage+microG+Magisk again - success!
 
 Let's try downloading the latest and flashing again.
 
@@ -1983,14 +1985,90 @@ success. open up magisk, shows as installed (v24.3)
 
 ## F-Droid app list
 
+Turn on install history before starting so that we can export at the end - <https://gitlab.com/fdroid/fdroidclient/-/issues/70#note_89110104>
+
+Settings > Expert mode > Keep install history
+
 * Vespucci (open-streetmap (OSM) editor)
 * andOTP (one time password generator with backup/restore capability)
+* Aurora play store proxy
+* Syncthing
+* OAndBackupX - to replace proprietary (but very good) titanium backup
+  * Needs root, provided by Magisk. Without root no apps can access the data of other apps. This is the primary reason that root is so important to me. I want a backup system that I can actually trust because it's not some proprietary cloud magic pixie dust, it's instead a straight-forward grab-the-files-and-put-them-somewhere-safe operation that I can inspect and get to without more proprietary black magic.
+
+Export app list when done 
+
+Settings > Install history and metrics > Share (share icon with 3 linked dots at top) > fail, no apps that know what to do with the file installed yet. gah.
+
+Other suggestions: <https://www.reddit.com/r/fdroid/comments/lzzdbg/a_list_of_some_fdroid_apps_i_installed_to_get_you/>
 
 ## Play store app list
 
 Only things not available in f-droid
 
 * maps.me
+
+## Individual app setup
+
+### Syncthing
+
+* Open web gui
+* Disable all non-LAN
+* Remove default folder (Camera)
+* Set device name
+* Connect to existing machine(s).
+* Add `/storage/emulated/0` folder (can't do this in non-web gui, stupid security warning. Nanny state of android.)
+  * Warnings about failure to sync `Android/data` and `Android/obb`. Looks like they've tightened up security more, either that or syncthing has better warnings now. These folders will be exposed by OAndBackupX so I can safely ignore this until I sort out the ignore file for syncthing.
+
+## config
+
+A complete list
+
+* Settings
+  * Battery
+    * Battery saver and performance
+      * Automatic power saver - 15% (off by default oddly)
+  * Display
+    * Dark theme
+      * on
+      * no schedule - (let's give this a try, we'll see what it's like in broad daylight)
+      * pure black - on (better for battery and I think it looks cooler)
+    * Night Light
+      * Schedule
+        * sunset till sunrise - this is an experiment, we'll see if it is sensible at it
+    * Advanced (because this is extreem l33t haxxor stuff, beware n00bs)
+      * Screen timeout - 5 mins (scary stuff I know, you were warned by the **advanced** thing, I hope you know what you're doing. The nanny phone-state will keep you safe, don't you worry your pretty little head about this section. Twunts.)
+      * Styles and wallpapers - yes you read that right folks, wallpapers are an "Advanced" feature. What is wrong with this people?
+        * push a couple of images across to ~/Pictures with syncthing and set them as home & lock screen
+      * Tap to sleep - off (I only ever do this by mistake)
+  * Sound
+    * Vibrate for calls - Always (also has a vibrate then ring which is a nice option)
+    * Advanced (why??????)
+		* Phone ringtone - thriller three (there's a great selection & variety available, impressed with Lineage here. Also liked Solarium, Sheep (yes actual sheep), Rigel)
+		* Default notification sound - Hojus (also liked Beryllium and Titan for minimal stress-inducing feel. Again a great selection available with some really fun sounds).
+		* Default alarm sound - Piezo Alarm (for the retro kicks. Again more winners in here, well worth exploring)
+		* Dial pad tones - off
+      * Screen locking sound - off
+      * Touch sounds - off
+  * Privacy
+    * Show passwords, display characters briefly as you type - off (I just find this annoying/distracting)
+    * Notifications on lock screen
+      * Don't show notifications at all - this is more for a clear mind rather than privacy, though that's a bonus. I hate looking at my (locked) phone for the time and getting drawn into the notifications. Happened toooooo many times.
+    * Trust
+      * SMS message limit - always confirm (default of 30 seems like a lot of spam to me), might go to 5 if this is a pain
+  * Security
+    * Screen lock - pin
+    * Fingerprint
+  * System
+    * Status bar
+      * Network traffic monitor
+        * Display mode > upload and download
+      * Battery status style - Circle (much higher fidelity information)
+    * Advanced
+      * Gestures
+        * Power menu
+          * Advanced restart - on
+
 
 ## Conclusion: inconclusive
 
