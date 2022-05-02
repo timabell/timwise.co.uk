@@ -2040,6 +2040,9 @@ A complete list
       * Screen timeout - 5 mins (scary stuff I know, you were warned by the **advanced** thing, I hope you know what you're doing. The nanny phone-state will keep you safe, don't you worry your pretty little head about this section. Twunts.)
       * Styles and wallpapers - yes you read that right folks, wallpapers are an "Advanced" feature. What is wrong with this people?
         * push a couple of images across to ~/Pictures with syncthing and set them as home & lock screen
+      * Lock screen
+        * Add text on lock screen
+          * `Owner Tim Abell <tim@timwise.co.uk>` (the idea is that people are generally good and this might be the best way to reach me if I've lost it)
       * Tap to sleep - off (I only ever do this by mistake)
   * Sound
     * Vibrate for calls - Always (also has a vibrate then ring which is a nice option)
