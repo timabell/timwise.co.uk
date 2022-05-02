@@ -2000,20 +2000,40 @@ Settings > Install history and metrics > Share (share icon with 3 linked dots at
 ### Apps to intall
 * Vespucci (open-streetmap (OSM) editor)
 * andOTP (one time password generator with backup/restore capability)
-* Aurora play store proxy
+* Aurora play store proxy - configure as per above section
 * Syncthing
 * OAndBackupX - to replace proprietary (but very good) titanium backup
   * Needs root, provided by Magisk. Without root no apps can access the data of other apps. This is the primary reason that root is so important to me. I want a backup system that I can actually trust because it's not some proprietary cloud magic pixie dust, it's instead a straight-forward grab-the-files-and-put-them-somewhere-safe operation that I can inspect and get to without more proprietary black magic.
+* [KeepassDX](https://www.keepassdx.com/) - <https://github.com/Kunzisoft/KeePassDX>
+
+### todo - more apps (f-droid where possible)
+
+* VLC
+* AntennaPod
+* Audible
+* Maverick (for recording and viewing gps traces, could do with a replacement, the map tiles seem to have died and it's getting buggy)
+* google home (for chromecast & google mini integration)
+* Life360 (shared gps locations for family, saves a bunch of "have you left yet?" text messages)
+* RainAlarm (paid for ad-free)
+* Google calendar (or find a non-google replacement)
+* Google contacts (or find a non-google replacement)
+* Waze
+* Google maps (for satnav, route planning and finding local businesses)
+* LinkedIn
+* Twitter
+* Telegram FOSS (a slightly free-er version of telegram)
+* ...
 
 ### Other f-droid app suggestions
 
 * <https://www.reddit.com/r/fdroid/comments/lzzdbg/a_list_of_some_fdroid_apps_i_installed_to_get_you/>
 
-## Play store app list
+## Play store app list (via Aurora)
 
 Only things not available in f-droid
 
 * maps.me
+* Spotify
 
 ## Individual app setup
 
