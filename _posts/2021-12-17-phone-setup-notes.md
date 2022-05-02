@@ -1985,10 +1985,19 @@ success. open up magisk, shows as installed (v24.3)
 
 ## F-Droid app list
 
+### Turn On Install history
+
+Before starting installations do this so that we (might) have an exportable record to share.
+
 Turn on install history before starting so that we can export at the end - <https://gitlab.com/fdroid/fdroidclient/-/issues/70#note_89110104>
 
 Settings > Expert mode > Keep install history
 
+### Export list when done
+
+Settings > Install history and metrics > Share (share icon with 3 linked dots at top) > fail, no apps that know what to do with the file installed yet. gah.
+
+### Apps to intall
 * Vespucci (open-streetmap (OSM) editor)
 * andOTP (one time password generator with backup/restore capability)
 * Aurora play store proxy
@@ -1996,11 +2005,9 @@ Settings > Expert mode > Keep install history
 * OAndBackupX - to replace proprietary (but very good) titanium backup
   * Needs root, provided by Magisk. Without root no apps can access the data of other apps. This is the primary reason that root is so important to me. I want a backup system that I can actually trust because it's not some proprietary cloud magic pixie dust, it's instead a straight-forward grab-the-files-and-put-them-somewhere-safe operation that I can inspect and get to without more proprietary black magic.
 
-Export app list when done 
+### Other f-droid app suggestions
 
-Settings > Install history and metrics > Share (share icon with 3 linked dots at top) > fail, no apps that know what to do with the file installed yet. gah.
-
-Other suggestions: <https://www.reddit.com/r/fdroid/comments/lzzdbg/a_list_of_some_fdroid_apps_i_installed_to_get_you/>
+* <https://www.reddit.com/r/fdroid/comments/lzzdbg/a_list_of_some_fdroid_apps_i_installed_to_get_you/>
 
 ## Play store app list
 
@@ -2019,6 +2026,14 @@ Only things not available in f-droid
 * Connect to existing machine(s).
 * Add `/storage/emulated/0` folder (can't do this in non-web gui, stupid security warning. Nanny state of android.)
   * Warnings about failure to sync `Android/data` and `Android/obb`. Looks like they've tightened up security more, either that or syncthing has better warnings now. These folders will be exposed by OAndBackupX so I can safely ignore this until I sort out the ignore file for syncthing.
+
+### AndOTP
+
+* Set up password
+* Turn off global timeout bar (distracting & stressful)
+* Icons: small
+* Layout: compact
+* Copy backup from old phone with syncthing and restore it
 
 ## config
 
