@@ -13,8 +13,31 @@ blogger_orig_url: https://timwise.blogspot.com/2016/03/yet-another-good-commit-m
 1.  Not everything can be deduced from the code. Even with excellent variable/function/class/module names, and beautiful refactoring, the circumstances that let to a particular design or change are lost. Good comments adding context help, but sometimes you don't want to clutter code with temporally relevant comments; the source control gives you a suitable place to keep this information locked up with your patch of the day.
 1.  When someone wants to know if they can delete a line of code in the future, if they can't fathom why it was put there then the only way to find out is to delete it and see what breaks. By adding context in a commit message they can use the source-control history to get that context, and then decide whether that context is still applicable.
 1. You might think your code is perfect and correct and needs no explanation beyond the code itself; but what if there's a bug? Now the only documentation is the buggy code. If I come to fix your code later how do I know what it was supposed to do without going back to first principles. What algorithm or design pattern were you trying to implement? What references did you use?
+1. [Chesterton's Fence](https://thoughtbot.com/blog/chestertons-fence) - understand why something is the way it is before you change it.
 
 > "Write every commit message like the next person who reads it is an axe-wielding maniac who knows where you live" ~ unknown
+
+## Why I care about good commit messages
+
+For reasons of chance I've ended up more than once maintaining and extending things created by other people, many of whom had moved on from the projects and were no longer contactable.
+
+When dealing with a piece of code that has a behaviour that is clearly causing problems for users/customers etc. sometimes I have needed to understand *why* it was that way before I could know whether it could be changed without creating even bigger problems.
+
+Another example was a buggy and complex algorithm implementation, but no clue left as to what the algorithm being implemented was, as a result a week of reverse-engineering the maths happened that could have been saved with a simple "this is an implementation of ..." with a hyperlink or algorithm name.
+
+With the author of the code not available to ask I'm left only with the source code and `git blame` to fathom why it's like that.
+
+When you find the commit that added the patch and it's one of the following then you realise the author was not taking into account future maintainers:
+
+- "wip"
+- an entire fully formed set of behaviour appears in one giant commit with no explanation (perhaps copied from somewhere else)
+- a mention of a ticket number from a defunct ticket tracker with no further explanation
+
+It seems to me that it doesn't take much additional effort to rattle out a sentence or two with some context on why something is being changed for the benefit of future maintainers. Especially when it's a complex patch that maybe took more than a day to create.
+
+Given that each line of code is read many more times than it is written it seems that being "lazy" with explanation is not delivering the highest quality output to your client/employer/project.
+
+I, like many developers, also value speed of delivery, fast iteration, early prototypes that may get rewritten; but you can still move fast while taking a few minutes for each patch to explain it. And you have to think that just because you might throw this one away, you also might not, and you just don't know yet.
 
 ## How to make them better
 
@@ -31,9 +54,14 @@ My personal additions to this list:
 
 * A list of highlights of changes in bullets is often nice to add, think of it as a tourist's guide to your patch. It makes it easier to spot the key changes in a large diff, and can make code-reviews more effective.
 * Hard-wrapping lines shouldn't be required, that should be an editor/display concern but unfortunately the git tooling doesn't agree so doesn't wrap anything so you might have to hard-wrap.
-## Presentations on why good history matters
 
-Remember, your code and your commits can last a veeeeeery long time and you never know what poor soul will have to understand what you did and why years later... when you have time watch this video:
+## Are you expecting every tiny change to be like this?
+
+No. Some patches really don't need much explaining, e.g. re-applying default code formatting or fixing a typo; but you should always consider what context a future reader might need.
+
+## Are your patches atomic incremental improvements
+
+If it's hard to write a good message, it might be that you are not taking the time to craft good single-purpose commits.
 
 ## Examples of good
 
@@ -49,7 +77,9 @@ Remember, your code and your commits can last a veeeeeery long time and you neve
   * It provides an outline of the patch so you don't have to parse the whole diff to get a flavour of how the patch changes behaviour. When you have a lot of patches to read because you're looking for something in the history this can be a big timesaver.
   * It gives insight into why certain decisions were made about the final shape of the patch (e.g. why just /healthcheck and not /ping as well)
 
-----
+## Video presentations on why good history matters
+
+Remember, your code and your commits can last a veeeeeery long time and you never know what poor soul will have to understand what you did and why years later... when you have time watch this video:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1NoNTqank_U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
