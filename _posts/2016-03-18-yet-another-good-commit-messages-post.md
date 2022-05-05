@@ -35,6 +35,22 @@ My personal additions to this list:
 
 Remember, your code and your commits can last a veeeeeery long time and you never know what poor soul will have to understand what you did and why years later... when you have time watch this video:
 
+## Examples of good
+
+* <https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=f076ef44a44d02ed91543f820c14c2c7dff53716> ([via reddit](https://www.reddit.com/r/linux/comments/3y6st0/funny_commit_message_in_kernel/)) - what I like about this one is:
+  * It adds **context** that you could never get from code (note some is repeatedly more briefly in code comments which is a good thing)
+  * It explains the new behaviour **in human terms**.
+  * It's easy to read (good quality English prose)
+* <https://github.com/DFE-Digital/find-teacher-training/pull/159/commits/00e24dbc216836dd73281688491b8da355706d81> - what I like about this one is:
+  * It's part of a PR that is also well described & reviewed
+  * It adds context (about the thing that will call the endpoint added in the patch, i.e .the reason it was created)
+  * It mentions a PR in another repo that was a source for some of the code & ideas, yet more context for answering the question "why was this done and why is it like this?"
+  * The co-author is attributed (github shows this which is nice), this might give you someone to talk to about if they're still around
+  * It provides an outline of the patch so you don't have to parse the whole diff to get a flavour of how the patch changes behaviour. When you have a lot of patches to read because you're looking for something in the history this can be a big timesaver.
+  * It gives insight into why certain decisions were made about the final shape of the patch (e.g. why just /healthcheck and not /ping as well)
+
+----
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1NoNTqank_U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/G45hqWNScvE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
