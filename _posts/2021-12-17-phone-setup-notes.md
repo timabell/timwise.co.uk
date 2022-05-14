@@ -913,6 +913,8 @@ Audible worked and played no problem.
 
 Again pleasingly working with no quibbling or warnings. This is more important to me at the moment than perhaps it should be.
 
+Casting sound to chromecast audio not working.
+
 #### Whatscrapp (working)
 
 Much as I hate WhatsApp and it being owned by Facebook/Meta .... thanks to network effect I kinda still need it. I've managed to get some of my contacts over to telegram/signal but not everyone.
@@ -1324,6 +1326,8 @@ Things I can't escape the googly jail for
   * digidentity
 * banking apps that don't work on the primary phone (not naming because haxxors)
 * google pay (never used it, just use an actual card)
+* google home for controlling the chromecast
+* spotify just for casting to the chromecast audio
 
 To my horror I have discovered that android allows apps to force remote admin privs so that IT departments can snoop on your BYOD. Hello Microsoft Outlook + Active Directory. Yet more erosion of user rights in the name of security. There's no way in hell I'm allowing a client to be an admin on my primary phone so this is burner phone territory if at all necessary; though I just won't install any of that junk at all and will be uncontactable within their network unless on their supplied devices. Shrug.
 
@@ -2027,7 +2031,6 @@ Calendar app works and has all events, desktop widget broken (shows no events)
 * Audible
 * Maverick (for recording and viewing gps traces, could do with a replacement, the map tiles seem to have died and it's getting buggy)
 * google home (for chromecast & google mini integration)
-* Life360 (shared gps locations for family, saves a bunch of "have you left yet?" text messages)
 * RainAlarm (paid for ad-free)
 * Google calendar (or find a non-google replacement)
 * Google contacts (or find a non-google replacement)
@@ -2062,6 +2065,9 @@ Only things not available in f-droid
 * zoom
 * bulb energy
 * YNAB
+* Ring (doorbell)
+* Google home
+* Life360 (shared gps locations for family, saves a bunch of "have you left yet?" text messages)
 
 ## Individual app setup
 
@@ -2196,6 +2202,12 @@ A complete list
       * Gestures
         * Power menu
           * Advanced restart - on
+  * About phone
+    * Emergency information (wtf is this in about phone for? I had to ddg to find it)
+      * Add information
+        * set all the things
+      * Add contact
+        * doesn't work, just shows empty list to choose from. dang. TODO
 
 ## Todo
 
@@ -2207,6 +2219,7 @@ A complete list
 * contribute to lineage to link to golang extractor, maybe with step by step instructions
 * Make signal default sms app
 * Camera from lock screen
+* transfer paid version of rain alarm, seems to be missing three-dot-menu on new version
 
 ## Conclusion: inconclusive
 
@@ -2225,3 +2238,7 @@ Open source moves slowly, but like an iceberg it's hard to stop when it's claime
 That's as far as I've got so far. I'll be editing this post as I progress with the install so do come and look again. Also suggestions and questions welcome.
 
 I really do hope one day I can de-google my phone just like I de-microsofted my laptop, but today is not that day for me.
+
+## Further reading
+
+* <https://www.howtogeek.com/358166/using-android-without-google-a-kind-of-guide/>
