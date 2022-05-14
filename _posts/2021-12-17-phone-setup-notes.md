@@ -2075,6 +2075,16 @@ Only things not available in f-droid
 * Add `/storage/emulated/0` folder (can't do this in non-web gui, stupid security warning. Nanny state of android.)
   * Warnings about failure to sync `Android/data` and `Android/obb`. Looks like they've tightened up security more, either that or syncthing has better warnings now. These folders will be exposed by OAndBackupX so I can safely ignore this until I sort out the ignore file for syncthing.
 
+#### Syncthing ignore patterns
+
+Set up ignores for caches and things that won't sync. Files for this are on github at <https://github.com/timabell/dotmatrix/tree/master/phone>
+
+* Create file `phone.stignore` in the root of the sync'd sdcard folder. This one you can edit on the laptop as you find more things you don't want sync'd.
+* Create file `phonetemplate.stignore` in the root folder and put only this line in it `#include phone.stignore`
+* On the phone when they have sync'd copy the `phonetemplate.stignore` to a file named just `.stignore` in the root folder.
+
+The reason for this dance is that syncthing won't sync the `.stignore` so to be able to edit the ignores on a different device you have to set up a link.
+
 ### AndOTP
 
 * Set up password
