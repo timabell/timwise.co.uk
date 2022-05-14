@@ -2009,6 +2009,29 @@ Same problem for gmail.
 
 Calendar app works and has all events, desktop widget broken (shows no events)
 
+#### Alternatives research
+
+* <https://alternativeto.net/software/google-contacts/>
+* <https://www.reddit.com/r/LineageOS/comments/7wnwpe/alternative_to_google_calender_or_contacts_sync/>
+* <https://www.reddit.com/r/LineageOS/comments/8qv3p3/alternative_services_to_google_calendar_and/>
+* <https://www.reddit.com/r/LineageOS/comments/pt5ce7/are_the_contacts_and_telephone_apps_built_by/>
+  * <https://f-droid.org/en/packages/com.simplemobiletools.contacts.pro/>
+* <https://f-droid.org/en/packages/com.simplemobiletools.contacts.pro/>
+
+#### Calendar
+
+bearable, widget broken but app itself works and syncs
+
+have to manually turn on sync for additional calendars
+
+#### Contacts
+
+Need alternative, perhaps fastmail
+
+#### GMail
+
+todo, probably set up imap and use k9mail + web interface on laptop
+
 ### F-Droid app list
 
 * Vespucci (open-streetmap (OSM) editor)
