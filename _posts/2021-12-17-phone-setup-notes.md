@@ -21,8 +21,8 @@ Most people don't think their phone install deserves a blog post, or even a lot 
 There are many factors in this battle for the phone in your pocket.
 
 * The GPL's fundamental truth is that there is a tension for control over your devices between the creators of software and the users of that software. iOS and Android both believe that the users can't be trusted with full control over their device because "security". I believe this balance of power is important. Too far in either direction and things start to go badly:
-  * All the power in the hands of vendors at the expense of users results in exploitation, unfair pricing, anti-competitive practices, monopolies, duopolies (google+apple), cartels, and lack of innovation and quality due to lack of competition.
-  * On the flip side all the power in the hands of "users" (or at least user-developers) as per the pure GPL and it becomes difficult or impossible for capitalist processes to fund innovation and engineering effort due to the inability to capture generated value.
+	* All the power in the hands of vendors at the expense of users results in exploitation, unfair pricing, anti-competitive practices, monopolies, duopolies (google+apple), cartels, and lack of innovation and quality due to lack of competition.
+	* On the flip side all the power in the hands of "users" (or at least user-developers) as per the pure GPL and it becomes difficult or impossible for capitalist processes to fund innovation and engineering effort due to the inability to capture generated value.
 * The apps matter, I do actually want to use a phone for useful things, and increasingly web applications are a poor cousin to their equivalent apps. (Facebook, horror that it is, oscillates between making a browser unusable and making it just about possible to read and interact, they *really* want all that juicy extra data that you can get from being an installed app).
 
 > iOS and Android both believe that users can't be trusted with full control over their device
@@ -537,7 +537,7 @@ The steps:
 		tim@max:~/Downloads/oneplus9pro/LineageOS
 		$ adb sideload lineage-18.1-20211214-nightly-lemonadep-signed.zip
 		serving: 'lineage-18.1-20211214-nightly-lemonadep-signed.zip'  (~47%)
-		    adb: failed to read command: Success
+			adb: failed to read command: Success
 		```
 		apparently this is normal, but the failed to flash error on the phone is not, and rebooting drops me back into the existing Oxygen install. Dammit.... Try again
 	* Second attempt ran fine
@@ -1095,7 +1095,7 @@ Here's what I found so far, I haven't got it working yet.
 I *think* it's the same signing that you have to do to `apk` files, and `apk` is just a special shaped `zip` file. Off into learning-android-sdk-land I went...
 
 * There's some kind of strange android app that can sign zips called [ZipSigner](https://f-droid.org/forums/topic/zipsigner/)
-  * [ZipSigner is missing source code](https://code.google.com/archive/p/zip-signer/issues/3) so you are relying on random binaries. Dodgy but probably well intentioned.
+	* [ZipSigner is missing source code](https://code.google.com/archive/p/zip-signer/issues/3) so you are relying on random binaries. Dodgy but probably well intentioned.
 * <https://android.stackexchange.com/questions/222262/how-to-create-manually-create-my-own-%e1%b4%8f%e1%b4%9b%e1%b4%80-update-file-to-be-used-for-adb-sideload>
 * <https://android.stackexchange.com/questions/95425/update-zip-just-for-fixing-file-permissions-possible>
 * <https://forum.xda-developers.com/t/tutorial-the-updater-script-completely-explained.2377695/>
@@ -1128,32 +1128,32 @@ I *think* it's the same signing that you have to do to `apk` files, and `apk` is
 
 * Well, let's get a new nightly
 * Instructions say check model...
-  * Reboot to twrp (recovery) with USB connected to laptop
-  * Laptop pops window for new mount `mtp://OnePlus_LE2123_dade278d/`
-  * Yep, LE2123 is in the supported list. Phew.
+	* Reboot to twrp (recovery) with USB connected to laptop
+	* Laptop pops window for new mount `mtp://OnePlus_LE2123_dade278d/`
+	* Yep, LE2123 is in the supported list. Phew.
 * Skip all the "recovery" steps in <https://wiki.lineageos.org/devices/lemonadep/install>
 * I'm guessing I don't need to run "copy partitions" again because that's to avoid only having one working slot, and I already have to having done this before. Tell me if I'm wrong!
 * Give up waiting for new image download (~1GB), continue with older image...
 * Factory reset
-  * TWRP > Wipe > Swipe for factory reset
-  * back
-  * Format Data (button)
-  * type yes to continue (wiping all apps & data)
-  * back to main menu (android back button lots of times)
+	* TWRP > Wipe > Swipe for factory reset
+	* back
+	* Format Data (button)
+	* type yes to continue (wiping all apps & data)
+	* back to main menu (android back button lots of times)
 * Flash lineage
-  * Still in TWRP
-  * Advanced > ADB Sideload
-  * Tick the wipe boxes ("Dalvik cache" + "cache")
-  * Swipe to sart sideload
-  * `adb sideload lineage-18.1-20211228-nightly-lemonadep-signed.zip`
-  * back
-  * Don't reboot yet
+	* Still in TWRP
+	* Advanced > ADB Sideload
+	* Tick the wipe boxes ("Dalvik cache" + "cache")
+	* Swipe to sart sideload
+	* `adb sideload lineage-18.1-20211228-nightly-lemonadep-signed.zip`
+	* back
+	* Don't reboot yet
 * Add MindTheGaps
-  * still in TWRP
-  * ADB Sideload
-  * swipe (cache wipe still selected)
-  * `adb sideload MindTheGapps-11.0.0-arm64-20210920_084011.zip`
-  * fail. log:
+	* still in TWRP
+	* ADB Sideload
+	* swipe (cache wipe still selected)
+	* `adb sideload MindTheGapps-11.0.0-arm64-20210920_084011.zip`
+	* fail. log:
 
 ```
 **********************
@@ -1199,9 +1199,9 @@ Okay, back to the plan.
 #### OpenGApps install - fail
 
 * Download <https://opengapps.org/?api=11.0&variant=nano> - ARM64 / 11 / nano
-  * (manually changed from 10 to 11 from link on <https://wiki.lineageos.org/gapps>)
-  * download the md5 too
-  * `md5sum -c *.md5` to validate...
+	* (manually changed from 10 to 11 from link on <https://wiki.lineageos.org/gapps>)
+	* download the md5 too
+	* `md5sum -c *.md5` to validate...
 * Back to ADB Sideload in TWRP (cache wipe ticked x2), swipe to start
 * `adb sideload open_gapps-arm64-11.0-nano-20220215.zip`
 * cross fingers
@@ -1250,7 +1250,7 @@ I can opt out of that battle by running two phones.
 The idea here is to get the free-est possible base layer (i.e. operating system), and then get maximum functionality within that. Anything that doesn't work or I can't find a working alternative to gets punted to the burner phone while we wait for hell to freeze over again. This will be the compromise for now.
 
 * Research trying PureOS, see what the app ecosystem is like - done - nope
-  * research done, doesn't seem to be possible to install on the OnePlus. Next...
+	* research done, doesn't seem to be possible to install on the OnePlus. Next...
 * Continue with Lineage (I left the phone with a working but empty install of this)
 * **Don't install proprietary google play services or play store at all.** - This is the line in the sand. I would have accepted it for now, but given I couldn't install it, I'll take it as the new battle line for free vs proprietary.
 * Install microG for re-implementation of shared services (i.e. location, polling for updates from servers etc)
@@ -1271,12 +1271,12 @@ Went through language prompt, was looking at time prompt in setup wizard when th
 
 ### Setup wizard
 
-  - selected UK location,
-  - GMT timezone.
-  - Put in wifi password (incorrectly)
-  - set up pin
-  - set up fingerprint
-  - booted into OS (yay, pleasing to see Lineage in action)
+	- selected UK location,
+	- GMT timezone.
+	- Put in wifi password (incorrectly)
+	- set up pin
+	- set up fingerprint
+	- booted into OS (yay, pleasing to see Lineage in action)
 
 ### OS update with on-phone updater
 
@@ -1293,9 +1293,9 @@ reboot (press button that's presented)
 ### config
 
 * turn off annoying sounds
-  * settings > sound > advanced
-    * screen locking sound - off
-    * touch sounds - off
+	* settings > sound > advanced
+	* screen locking sound - off
+	* touch sounds - off
 
 ### todo
 
@@ -1319,11 +1319,11 @@ Things I can't escape the googly jail for
 
 * google maps?
 * apps for clients
-  * microsoft outlook
-  * securid (vpn stuff)
-  * google authenticator (use andOTP instead wherever possible)
-  * microsoft authenticator (yuck, what's wrong with the OTP standard?!?!)
-  * digidentity
+	* microsoft outlook
+	* securid (vpn stuff)
+	* google authenticator (use andOTP instead wherever possible)
+	* microsoft authenticator (yuck, what's wrong with the OTP standard?!?!)
+	* digidentity
 * banking apps that don't work on the primary phone (not naming because haxxors)
 * google pay (never used it, just use an actual card)
 * google home for controlling the chromecast
@@ -1819,15 +1819,15 @@ todo:
 ### config
 
 * settings
-  * sound
-    * advanced
-      * screen locking sound - off
-      * touch sounds - off
-  * system
-    * advanced
-      * gestures
-        * power menu
-          * advanced restart - on
+	* sound
+	* advanced
+	  * screen locking sound - off
+	  * touch sounds - off
+	* system
+	* advanced
+	  * gestures
+		* power menu
+		  * advanced restart - on
 
 ### Lineage+microG+Magisk again - success!
 
@@ -2015,7 +2015,7 @@ Calendar app works and has all events, desktop widget broken (shows no events)
 * <https://www.reddit.com/r/LineageOS/comments/7wnwpe/alternative_to_google_calender_or_contacts_sync/>
 * <https://www.reddit.com/r/LineageOS/comments/8qv3p3/alternative_services_to_google_calendar_and/>
 * <https://www.reddit.com/r/LineageOS/comments/pt5ce7/are_the_contacts_and_telephone_apps_built_by/>
-  * <https://f-droid.org/en/packages/com.simplemobiletools.contacts.pro/>
+	* <https://f-droid.org/en/packages/com.simplemobiletools.contacts.pro/>
 * <https://f-droid.org/en/packages/com.simplemobiletools.contacts.pro/>
 
 #### Calendar
@@ -2039,7 +2039,7 @@ todo, probably set up imap and use k9mail + web interface on laptop
 * Aurora play store proxy - configure as per above section
 * Syncthing
 * OAndBackupX - to replace proprietary (but very good) titanium backup
-  * Needs root, provided by Magisk. Without root no apps can access the data of other apps. This is the primary reason that root is so important to me. I want a backup system that I can actually trust because it's not some proprietary cloud magic pixie dust, it's instead a straight-forward grab-the-files-and-put-them-somewhere-safe operation that I can inspect and get to without more proprietary black magic.
+	* Needs root, provided by Magisk. Without root no apps can access the data of other apps. This is the primary reason that root is so important to me. I want a backup system that I can actually trust because it's not some proprietary cloud magic pixie dust, it's instead a straight-forward grab-the-files-and-put-them-somewhere-safe operation that I can inspect and get to without more proprietary black magic.
 * [KeepassDX](https://www.keepassdx.com/) - <https://github.com/Kunzisoft/KeePassDX>
 * k9mail
 * vlc
@@ -2078,8 +2078,8 @@ Only things not available in f-droid
 * Firefox
 * google maps - works flawlessly!
 * signal messemger
-   * surprisingly not in f-droid!
-   * can't be on multiple phones at once, can only "transfer". Grumble.
+	* surprisingly not in f-droid!
+	* can't be on multiple phones at once, can only "transfer". Grumble.
 * banking apps (2/3 work)
 * sunsama
 * trello
@@ -2102,7 +2102,7 @@ Only things not available in f-droid
 * Set device name
 * Connect to existing machine(s).
 * Add `/storage/emulated/0` folder (can't do this in non-web gui, stupid security warning. Nanny state of android.)
-  * Warnings about failure to sync `Android/data` and `Android/obb`. Looks like they've tightened up security more, either that or syncthing has better warnings now. These folders will be exposed by OAndBackupX so I can safely ignore this until I sort out the ignore file for syncthing.
+	* Warnings about failure to sync `Android/data` and `Android/obb`. Looks like they've tightened up security more, either that or syncthing has better warnings now. These folders will be exposed by OAndBackupX so I can safely ignore this until I sort out the ignore file for syncthing.
 
 #### Syncthing ignore patterns
 
@@ -2179,58 +2179,58 @@ Easy thanks to syncthing, just move the folders & files on the laptop from sync 
 A complete list
 
 * Settings
-  * Battery
-    * Battery saver and performance
-      * Automatic power saver - 15% (off by default oddly)
-  * Display
-    * Dark theme
-      * on
-      * no schedule - (let's give this a try, we'll see what it's like in broad daylight)
-      * pure black - on (better for battery and I think it looks cooler)
-    * Night Light
-      * Schedule
-        * sunset till sunrise - this is an experiment, we'll see if it is sensible at it
-    * Advanced (because this is extreem l33t haxxor stuff, beware n00bs)
-      * Screen timeout - 5 mins (scary stuff I know, you were warned by the **advanced** thing, I hope you know what you're doing. The nanny phone-state will keep you safe, don't you worry your pretty little head about this section. Twunts.)
-      * Styles and wallpapers - yes you read that right folks, wallpapers are an "Advanced" feature. What is wrong with this people?
-        * push a couple of images across to ~/Pictures with syncthing and set them as home & lock screen
-      * Lock screen
-        * Add text on lock screen
-          * `Owner Tim Abell <tim@timwise.co.uk>` (the idea is that people are generally good and this might be the best way to reach me if I've lost it)
-      * Tap to sleep - off (I only ever do this by mistake)
-  * Sound
-    * Vibrate for calls - Always (also has a vibrate then ring which is a nice option)
-    * Advanced (why??????)
+	* Battery
+	* Battery saver and performance
+		* Automatic power saver - 15% (off by default oddly)
+	* Display
+	* Dark theme
+		* on
+		* no schedule - (let's give this a try, we'll see what it's like in broad daylight)
+		* pure black - on (better for battery and I think it looks cooler)
+	* Night Light
+		* Schedule
+		* sunset till sunrise - this is an experiment, we'll see if it is sensible at it
+	* Advanced (because this is extreem l33t haxxor stuff, beware n00bs)
+		* Screen timeout - 5 mins (scary stuff I know, you were warned by the **advanced** thing, I hope you know what you're doing. The nanny phone-state will keep you safe, don't you worry your pretty little head about this section. Twunts.)
+		* Styles and wallpapers - yes you read that right folks, wallpapers are an "Advanced" feature. What is wrong with this people?
+		* push a couple of images across to ~/Pictures with syncthing and set them as home & lock screen
+		* Lock screen
+		* Add text on lock screen
+			* `Owner Tim Abell <tim@timwise.co.uk>` (the idea is that people are generally good and this might be the best way to reach me if I've lost it)
+		* Tap to sleep - off (I only ever do this by mistake)
+	* Sound
+	* Vibrate for calls - Always (also has a vibrate then ring which is a nice option)
+	* Advanced (why??????)
 		* Phone ringtone - thriller three (there's a great selection & variety available, impressed with Lineage here. Also liked Solarium, Sheep (yes actual sheep), Rigel)
 		* Default notification sound - Hojus (also liked Beryllium and Titan for minimal stress-inducing feel. Again a great selection available with some really fun sounds).
 		* Default alarm sound - Piezo Alarm (for the retro kicks. Again more winners in here, well worth exploring)
 		* Dial pad tones - off
-      * Screen locking sound - off
-      * Touch sounds - off
-  * Privacy
-    * Show passwords, display characters briefly as you type - off (I just find this annoying/distracting)
-    * Notifications on lock screen
-      * Don't show notifications at all - this is more for a clear mind rather than privacy, though that's a bonus. I hate looking at my (locked) phone for the time and getting drawn into the notifications. Happened toooooo many times.
-    * Trust
-      * SMS message limit - always confirm (default of 30 seems like a lot of spam to me), might go to 5 if this is a pain
-  * Security
-    * Screen lock - pin
-    * Fingerprint
-  * System
-    * Status bar
-      * Network traffic monitor
-        * Display mode > upload and download
-      * Battery status style - Circle (much higher fidelity information)
-    * Advanced
-      * Gestures
-        * Power menu
-          * Advanced restart - on
-  * About phone
-    * Emergency information (wtf is this in about phone for? I had to ddg to find it)
-      * Add information
-        * set all the things
-      * Add contact
-        * doesn't work, just shows empty list to choose from. dang. TODO
+		* Screen locking sound - off
+		* Touch sounds - off
+	* Privacy
+	* Show passwords, display characters briefly as you type - off (I just find this annoying/distracting)
+	* Notifications on lock screen
+		* Don't show notifications at all - this is more for a clear mind rather than privacy, though that's a bonus. I hate looking at my (locked) phone for the time and getting drawn into the notifications. Happened toooooo many times.
+	* Trust
+		* SMS message limit - always confirm (default of 30 seems like a lot of spam to me), might go to 5 if this is a pain
+	* Security
+	* Screen lock - pin
+	* Fingerprint
+	* System
+	* Status bar
+		* Network traffic monitor
+		* Display mode > upload and download
+		* Battery status style - Circle (much higher fidelity information)
+	* Advanced
+		* Gestures
+		* Power menu
+			* Advanced restart - on
+	* About phone
+	* Emergency information (wtf is this in about phone for? I had to ddg to find it)
+		* Add information
+		* set all the things
+		* Add contact
+		* doesn't work, just shows empty list to choose from. dang. TODO
 
 ## Todo
 
