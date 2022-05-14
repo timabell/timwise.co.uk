@@ -2009,7 +2009,9 @@ Same problem for gmail.
 
 Calendar app works and has all events, desktop widget broken (shows no events)
 
-#### Alternatives research
+#### Research
+
+##### Alternatives
 
 * <https://alternativeto.net/software/google-contacts/>
 * <https://www.reddit.com/r/LineageOS/comments/7wnwpe/alternative_to_google_calender_or_contacts_sync/>
@@ -2017,6 +2019,17 @@ Calendar app works and has all events, desktop widget broken (shows no events)
 * <https://www.reddit.com/r/LineageOS/comments/pt5ce7/are_the_contacts_and_telephone_apps_built_by/>
 	* <https://f-droid.org/en/packages/com.simplemobiletools.contacts.pro/>
 * <https://f-droid.org/en/packages/com.simplemobiletools.contacts.pro/>
+
+##### Making it work
+
+* <https://github.com/microg/GmsCore/issues/585>
+* <https://github.com/tomwiggers/Magisk-ConCal-Sync-MicroG>
+	* [download Magisk-ConCal-Sync-MicroG repo zip](https://github.com/tomwiggers/Magisk-ConCal-Sync-MicroG/archive/refs/heads/master.zip)
+	* extract, go into inner folder and zip up the four items
+	* copy to phone with syncthing
+	* magisk > modules > install from storage > select the zip > done
+	* reboot phone
+	* boot loop. FUUUUUUUUCK
 
 #### Calendar
 
