@@ -2092,6 +2092,10 @@ Only things not available in f-droid
 * Google home
 * Life360 (shared gps locations for family, saves a bunch of "have you left yet?" text messages)
 
+## Built-in apps
+
+* Browser - disable (using firefox instead)
+
 ## Individual app setup
 
 ### Syncthing
