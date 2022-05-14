@@ -1228,19 +1228,6 @@ Current Free Space |         0
 
 Well on the plus side the diagnostics are muuuuch better in OpenGApps so that's saved me fucking around trying to patch MindTheGaps' installer.
 
-## Todo once I have an Android OS I'm happy with
-
-* firmware update: <https://wiki.lineageos.org/devices/lemonadep/fw_update>
-* Restore google things with google backup (app installs, wallpaper, some settings, contacts)
-	* GApps <https://wiki.lineageos.org/gapps>
-* Backup/restore with titanium
-* 2FA (already on the backup-able andOTP) (is it 2FA if you log in on your phone web browser using a 2FA app on the same phone??)
-* Sync with syncthing (photos, rest of SD card)
-* better camera support? <https://www.xda-developers.com/google-camera-port-hub/>
-* see if android pay etc will work with magisk magic mask pretending we haven't unlocked anything
-* find an alternative to titanium backup <https://forum.xda-developers.com/t/farewell-to-titanium-backup-looking-for-alternative.3932814/>
-* contribute to lineage to link to golang extractor, maybe with step by step instructions
-
 ### OS Updates (for next time)
 
 <https://wiki.lineageos.org/devices/lemonadep/update>
@@ -1997,7 +1984,29 @@ Settings > Expert mode > Keep install history
 
 Settings > Install history and metrics > Share (share icon with 3 linked dots at top) > fail, no apps that know what to do with the file installed yet. gah.
 
-### Apps to intall
+### Google contacts, calendar & gmail - fail
+
+via aurora
+
+Install contacts...
+
+- Sign in
+- Goes to microG
+- Then to official google sign in
+- Sign in succeeds
+- Acc now listed in settings > accounts
+- google contacts still shows no accounts & no contacts. Damn
+- tap acc, tap any of the settings (all go to same place) turn on "Allow apps to find contacts"
+- now google contacts shows the account, but still doesn't sync.
+
+Hrmm. Need this or equivalent obviously. Switching will be non trivial.
+
+Same problem for gmail.
+
+Calendar app works and has all events, desktop widget broken (shows no events)
+
+### F-Droid app list
+
 * Vespucci (open-streetmap (OSM) editor)
 * andOTP (one time password generator with backup/restore capability)
 * Aurora play store proxy - configure as per above section
@@ -2005,6 +2014,11 @@ Settings > Install history and metrics > Share (share icon with 3 linked dots at
 * OAndBackupX - to replace proprietary (but very good) titanium backup
   * Needs root, provided by Magisk. Without root no apps can access the data of other apps. This is the primary reason that root is so important to me. I want a backup system that I can actually trust because it's not some proprietary cloud magic pixie dust, it's instead a straight-forward grab-the-files-and-put-them-somewhere-safe operation that I can inspect and get to without more proprietary black magic.
 * [KeepassDX](https://www.keepassdx.com/) - <https://github.com/Kunzisoft/KeePassDX>
+* k9mail
+* vlc
+* markor
+* antennapod - todo restore state
+* qr & barcode scanner
 
 ### todo - more apps (f-droid where possible)
 
@@ -2035,6 +2049,19 @@ Only things not available in f-droid
 * maps.me
 * Spotify
 * Audible
+* Firefox
+* google maps - works flawlessly!
+* signal messemger
+   * surprisingly not in f-droid!
+   * can't be on multiple phones at once, can only "transfer". Grumble.
+* banking apps (2/3 work)
+* sunsama
+* trello
+* slack
+* rain alarm - todo restore paid version
+* zoom
+* bulb energy
+* YNAB
 
 ## Individual app setup
 
@@ -2056,7 +2083,13 @@ Only things not available in f-droid
 * Layout: compact
 * Copy backup from old phone with syncthing and restore it
 
-## AntennaPod
+### AntennaPod
+
+Now I get to the crux of why I was so fucked off with Android.
+
+I want to copy the *exact* state of antennapod to the new phone; but my old phone de-rooted itself and broke the backups; and you can't back up ~/data where everything lives without root because it's all locked down with per-app-user permissions, which is great for isolating apps from each other ... and you. The only option for those folders is in app sync (e.g.. sign in to trello/firefox/slack etc) so local state is throwaway, or backup to google drive .... to some magical fucking invisible folder so you can't even download the backups it made. This shit makes me so mad.
+
+We already have working systems for backups and security and these fuckers have broken them and replaced them with their own vendor-locked-in proprietary black-box shite that doesn't even work all the time.
 
 Because I'd lost root and usable backups it took me a while to work out how to transfer my latest beloved podcast player state to a new phone. I knew that you could import/export an OPML list of suscriptions but I really wanted to keep the play state of every episode so I caould easily scan the back-catalogues for episodes I'd never listened to dotted amongst the many thousands of episodes I have listned to. Well darm it there is a full export feature I didn't know about. It exports to the virtual sdcard storagea which is kinda like a home directory that you can actually access as a user. I already have the sdcard storage syncing to my other machines with syncthing so getting it from there onwards is a trivial copy-paste on the laptop.
 
@@ -2086,6 +2119,17 @@ New phone:
 * Woo! Queue entirely intact!
 
 Downloads have to be re-done for the queue but the UI makes that dead easy, just hit play and it switches to a download button so you can whip through them quick.
+
+### Bulb energy
+
+* App downloaded
+* Sign in by magic email link failed
+* Sign in with password worked
+* Statement download failed with "no apps can perform this action" but can always use website to get them.
+
+### keepassdx
+
+Enable fingerprint unlock <https://github.com/Kunzisoft/KeePassDX/wiki/Advanced-Unlocking#b-link-database-credential-to-advanced-unlock-recognition=>
 
 ## config
 
@@ -2139,6 +2183,16 @@ A complete list
         * Power menu
           * Advanced restart - on
 
+## Todo
+
+* firmware update: <https://wiki.lineageos.org/devices/lemonadep/fw_update>
+* Backup/restore with titanium
+* better camera support? <https://www.xda-developers.com/google-camera-port-hub/>
+* see if android pay etc will work with magisk magic mask pretending we haven't unlocked anything
+* find an alternative to titanium backup <https://forum.xda-developers.com/t/farewell-to-titanium-backup-looking-for-alternative.3932814/>
+* contribute to lineage to link to golang extractor, maybe with step by step instructions
+* Make signal default sms app
+* Camera from lock screen
 
 ## Conclusion: inconclusive
 
