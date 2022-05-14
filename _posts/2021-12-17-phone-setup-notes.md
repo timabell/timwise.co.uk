@@ -2131,6 +2131,10 @@ Downloads have to be re-done for the queue but the UI makes that dead easy, just
 
 Enable fingerprint unlock <https://github.com/Kunzisoft/KeePassDX/wiki/Advanced-Unlocking#b-link-database-credential-to-advanced-unlock-recognition=>
 
+## File transfer
+
+Easy thanks to syncthing, just move the folders & files on the laptop from sync sdcard folder of the old phone to the one for the new phone. Win. 
+
 ## config
 
 A complete list
