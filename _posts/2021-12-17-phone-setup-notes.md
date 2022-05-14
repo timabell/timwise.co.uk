@@ -2030,6 +2030,13 @@ Calendar app works and has all events, desktop widget broken (shows no events)
 	* magisk > modules > install from storage > select the zip > done
 	* reboot phone
 	* boot loop. FUUUUUUUUCK
+	* reported issue for what it's worth, including `logcat` logs: <https://github.com/tomwiggers/Magisk-ConCal-Sync-MicroG/issues/3>
+	* remove modules
+    	* <https://www.thecustomdroid.com/uninstall-magisk-modules-in-twrp-recovery-guide/>
+		* connect phone usb
+    	* run `adb wait-for-device shell magisk --remove-modules` on laptop
+    	* boot up phone normally
+    	* phone booted into lock screen, phew!
 
 #### Calendar
 
