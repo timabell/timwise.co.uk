@@ -2060,7 +2060,7 @@ Only things not available in f-droid
 
 Because I'd lost root and usable backups it took me a while to work out how to transfer my latest beloved podcast player state to a new phone. I knew that you could import/export an OPML list of suscriptions but I really wanted to keep the play state of every episode so I caould easily scan the back-catalogues for episodes I'd never listened to dotted amongst the many thousands of episodes I have listned to. Well darm it there is a full export feature I didn't know about. It exports to the virtual sdcard storagea which is kinda like a home directory that you can actually access as a user. I already have the sdcard storage syncing to my other machines with syncthing so getting it from there onwards is a trivial copy-paste on the laptop.
 
-Here's what a quick ~google~ [ddg](https://duckduckgo.com/) showed up:
+Here's what a quick ~~google~~ [ddg](https://duckduckgo.com/) showed up:
 
 * <https://github.com/AntennaPod/AntennaPod/issues/5391>
 * <https://github.com/AntennaPod/AntennaPod/issues/5031>
