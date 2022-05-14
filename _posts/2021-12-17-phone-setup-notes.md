@@ -2034,6 +2034,7 @@ Only things not available in f-droid
 
 * maps.me
 * Spotify
+* Audible
 
 ## Individual app setup
 
@@ -2054,6 +2055,37 @@ Only things not available in f-droid
 * Icons: small
 * Layout: compact
 * Copy backup from old phone with syncthing and restore it
+
+## AntennaPod
+
+Because I'd lost root and usable backups it took me a while to work out how to transfer my latest beloved podcast player state to a new phone. I knew that you could import/export an OPML list of suscriptions but I really wanted to keep the play state of every episode so I caould easily scan the back-catalogues for episodes I'd never listened to dotted amongst the many thousands of episodes I have listned to. Well darm it there is a full export feature I didn't know about. It exports to the virtual sdcard storagea which is kinda like a home directory that you can actually access as a user. I already have the sdcard storage syncing to my other machines with syncthing so getting it from there onwards is a trivial copy-paste on the laptop.
+
+Here's what a quick ~google~ [ddg](https://duckduckgo.com/) showed up:
+
+* <https://github.com/AntennaPod/AntennaPod/issues/5391>
+* <https://github.com/AntennaPod/AntennaPod/issues/5031>
+* <https://github.com/AntennaPod/AntennaPod/issues/377>
+
+Old phone:
+
+* hamburger menu top left
+* settings (cog at bottom) > storage > import/export > database export
+* ensure syncthing is running and connected
+
+Laptop:
+
+* Copy file on laptop to new phone's sync folder
+
+New phone:
+
+* make sure symcthing is running, connected and up to date to pull new file in
+* hamburger menu top left
+* settings (cog at bottom) > storage > import/export > database import > Confirm
+* select file
+* press ok to restart Antennapod
+* Woo! Queue entirely intact!
+
+Downloads have to be re-done for the queue but the UI makes that dead easy, just hit play and it switches to a download button so you can whip through them quick.
 
 ## config
 
