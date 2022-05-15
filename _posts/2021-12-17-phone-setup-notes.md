@@ -2032,11 +2032,11 @@ Calendar app works and has all events, desktop widget broken (shows no events)
 	* boot loop. FUUUUUUUUCK
 	* reported issue for what it's worth, including `logcat` logs: <https://github.com/tomwiggers/Magisk-ConCal-Sync-MicroG/issues/3>
 	* remove modules
-    	* <https://www.thecustomdroid.com/uninstall-magisk-modules-in-twrp-recovery-guide/>
+		* <https://www.thecustomdroid.com/uninstall-magisk-modules-in-twrp-recovery-guide/>
 		* connect phone usb
-    	* run `adb wait-for-device shell magisk --remove-modules` on laptop
-    	* boot up phone normally
-    	* phone booted into lock screen, phew!
+		* run `adb wait-for-device shell magisk --remove-modules` on laptop
+		* boot up phone normally
+		* phone booted into lock screen, phew!
 
 #### Calendar
 
@@ -2047,6 +2047,14 @@ have to manually turn on sync for additional calendars
 #### Contacts
 
 Need alternative, perhaps fastmail
+
+* Let's try fastmail's contacts...
+	* [google contacts web app](https://contacts.google.com/) > export from google contacts > vCard
+	* [fastmail web app > dropdown thing > settings](https://www.fastmail.com/settings/setup/importexport) > import > contacts > upload addressbook file > choose the vcf
+		* imported all but two, showed me the errors, not ones I care about.
+	* check fastmail phone app, contacts come flooding in.
+	* but no sign of them in the main phone contacts app. damn.
+* <https://www.reddit.com/r/fastmail/comments/f2akqj/dealing_with_contacts/>
 
 #### GMail
 
@@ -2111,6 +2119,7 @@ Only things not available in f-droid
 * Ring (doorbell)
 * Google home
 * Life360 (shared gps locations for family, saves a bunch of "have you left yet?" text messages)
+* Fastmail - not for the mail, prefer k9mail, but to see if it can do contacts as well as goooooooogle
 
 ## Built-in apps
 
