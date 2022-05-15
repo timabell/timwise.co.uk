@@ -2178,6 +2178,10 @@ Messaging > long press > app info > disable
 * Add `/storage/emulated/0` folder (can't do this in non-web gui, stupid security warning. Nanny state of android.)
 	* Warnings about failure to sync `Android/data` and `Android/obb`. Looks like they've tightened up security more, either that or syncthing has better warnings now. These folders will be exposed by OAndBackupX so I can safely ignore this until I sort out the ignore file for syncthing.
 
+Oh no, syncthing can no longer access `/storage/emulated/0/Android/data` - <https://forum.syncthing.net/t/can-i-sync-send-only-data-from-android-data-in-android-11/17898>
+
+Even more reason to have root and run a real and independent backup tool.
+
 #### Syncthing ignore patterns
 
 Set up ignores for caches and things that won't sync. Files for this are on github at <https://github.com/timabell/dotmatrix/tree/master/phone>
