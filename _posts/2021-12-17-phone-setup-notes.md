@@ -2152,7 +2152,19 @@ Only things not available in f-droid
 
 ## Built-in apps
 
-* Browser - disable (using firefox instead)
+### Camera - configure
+
+* Hamburger
+	* GPS > on
+	* Touch focus duration > infinite (man that has always annoyed me! Default 3 seconds, why?!)
+
+### Browser - disable
+
+Disable (using firefox instead)
+
+### Messaging - disable
+
+Messaging > long press > app info > disable
 
 ## Individual app setup
 
@@ -2232,6 +2244,37 @@ Downloads have to be re-done for the queue but the UI makes that dead easy, just
 
 Enable fingerprint unlock <https://github.com/Kunzisoft/KeePassDX/wiki/Advanced-Unlocking#b-link-database-credential-to-advanced-unlock-recognition=>
 
+### Neo Backup
+
+Neo Backup
+
+* Backup folder > neo-backup folder on emulated sdcard home > use this folder
+* Allow access prompt > allow
+
+"i" button top right > interesting note about types of android data and inability to restore apps using hardware key stores such as signal
+
+todo:
+
+* work out what apps to back up
+* actual backups
+* schedule backups
+* maybe automate clearing off phone onto laptop/server
+
+### Firefox
+
+3dots > settings > Search > duckduckgo
+
+firefox was active for 6 hours which makes me think it isn't backgrounding properly, perhaps because of media or js on websites.
+
+Firefox icon > long press > App info (i) > Advanced > Battery > Background restriction > Restrict
+
+### Signal
+
+Use transfer account to new phone feature
+Enable chat backups to virtual SD: dots > settings > chat. > Chat backups. Set folder and create backup.
+
+Signal popup saying detected issue with play services and establishing own connection. Now have permanent notification.
+
 ## File transfer
 
 Easy thanks to syncthing, just move the folders & files on the laptop from sync sdcard folder of the old phone to the one for the new phone. Win. 
@@ -2241,6 +2284,20 @@ Easy thanks to syncthing, just move the folders & files on the laptop from sync 
 A complete list
 
 * Settings
+	* Network and Internet
+		*	Hotspot and Tethering
+			* Wi-Fi Hotspot
+				* On
+				* AP Band
+					* 5 GHz band preferred
+			* Bluetooth tethering > On (to give the laptop internet out and about)
+		* Connected Devices
+			* Connection preferences
+				* Bluetooth
+					* Device name: foo
+	* Apps and Notifications
+		* Default apps
+			* SMS app > Signal (actually a great integrated SMS app)
 	* Battery
 	* Battery saver and performance
 		* Automatic power saver - 15% (off by default oddly)
@@ -2294,6 +2351,16 @@ A complete list
 		* Add contact
 		* doesn't work, just shows empty list to choose from. dang. TODO
 
+### Legacy phone connectivity
+
+The old phone has Wifi at home but without a sim has no internet out and about. Tether to new phone to give it access to internet elsewhere as needed.
+
+Connected to WiFi hotspot but although it accepted the details it fails to actually connect.
+
+Pair to other phone with bluetooth (either end is fine). On old phone open bluetooth settings, go to device > configure (cog) > Internet access > On.
+
+Success, old phone has internet via bluetooth to new phone just like laptop. Win.
+
 ## Todo
 
 * firmware update: <https://wiki.lineageos.org/devices/lemonadep/fw_update>
@@ -2305,6 +2372,9 @@ A complete list
 * Make signal default sms app
 * Camera from lock screen
 * transfer paid version of rain alarm, seems to be missing three-dot-menu on new version
+* Rainalarm problems:
+	* no menu so can't enable paid copy
+	* map loads but no rain shown
 
 ## Conclusion: inconclusive
 
