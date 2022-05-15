@@ -2149,6 +2149,7 @@ Only things not available in f-droid
 * Google home
 * Life360 (shared gps locations for family, saves a bunch of "have you left yet?" text messages)
 * Fastmail - not for the mail, prefer k9mail, but to see if it can do contacts as well as goooooooogle
+* DroidEdit
 
 ## Built-in apps
 
