@@ -2056,6 +2056,35 @@ Need alternative, perhaps fastmail
 	* but no sign of them in the main phone contacts app. damn.
 * <https://www.reddit.com/r/fastmail/comments/f2akqj/dealing_with_contacts/>
 
+I've messaged fastmail support to ask them why they have a completely separate contact section in the fastmail app rather than using the shared contacts store in Android/LineageOS.
+
+Because I'm short of good options I will reluctantly try the DAVx app that everyone points to. I really don't want yet another sync involved in the whole thing but I also don't want to run and maintain a NextCloud install (which lots of people suggest).
+
+* Installing DAVx5
+	* It's listed in Aurora (the play store proxy) and shows "£4.29" instead of the usual "Install".
+	* Pressed money button to see what happens > error "Download failed, app not purchased". Cool.
+	* Go to [DAVx5 on play store](https://play.google.com/store/apps/details?id=at.bitfire.davdroid) and make the purchase
+		* concerningly for the future the play store pops an "install to blah device", which is fine now because it knows about my *old* phone, but what if I didn't have the old phone some time, does that mean I could no longer get paid apps and install them with Aurora?
+	* Back on the new phone Aurora install now works. Win.
+* Setting up DAVx5
+	* rattled through default wizard without changing (or understanding) anything
+	* interesting warning about oneplus blocking sync that points to <https://www.davx5.com/faq/synchronization-is-not-run-as-expected>
+	* Create app password in fastmail web interface for DAVx
+	* Login to DAVx app with email + app-password ... fail, presumably because it's a custom domain
+	* Use custom base url option - <https://www.davx5.com/tested-with/fastmail>
+		* Base url: `https://carddav.fastmail.com` + email + app-password .... success
+		* Create account: account name? (defaults to tim@timwise.co.uk) - "Use your email address as account name because Android will use the account name as ORGANIZER field for events you create. You can't have two accounts with the same name." - probably fine, left default
+		* Contact group method:
+			* "Groups are separate vCards" - default, left as this
+			* "Groups are per-contact categories"
+	* Next
+	* No contacts sync (missing permissions) > Permissions > All of the below to "on" > grant dialogs
+	* Shows two unchecked checkboxes, but don't know what they mean
+		* "Global Address Book"
+		* "personal"
+  	* Trying out ticking "personal", tick it and press orange sync now button
+	* woo, main contacts app now full of contacts. sim switch time!!!
+
 #### GMail
 
 todo, probably set up imap and use k9mail + web interface on laptop
