@@ -2103,6 +2103,7 @@ todo, probably set up imap and use k9mail + web interface on laptop
 * markor
 * antennapod - todo restore state
 * qr & barcode scanner
+* aTimeLogger
 
 ### todo - more apps (f-droid where possible)
 
@@ -2150,6 +2151,22 @@ Only things not available in f-droid
 * Life360 (shared gps locations for family, saves a bunch of "have you left yet?" text messages)
 * Fastmail - not for the mail, prefer k9mail, but to see if it can do contacts as well as goooooooogle
 * DroidEdit
+* Ringo
+* National rail
+* Goodreads
+* Pluralsight
+* LinkedIn
+* FreeAgent
+* BBC
+    * Weather
+    * Sounds
+    * iPlayer
+* Amazon Shopping
+* Amazon Prime
+* YouTube
+* Microsoft authenticator
+* Google authenticator
+* Bandcamp
 
 ## Built-in apps
 
@@ -2280,9 +2297,57 @@ Enable chat backups to virtual SD: dots > settings > chat. > Chat backups. Set f
 
 Signal popup saying detected issue with play services and establishing own connection. Now have permanent notification.
 
+## A thought on moving apps and data between phones
+
+During the 1000th discussion of phones with my long-sufferring better-half I happened to utter a line that I think realy captures why this whole nonsense is (probably) worth the effort:
+
+> "Living in the iOS ecosystem with their magical one-tap transfer from old phones to new phones that leave the new phone exactly in the same state as your old phone ... until you realize one day you want to leave the ecosystem, and you have to leave all your data behind in their walled garden." ~ Me
+
+There are several ways of moving data between phones, which provide varying levels of protection against data loss disasters. Disasters that could be local (phone down loo), localized (all devices stolen from house), cloud based (cloud account hacked and wiped), a combination (cloud hacked and devices remote-wiped).
+
+### Copying files directly
+
+Something like syncthing.
+
+Only works for data on virtual sdcard such as photos & downloads.
+
+### Local backup/restore
+
+With OAndBackup, NeoBackup, TitaniumBackup etc.
+
+Needs root.
+
+Can get app's private data out to storage you control.
+
+Can also backup set of installed apps (`.apk`s) which it turns out is actually quite a time saver compared to clicking install in the app store 100+ times.
+
+### Vendor-provided cloud backup
+
+Completely walled-garden solution. No way to get your data off their cloud without restoring to another device they support (i.e. another Android/iOS device).
+
+### 3rd party cloud backup
+
+Something like dropbox.
+
+It seems that the duopoly has deemed this unacceptable so have hobbled these apps fom working properly or at all. Dropbox on iOS has been reduced to a glorified photo backup which can't even run in the background.
+
+Personally I think the fact that the duopoly is denying competition is anti-competitive practice the likes of which saw Microsoft get record fines from the EU back in the day. Hopefully the same will happen to Apple & Google to crack this open a bit, but until then we'll have to just shovel digital shit like this blog post to get out from under them.
+
 ## File transfer
 
 Easy thanks to syncthing, just move the folders & files on the laptop from sync sdcard folder of the old phone to the one for the new phone. Win. 
+
+## Trial TitaniumBackup restore
+
+Before my old phone de-rooted itself thanks to a F****g OS update (grrrrr) I did have titanium set up, so I have somem rather stale backups from before then. Mostly as an experiment I've installed Titanium on the new phone to see if the restore works. This is the first time I've had two capable and still working phones at the same time to be able to experiment like this.
+
+* Installed TitaniumBackup via Aurora.
+* Installed Titanium's "key" app via Aurora.
+* Titanium complained that Play store wasn't responding so couldn't check licence key. Fucksake. More lockin.
+* Removed key app again.
+* Copied one of the old backups across (google authenticator). (An app I had not yet installed on the new phone)
+* Fired up titanium, hit restore for that app.
+* Boom! There's the app installed, fired it up, worked no problems and now have an (outdated) list of OTPs that I don't use any more. Hollow victory achieved.
 
 ## config
 
