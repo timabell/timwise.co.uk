@@ -185,7 +185,7 @@ It's good to have single points of responsibility such as a tech lead or project
 As for how to make the best decisions in chaos and complexity, or when thinking seems to have narrowed to group-think this is an excellent guide: [Decisive: How to Make Better Choices in Life and Work by Chip & Dan Heath](https://www.amazon.co.uk/Decisive-Make-Better-Choices-Life/dp/0307956393)
 
 
-### Things to read
+### Things to read / watch / listen too
 
 * Blog posts
 	* [Maker's Schedule, Manager's Schedule by Paul Graham](http://paulgraham.com/makersschedule.html)
@@ -200,6 +200,10 @@ As for how to make the best decisions in chaos and complexity, or when thinking 
 	* [Nonviolent Communication; Marshall Rosenberg](https://www.amazon.co.uk/Nonviolent-Communication-Create-Relationships-Harmony/dp/B00TIWFAV0/)
 	* [Bonds That Make Us Free; C. Terry Warner](https://www.amazon.co.uk/Bonds-That-Make-Free-Relationships/dp/B07N149VZK/)
 	* [48 Laws of Power; Robert Greene](https://www.amazon.co.uk/48-Laws-of-Power/dp/B00WYRC0L4/)
+* Lean / Flow / Kanban agile etc
+  * [The Goal: A Process of Ongoing Improvement Kindle Edition
+by Eliyahu M. Goldratt](https://www.amazon.co.uk/Goal-Process-Ongoing-Improvement-ebook/dp/B002LHRM2O) (Audible version has sound effects and everything!)
+  * [WIP: why limiting work in progress makes sense (Kanban) (YouTube)](https://www.youtube.com/watch?v=W92wG-HW8gg)
 
 (Personally I like Audible books, I think it sinks in better being told the stories by another human voice)
 
