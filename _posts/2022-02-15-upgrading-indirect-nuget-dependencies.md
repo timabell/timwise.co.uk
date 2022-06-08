@@ -3,6 +3,14 @@ title: Upgrading indirect NuGet dependencies
 layout: post
 ---
 
+## Update - transitive pinning
+
+It seems microsoft have produced a solution to this problem, along with the long awaited solution-level package management. Read all about it here: <https://devblogs.microsoft.com/nuget/introducing-central-package-management/#transitive-pinning>
+
+---
+
+## About
+
 The state of the art for dependency management in dotnet land. Having used ruby bundler and npm this makes me cry.
 
 I really hope I'm massively wrong about the following information. Please do tell me if I'm wrong and NuGet dependency management is not actually as bad as this!
