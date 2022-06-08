@@ -1230,12 +1230,6 @@ Current Free Space |         0
 
 Well on the plus side the diagnostics are muuuuch better in OpenGApps so that's saved me fucking around trying to patch MindTheGaps' installer.
 
-### OS Updates (for next time)
-
-<https://wiki.lineageos.org/devices/lemonadep/update>
-
-Watch out for de-rooting, make sure backups are up to date first.
-
 ## Two-phone-Timmy - the burner phone
 
 Having spent some time completely stumped by the space issue and giving it some thought I realize that this battle with Android will never end. Trying to get an unholy mix of Libre and proprietary to mix is like oil and water.
@@ -2167,6 +2161,7 @@ Only things not available in f-droid
 * Microsoft authenticator
 * Google authenticator
 * Bandcamp
+* [Offline English Dictionary by Livio](https://play.google.com/store/apps/details?id=livio.pack.lang.en_US)
 
 ## Built-in apps
 
@@ -2175,6 +2170,7 @@ Only things not available in f-droid
 * Hamburger
 	* GPS > on
 	* Touch focus duration > infinite (man that has always annoyed me! Default 3 seconds, why?!)
+	* shutter sound > disabled
 
 ### Browser - disable
 
@@ -2260,27 +2256,35 @@ Downloads have to be re-done for the queue but the UI makes that dead easy, just
 * App downloaded
 * Sign in by magic email link failed
 * Sign in with password worked
-* Statement download failed with "no apps can perform this action" but can always use website to get them.
+* Statement download failed with "no apps can perform this action" but can always use website to get them. ... ah, no pdf reading apps installed, installing a random pdf app fixed that. Not a very clear error message that one!
 
-### keepassdx
+### KeePassDX
 
 Enable fingerprint unlock <https://github.com/Kunzisoft/KeePassDX/wiki/Advanced-Unlocking#b-link-database-credential-to-advanced-unlock-recognition=>
 
-### Neo Backup
-
-Neo Backup
+### NeoBackup
 
 * Backup folder > neo-backup folder on emulated sdcard home > use this folder
 * Allow access prompt > allow
 
 "i" button top right > interesting note about types of android data and inability to restore apps using hardware key stores such as signal
 
-todo:
-
-* work out what apps to back up
-* actual backups
-* schedule backups
+* work out what apps to back up -- all of them, why guess what I'll need with so much storage available
+* actual backups - done
+* schedule backups - done, works great
 * maybe automate clearing off phone onto laptop/server
+
+* Set backup password
+
+Set scheduled backup:
+
+* 7 days
+* 5am
+* system apps + user apps
+* apk + obb + data + device protected data
+* all apps
+* enabled
+* Start now
 
 ### Firefox
 
@@ -2337,7 +2341,7 @@ Personally I think the fact that the duopoly is denying competition is anti-comp
 
 Easy thanks to syncthing, just move the folders & files on the laptop from sync sdcard folder of the old phone to the one for the new phone. Win. 
 
-## Trial TitaniumBackup restore
+## Trial TitaniumBackup restore - success
 
 Before my old phone de-rooted itself thanks to a F****g OS update (grrrrr) I did have titanium set up, so I have somem rather stale backups from before then. Mostly as an experiment I've installed Titanium on the new phone to see if the restore works. This is the first time I've had two capable and still working phones at the same time to be able to experiment like this.
 
@@ -2349,7 +2353,17 @@ Before my old phone de-rooted itself thanks to a F****g OS update (grrrrr) I did
 * Fired up titanium, hit restore for that app.
 * Boom! There's the app installed, fired it up, worked no problems and now have an (outdated) list of OTPs that I don't use any more. Hollow victory achieved.
 
-## config
+## Clock
+
+* Settings
+  * Time in seconds > on
+  * Alarms
+    * silence after > 5 mins
+    * Snooze length > 15 minutes - I find that if I'm really too tired to move 15 mins makes a good power nap but isn't long enough to be disastrous
+    * gradually increase
+    * vol button to snooze
+
+## Config
 
 A complete list
 
@@ -2365,9 +2379,17 @@ A complete list
 			* Connection preferences
 				* Bluetooth
 					* Device name: foo
+		* Wifi
+			* Wifi preferences
+				* Notify for public networks > off
 	* Apps and Notifications
 		* Default apps
 			* SMS app > Signal (actually a great integrated SMS app)
+		* Notifications
+  			* Advanced
+				* Do Not Disturb
+					* People
+    					* Calls > "Contacts and repeat callers"
 	* Battery
 	* Battery saver and performance
 		* Automatic power saver - 15% (off by default oddly)
@@ -2406,6 +2428,9 @@ A complete list
 	* Screen lock - pin
 	* Fingerprint
 	* System
+		* Buttons
+			* Additional buttons
+				* Slider top - total silence
 	* Status bar
 		* Network traffic monitor
 		* Display mode > upload and download
@@ -2442,9 +2467,32 @@ Success, old phone has internet via bluetooth to new phone just like laptop. Win
 * Make signal default sms app
 * Camera from lock screen
 * transfer paid version of rain alarm, seems to be missing three-dot-menu on new version
+* Xmeye cctv
+* Backup alarms
+* Signal SMS warnings -> Settings-privacy-Trust-SMS Sending Limit > 5
+* No access to work google cal
+* Ignore public wifi
+* Maps.me voice. Needs language pack. Wut.
+* Remember Bluetooth tethering setting. Needs code change.
+* Phone default to Bluetooth
+
+## Problems & bugs
+
+* Phone app
+	* Fails to unblank when phone rings half the time. Workaround to use power button to sleep/wake a couple of times to wake it up. Painful but bearable.
 * Rainalarm problems:
 	* no menu so can't enable paid copy
 	* map loads but no rain shown
+
+### OS Updates
+
+<https://wiki.lineageos.org/devices/lemonadep/update>
+
+Watch out for de-rooting, make sure backups are up to date first.
+
+Got the first Over The Air (OTA) (...well, over wifi anyway) update from LineageOS. Download. Install. Reboot. Magisk no longer installed. Well that's a fucking pain. NeoBackup fails to start. Backups now broken. Fuck you android.
+
+todo: see if I can restore root with out a full wipe and reinstall this time. twunts. what a pile of yaks.
 
 ## Conclusion: inconclusive
 
