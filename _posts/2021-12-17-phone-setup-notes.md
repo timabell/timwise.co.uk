@@ -2163,6 +2163,7 @@ Only things not available in f-droid
 * Google authenticator
 * Bandcamp
 * [Offline English Dictionary by Livio](https://play.google.com/store/apps/details?id=livio.pack.lang.en_US)
+* Strava
 
 ## Built-in apps
 
