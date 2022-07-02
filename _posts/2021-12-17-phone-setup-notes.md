@@ -2099,6 +2099,7 @@ todo, probably set up imap and use k9mail + web interface on laptop
 * qr & barcode scanner
 * aTimeLogger
 * [Editor](https://f-droid.org/en/packages/org.billthefarmer.editor/) (replacement for droidedit?)
+* [GPSLogger](https://f-droid.org/en/packages/com.mendhak.gpslogger/)
 
 ### todo - more apps (f-droid where possible)
 
@@ -2302,6 +2303,21 @@ Use transfer account to new phone feature
 Enable chat backups to virtual SD: dots > settings > chat. > Chat backups. Set folder and create backup.
 
 Signal popup saying detected issue with play services and establishing own connection. Now have permanent notification.
+
+### GPSLogger
+
+<https://f-droid.org/en/packages/com.mendhak.gpslogger/>
+
+* hamburger
+	* logging details
+		* save to folder > give permissions > new folder (+) > `~/gpx`
+		* New file creation > every time I start
+	* performance
+		* Logging interval > 5 secs
+
+So that syncthing can see it. Defaults to inaccessible data folder. Fffffff
+
+Also set to create new track every time.
 
 ## A thought on moving apps and data between phones
 
