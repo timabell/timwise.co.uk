@@ -2410,6 +2410,7 @@ Settings:
 		* Add text on lock screen
 			* `Owner Tim Abell <tim@timwise.co.uk>` (the idea is that people are generally good and this might be the best way to reach me if I've lost it)
 		* Tap to sleep - off (I only ever do this by mistake)
+		* Font size > Largest (I'm gettingn quite long-sighted)
 * Sound
 * Vibrate for calls - Always (also has a vibrate then ring which is a nice option)
 * Advanced (why??????)
