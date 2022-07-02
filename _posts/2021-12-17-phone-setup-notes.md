@@ -2367,33 +2367,34 @@ Before my old phone de-rooted itself thanks to a F****g OS update (grrrrr) I did
 
 A complete list
 
-* Settings
-	* Network and Internet
-		*	Hotspot and Tethering
-			* Wi-Fi Hotspot
-				* On
-				* AP Band
-					* 5 GHz band preferred
-			* Bluetooth tethering > On (to give the laptop internet out and about)
-		* Connected Devices
-			* Connection preferences
-				* Bluetooth
-					* Device name: foo
-		* Wifi
-			* Wifi preferences
-				* Notify for public networks > off
-	* Apps and Notifications
-		* Default apps
-			* SMS app > Signal (actually a great integrated SMS app)
-		* Notifications
-  			* Advanced
-				* Do Not Disturb
-					* People
-    					* Calls > "Contacts and repeat callers"
-	* Battery
+Settings:
+
+* Network and Internet
+	*	Hotspot and Tethering
+		* Wi-Fi Hotspot
+			* On
+			* AP Band
+				* 5 GHz band preferred
+		* Bluetooth tethering > On (to give the laptop internet out and about)
+	* Connected Devices
+		* Connection preferences
+			* Bluetooth
+				* Device name: foo
+	* Wifi
+		* Wifi preferences
+			* Notify for public networks > off
+* Apps and Notifications
+	* Default apps
+		* SMS app > Signal (actually a great integrated SMS app)
+	* Notifications
+		* Advanced
+			* Do Not Disturb
+				* People
+					* Calls > "Contacts and repeat callers"
+* Battery
 	* Battery saver and performance
 		* Automatic power saver - 15% (off by default oddly)
-	* Display
+* Display
 	* Dark theme
 		* on
 		* no schedule - (let's give this a try, we'll see what it's like in broad daylight)
@@ -2409,42 +2410,42 @@ A complete list
 		* Add text on lock screen
 			* `Owner Tim Abell <tim@timwise.co.uk>` (the idea is that people are generally good and this might be the best way to reach me if I've lost it)
 		* Tap to sleep - off (I only ever do this by mistake)
-	* Sound
-	* Vibrate for calls - Always (also has a vibrate then ring which is a nice option)
-	* Advanced (why??????)
-		* Phone ringtone - thriller three (there's a great selection & variety available, impressed with Lineage here. Also liked Solarium, Sheep (yes actual sheep), Rigel)
-		* Default notification sound - Hojus (also liked Beryllium and Titan for minimal stress-inducing feel. Again a great selection available with some really fun sounds).
-		* Default alarm sound - Piezo Alarm (for the retro kicks. Again more winners in here, well worth exploring)
-		* Dial pad tones - off
-		* Screen locking sound - off
-		* Touch sounds - off
-	* Privacy
-	* Show passwords, display characters briefly as you type - off (I just find this annoying/distracting)
-	* Notifications on lock screen
-		* Don't show notifications at all - this is more for a clear mind rather than privacy, though that's a bonus. I hate looking at my (locked) phone for the time and getting drawn into the notifications. Happened toooooo many times.
-	* Trust
-		* SMS message limit - always confirm (default of 30 seems like a lot of spam to me), might go to 5 if this is a pain
-	* Security
-	* Screen lock - pin
-	* Fingerprint
-	* System
-		* Buttons
-			* Additional buttons
-				* Slider top - total silence
-	* Status bar
-		* Network traffic monitor
-		* Display mode > upload and download
-		* Battery status style - Circle (much higher fidelity information)
-	* Advanced
-		* Gestures
-		* Power menu
-			* Advanced restart - on
-	* About phone
-	* Emergency information (wtf is this in about phone for? I had to ddg to find it)
-		* Add information
-		* set all the things
-		* Add contact
-		* doesn't work, just shows empty list to choose from. dang. TODO
+* Sound
+* Vibrate for calls - Always (also has a vibrate then ring which is a nice option)
+* Advanced (why??????)
+	* Phone ringtone - thriller three (there's a great selection & variety available, impressed with Lineage here. Also liked Solarium, Sheep (yes actual sheep), Rigel)
+	* Default notification sound - Hojus (also liked Beryllium and Titan for minimal stress-inducing feel. Again a great selection available with some really fun sounds).
+	* Default alarm sound - Piezo Alarm (for the retro kicks. Again more winners in here, well worth exploring)
+	* Dial pad tones - off
+	* Screen locking sound - off
+	* Touch sounds - off
+* Privacy
+* Show passwords, display characters briefly as you type - off (I just find this annoying/distracting)
+* Notifications on lock screen
+	* Don't show notifications at all - this is more for a clear mind rather than privacy, though that's a bonus. I hate looking at my (locked) phone for the time and getting drawn into the notifications. Happened toooooo many times.
+* Trust
+	* SMS message limit - always confirm (default of 30 seems like a lot of spam to me), might go to 5 if this is a pain
+* Security
+* Screen lock - pin
+* Fingerprint
+* System
+	* Buttons
+		* Additional buttons
+			* Slider top - total silence
+* Status bar
+	* Network traffic monitor
+	* Display mode > upload and download
+	* Battery status style - Circle (much higher fidelity information)
+* Advanced
+	* Gestures
+	* Power menu
+		* Advanced restart - on
+* About phone
+* Emergency information (wtf is this in about phone for? I had to ddg to find it)
+	* Add information
+	* set all the things
+	* Add contact
+	* doesn't work, just shows empty list to choose from. dang. TODO
 
 ### Legacy phone connectivity
 
