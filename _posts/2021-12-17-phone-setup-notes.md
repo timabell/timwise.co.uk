@@ -2098,6 +2098,7 @@ todo, probably set up imap and use k9mail + web interface on laptop
 * antennapod - todo restore state
 * qr & barcode scanner
 * aTimeLogger
+* [Editor](https://f-droid.org/en/packages/org.billthefarmer.editor/) (replacement for droidedit?)
 
 ### todo - more apps (f-droid where possible)
 
