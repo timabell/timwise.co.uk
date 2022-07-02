@@ -2499,7 +2499,8 @@ todo: see if I can restore root with out a full wipe and reinstall this time. tw
 
 * [OnePlus Community forum: Keep Root with Magisk with OTA updates](https://community.oneplus.com/thread?id=914099)
 * [piles of fucking yaks courtesy of reddit](https://www.reddit.com/r/LineageOS/comments/hynl52/any_way_to_keep_magisk_and_installed_modules_when/)
-* <https://www.reddit.com/r/LineageOS/comments/hynl52/any_way_to_keep_magisk_and_installed_modules_when/>
+* <https://android.stackexchange.com/questions/200410/how-do-i-update-an-ota-while-retaining-twrp-and-magisk-only-with-my-phone>
+* <https://topjohnwu.github.io/Magisk/ota.html> -
 
 > "When an OTA is available, first go to (Magisk app → Uninstall → Restore Images). Do not reboot or you will have Magisk uninstalled."
 
