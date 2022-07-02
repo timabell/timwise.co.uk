@@ -2507,6 +2507,8 @@ So basically you have to know all this *before* you let android install an updat
 
 Guess I'll have to re-do the patch thing I did in the first place.
 
+Export Antennapod state, backup andOTP and make sure syncthing has pushed the files before attempting anything.
+
 ## Conclusion: inconclusive
 
 The main thing I've learned from this is the long-standing duopoly of iOS+Android has caused deep and hard to reverse problems in the phone software ecosystem. It's a crying shame really because there is so much opportunity for innovation now that phone hardware is basically done, but instead we get stagnation, pointless features, anti-features and down-right user-hostile behaviour from both we-know-best camps. It really reminds me of the dark years of the browser and operating system wars. Particularly when internet explorer became dominant and website (i.e. app) developers targeted proprietary IE APIs, locking everyone in and nearly killing the competition. The same for windows in its prime (when Balmer shouted developers-developers-developers he knew the apps created platform-vendor lock-in that he so desired).
