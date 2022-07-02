@@ -2484,7 +2484,7 @@ Success, old phone has internet via bluetooth to new phone just like laptop. Win
 	* no menu so can't enable paid copy
 	* map loads but no rain shown
 
-### OS Updates
+## OS Updates
 
 <https://wiki.lineageos.org/devices/lemonadep/update>
 
@@ -2493,6 +2493,18 @@ Watch out for de-rooting, make sure backups are up to date first.
 Got the first Over The Air (OTA) (...well, over wifi anyway) update from LineageOS. Download. Install. Reboot. Magisk no longer installed. Well that's a fucking pain. NeoBackup fails to start. Backups now broken. Fuck you android.
 
 todo: see if I can restore root with out a full wipe and reinstall this time. twunts. what a pile of yaks.
+
+* [OnePlus Community forum: Keep Root with Magisk with OTA updates](https://community.oneplus.com/thread?id=914099)
+* [piles of fucking yaks courtesy of reddit](https://www.reddit.com/r/LineageOS/comments/hynl52/any_way_to_keep_magisk_and_installed_modules_when/)
+* <https://www.reddit.com/r/LineageOS/comments/hynl52/any_way_to_keep_magisk_and_installed_modules_when/>
+
+> "When an OTA is available, first go to (Magisk app → Uninstall → Restore Images). Do not reboot or you will have Magisk uninstalled."
+
+Bit fucking late now.
+
+So basically you have to know all this *before* you let android install an update and fuck up your setup (again). Pit of failure.
+
+Guess I'll have to re-do the patch thing I did in the first place.
 
 ## Conclusion: inconclusive
 
