@@ -93,6 +93,8 @@ So that means to backup independently of google, you need root, and to get root 
 
 I did have root on my OnePlus 5t, but an operating system update helpfully removed that for me... breaking my backups... and root access couldn't be restored without wiping the phone... including the data I didn't have backed up because it had broken my backups. Gah. Off the back of that experience I want to make sure that I'm not set up to fight some bloody vendor that doesn't believe I should have root.
 
+Any hope of an effective root is dwindling. According to <https://www.androidpolice.com/a-new-method-for-hiding-root-in-magisk-may-soon-emerge/> the developer of Magisk Hide that prevented root being detected and thus allowed shitty apps to continue to be run has been *hired by google*. That's google following the advice of "keep friends close, keep your enemies closer" close if ever I've seen it. No better way to shut the project down than to pay off the developer with a "salary". Cough.
+
 ### Something other than iOS or Android and its derivatives?
 
 It's all about the apps.
@@ -351,17 +353,23 @@ I'm glad this freedom is here but I'm not quite ready to give up every last prop
 
 [Supported devices](https://redmine.replicant.us/projects/replicant/wiki#Supported-devices) shows purely Samsung Galaxy devices currently.
 
-#### /e/ (aka Eelo) (nope)
+#### /e/ (aka Eelo)
 
-What a bizarre name! Good luck googling this.
+<https://e.foundation/>
 
 > "We build desirable, open source, privacy-enabled smartphone operating systems."
 
-This Android derivative is focussed on privacy; eliminating as much data collection as possible. Laudable but not my main focus right now.
+This Android derivative is focussed on privacy; eliminating as much data collection (i.e. all things google) as possible. Laudable but not my main focus right now.
 
-* [Main site: e.foundation](https://e.foundation/)
+You can buy their reconditioned phones with their OS pre-installed or just install the OS on something else.
+
+They provide their own alternative cloud hosting for contacts etc for reasonable prices.
+
+Their dev build has a root option it seems which might be useful. - <https://doc.e.foundation/support-topics/root-e-os.html>
+
 * [/e/ on wikipedia](https://en.wikipedia.org/wiki//e/_(operating_system))
 * [itsfoss.com/eelo-mobile-os](https://itsfoss.com/eelo-mobile-os/)
+* <https://www.pcmag.com/news/google-free-android-smartphones-are-now-available-in-the-us>
 
 #### GrapheneOS (nope)
 
