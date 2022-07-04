@@ -2537,6 +2537,39 @@ Guess I'll have to re-do the patch thing I did in the first place.
 
 Export Antennapod state, backup andOTP and make sure syncthing has pushed the files before attempting anything.
 
+### Re-root attempt
+
+Let's try repeating the magisk setup from the original install but with the updated image.
+
+* Check current version installed
+	* on phone: settings > about > android version >  > lineageos version: lineage-18.1-20220518-microG-lemonadep
+* Download matching image to laptop from <https://download.lineage.microg.org/lemonadep/> (if it's still available, which it is. If it wasn't then might have to run more updates or grab image from phone somehow)
+* Run the payload extaction, patch on phone & reflash as in original install:
+	* ` ../../payload-dumper-go/payload-dumper-go_1.2.0_linux_amd64/payload-dumper-go ../lineage-18.1-20220518-microG-lemonadep.zip`
+	* [plug phone in to laptop with usb]
+	* `adb push extracted_20220704_232617/boot.img /sdcard/Download/`
+	* patch the file in magisk on the phone (install > patch > select file etc.)
+	* get the patched file back on to laptop: `patched=``adb shell ls /sdcard/Download/magisk_patched*`` && echo $patched && adb pull $patched`
+	* advanced reboot on phone > fastboot
+	* flash the boot image:
+
+```
+tim@max:~/Downloads/oneplus9pro/lineage-for-microG/payload2
+$ fastboot flash boot magisk_patched-24300_nspcI.img
+target reported max download size of 268435456 bytes
+sending 'boot_b' (196608 KB)...
+OKAY [  5.675s]
+writing 'boot_b'...
+OKAY [  0.644s]
+finished. total time: 6.320s
+```
+
+* reboot phone ("reboot system now" > power button)
+* open up magisk app .... drumroll ....
+* success!! "Installed 24.3 (24300)"
+
+... run a backup with neobackup to see if it works... oh never mind it just popped a notification that neobackup has been granted superuser so I guess it can run its backups now and the schedule has kicked it off after a reboot.
+
 ## Conclusion: inconclusive
 
 The main thing I've learned from this is the long-standing duopoly of iOS+Android has caused deep and hard to reverse problems in the phone software ecosystem. It's a crying shame really because there is so much opportunity for innovation now that phone hardware is basically done, but instead we get stagnation, pointless features, anti-features and down-right user-hostile behaviour from both we-know-best camps. It really reminds me of the dark years of the browser and operating system wars. Particularly when internet explorer became dominant and website (i.e. app) developers targeted proprietary IE APIs, locking everyone in and nearly killing the competition. The same for windows in its prime (when Balmer shouted developers-developers-developers he knew the apps created platform-vendor lock-in that he so desired).
