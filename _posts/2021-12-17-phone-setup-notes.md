@@ -2459,14 +2459,16 @@ Settings:
 	* Buttons
 		* Additional buttons
 			* Slider top - total silence
-* Status bar
-	* Network traffic monitor
-	* Display mode > upload and download
-	* Battery status style - Circle (much higher fidelity information)
-* Advanced
-	* Gestures
-	* Power menu
-		* Advanced restart - on
+	* Status bar
+		* Network traffic monitor
+		* Display mode > upload and download
+		* Battery status style - Circle (much higher fidelity information)
+	* Advanced
+		* Gestures
+		* Power menu
+			* Advanced restart - on
+		* Developer options
+			* Automatic system updates > off ("Apply updates when device restarts)
 * About phone
 * Emergency information (wtf is this in about phone for? I had to ddg to find it)
 	* Add information
@@ -2537,7 +2539,7 @@ Guess I'll have to re-do the patch thing I did in the first place.
 
 Export Antennapod state, backup andOTP and make sure syncthing has pushed the files before attempting anything.
 
-### Re-root attempt
+### Re-root attempt - success!
 
 Let's try repeating the magisk setup from the original install but with the updated image.
 
@@ -2569,6 +2571,100 @@ finished. total time: 6.320s
 * success!! "Installed 24.3 (24300)"
 
 ... run a backup with neobackup to see if it works... oh never mind it just popped a notification that neobackup has been granted superuser so I guess it can run its backups now and the schedule has kicked it off after a reboot.
+
+### OTA (Over The Air) update without losing root - fail
+
+Having regained root by patching and flashing boot.img again (above) I'm going to try the OTA on-phone patching as per <https://topjohnwu.github.io/Magisk/ota.html>:
+
+* Settings > System > Advanced > Updater
+
+Press refresh symbol in top right corner.
+
+Two images available:
+
+1. LineageOS 19.1, 11 June 2022, 1.3GB > INFO > "Update blocked This update cannot be installed using the updater app. Please read <https://wiki.lineageos.org/devices/lemonadep/upgrade> for more information."
+2. LineageOS 18.1, 18 May 2022, 1.1GB > INSTALL > ...
+
+So let's try the point update following [the magisk ota instructions](https://topjohnwu.github.io/Magisk/ota.html)
+
+* Magisk app > Unistall.... um, where's that then. Perhaps missing because it wasn't instaled this way.
+	* "This will restore partitions modified by Magisk back to stock from backups made at install in order to pass pre-OTA block verifications." - yeah that figures, I didn't do that so there's no backups to restore.
+	* Guess we'll skip this and hope for the best
+* Settings > System > Advanced > Updater > 18.1 18 May 2022 > INSTALL > OK
+* ... ~ 10 mins elapse ...
+* Updater shows "reboot" button. *DON'T PRESS IT!!*.
+* Magisk app > install > install to inactive slot (after OTA) > 
+	* "Attention. Your device will be FORCED to boot to the current inactive slot after a reboot! Only use this option after the OTA is done. Continue?" > OK
+	* Target slot _a ...
+	* failed! dammit.
+	* press little save button top right to save log
+
+Failure log: `magisk_install_log_2022-07-05T21_12_57.log`
+
+```
+- Target slot: _a
+- Target image: /dev/block/sde16
+- Device platform: arm64-v8a
+- Installing: 24.3 (24300)
+- Unpacking boot image
+Parsing boot image: [/dev/block/sde16]
+HEADER_VER      [3]
+KERNEL_SZ       [40823296]
+RAMDISK_SZ      [10201092]
+OS_VERSION      [11.0.0]
+OS_PATCH_LEVEL  [2022-05]
+PAGESIZE        [4096]
+CMDLINE         []
+KERNEL_FMT      [raw]
+RAMDISK_FMT     [gzip]
+VBMETA
+- Checking ramdisk status
+Loading cpio: [ramdisk.cpio]
+- Stock boot image detected
+- Patching ramdisk
+Loading cpio: [ramdisk.cpio]
+Add entry [init] (0750)
+Create directory [overlay.d] (0750)
+Create directory [overlay.d/sbin] (0750)
+Add entry [overlay.d/sbin/magisk32.xz] (0644)
+Add entry [overlay.d/sbin/magisk64.xz] (0644)
+Patch with flag KEEPVERITY=[true] KEEPFORCEENCRYPT=[true]
+Loading cpio: [ramdisk.cpio.orig]
+Backup mismatch entry: [init] -> [.backup/init]
+Record new entry: [overlay.d] -> [.backup/.rmlist]
+Record new entry: [overlay.d/sbin] -> [.backup/.rmlist]
+Record new entry: [overlay.d/sbin/magisk32.xz] -> [.backup/.rmlist]
+Record new entry: [overlay.d/sbin/magisk64.xz] -> [.backup/.rmlist]
+Create directory [.backup] (0000)
+Add entry [.backup/.magisk] (0000)
+Dump cpio: [ramdisk.cpio]
+- Repacking boot image
+Parsing boot image: [/dev/block/sde16]
+HEADER_VER      [3]
+KERNEL_SZ       [40823296]
+RAMDISK_SZ      [10201092]
+OS_VERSION      [11.0.0]
+OS_PATCH_LEVEL  [2022-05]
+PAGESIZE        [4096]
+CMDLINE         []
+KERNEL_FMT      [raw]
+RAMDISK_FMT     [gzip]
+VBMETA
+Repack to boot image: [new-boot.img]
+HEADER_VER      [3]
+KERNEL_SZ       [40823296]
+RAMDISK_SZ      [10715780]
+OS_VERSION      [11.0.0]
+OS_PATCH_LEVEL  [2022-05]
+PAGESIZE        [4096]
+CMDLINE         []
+- Flashing new boot image
+- Sepolicy rules dir is /dev/hWU/.magisk/mirror/metadata
+! Installation failed
+! Unable to download bootctl
+```
+
+Guess I'll try the patch of boot again.
 
 ## Conclusion: inconclusive
 
