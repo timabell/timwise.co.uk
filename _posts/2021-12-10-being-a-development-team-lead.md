@@ -191,6 +191,7 @@ As for how to make the best decisions in chaos and complexity, or when thinking 
 	* [Maker's Schedule, Manager's Schedule by Paul Graham](http://paulgraham.com/makersschedule.html)
 	* [Being Glue post/talk by Tanya Reilly](https://noidea.dog/glue)
 	* [Command and Conquer and the Herd of Coconuts by Joel Spolsky](https://www.joelonsoftware.com/2000/03/23/command-and-conquer-and-the-herd-of-coconuts/)
+	* [Normalization of deviance by Dan Luu](https://danluu.com/wat/)
 *  Tech leadership books
 	*	[Notes to a Software Team Leader: Growing Self Organizing Teams by Roy Osherove](https://www.amazon.co.uk/Notes-Software-Team-Leader-Organizing/dp/829993320X)
 * General leadership & communication books
