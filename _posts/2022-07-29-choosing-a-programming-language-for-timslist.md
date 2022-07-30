@@ -25,10 +25,14 @@ I want to enjoy this project, and I also want it to be written in something that
 
 In case anyone wonders, I'm happy to carry on consulting in C# land and hack on other things outside of client time.
 
+[Endler's article on go vs rust](https://endler.dev/2017/go-vs-rust/) makes me think I will *enjoy* building in rust more, which is important for a project that I plan to be solo on for a long time, and have to want to work on it day in day out regardless of the challenges of life to stand a chance of success
+
+My main worry with rust (and to a lesser extent golang) is the incompleteness of libraries, frameworks and integrations; leading to endless toil and dead ends that I just don't have the engineering resources to contend with
+
 ## Research
 
 * This is a must read on golang and rust: <https://bitfieldconsulting.com/golang/rust-vs-go>
-* <https://endler.dev/2017/go-vs-rust/>
+* <https://endler.dev/2017/go-vs-rust/> this one makes me think that perhaps using the hard road of rust would give me some opportunities for hard-to-copy features in future (such as responsiveness, stability)
 
 ---
 
