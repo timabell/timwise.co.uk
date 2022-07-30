@@ -28,6 +28,7 @@ In case anyone wonders, I'm happy to carry on consulting in C# land and hack on 
 ## Research
 
 * This is a must read on golang and rust: <https://bitfieldconsulting.com/golang/rust-vs-go>
+* <https://endler.dev/2017/go-vs-rust/>
 
 ---
 
