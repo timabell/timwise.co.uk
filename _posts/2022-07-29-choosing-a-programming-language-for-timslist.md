@@ -48,6 +48,7 @@ My main worry with rust (and to a lesser extent golang) is the incompleteness of
 * This is a must read on golang and rust: <https://bitfieldconsulting.com/golang/rust-vs-go>
 * <https://endler.dev/2017/go-vs-rust/> this one makes me think that perhaps using the hard road of rust would give me some opportunities for hard-to-copy features in future (such as responsiveness, stability)
 * <https://kristoff.it/blog/why-go-and-not-rust/> - a very persuasive and level-headed article article that explains the tradeoff in terms of real enterprise development (something I'm painfully familiar with).
+* <https://codeburst.io/should-i-rust-or-should-i-go-59a298e00ea9?gi=8338640ecce8> - mentions that rust can be made hard to read by other devs, an important point.
 
 ---
 
