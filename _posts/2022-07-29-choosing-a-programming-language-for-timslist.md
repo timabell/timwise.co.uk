@@ -29,10 +29,13 @@ In case anyone wonders, I'm happy to carry on consulting in C# land and hack on 
 
 My main worry with rust (and to a lesser extent golang) is the incompleteness of libraries, frameworks and integrations; leading to endless toil and dead ends that I just don't have the engineering resources to contend with
 
+[Loris Cro's piece on choosing golang over rust for the enterprise](https://kristoff.it/blog/why-go-and-not-rust/) is very compelling and I think probably has the argument that I've been looking for to persuade me that I should choose GoLang rather than Rust for timslist. I'm looking for something that will do engineering at scale in the long run while keeping hosting and programmer costs down.
+
 ## Research
 
 * This is a must read on golang and rust: <https://bitfieldconsulting.com/golang/rust-vs-go>
 * <https://endler.dev/2017/go-vs-rust/> this one makes me think that perhaps using the hard road of rust would give me some opportunities for hard-to-copy features in future (such as responsiveness, stability)
+* <https://kristoff.it/blog/why-go-and-not-rust/> - a very persuasive and level-headed article article that explains the tradeoff in terms of real enterprise development (something I'm painfully familiar with).
 
 ---
 
