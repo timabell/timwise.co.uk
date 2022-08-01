@@ -47,9 +47,66 @@ My main worry with rust (and to a lesser extent golang) is the incompleteness of
 
 * This is a must read on golang and rust: <https://bitfieldconsulting.com/golang/rust-vs-go>
 * <https://endler.dev/2017/go-vs-rust/> this one makes me think that perhaps using the hard road of rust would give me some opportunities for hard-to-copy features in future (such as responsiveness, stability)
+	* <https://news.ycombinator.com/item?id=15266066> interesting discussion of the endler post
 * <https://kristoff.it/blog/why-go-and-not-rust/> - a very persuasive and level-headed article article that explains the tradeoff in terms of real enterprise development (something I'm painfully familiar with).
 * <https://codeburst.io/should-i-rust-or-should-i-go-59a298e00ea9?gi=8338640ecce8> - mentions that rust can be made hard to read by other devs, an important point.
 
+## Assimilating the tradeoffs
+
+The relevant pros and cons of the languages that are relevant to what I'm trying to do:
+
+### GoLang
+
+#### For
+
+* Maintainable as more programmers added to team of varying quality and opinion (inevitable in the long run I think).
+* Highly performant programs.
+* Fast compile times on big codebases.
+* I like the test library style (minimal, uncontrived, use real code to write tests).
+* Has generics at last.
+* Easy multi-threading (not sure I need this particularly).
+* GC (easier than worrying about Rust's ideas).
+* Continues to be used internally at google at scale so likely to be supported for a loooong time.
+* Stated mission to remain a small language.
+  * Having watched C# go from being a truly knowable and useful language in 2.0 to being a sprawling mess with syntactic-sugar-itis in [C# 11](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-11), a state that makes it increasingly hard to work with the code of others and work well together in teams, I have no desire to set my own startup up with that fate.
+* I'm guessing the ecosystem of libraries & frameworks for writing web things has matured since I last looked and is (I'm guessing) ahead of the rust ecosystem.
+* Explicit handling of errors by return (but also has panic available for burn-it-all-down errors, which can be caught).
+
+#### Against
+* Error handling boilerplate.
+* Module system is a bit confusing (perhaps they have it right and easy now?)
+* Unknown future direction (do we know the future of any language really?)
+* Code ends up quite verbose - volume of code can cause resistance to change.
+* Dull, so might not be able to retain great coders in the long run as the zeitgeist moves on to hip'er pastures.
+* No pattern matching coolness. I don't know if I'm just overexcited about discovering this way of coding or if it's actually important. No doubt I'll gain more perspective with practice.
+
+### Rust
+
+#### For
+
+* Highly performant programs.
+* Immutable by default (this is huge!)
+* No null-ref errors (hooray!)
+* Intersting new toy to learn.
+* Potentially able to make higher level clean abstractions than in go
+* Created by Mozilla so (largely) free from private interests.
+* Owned and run by the independent [Rust Foundation](https://foundation.rust-lang.org/), so perhaps free from the dubious influence of commercial interests.
+* Most loved language, but what does that mean? Possibly easier to attract talent that want to work in rust? But will they be the right kind of talent?
+
+#### Against
+
+* Harder to learn.
+* Takes longer to write a single piece of functionality up front
+* Unknown future direction.
+* The [Rust foundation is new](https://foundation.rust-lang.org/news/2021-02-08-hello-world/), and unproven in ability to maintain the language over the long term.
+* I heard that there may be issues with the completeness and maintenance of libraries ("crates") in the rust ecosystem, this is of particular concern when it comes to security issues. Perhaps this will improve, or perhaps I am mislead. Every ecosystem has its security issues, it's a tough world out there at the moment no matter your platform.
+* I clearly don't know what I'm doing yet, given how long it's taking me to build gitopolis.
+* "Fighting the borrow checker" (perhaps a worthy price for eliminating whole classes of programming error at compile time).
+* Perhaps a more limited pool of Rust programmers availale than golang programmers. If all I can find is a few relevant coders it's going to be harder to filter for other traits such as not-being-an-asshole, or communication skills.
+* Layers and layers of boilerplate error/match handlers (or so I heard). Not sure if this is an issue yet, I need to get more experience to judge.
+* Language for C++ coders, not people who want to build simple business value fast. Might encourage over-engineering for what should be straight-forward simple solutions to simple business needs.
+* Complex language with many ways to solve problems, that might result in it being harder to maintain as programmers and styles come and go.
+
 ---
 
-to be continued when I have decided
+to be continued (i.e. edited)
