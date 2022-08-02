@@ -50,6 +50,7 @@ My main worry with rust (and to a lesser extent golang) is the incompleteness of
 	* <https://news.ycombinator.com/item?id=15266066> interesting discussion of the endler post
 * <https://kristoff.it/blog/why-go-and-not-rust/> - a very persuasive and level-headed article article that explains the tradeoff in terms of real enterprise development (something I'm painfully familiar with).
 * <https://codeburst.io/should-i-rust-or-should-i-go-59a298e00ea9?gi=8338640ecce8> - mentions that rust can be made hard to read by other devs, an important point.
+* [Why Discord is switching from Go to Rust](https://discord.com/blog/why-discord-is-switching-from-go-to-rust) - powerful article on how much better Rust is than golang for making the best use of server resources and providing low-latency high-throughput capabilities, with no GC related spikes in latency. A strong argument for Rust over GoLang.
 
 ## Assimilating the tradeoffs
 
