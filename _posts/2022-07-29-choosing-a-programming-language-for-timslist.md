@@ -41,6 +41,8 @@ I wrote [schema explorer](https://github.com/timabell/schema-explorer) in GoLang
 
 I want to enjoy this project, and I also want it to be written in something that attracts great coders for many years just in case this is successful. The kind of coders that are more than just writers of reams of mediocre code.
 
+My main worry with Rust (and to a lesser extent GoLang) is the incompleteness of libraries, frameworks and integrations; leading to endless toil and dead ends that I just don't have the engineering resources to contend with.
+
 #### Popularity curves & engineering talent
 
 Ruby has seen a rise and fall in popularity with the best coders as the basecamp-induced excitement faded and the kool kids moved to the next big thing, probably something with types or functional programming.
@@ -56,8 +58,6 @@ Rust is definitely a sharper and harder to use tool, which is the kind of thing 
 I can't tell if Rust will buck that trend and be sustainably cool, or if the cool coders will all head off to the next big thing by the time I have need of many engineers.
 
 I'm also worried that Rust will attract the C++ over-engineering crowd who will write incredible code that no-one else can comprehend while the business goes out of business due to not shipping anything users actually care about. (Sometimes called "write-only code"!)
-
-My main worry with Rust (and to a lesser extent GoLang) is the incompleteness of libraries, frameworks and integrations; leading to endless toil and dead ends that I just don't have the engineering resources to contend with.
 
 ### Articles of persuasion
 
@@ -130,8 +130,6 @@ The pros and cons that are relevant to what I'm trying to do:
 * Layers and layers of boilerplate error/match handlers (or so I heard). Not sure if this is an issue yet, I need to get more experience to judge.
 * Language for C++ coders, not people who want to build simple business value fast. Might encourage over-engineering for what should be straight-forward simple solutions to simple business needs.
 * Complex language with many ways to solve problems, that might result in it being harder to maintain as programmers and styles come and go.
-
----
 
 ## What now?
 
