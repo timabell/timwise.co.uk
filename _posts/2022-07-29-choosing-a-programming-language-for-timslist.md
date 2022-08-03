@@ -116,6 +116,7 @@ The pros and cons that are relevant to what I'm trying to do:
 * Created by Mozilla who we love.
 * Owned and run by the independent [Rust Foundation](https://foundation.rust-lang.org/), so perhaps free from the dubious influence of commercial interests. (Though people don't ignore those that pay them).
 * "Most loved language", but what does that mean? Possibly easier to attract talent that want to work in Rust? But will they be the right kind of talent? And how long will that last?
+* No runtime means smaller WASM files I think, and there seems to be [lots of ways to optimise wasm file size in Rust](https://rustwasm.github.io/book/reference/code-size.html)
 
 ### Against Rust
 
