@@ -29,7 +29,7 @@ I'm giving this *a lot* of thought because should I succeed then this is probabl
 4. Something I can run server and client side (with WASM) to avoid duplication of code that I can ill afford.
 5. Something that allows me to build up advanced abstractions that allow me to operate and pivot without re-writing reams of code..
 6. Something that has enough good quality library support that I'm not going to drown in unfinished or missing dependencies.
-7. Ideally something that might allow me to build some unique tehcnical advantages over the competition.
+7. Ideally something that might allow me to build some unique technical advantages over the competition.
 
 ### GoLang
 
