@@ -53,7 +53,7 @@ It's hard to tell where GoLang and Rust fit in these curves.
 
 I suspect GoLang is likely to bore the better coders in the end, and although it will prevent the less good coders hurting themselves quite so badly I'm not sure I want that crowd.
 
-Rust is definitely a sharper and harder to use tool, which is the kind of thing that attracts the hot talent. But equally, when they get bored of the challenge they move on like locusts to the next hot thing, leaving the businesses that chose Rust behind with a derth of talented people to work on their existing code.
+Rust is definitely a sharper and harder to use tool, which is the kind of thing that attracts the hot talent. But equally, when they get bored of the challenge they move on like locusts to the next hot thing, leaving the businesses that chose Rust behind with a dearth of talented people to work on their existing code.
 
 I can't tell if Rust will buck that trend and be sustainably cool, or if the cool coders will all head off to the next big thing by the time I have need of many engineers.
 
