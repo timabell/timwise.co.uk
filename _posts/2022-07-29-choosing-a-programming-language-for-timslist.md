@@ -78,6 +78,7 @@ Completely opposing this, and also very compelling is the story of [Why Discord 
 * <https://codeburst.io/should-i-rust-or-should-i-go-59a298e00ea9?gi=8338640ecce8> - mentions that Rust can be made hard to read by other devs, an important point.
 * [Why Discord is switching from Go to Rust](https://discord.com/blog/why-discord-is-switching-from-go-to-rust) - powerful article on how much better Rust is than GoLang for making the best use of server resources and providing low-latency high-throughput capabilities, with no GC related spikes in latency. A strong argument for Rust over GoLang.
 * <https://blog.boot.dev/rust/concurrency-in-rust-can-it-stack-up-against-gos-goroutines/> compares concurrency and parallelism in Rust and GoLang in a short and enlightening style with some useful code samples. I think the differences are less important to the decision than the other factors above, clearly both can solve the problems as needed.
+* <https://softwareengineering.stackexchange.com/questions/247298/how-are-rust-traits-different-from-go-interfaces> - dynamic and static dispatch
 
 ## Assimilating the tradeoffs
 
