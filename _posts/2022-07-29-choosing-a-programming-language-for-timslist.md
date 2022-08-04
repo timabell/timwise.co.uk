@@ -106,6 +106,7 @@ The pros and cons that are relevant to what I'm trying to do:
 * Code ends up quite verbose - volume of code can cause resistance to change.
 * Dull, so might not be able to retain great coders in the long run as the zeitgeist moves on to hip'er pastures.
 * No pattern matching coolness. I don't know if I'm just overexcited about discovering this way of coding or if it's actually important. No doubt I'll gain more perspective with practice.
+* [Why Go Is Not Good by Will Yager](https://yager.io/programming/go.html)
 
 ### In favour of Rust
 
