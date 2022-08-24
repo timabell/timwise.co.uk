@@ -193,9 +193,10 @@ As for how to make the best decisions in chaos and complexity, or when thinking 
 	* [Command and Conquer and the Herd of Coconuts by Joel Spolsky](https://www.joelonsoftware.com/2000/03/23/command-and-conquer-and-the-herd-of-coconuts/)
 	* [Normalization of deviance by Dan Luu](https://danluu.com/wat/)
 *  Tech leadership books
-	*	[Notes to a Software Team Leader: Growing Self Organizing Teams by Roy Osherove](https://www.amazon.co.uk/Notes-Software-Team-Leader-Organizing/dp/829993320X)
+	* [Notes to a Software Team Leader: Growing Self Organizing Teams by Roy Osherove](https://www.amazon.co.uk/Notes-Software-Team-Leader-Organizing/dp/829993320X)
 * General leadership & communication books
 	* [The Advice Trap: Be Humble, Stay Curious & Change the Way You Lead Forever by Michael Bungay Stanier](https://www.amazon.co.uk/Advice-Trap-Humble-Curious-Forever-ebook/dp/B083YZTW4B)
+	* [5 Dysfunctions of a Team](https://www.audible.co.uk/pd/The-Five-Dysfunctions-of-a-Team-Audiobook/B004EXKC5M)
 * Personal development (you'll need this for you and your team!)
 	* [Daring Greatly by Brené Brown](https://www.amazon.co.uk/Daring-Greatly-Courage-Vulnerable-Transforms-ebook/dp/B00APRW2WC)
 	* [Nonviolent Communication; Marshall Rosenberg](https://www.amazon.co.uk/Nonviolent-Communication-Create-Relationships-Harmony/dp/B00TIWFAV0/)
