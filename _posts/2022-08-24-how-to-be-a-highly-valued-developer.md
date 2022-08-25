@@ -44,6 +44,7 @@ There is however a reason I am taking up your time in an era of all-the-informat
 * Empathy for your team.
 * Empathy for your users, including a11y needs.
 * A desire to be in contact with end-users (whether or not the organisation is supportive of this, I love that GDS style teams have dedicated "user research" functions to connect programmers to end users).
+* Know when it's important to polish and when to just ship fast.
 
 
 A lot of this is down to personal growth, which takes a lot of work. I've recommended some books that are relevant to this in [A book list for my children](/2021/01/25/a-book-list-for-my-children/), and there's more scattered around my [goodreads list](https://www.goodreads.com/review/list/50628592?shelf=read). If you're a programmer then work on these things. If you're a hiring manager then be sure to filter for these things, you can't train them in time it takes to run a project, and maybe not even over an entire employment.
