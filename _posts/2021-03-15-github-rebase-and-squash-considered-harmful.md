@@ -81,6 +81,8 @@ I'm aware there are counter-arguments, but in my experience on many teams this s
 
 ## But my interface can't do first-parent!
 
+Someone once complained at me that we shouldn't do merge commits because they make no sense when viewed in github's deficient history viewer, which shows a random mishmash of mainline and branch commits with no indication of which is which.
+
 Seriously, use a better git viewer, there are literally thousands.
 
 It 100% sucks that github, the flagship platform for git, still to this day does not have a proper branch view let alone first-parent view. Appalling. If the view of history / PRs in github doesn't show you what you need **don't use it**. Did you know you can review PRs by just pulling down the branch and looking at it locally? You are a capable programmer who uses many tools not an idiot that needs to be spoonfed powerpoint presentations.
