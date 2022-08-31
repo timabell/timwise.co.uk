@@ -39,7 +39,9 @@ Anyone who tries to create many small meaningful and logically coherent patches 
 
 Note that github alters your original commit message to retro-fit PR numbers. Also evil.
 
-I have nothing good to say about this option. If you don't want to see the messy branches of your developers **then use `--first-parent`**. This option solves a non-problem, and just makes everything worse. Anyone who thinks this option has any merit is wrong.
+If you make a change to a file that results in both renaming and modifying files such as a rename-refactor, you can make that easier to follow by doing it in two commits... unless you squash them together. This is exacerbated by [git's rename detection](https://stackoverflow.com/questions/7938582/how-does-git-detect-similar-files-for-its-rename-detection) which is actually not stored at all, but instead done as a heuristic when viewing patches. If you split the file name change and contents change into two patches you can help a future reader follow what you did, but if you change a file too much and then squash it all together then git will treat it as add and delete, breaking the ability to follow a line of code back through history without even more detective work and guessing.
+
+I have nothing good to say about the "Squash and merge" option. If you don't want to see the messy branches of your developers **then use `--first-parent`**. This option in github solves a non-problem and just makes everything worse. Anyone who thinks this option has any merit is wrong.
 
 If an individual developer wants to create a single squashed commit for `main` **they should squash locally and PR that**. This option adds precisely nothing to what is possible, encourages reviewing and shipping junk history and encourages bad behaviour and unreadable patches. If you think it annoys me you're right, it should never have been created. It enables shit developers to carry on being shit and generate less "noise" in the history. Why would you want a process that only exists to to take the edge off being around the worst developers?
 
