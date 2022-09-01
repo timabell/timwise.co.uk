@@ -197,6 +197,7 @@ As for how to make the best decisions in chaos and complexity, or when thinking 
 * General leadership & communication books
 	* [The Advice Trap: Be Humble, Stay Curious & Change the Way You Lead Forever by Michael Bungay Stanier](https://www.amazon.co.uk/Advice-Trap-Humble-Curious-Forever-ebook/dp/B083YZTW4B)
 	* [5 Dysfunctions of a Team](https://www.audible.co.uk/pd/The-Five-Dysfunctions-of-a-Team-Audiobook/B004EXKC5M)
+	* [The First 90 Days](https://www.audible.co.uk/pd/The-First-90-Days-Updated-and-Expanded-Audiobook/B00CDW0EX6)
 * Personal development (you'll need this for you and your team!)
 	* [Daring Greatly by Brené Brown](https://www.amazon.co.uk/Daring-Greatly-Courage-Vulnerable-Transforms-ebook/dp/B00APRW2WC)
 	* [Nonviolent Communication; Marshall Rosenberg](https://www.amazon.co.uk/Nonviolent-Communication-Create-Relationships-Harmony/dp/B00TIWFAV0/)
