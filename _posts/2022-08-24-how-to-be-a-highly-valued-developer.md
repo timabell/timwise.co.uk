@@ -41,6 +41,7 @@ There is however a reason I am taking up your time in an era of all-the-informat
 * Constant iteration in personal productivity, e.g. learning to touch-type, creating aliases for common commands. It's not so much that this makes you faster, it's more about what it says about the attitude you bring to everything. If you don't constantly improve your own things, would you constantly improve your client/company things? These things pay compound returns, particularly by freeing up mental space for the next thing.
 * A drive for simplicity.
 * An avoidance of "clever" - valuing future maintainability and legibility for other programmers over your own programmer ego. (This one is straying into pure programmer skills but I mention it as it's not something you'll get from a course on C#).
+* Consider how code and systems could behave not just under perfect "happy path" conditions, but how it would behave under unexpected conditions, failure, bad input, maybe even when in the hands of a hostile attacker. Would it be catastrophic? Would it be easy to troubleshoot and fix? Would it give a hacker a leg-up to even greater evil powers?
 * Empathy for your team.
 * Empathy for your users, including a11y needs.
 * A desire to be in contact with end-users (whether or not the organisation is supportive of this, I love that GDS style teams have dedicated "user research" functions to connect programmers to end users).
