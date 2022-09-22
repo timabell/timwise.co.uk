@@ -28,20 +28,20 @@ Small matter of code style that I keep coming across.
 
 Whether to write
 
-```
+```c#
 if (thing) Action();
 ```
 
 or
 
-```
+```c#
 if (thing)
   Action();
 ```
 
 or
 
-```
+```c#
 if (thing)
 {
 	Action();
