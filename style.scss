@@ -17,12 +17,44 @@
 
 html {
   font-size: 100%;
+	--background-color: #fff;
+	--main-text-color: #555;
+  --heading-color: $darkerGray;
+  --h4-color: $gray;
+  --share-box-color: #222;
+  --date-color: $gray;
+  --selection-background: rgb(209, 209, 215);
+  --selection-color: rgb(20, 20, 20);
+  --site-name-color: $darkGray;
+  --site-description-color: $gray;
+  --blockquote-color: $gray;
+  --blockquote-background: #f0f2ff;
+  --footer-color: $lightGray;
+}
+
+@media (prefers-color-scheme: dark) {
+	/* https://derekkedziora.com/blog/dark-mode-revisited */
+	html {
+		--background-color: rgb(20, 19, 19);
+		--main-text-color: rgb(228, 228, 228);
+		--heading-color: rgb(228, 228, 228);
+		--h4-color: rgb(228, 228, 228);
+		--share-box-color: #222;
+		--date-color: $gray;
+		--selection-background: rgb(61, 58, 76);
+		--selection-color: rgb(220, 214, 255);
+		--site-name-color: $darkGray;
+		--site-description-color: $gray;
+		--blockquote-color: $gray;
+		--blockquote-background: #3b3b3b;
+		--footer-color: #000;
+	}
 }
 
 body {
-  background: #fff;
+  background: var(--background-color);
   font-family: $helveticaNeue;
-  color: #555;
+  color: var(--main-text-color);
   line-height: 1.7;
   font-size: 12pt;
 }
@@ -36,7 +68,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;
-  color: $darkerGray;
+  color: var(--heading-color);
 
   line-height: 1.7;
   margin: 1em 0 15px;
@@ -77,7 +109,7 @@ h3 {
 
 h4 {
   font-size: 18px;
-  color: $gray;
+  color: var(--h4-color);
 }
 
 .entry table {
@@ -127,7 +159,7 @@ p {
 
 .share-box {
   font-weight: bold;
-  color: #222;
+  color: var(--share-box-color);
 }
 
 a {
@@ -185,17 +217,17 @@ p > img {
 
 .date {
   font-style: italic;
-  color: $gray;
+  color: var(--date-color);
 }
 
 // Specify the color of the selection
 ::-moz-selection {
-  color: $black;
-  background: $lightGray;
+  color: var(--selection-color);
+  background: var(--selection-background);
 }
 ::selection {
-  color: $black;
-  background: $lightGray;
+  color: var(--selection-color);
+  background: var(--selection-background);
 }
 
 // Nicolas Gallagher's micro clearfix hack
@@ -260,7 +292,7 @@ p > img {
 
 h1.site-name {
   margin: 0;
-  color: $darkGray;
+  color: var(--site-name-color);
   cursor: pointer;
   font-family: $helveticaNeue;
   font-weight: 300;
@@ -274,7 +306,7 @@ h1.site-name {
 
 .site-description {
   margin: -5px 0 0 0;
-  color: $gray;
+  color: var(--site-description-color);
   font-size: 16px;
 
   @include mobile {
@@ -326,9 +358,9 @@ nav {
 blockquote {
   /*border-left: 2px solid $gray;*/
   padding: 0.1em 1em;
-  color: $gray;
   font-size: 22px;
-  background-color: #f0f2ff;
+  color: var(--blockquote-color);
+  background-color: var(--blockquote-background);
 }
 
 .post {
@@ -356,7 +388,7 @@ blockquote {
   margin-top: 50px;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
-  background-color: $lightGray;
+  background-color: var(--footer-color);
 }
 
 footer {
