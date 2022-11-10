@@ -84,13 +84,11 @@ Specifically within C# here's the reasons that would push you to chose one or th
 
 An illustrative example is how a microservice should deal with being misconfigured.
 
-This is an illustrative example because:
-
 * if all is well the system will be configured correctly
 * misconfiguration can cause a system to fail
 * the code can be expected to have to occasionally deal with receiving bad config
 
-Systems consist of many concentric circle, a library is used by a single web service, which is part of a microservices architected platform etc etc.
+Systems consist of many concentric circles, a library is used by a single web service, which is part of a microservices architected platform etc etc.
 
 If a single web service throws an exception, it should indicate:
 
