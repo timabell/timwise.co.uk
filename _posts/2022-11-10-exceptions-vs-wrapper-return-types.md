@@ -82,13 +82,28 @@ Specifically within C# here's the reasons that would push you to chose one or th
 
 ## How to choose
 
-Something that came up in a discussion that has shed light on this issue was a discussion about how a misconfigured web should behave. This is an illustrative example, because misconfiguration can cause a system to fail, but equally the code can be expected to have to occasionally deal with receiving bad config.
+An illustrative example is how a microservice should deal with being misconfigured.
+
+This is an illustrative example because:
+
+* if all is well the system will be configured correctly
+* misconfiguration can cause a system to fail
+* the code can be expected to have to occasionally deal with receiving bad config
 
 Systems consist of many concentric circle, a library is used by a single web service, which is part of a microservices architected platform etc etc.
 
-If a single web service throws an exception, it should indicate that there is a programming error or complete system failure in the microservice (e.g. out of memory/disk, or an incomplete switch statement that wasn't supposed to be used). The case where the system is misconfigured should be handled in a way that the system doesn't throw exceptions, but instead uses error-return types to indicate that it is unable to perform its duties due the bad configuration it has been fed.
+If a single web service throws an exception, it should indicate:
+
+* that there is a programming error such as an unhandled enum value in a switch statement, or
+* complete system failure in the microservice (e.g. out of memory/disk,
+
+The case where the system is misconfigured should be handled without using an exception, but instead use error-return types to indicate that it is unable to perform its duties due the bad configuration it has been fed, rather than something unexpected going wrong.
 
 ## Summary
 
 1. Throw exceptions for things that should never happen if the code is correct and the host computer is functioning properly (unhandled enum in switch statement, out of memory)
 2. Return error types for all failure modes that could be reasonably expected (missing config, dependent microservices down etc).
+
+## Notes
+
+You could potentially use [OneOf](https://github.com/mcintyre321/OneOf) for your error return types.
