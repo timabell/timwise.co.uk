@@ -46,7 +46,7 @@ I've asked around my network and these are the ones I've gathered so far. I've p
 * [Airtable of contract accountants](https://airtable.com/shrRhSa7ZFHt1o6Bx)
 
 
-<iframe class="airtable-embed" src="https://airtable.com/embed/shrRhSa7ZFHt1o6Bx?backgroundColor=cyan" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+<iframe class="airtable-embed" src="https://airtable.com/embed/shr3L59pAzDxaDES4?backgroundColor=cyan&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
 
 * [Asking on twitter](https://twitter.com/tim_abell/status/1591194541797040128)
 * [Asking on LinkedIn](https://www.linkedin.com/posts/timabell_any-suggestions-for-a-better-accountancy-activity-6851550397241290752-JRBl/)
