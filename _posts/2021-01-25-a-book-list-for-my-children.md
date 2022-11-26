@@ -9,6 +9,8 @@ What book should you read next? Well, what problem are you trying to solve right
 
 I've added a note to each explaining why you should read it, and when you might want to make it a priority. I've also put them in an order that I think would be sensible; with the most foundational first (personal growth) followed by more wealth and lifestyle focussed volumes.
 
+## Being human
+
 1. [The 7 habits of highly effective people; Stephen Covey](https://www.amazon.co.uk/Habits-Highly-Effective-People/dp/0684858398)
 	* Why? It's important to know you can change who you are and be a better person, and know how to do so. You can be better with relationships and those around you. This book is an inspiration in personal growth.
 	* When to read: as a young adult, and again when you're older and wiser. Or right now if you're already both of those.
@@ -24,12 +26,18 @@ I've added a note to each explaining why you should read it, and when you might 
 1. [So good they can't ignore you; Cal Newport](https://www.amazon.co.uk/Good-They-Cant-Ignore-You/dp/0349415862/)
 	* Why? Don't believe the hype at work, people hire for your real skills and what you can do for them. More details and foundational career advice for any path you choose lie within.
 	* When to read: Probably before your first or second job, but better late than never. If you've retired rich before you read this then maybe don't bother!
-1. [Rich dad, poor dad; Robert T. Kiyosaki](https://www.amazon.co.uk/Rich-Dad-Poor-Teach-Middle/dp/1612680194/)
-	* Why? Money isn't everything, but not having it will make you miserable. And the thing that will make you poor beyond anything else is your mindset and financial education. Read this to learn what the people who never seem to work do and why they never seem to run out of money.
-	* When to read: As soon as your bank account hits zero for the first time, and any time you are annoyed that you still have that sucky job you hate but can't escape from (happens to us all I think).
 1. [The Life-Changing Magic of Tidying; Marie Kondo](https://www.amazon.co.uk/gp/product/0091955106/)
 	* Why? Because too much stuff ironically makes you less happy. Go figure. A practical guide to a calming and tidy house/room/boat/mansion/office from someone a little obsessed with tidy.
 	* When to read: When you're fed up hearing me complain your room's a mess. Or later on when you realise why I complained about it but don't really know how to fix it.
+1. [48 Laws of Power; Robert Greene](https://www.amazon.co.uk/48-Laws-of-Power/dp/B00WYRC0L4/)
+	* Why? Sadly the world is not the cuddly, friendly, fair and equitable world some people seem to think they can wish into existence by will power and singing alone. There are plenty of good things, but the hard truths about raw underlying human nature are best understood so you can deal with them if you need to. I trust you are a good human being who will only use some of the darker knowledge in here for good and personal survival.
+	* When to read: I hesitate to say early because used without experience this knowledge will get you into more trouble than it gets you out of. That said, earlier the better but don't rush into using it, just observe the people around quietly with this new knowledge for the next few years at least.
+
+## Money and work
+
+1. [Rich dad, poor dad; Robert T. Kiyosaki](https://www.amazon.co.uk/Rich-Dad-Poor-Teach-Middle/dp/1612680194/)
+	* Why? Money isn't everything, but not having it will make you miserable. And the thing that will make you poor beyond anything else is your mindset and financial education. Read this to learn what the people who never seem to work do and why they never seem to run out of money.
+	* When to read: As soon as your bank account hits zero for the first time, and any time you are annoyed that you still have that sucky job you hate but can't escape from (happens to us all I think).
 1. [Think and Grow Rich; Napoleon Hill](https://www.audible.co.uk/pd/Think-and-Grow-Rich-Audiobook/B00O5DGGZQ)
 	* Why? More money will let you solve more problems, have more freedom, help more people, and live your best life. But it's not that easy to know where to start without a role model and a plan. Good practical guidance in here. Time will tell if I make good use of it myself.
 	* When to read: After the first few years of plying a trade perhaps, but don't leave it too long.
@@ -39,9 +47,9 @@ I've added a note to each explaining why you should read it, and when you might 
 1. [The Road Less Stupid; Keith J. Cunningham](https://www.amazon.co.uk/The-Road-Less-Stupid/dp/B07DJY4RSQ/)
 	* Why? Whatever money and success you achieve, it's very easy to throw it all away again by doing dumb things that seemed like a good idea. This is a straight-talking guide to not doing that. Contains important lesson about protecting against downside risk (i.e. a small chance you lose everything) when chasing upside risk (i.e. a chance to be much richer etc). Unmitigated downside risk has the power to destroy everything you've worked for.
 	* When to read: Sooner rather than later, especially if you're feeling a bit ambitious.
-1. [48 Laws of Power; Robert Greene](https://www.amazon.co.uk/48-Laws-of-Power/dp/B00WYRC0L4/)
-	* Why? Sadly the world is not the cuddly, friendly, fair and equitable world some people seem to think they can wish into existence by will power and singing alone. There are plenty of good things, but the hard truths about raw underlying human nature are best understood so you can deal with them if you need to. I trust you are a good human being who will only use some of the darker knowledge in here for good and personal survival.
-	* When to read: I hesitate to say early because used without experience this knowledge will get you into more trouble than it gets you out of. That said, earlier the better but don't rush into using it, just observe the people around quietly with this new knowledge for the next few years at least.
+
+## The meaning of life, evolution and religion
+
 1. [The Blind Watchmaker; Richard Dawkins](https://www.amazon.co.uk/gp/product/0141026162/)
 	* Why? Evolution if often poorly understood. As the foundation of our existence and behaviours this to me is a must read to truly understand life. For me it answers the question of "what is the point in life"; ironically there is no point really, but that is more freeing than some deity with odd morals. Just know that you can know the raw mechanics and still live a full, happy and meaningful life; helping all those around you.
 	* When to read: Whenever you have some time. Kinda background knowledge for life.
