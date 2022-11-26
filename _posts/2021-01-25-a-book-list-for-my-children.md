@@ -57,6 +57,20 @@ I've added a note to each explaining why you should read it, and when you might 
 	* Why? God is all around us in the many people's of the world. His name(s) are often used to manipulate and exploit, and play power games. You and I can probably do nothing about this (and it's dangerous territory to tread in, I'm surprised Dawkins is still alive), however I think the knowledge is an important piece of the complex puzzle that is humanity. Once you've read this, don't judge those who believe for whatever reason, you will not change them and you will only cause hurt.
 	* When to read: Whenever you have time, any time you are considering the meaning and truth of religion, and any time you want to be able to discuss the topic with more useful information.
 
+## Children of your own
+
+1. [Pregnancy For Men](https://www.amazon.co.uk/Pregnancy-Men-whole-months-PAPERBACK-ebook/dp/B088PHPKRK)
+	* Why? Nothing can prepare you for this experience, and men are an anxious side-show. This book helped me cope, and even occasionally be useful.
+	* When to read: As soon as you think you'll have a kid on the way, don't leave it till the due date or you'll miss the pre-natal stuff.
+1. [How to talk so Kids Will listen](https://www.amazon.co.uk/Talk-Collection-Books-talk-listen/dp/9526533585)
+	* Why? Nothing about communicating well is natural or obvious. It takes work and understanding, and undoing cultural failings. This series is one of the best, kindest works out there, and helped me immensely.
+	* When to read: When your kids are starting to talk.
+1. [Hold on to Your Kids: Why Parents Need to Matter More Than Peers](https://www.amazon.co.uk/Hold-Your-Kids-Parents-Matter-ebook/dp/B07DK2CZ2V)
+	* Why? Culture is teaching us to ignore our parents with devastating consequences for all involved. It turns out "attachment" is the key, and when it goes wrong nothing you do will work.
+	* When to read: When your kids are 4+ years old.
+
+---
+
 Personally I like the audiobook format, and at time of writing a yearly subscription to Audible was good value for getting easy access to the content, and a narration from the author or a good speaker makes for a more memorable experience.
 
 Beyond this list, check the best-seller lists for whatever subject you wish to excel at. There's no point learning the hard way when you can learn from someone who has. Even in this digital age books still pack a tremendous punch; the result of someone pouring 20+ years of their experience into something you can read in a week is like liquid gold.
