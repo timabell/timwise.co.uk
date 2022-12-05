@@ -38,6 +38,7 @@ Some also will do:
 * IPSE membership
 * Provide a registered address to use that's not your home, and forward any mail
 * Business insurance
+* Registered company address
 
 ## Contract accountant list & reviews
 
