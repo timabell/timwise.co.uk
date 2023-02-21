@@ -169,6 +169,33 @@ If you have tasks that really are important and they are never getting done, the
 
 Spending all your time just arranging your GTD board and never doing any of the action items. Are you avoiding an unpleasant task? Are your tasks too big and need breaking down?
 
+## Learn more
+
+### Podcast
+
+Having run this system for a while, it grew to a daunting few-hundred cards in inbox/actions. To figure out what I'm doing wrong I did some more research.
+
+The [official GTD podcast](https://gettingthingsdone.com/category/podcast-2/) is gold, hearing from the creator and his consultants on how they really use it and help clients get unstuck was really helpful.
+
+Key points I learned:
+
+1. Projects are not what you'd normally think of, they're just anything bigger than one action. *Anything*. (You can add another layer for big projects if that's your world).
+2. The weekly review isn't just shuffling your todo pile. It's stepping back and considering the big picture, setting strategic direction, and just having time to reflect.
+
+### Articles
+
+In no particular order, and of varying usefulness:
+
+* <https://facilethings.com/blog/en/starting-gtd-when-you-are-busy>
+* <https://lifehacker.com/the-weekly-review-how-one-hour-can-save-you-a-week-s-w-5908816>
+* <https://todoist.com/productivity-methods/getting-things-done>
+* <https://blog.doist.com/gtd-tips/>
+* <https://www.reddit.com/r/gtd/comments/8bv3as/how_do_i_keep_my_gtd_inbox_from_overflowing_to/>
+* <https://plan.io/blog/getting-things-done/>
+* <https://www.taskade.com/blog/outliner-note-taking/>
+* <https://www.taskade.com/blog/getting-things-done-gtd/>
+* <https://www.taskade.com/blog/hierarchical-note-taking/>
+
 ## Get started with a template GTD+Trello board
 
 You can easily create your own GTD Trello board from this template I've created for you.
