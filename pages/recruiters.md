@@ -10,7 +10,7 @@ While many recruiters try and be reasonable, there are enough out there using
 tactics](http://www.brandonsavage.net/why-recruiters-are-bad-for-your-career/)
 to make life difficult and potentially jeopardise a good contract.
 
-The one tackle here is "multiple submission". This is where you end up with
+The one tackled here is "multiple submission". This is where you end up with
 your CV landing on a client's desk from **two** different recruitment companies. I
 gather this can be the nail in the coffin of a contract even if the client was
 keen - who wants to be stuck in the middle of two recruiters fighting over the
@@ -112,6 +112,10 @@ Learn more about the state of sharing gpg keys: <https://superuser.com/questions
 
 ## Technical details
 
+### Auth codes
+
+These in a way are redundant, but they are easier for the average person to check, and they add air of authority to the whole thing to help discourage those who would behave in bad faith.
+
 Using libreoffice calc, codes are generated with the following:
 
 A cell containing allowable characters in the codes as text: `0123ABCDEF` etc
@@ -121,30 +125,38 @@ A row for each authorized representation containing this formula to generate a
 unique authorisation code: `=CONCATENATE(MID($F$1,RANDBETWEEN(1,LEN($F$1)),1)`,
 [repeat the "mid" clause once for each digit of the code to be generated] )
 
-There's then another concatenation cell to generate the message to add to the
-CV. This is then copy-pasted into a file, and signed with gnupg on the
-command-line of my linux box. Here you can see the signing happening, followed
-by verification that the file is signed properly (as the client might do if
-they suspect a recruiter is reusing my CV for without my permission).
+### Generating auth text
 
-```
-$ ./sign.sh #!/bin/sh -v gpg --clearsign authorization.txt
+There's another concatenation cell to generate the message to add to the CV.
 
-You need a passphrase to unlock the secret key for user: "Tim Abell
-<tim@timwise.co.uk>" 4096-bit RSA key, ID 28CDF8EA, created 2015-01-20
-```
+This is auth text is then copy-pasted into a file, and signed with gnupg on the command-line of my linux box.
 
-```
-$ ./verify.sh #!/bin/sh -v gpg --verify authorization.txt.asc gpg:
-Signature made Thu 29 Oct 2015 01:02:52 GMT using RSA key ID 28CDF8EA gpg: Good
-signature from "Tim Abell <tim@timwise.co.uk>" gpg: WARNING: This key is not
-certified with a trusted signature!  gpg:          There is no indication that
-the signature belongs to the owner.  Primary key fingerprint: 74D4 2A4C 9055
-07C5 4A7E  3C9C 26C6 E087 28CD F8EA
+### Signing
+
+Here you can see the signing happening, followed by verification that the file is signed properly (as the client might do if they suspect a recruiter is reusing my CV for without my permission).
+
+```bash
+gpg --clearsign authorization.txt
 ```
 
-the contents of the signed file is then copy-pasted onto the end of a CV and
-sent off to the recruiter to relay to their client.
+the contents of the signed file (output to `authorization.txt.asc`) is then copy-pasted onto the end of a CV and
+sent off to the recruiter to relay to their client. Along with a custom header with the client & recruiter name to make it absolutely clear who it's solely intended for.
+
+### Verifying
+
+```bash
+gpg --verify authorization.txt.asc
+
+gpg: Signature made Fri 07 Apr 2023 10:31:36 BST
+gpg:                using RSA key 74D42A4C905507C54A7E3C9C26C6E08728CDF8EA
+gpg: Good signature from "Tim Abell <tim@timwise.co.uk>" [ultimate]
+```
+
+The important bit here is "Good signature".
+
+If you haven't told gpg to trust my key then you'll get a stern warning from gpg, but it still checks the signature. GPG (and PGP) do more than just sign files, they have a web-of-trust system that involves showing up in the real world with passports and signing each other's keys. You can see why that hasn't gone mainstream, but it is very good.
+
+See <https://yanhan.github.io/posts/2014-03-04-gpg-how-to-trust-imported-key/> for how to mark keys as trusted.
 
 ## Examples
 
@@ -152,40 +164,12 @@ I've uploaded a couple of files for you to try out verifying, one with the
 original message, and one with a forged message where the client's name has
 been changed. See if you can figure out which is which:
 
-* [authorization1](https://www.dropbox.com/s/ycr0x9gruzjxlch/authorization1.txt?dl=1)
-* [authorization2](https://www.dropbox.com/s/mlzyk3dd406dkqu/authorization2.txt?dl=1)
+* [authorization1](/assets/authorization-1.txt.asc)
+* [authorization2](/assets/authorization-2.txt.asc)
 
-Here's an example signed authorization with a valid signature for the end of my
-CV (mail merge fields in bold):
-
-```
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-Tim Abell has given permission for Test Recruiter Ltd to pass on this CV to
-Some Client on 28 Oct 2015; auth code 662QP93XP4. Any copies of my CV received
-without a valid signature have not been authorized for distribution.
-
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1
-
-iQIcBAEBAgAGBQJWMXA8AAoJECbG4IcozfjqtKYP/0DGQBU64kRsAqmnkpRkJEIo
-5gu1RVvozLE1AjE+/l7cq3LHo9jr3FUeigFD+DRcxVnfUT4pmyWHJYaqiYkm6MFf
-dx/3DAwj9g1sUOr4Ef0CN3MuSiP0HqrNanRCao0qxvCw9GJlKO+vTJlo8ZZMt+V0
-ImNxAIwjwKKLTvaLc7nxAlyjS8ZVuykBO5BTu5NnP4oDD359g1MEa6wI61et6bmj
-jvQiSQpqJnHxs+EN1QvrkVuDLZUT2OOQxwnKJV3WfI87YBuaMH/Eguor5NIQvnXT
-Z0vm5WbVgbadvpL5MP722EiNx+Ab4VCPJmEkrarH24em8f+JbZsvU753rZ4zgbOO
-TtO71Bn2DtjvgT6cVEytDbpJcl0pAhCjbSYkFCXOQYeP9lcBopbdTJ6nRcFcFEFK
-wlMcf+Cw/9WnYwyPMaWJi2zggJjLoWX2vRV5yUVa7y92pi9Fi2ow6Cru8WgXz/WW
-FMqOTDdRcYbDWCcDT7vc3oW0yfIkaCxnSm1jcg+/VUr1X/9zuNxcV+qRPUJ15fYR
-ii+cw/hIEqxn0tr+6eUsDmKdmS87PGGpo0wlGf3z7peytITIPf9y8bs2+N8ok6kA
-8IXtZXqzYO3qnaIw2JUQidm/0zQ8xz4UNsSrqN2ZsxDtqGeDgHAn7+yFH7dvfTTV
-ndYHkrMcYt1Yn5AmIsgZ =tFS7
------END PGP SIGNATURE-----
-```
 
 ## Limiting the period of right to represent
 
-It occurred to me more recently that there should be a time limit of say 6 months on the permission for a recruiter to represent you. As such my permission message currently reads:
+It occurred to me more recently that there should be a time limit of say 3 months on the permission for a recruiter to represent you. As such my permission message currently reads:
 
-> "Tim Abell has given permission for ExampleRecruiter to pass on this CV to ExampleClient on 22 Jan 2022; auth code Q5GAYUEEH5. Any copies of my CV received without a valid gpg signature have not been authorized for distribution. Any express or implied right to represent will expire on 22 Apr 2022 Learn more: https://timwise.co.uk/recruiters"
+> "Tim Abell has given permission for ExampleRecruiter to pass on this CV to ExampleClient on 22 Jan 2022; auth code Q5GAYUEEH5. Any copies of my CV received without a valid gpg signature have not been authorized for distribution. Any express or implied right to represent will expire on 22 Apr 2022 Learn more: https://timwise.co.uk/recruiters "
