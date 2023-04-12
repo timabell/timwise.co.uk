@@ -4,10 +4,6 @@ title: My approach to my work
 categories: [contracting,self]
 ---
 
-_This post is a work in progress._
-
-* * *
-
 I've realised that something that sets me apart from other developers with similar buzzwords on their CV is the way I think about things and the principles I think are important. But I've never put them on my CV or tried to express them in writing before. I'm not perfect and may fall short sometimes but these are the perfection I strive for.
 
 ## Tell the Truth, Even if it's Hard
