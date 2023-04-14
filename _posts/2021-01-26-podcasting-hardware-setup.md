@@ -40,8 +40,6 @@ Lately I've started [streaming the recording](https://www.youtube.com/watch?v=5K
 
 ## Pics
 
-This is what it looked like Nov 2021:
-
 ![photo of standing desk](/images/blog/desk.jpg)
 
 ## Also-ran hardware
