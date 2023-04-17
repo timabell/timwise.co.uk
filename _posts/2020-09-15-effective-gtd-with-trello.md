@@ -169,6 +169,18 @@ If you have tasks that really are important and they are never getting done, the
 
 Spending all your time just arranging your GTD board and never doing any of the action items. Are you avoiding an unpleasant task? Are your tasks too big and need breaking down?
 
+### When the lists get long
+
+You have to make sure you're investing enough time on average for the piles not to build up and up.
+
+When my list got to the several hundred range I needed to know for my own sanity whether I was winning or losing week by week, it's hard to remember whether the inbox was on 197 or 185 the week before. Being a bit of a systems person not afraid of a spreadsheet, I enabled the [firefox trello card counter addon](https://addons.mozilla.org/en-US/firefox/addon/firefox-trello-card-counter/), manually copied them into a spreadsheet, added a graph, and now I can see if I need to spend more or less time getting on top of it.
+
+![firefox trello card counter in action](/images/blog/gtd/card-count-addon.png)
+
+![screenshot of card count spreadsheet](/images/blog/gtd/card-count-graph.png)
+
+I've shared a [google sheets copy of the card count graph spreadsheet](https://docs.google.com/spreadsheets/d/e/2PACX-1vTJ--K37eyRik0kpBbwaGlH5p5nxfYliJDuRxkZmitntMBAnp4Cl0fW71drbvZxqQ6ApZB3LcL9XX8q/pubhtml) which you can use yourself.
+
 ## Learn more
 
 ### Podcast
