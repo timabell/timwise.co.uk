@@ -145,6 +145,37 @@ If you aren't up to the full `git` setup, you can edit your blog directly in git
 1. Editing the text of a post
    ![editing the text of a post](/images/blog/jekyll-setup/editing-editing.png)
 
+# Advanced ninja coder blogging
+
+Part of the reason I chose this particular setup is that plain markdown blogging with github pages allows me to use my existing coder tools to blog things really fast, reducing the barrier to me actually sharing useful insights and thoughts with you all.
+
+You can see the advanced editing flow in action here:
+
+<https://www.youtube.com/watch?v=w3gMZTKcGKc>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/w3gMZTKcGKc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+Here's the tools I use, as shown in the above video:
+
+- [zsh](https://en.wikipedia.org/wiki/Z_shell) - allows changing directory without `cd`
+- [symlinks](https://www.howtogeek.com/287014/how-to-create-and-use-symbolic-links-aka-symlinks-on-linux/) to link blog folder into `~/blog`
+- [shell script `new`](https://github.com/timabell/timwise.co.uk/blob/1024d49afab27b08ef060ac2d245a37a9d8b3837/new)
+- [template md file](https://github.com/timabell/timwise.co.uk/blob/1024d49afab27b08ef060ac2d245a37a9d8b3837/_drafts/template.md?plain=1)
+- [jekyll](http://jekyllrb.com/)
+- [github pages](https://pages.github.com/)
+- [github actions](https://github.com/timabell/timwise.co.uk/actions) - automatically deploys pages (automatically set up when you enable github pages)
+- [markdown](https://commonmark.org/help/) - this is important, it allows efficiently writing richly formatted blog posts with nothing but an (advanced) text editor such as vim or vscode
+- [vim](https://www.vim.org/) the original text editor (see also [neovim](https://neovim.io/) that I haven't got around to using yet)
+- [fzf the fuzzy finder](https://github.com/junegunn/fzf) - so I can type `**[tab]` and find any blog post easily
+- [vscode](https://code.visualstudio.com/) with the [vscode vim emulator extension](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim) - ctrl-p to open any post quickly
+- [git](https://git-scm.com/) - provides history, and a very quick way to ship changes to the host (github) all on the command line
+- I have many [command line aliases in my dotmatrix](https://github.com/timabell/dotmatrix/blob/main/.aliases) and [aliases in my gitconfig](https://github.com/timabell/dotmatrix/blob/main/.gitconfig) - these make working on the commandline (cli) muuuch faster.
+- Ruby locally (advanced coder things)
+- [asdf-vm](https://asdf-vm.com/) to ensure I always have the right ruby version available on any machine, or can easily install it
+- [tmux](https://www.howtogeek.com/671422/how-to-use-tmux-on-linux-and-why-its-better-than-screen/) to allow me to have the server running in the background while I use the editor
+
+⚠️ Note: ignore the `_site` folder when choosing the file to edit, that's the generated cache and will be overwritten.
+
 # Summary
 
 Wordpress was overcomplicated for my needs, and slower to use/read, this new setup should mean I can tap away on the train and send new thoughts your way more regularly.
