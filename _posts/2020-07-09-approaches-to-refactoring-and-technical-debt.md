@@ -3,8 +3,6 @@ title: Approaches to refactoring, technical debt and legacy code
 layout: post
 ---
 
-![word cloud from article](/assets/debt-cloud.png)
-
 Sometimes a codebase has an overwhelming amount of "terrible" stuff that as a developer you almost can't help but just diving in and fixing it. Doing this without thinking too hard can result in many variations of failure, such as:
 
 * Upsetting the people paying you because you are doing something they don't consider important.
@@ -13,9 +11,11 @@ Sometimes a codebase has an overwhelming amount of "terrible" stuff that as a de
 * Fixing things that maybe weren't actually that important (even if they make you cry whenever you have to look at their source code), at the expense of failing to fix more urgent problems or building useful features.
 
 ---
+
 ⏩ If you want the executive summary, head over to my [Leaders guide to technical debt - aka "why can't we ship anything!?"](https://charmconsulting.co.uk/2020/11/27/leaders-guide-to-technical-debt/) 🧐. For the technical details read on below.
 
----
+![word cloud from article](/assets/debt-cloud.png)
+
 
 ## Must-read articles
 
@@ -217,3 +217,4 @@ If you want to avoid the task at hand by reading the whole internet in the hope 
 * <https://www.productplan.com/glossary/technical-debt/>
 * <https://leadership.garden/tips-on-prioritizing-tech-debt>
 * <https://www.steveonstuff.com/2022/01/27/no-such-thing-as-clean-code>
+* <https://leadership.garden/tips-on-prioritizing-tech-debt/>
