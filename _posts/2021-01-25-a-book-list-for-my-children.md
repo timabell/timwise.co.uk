@@ -73,7 +73,7 @@ I've added a note to each explaining why you should read it, and when you might 
 
 Personally I like the audiobook format, and at time of writing a yearly subscription to Audible was good value for getting easy access to the content, and a narration from the author or a good speaker makes for a more memorable experience.
 
-Beyond this list, check the best-seller lists for whatever subject you wish to excel at. There's no point learning the hard way when you can learn from someone who has. Even in this digital age books still pack a tremendous punch; the result of someone pouring 20+ years of their experience into something you can read in a week is like liquid gold.
+Beyond this list, check the best-seller lists for whatever subject you wish to excel at. There's no point learning the hard way when you can learn from someone who has. Even in this digital age books still pack a tremendous punch; the result of someone pouring 20+ years of their experience into something you can read in a week is like liquid gold. I also have recorded a lot of [my personal reading list on GoodReads](https://www.goodreads.com/user/show/50628592-tim-abell).
 
 To my little people who will soon be bigger than me in every way, love you 💕️👊️, Diddy x
 
