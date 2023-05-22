@@ -42,24 +42,22 @@ layout: default
 		<div>
 				<a href='http://twitter.com/share?text=Read this: "{{ page.title | url_encode }}" by @{{
 					site.footer-links.twitter }}&url={{site.url}}{{page.url}}'
-					target='_blank'>Share as Tweet</a>
+					target='_blank'>Tweet This</a>
 				||
-				 <a target='_blank'
-					 href="https://www.linkedin.com/shareArticle?mini=true&url={{site.url}}{{page.url}}&title={{ page.title }}">
-				Share on LinkedIn</a>
+				<a href="https://www.linkedin.com/shareArticle?mini=true&url={{site.url}}{{page.url}}&title={{ page.title }}"
+				  target='_blank'>Post to LinkedIn</a>
 				{% if has_reddit %}
 				||
-				 <a target='_blank' href="{{page.reddit}}">Discuss on Reddit</a>
+				<a target='_blank' href="{{page.reddit}}">Discuss on Reddit</a>
 				{% endif %}
-		</div>
-		<div>
-			<a href="https://github.com/timabell/timwise.co.uk/blob/master/{{ page.path }}"
-													target="_blank">Post source code on GitHub</a>
-			- suggestions &amp; PRs welcome!
+				||
+				<a href="https://github.com/timabell/timwise.co.uk/blob/master/{{ page.path }}"
+				   target="_blank">Page Source</a>
 		</div>
 	</div>
 
-  {% include subscribe.html %}
+	<hr/>
+	{% include subscribe.html %}
 
 	{% unless has_reddit %}
 		{% include disqus.html %}
