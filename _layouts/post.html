@@ -33,11 +33,6 @@ layout: default
   </div>
 
   <hr/>
-{% if page.reddit != nil and page.reddit != "" %}
-	{% assign has_reddit =  true %}
-{% else %}
-	{% assign has_reddit =  false %}
-{% endif %}
 	<div id="post_footer">
 		<div>
 				<a href='http://twitter.com/share?text=Read this: "{{ page.title | url_encode }}" by @{{
@@ -46,10 +41,6 @@ layout: default
 				||
 				<a href="https://www.linkedin.com/shareArticle?mini=true&url={{site.url}}{{page.url}}&title={{ page.title }}"
 				  target='_blank'>Post to LinkedIn</a>
-				{% if has_reddit %}
-				||
-				<a target='_blank' href="{{page.reddit}}">Discuss on Reddit</a>
-				{% endif %}
 				||
 				<a href="https://github.com/timabell/timwise.co.uk/blob/master/{{ page.path }}"
 				   target="_blank">Page Source</a>
@@ -59,7 +50,5 @@ layout: default
 	<hr/>
 	{% include subscribe.html %}
 
-	{% unless has_reddit %}
-		{% include disqus.html %}
-	{% endunless %}
+	{% include disqus.html %}
 </article>
