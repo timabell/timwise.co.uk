@@ -24,7 +24,7 @@ Either way you are making a BIG change to your technology. Out with the old, in 
 
 I was lucky enough to be involved in a technology shift at the Department for Education (UK) with some exceptionally talented people. I'd been part of a team creating an MVP (Minimal Viable Product) in C# with a couple of web front ends and a postgres database (yay no sql server!). The department then decided to shift wholesale to Ruby on Rails (for good reasons, but they are not important here).
 
-The approach taken was superb, went really well, and is well worth learning from, I'll outline it here for the benefit of all.
+The approach taken was superb, went really well, and is well worth learning from, I'll outline it here for the benefit of all. It was inspired by a [previous rewrite at gov.uk](https://insidegovuk.blog.gov.uk/2016/07/29/the-specialist-publisher-rebuild-behind-the-scenes/) as we were lucky enough to have fabulous people on the team who'd been involved in that.
 
 ## How to seamlessly migrate
 
@@ -64,11 +64,29 @@ This will go smoother if you observe the cardinal rule of rewrites: no new funct
 
 This is to avoid the trap where the old system keeps being improved and the new system can never catch up. It also prevents your time and resources being invested in something that you plan to delete.
 
+> "While it’s tempting to add new features to Specialist Publisher right now, we need to concentrate on rewriting and integrating with the Publishing Platform. ... We don’t want to run two versions of Specialist Publisher concurrently for very long as it risks creating confusion, so we’ll deprioritise product requests until the rebuild is complete."  
+>  
+> ~ [Jen Allum, Inside GOV.UK, 2016](https://insidegovuk.blog.gov.uk/2016/07/29/the-specialist-publisher-rebuild-behind-the-scenes/#:~:text=while%20it%E2%80%99s%20tempting%20to%20add%20new%20features%20to%20specialist%20publisher%20right%20now%2C%20we%20need%20to%20concentrate%20on%20rewriting%20and%20integrating%20with%20the%20publishing%20platform.%20)
+
 The only exception to this is whatever changes are needed to support the seamless user experience across the two services. Notably the redirections.
 
 ## Monitoring
 
 As you migrate your tech, keep an eye on your telemetry, error reporting and anything else you have to make sure your user experience remains good throughout.
+
+## Pattern name: Strangler Fig
+
+This approach is known as the "strangler fig" pattern.
+
+> "An alternative route is to gradually create a new system around the edges of the old, letting it grow slowly over several years until the old system is strangled. Doing this sounds hard, but increasingly I think it's one of those things that isn't tried enough"  
+>
+> ~ Martin Fowler  
+> <https://martinfowler.com/bliki/StranglerFigApplication.html>
+
+See also
+
+- <https://learn.microsoft.com/en-us/azure/architecture/microservices/design/patterns>
+- <https://www.freecodecamp.org/news/what-is-the-strangler-pattern-in-software-development/>
 
 ## The end
 
