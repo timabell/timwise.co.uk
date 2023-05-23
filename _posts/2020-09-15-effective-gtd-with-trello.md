@@ -103,11 +103,14 @@ Go through inbox cards and triage them as follows:
   * Do now.
 * For someone else?
   * Move to "waiting"
+* Need to just mull it over a bit?
+  * Move to "incubate"
 * For future time/date?
   * Add to [google calendar](https://calendar.google.com/) as event or timed reminder and move to "scheduled".
-* More than single step to complete?
+* More than single step to complete? (Even two really small steps counts)
   * Move to "projects"
 	* and add a checklist.
+	* For some multi-step things I keep it as a single card, put it in actions but put the next step in the title (e.g. "something to do - call bob"), and when I've done that step I update the title to the next step. It's a bit less overhead than juggling multiple cards, but it's a judgement call whether it's worth a project card. I like project cards for things that are going to drag on over months.
 * Finally if none of the above then:
   * move to "action items"
 	* and edit the card to make sure it's doable in one go (add links, forms, phone numbers etc).
@@ -193,6 +196,7 @@ Key points I learned:
 
 1. Projects are not what you'd normally think of, they're just anything bigger than one action. *Anything*. (You can add another layer for big projects if that's your world).
 2. The weekly review isn't just shuffling your todo pile. It's stepping back and considering the big picture, setting strategic direction, and just having time to reflect.
+3. If tasks are getting stuck, or you are avoiding them it's probably because you haven't taken the time to step back and think clearly about whether it's something you actually want to do (someday/incubate/delete), and if you do then thinking about what the one next step might be (e.g. "google xx to learn more" about it).
 
 ### Articles
 
