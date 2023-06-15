@@ -151,6 +151,10 @@ There are many other articles on the merge/rebase topic such as
 couldn't see anything that matched my heuristic for tackling feature branch
 updates so I wrote this one.
 
+"[Semantic merge conflicts](https://bors.tech/essay/2017/02/02/pitch/)" are where git reports no conflict but nonetheless the code is broken.
+
+I also wrote "[GitHub rebase and squash considered harmful](/2021/03/15/github-rebase-and-squash-considered-harmful/)" which address a github specific horror.
+
 ## Get in touch
 
 Hey there! Thanks for reading!
