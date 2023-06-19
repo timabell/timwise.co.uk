@@ -1,5 +1,5 @@
 ---
-title: How to find contract developer jobs
+title: How to find contract developer clients
 layout: post
 categories: [contracting,resources]
 ---
