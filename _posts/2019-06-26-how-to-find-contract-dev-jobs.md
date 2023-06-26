@@ -127,6 +127,7 @@ a PR](https://github.com/timabell/timwise.co.uk/edit/master/_posts/2019-06-26-ho
 * <https://news.ycombinator.com/submitted?id=whoishiring>
 * <https://www.contractspy.co.uk/>
 * <https://www.yunojuno.com/>
+* [OutsideIR35Roles.com](https://outsideir35roles.com/contract-listings/)
 
 ### Places to find even more
 
