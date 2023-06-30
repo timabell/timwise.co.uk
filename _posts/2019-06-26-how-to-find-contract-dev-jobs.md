@@ -108,7 +108,7 @@ to not miss anything, but I haven't either used or succeeded with these myself.
 Suggestions for additions to this list welcome, just drop me an email or [raise
 a PR](https://github.com/timabell/timwise.co.uk/edit/master/_posts/2019-06-26-how-to-find-contract-dev-jobs.md).
 
-* <https://jobs.github.com/>
+* ~~<https://jobs.github.com/>~~ - [github jobs decommissioned](https://github.blog/changelog/2021-04-19-deprecation-notice-github-jobs-site/)
 * <https://www.upwork.com/> - seems to be low paid commodity labour on an
 	international market largely, however I think some people have managed to
 	break through this and become in demand. At that point you're basically an
