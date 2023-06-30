@@ -42,14 +42,11 @@ advertised role, but what this does do is let recruiters that specialize in
 your particular skills know you are actively looking, which is a lot easier for
 them to make use of than hoping to tempt someone who isn't.
 
-### StackOverflow jobs
+### ~~StackOverflow jobs~~
 
-<https://stackoverflow.com/jobs?j=contract>
+Sadly [stackoverflow jobs has been decommissioned](https://meta.stackoverflow.com/questions/415293/sunsetting-jobs-developer-story).
 
-The kind of work I like is very rare on here, **but** I had one of my best ever
-contracts through this, and made a good friend who I'm still in touch with
-after a fair few years. I'd say the quality of companies on here is generally
-higher than average.
+~~<https://stackoverflow.com/jobs?j=contract>~~
 
 ### Workable
 
