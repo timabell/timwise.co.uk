@@ -10,13 +10,14 @@ While many recruiters try and be reasonable, there are enough out there using
 tactics](http://www.brandonsavage.net/why-recruiters-are-bad-for-your-career/)
 to make life difficult and potentially jeopardise a good contract.
 
-The one tackled here is "multiple submission". This is where you end up with
-your CV landing on a client's desk from **two** different recruitment companies. I
-gather this can be the nail in the coffin of a contract even if the client was
-keen - who wants to be stuck in the middle of two recruiters fighting over the
-commission?!
+The tactics addressed below are:
 
-# Principles
+1. "Multiple submission". This is where you end up with your CV landing on a client's desk from **two** different recruitment companies. I gather this can be the nail in the coffin of a contract even if the client was keen - who wants to be stuck in the middle of two recruiters fighting over the commission?!
+2. Requiring "references" that are actually just lead generation.
+
+# Multiple submission
+
+## Principles
 
 The first step is simple, which is **never agree verbally or otherwise to be
 put forward without first finding out who the client is**, and make sure you
@@ -49,7 +50,7 @@ So that's the easy bit which I've been doing for some time...
 <a href="https://www.flickr.com/photos/tim_abell/21013910269/" target="_blank" rel="noopener"><img title="" src="https://c2.staticflickr.com/6/5769/21013910269_433c52303f.jpg" alt="Picture of an otter's head poking up in the sea." width="320" height="192" border="0" /></a>
 </div>
 
-# Technical measures
+## Technical measures
 
 There are unfortunately a bunch of particularly unscrupulous recruiters out
 there like sharks in the water who will without your permission, or possibly
@@ -95,20 +96,6 @@ against my public key, proving that it did indeed come from me (assuming my pc
 hasn't been hacked of course but I haven't heard of any recruiters going that
 far, if they could they'd probably be security consultants instead of
 recruiters!).
-
-## My public key
-
-My current public key `28CD F8EA` for `tim@timwise.co.uk`.
-
-You can obtain the key for verifying from:
-
-* My website: [public-key.txt](/public-key.txt)
-* [keyserver.ubuntu.com](http://keyserver.ubuntu.com/pks/lookup?search=tim%40timwise.co.uk&fingerprint=on&op=index) (synchronised with other key servers)
-* [keys.opengpg.org](https://keys.openpgp.org/search?q=tim@timwise.co.uk)
-
-Full primary key fingerprint: `74D4 2A4C 9055 07C5 4A7E  3C9C 26C6 E087 28CD F8EA`.
-
-Learn more about the state of sharing gpg keys: <https://superuser.com/questions/227991/where-to-upload-pgp-public-key-are-keyservers-still-surviving>
 
 ## Technical details
 
@@ -158,7 +145,21 @@ If you haven't told gpg to trust my key then you'll get a stern warning from gpg
 
 See <https://yanhan.github.io/posts/2014-03-04-gpg-how-to-trust-imported-key/> for how to mark keys as trusted.
 
-## Examples
+#### My public key
+
+My current public key `28CD F8EA` for `tim@timwise.co.uk`.
+
+You can obtain the key for verifying from:
+
+* My website: [public-key.txt](/public-key.txt)
+* [keyserver.ubuntu.com](http://keyserver.ubuntu.com/pks/lookup?search=tim%40timwise.co.uk&fingerprint=on&op=index) (synchronised with other key servers)
+* [keys.opengpg.org](https://keys.openpgp.org/search?q=tim@timwise.co.uk)
+
+Full primary key fingerprint: `74D4 2A4C 9055 07C5 4A7E  3C9C 26C6 E087 28CD F8EA`.
+
+Learn more about the state of sharing gpg keys: <https://superuser.com/questions/227991/where-to-upload-pgp-public-key-are-keyservers-still-surviving>
+
+### Examples
 
 I've uploaded a couple of files for you to try out verifying, one with the
 original message, and one with a forged message where the client's name has
@@ -168,8 +169,22 @@ been changed. See if you can figure out which is which:
 * [authorization2](/assets/authorization-2.txt.asc)
 
 
-## Limiting the period of right to represent
+### Limiting the period of right to represent
 
 It occurred to me more recently that there should be a time limit of say 3 months on the permission for a recruiter to represent you. As such my permission message currently reads:
 
 > "Tim Abell has given permission for ExampleRecruiter to pass on this CV to ExampleClient on 22 Jan 2022; auth code Q5GAYUEEH5. Any copies of my CV received without a valid gpg signature have not been authorized for distribution. Any express or implied right to represent will expire on 22 Apr 2022 Learn more: https://timwise.co.uk/recruiters "
+
+# Requests for "References"
+
+Unfortunately the more unscrupulous recruiters will claim they need "references" pretty much on first contact before even making contact with the client for you. References should be a follow-up cross check once fit is agreed on. In the worst case these are no such thing, and are actually just mining you for contact details of potential new business that they can harass to find openings and contacts for their database. Worst case they will then spam that contact with unsolicited CVs in a hope of gaining an unearned commission. You owe it to your closest contacts (those who would do you the favour of writing a reference) to protect them from such approaches from the wild-west of the recruitment industry. They doubtless get enough fo this cold outreach without you allowing more of it. Worse they might even use your name without permission to try and gain credence with your contact.
+
+Defenses:
+
+1. Don't ever give out "reference" details until you know for certain that the end client has specifically requested them.
+2. Provide them only to the end client, not the recruitment firm.
+3. Provide them explicitly for the specific purpose fo reference checking, and forbid their use for any other purpose. Cite breach of GDPR.
+
+It's also important that you check with your contact that they are happy to be a reference for you and that they will be expecting contact from whichever recruiter or client you are in talks with. This way if your name or contact is spammed or abused by this firm then you will both know it has happened.
+
+Do not allow yourself to be pressured into providing references inappropriately, early or carelessly on pain of losing a deal. With the shadiest of recruitment companies the deal may not even exist and may just be made up for the purpose of attracting CVs and filling in their database of prospects to spam.
