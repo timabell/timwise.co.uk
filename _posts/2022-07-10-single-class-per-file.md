@@ -40,3 +40,21 @@ It is impossible to come up with a concrete rule for exactly what goes together 
 If you have one class in a file you can name the file the same as the class. If you have two types in a file what do you name the file?
 
 If you have two types in a file you now have to come up with a *third* name that covers both things, or use the name of only one of the things, which is then misleading / surprising. By having a class per file you eliminate this entirely.
+
+## But wait, what about tiny little records
+
+A project I was on recently made heavy use of the newer [`record`](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record) type, which is cool because they're (usually) immutable. In that project there was a coding style of lumping all related records together in one file, and I must confess that I'm happy to make the exception for tiny one-line record types that only exist as child types to a parent record, and they can go in the parent's file. As soon as they are shared between two parents at that point they have to go in their own file otherwise the structure makes no sense any more.
+
+For example if `Pet` is only referenced through Person then I'm cool with `Tattoo` living in `Person.cs`:
+
+```c#
+public record Person(string FirstName, string LastName, Hair Hair, List<Tattoo>);
+public record Hair(string Colour, int LengthCm);
+public record Tattoo(string Description, bool HasColour);
+```
+
+Without accepting this nuance the result is thousands of tiny files, which ends up being harder to navigate. Use your judgement wisely.
+
+## I hear C and Rust like huge files
+
+I have seen in Rust at least that there's a cultural preference for "one big file" that defines a whole thing. This is interesting, but not something I'd be keen to import into C# projects which have a much stronger thing-per-file heritage and where I've seen both and far prefer the class per file style.
