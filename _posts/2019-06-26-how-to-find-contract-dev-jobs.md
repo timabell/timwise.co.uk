@@ -102,6 +102,7 @@ to not miss anything, but I haven't either used or succeeded with these myself.
 Suggestions for additions to this list welcome, just drop me an email or [raise
 a PR](https://github.com/timabell/timwise.co.uk/edit/master/_posts/2019-06-26-how-to-find-contract-dev-jobs.md).
 
+* <https://gun.io/find-work/>
 * <https://news.ycombinator.com/submitted?id=whoishiring>
 * <https://outsideir35roles.com/contract-listings/>
 * <https://remoteok.io/>
