@@ -42,12 +42,6 @@ advertised role, but what this does do is let recruiters that specialize in
 your particular skills know you are actively looking, which is a lot easier for
 them to make use of than hoping to tempt someone who isn't.
 
-### ~~StackOverflow jobs~~
-
-Sadly [stackoverflow jobs has been decommissioned](https://meta.stackoverflow.com/questions/415293/sunsetting-jobs-developer-story).
-
-~~<https://stackoverflow.com/jobs?j=contract>~~
-
 ### Workable
 
 <https://jobs.workable.com/>
@@ -135,9 +129,10 @@ a PR](https://github.com/timabell/timwise.co.uk/edit/master/_posts/2019-06-26-ho
 	* <https://www.quora.com/What-should-I-do-to-increase-my-earnings-on-Upwork-when-I-have-been-registered-on-it-for-over-a-year-and-have-done-only-one-10-job-for-which-I-received-a-five-star-rating>
 * <https://www.yunojuno.com/>
 
-Deceased sites:
+#### Deceased sites
 
 * ~~<https://jobs.github.com/>~~ - [github jobs decommissioned](https://github.blog/changelog/2021-04-19-deprecation-notice-github-jobs-site/)
+* Sadly [stackoverflow jobs has been decommissioned](https://meta.stackoverflow.com/questions/415293/sunsetting-jobs-developer-story). ~~<https://stackoverflow.com/jobs?j=contract>~~
 
 ### Places to find even more
 
