@@ -130,6 +130,14 @@ a PR](https://github.com/timabell/timwise.co.uk/edit/master/_posts/2019-06-26-ho
 
 * <https://www.quora.com/What-are-the-best-job-boards-for-software-engineers>
 
+## Practical tips
+
+- Track everything you've applied to (Trello, or HubSpot if you're feeling rich).
+- Keep a copy of the full advert description and rate, they are often taken down before you speak to anyone which weakens your negotiation position.
+- Follow up with phone calls after applying - makes you more real, makes it easier for them.
+- Track all the businesses in your sector and technology, and their hiring managers and contact them before letting recruiters get in the middle.
+- See also my [recruiters page](/recruiters) for defense against the dark arts. Or you could just blanket declare "no recruiters".
+
 ## About this post
 
 Someone I know is looking for work (hello!) so rather than just emailing I
