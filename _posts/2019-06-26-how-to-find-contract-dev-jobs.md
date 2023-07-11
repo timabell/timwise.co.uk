@@ -108,23 +108,36 @@ to not miss anything, but I haven't either used or succeeded with these myself.
 Suggestions for additions to this list welcome, just drop me an email or [raise
 a PR](https://github.com/timabell/timwise.co.uk/edit/master/_posts/2019-06-26-how-to-find-contract-dev-jobs.md).
 
-* ~~<https://jobs.github.com/>~~ - [github jobs decommissioned](https://github.blog/changelog/2021-04-19-deprecation-notice-github-jobs-site/)
+* <https://news.ycombinator.com/submitted?id=whoishiring>
+* <https://outsideir35roles.com/contract-listings/>
+* <https://remoteok.io/>
+* <https://snap.hr/>
+* <https://uk.indeed.com>
+* <https://wellpaid.io/>
+* <https://www.amazon.jobs/>
+* <https://www.contractoruk.com/it_contract_jobs>
+* <https://www.contractspy.co.uk/>
+* <https://www.cv-library.co.uk>
+* <https://www.cwjobs.co.uk>
+* <https://www.icontract.co.uk/>
+* <https://www.itcontractjobs.co.uk>
+* <https://www.itjobboard.net>
+* <https://www.jobserve.com>
+* <https://www.jobsite.co.uk>
+* <https://www.linkedin.com/jobs>
+* <https://www.monster.co.uk>
+* <https://www.reed.co.uk>
+* <https://www.technojobs.co.uk>
 * <https://www.upwork.com/> - seems to be low paid commodity labour on an
 	international market largely, however I think some people have managed to
 	break through this and become in demand. At that point you're basically an
 	entrepreneur.
 	* <https://www.quora.com/What-should-I-do-to-increase-my-earnings-on-Upwork-when-I-have-been-registered-on-it-for-over-a-year-and-have-done-only-one-10-job-for-which-I-received-a-five-star-rating>
-* <https://www.cwjobs.co.uk/>
-* <https://www.monster.co.uk/>
-* <https://remoteok.io/>
-* <https://snap.hr/>
-* <https://www.icontract.co.uk/>
-* <https://www.contractspy.co.uk/>
-* <https://wellpaid.io/>
-* <https://news.ycombinator.com/submitted?id=whoishiring>
-* <https://www.contractspy.co.uk/>
 * <https://www.yunojuno.com/>
-* [OutsideIR35Roles.com](https://outsideir35roles.com/contract-listings/)
+
+Deceased sites:
+
+* ~~<https://jobs.github.com/>~~ - [github jobs decommissioned](https://github.blog/changelog/2021-04-19-deprecation-notice-github-jobs-site/)
 
 ### Places to find even more
 
