@@ -12,7 +12,7 @@ There is an unspoken mismatch in understanding of what was just casually agreed:
 
 The danger here is that even if you truly believed you could keep your word, circumstances can change, for example between verbal and written agreements, or between saying "I'll visit" and actually booking flights. Money issues, health, behaviour of others and many other things out of your control can get in the way.
 
-I like to think I stick to my word, and that if I say I do something I'll do it, and I make an effort to think through whether I would or wouldn't do something before saying yes. What I have missed in my thinking sometimes is that **things change**, and I should be more reserved when answering the initial query. If circumstances don't change there would be no issue, but if they do then one can be in hot water.
+I like to think I stick to my word, and that if I say I'll do something then I'll do it. I make an effort to think through whether I would or wouldn't do something before saying yes. What I have missed in my thinking sometimes is that **things change**, and I should be more reserved when answering the initial query. If circumstances don't change there would be no issue, but if they do then one can be in hot water.
 
 On the first commitment it all seems kind of vague and far off, but on the second one it's very real, and you might realize you no longer want to honour your commitment for some reason, and now you are in a bad place of either breaking your commitment or violating your boundaries (if you can keep it at all).
 
