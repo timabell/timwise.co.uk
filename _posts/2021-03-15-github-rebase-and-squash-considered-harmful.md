@@ -85,7 +85,7 @@ Someone once complained at me that we shouldn't do merge commits because they ma
 
 Seriously, use a better git viewer, there are literally thousands.
 
-It 100% sucks that github, the flagship platform for git, still to this day does not have a proper branch view let alone first-parent view. Appalling. If the view of history / PRs in github doesn't show you what you need **don't use it**. Did you know you can review PRs by just pulling down the branch and looking at it locally? You are a capable programmer who uses many tools not an idiot that needs to be spoonfed powerpoint presentations.
+It 100% sucks that github, the flagship platform for git, still to this day does not have a proper branch view let alone first-parent view. Appalling. I'm even more horrified that [GitHub desktop](https://github.com/desktop/desktop/issues/1634) has inherited this idiotic denial of branch based views. If the view of history / PRs in github doesn't show you what you need **don't use it**. Did you know you can review PRs by just pulling down the branch and looking at it locally? You are a capable programmer who uses many tools not an idiot that needs to be spoonfed powerpoint presentations.
 
 Even visual studio can show you branches, merges and first-parent views, it's just a little tricky to find because they insisted on calling everything by different names and using mystery-meat buttons.
 
