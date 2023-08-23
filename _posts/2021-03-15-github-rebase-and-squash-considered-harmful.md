@@ -69,7 +69,7 @@ To avoid many "tramlines" do local rebases to avoid PR branches being based on v
 * It calls out the difference between you writing your commit and deciding it can go into `main`.
 * It retains the information about which commit you based your branch on.
 
-There's something to be said for being able to do a `git log --first-parent origin/main` and get a consistent list of merged PR branches. It's really quite readbale compared to a mishmash of the different styles of merge to `main`.
+There's something to be said for being able to do a `git log --first-parent origin/main` and get a consistent list of merged PR branches. It's really quite readable compared to a mishmash of the different styles of merge to `main`.
 
 You can configure GitHub to disallow the other options if your team are on-board with the idea.
 
