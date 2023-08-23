@@ -49,7 +49,7 @@ If an individual developer wants to create a single squashed commit for `main` *
 
 This option takes your commits, rebases them on `main` and then fast-forwards main to the new top commit.
 
-When this option has been used you can no longer tell by looking at the git history that there was ever a PR, which is actually useful context when looking back to work out why the hell something is how it is. (If you look at the commits in github it does magically shows the PR number but you can't find that context any other way.)
+When this option has been used you can no longer tell by looking at the git history that there was ever a PR, which is actually useful context when looking back to work out why the hell something is how it is. (If you look at the commits in github it does magically show the PR number but you can't find that context any other way.)
 
 This option is marginally less offensive to me if used judiciously by skilled teams. You might sensibly use it because your PR was only for peer review rather than because your commits deserve a logical grouping. If you can trust your team to intelligently decide when the commits in a PR would look nice as straight-line history in `main` then perhaps leave this option available.
 
