@@ -315,10 +315,13 @@ h1.site-name {
 }
 
 nav {
-  float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
+	float: left;
+  margin-top: 16px;
   font-family: $helveticaNeue;
-  font-size: 18px;
+  font-size: 14px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
 
   @include mobile {
     float: none;
@@ -328,11 +331,9 @@ nav {
   }
 
   a {
-    margin-left: 20px;
-    color: $darkGray;
-    text-align: right;
-    font-weight: 300;
-    letter-spacing: 1px;
+		font-weight: 300;
+		letter-spacing: 1px;
+		flex-basis: 150px;
 
     @include mobile {
       margin: 0 10px;
