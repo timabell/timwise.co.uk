@@ -24,7 +24,7 @@ Then the other day I bumped into hexagonal architecture *HARD* in an initial mee
 
 Not particularly being a fan of this kind of interaction I went on a mission to *really* understand what the hell it is.
 
-Having discovered that the view of hexagonal being largely pointless was not actually universal amongst programmers, but still skeptical, I [posted my disdain on LinkedIn](https://lnkd.in/epBv6RHG).
+Having discovered that the view of hexagonal being largely pointless was not actually universal amongst programmers, but still skeptical, I [posted my disdain on LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7083072166547595264/).
 A key point that I picked up from these discussions is that *the pattern is more generalized than "interfaces in C#"* (or Java), it's seen as a *generic* pattern with the intent of isolating one or more pieces of pure code from the messy world around it in all directions. It can be used as a mental model regardless of the technology choices in place and the layer of technology under discussion.
 
 For example you can use the terminology to describe a piece of pure Ruby, C#, Rust, PHP etc. being isolated from UI and network concerns and independently testable, or you can can describe a microservice being isolated from other microservices with http and/or messaging boundaries (or so I'm led to believe, reach out if you know different). The discussion on LinkedIn and further questioning of other devs made it clear I still had a bit of an understanding gap; this prompted me to dig further. Clearly enough developers out there believe this is a valid and useful pattern, rightly or wrongly.
