@@ -1,5 +1,5 @@
 ---
-title: Always Add Argument Names
+title: Always Add Argument (Parameter) Names
 layout: post
 ---
 
@@ -112,3 +112,7 @@ void Foo(string otherThing, string importantThing) // <-- refactored
 	Log(otherThing);
 }
 ```
+
+## Making Wrong Code Look Wrong
+
+This piece of code-style opinion falls under "[Making Wrong Code Look Wrong](https://www.joelonsoftware.com/2005/05/11/making-wrong-code-look-wrong/)" as Joel Spolsky teaches.
