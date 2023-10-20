@@ -59,20 +59,18 @@ git rebase target-local-branch
 
 ## Terminology
 
-"base": before anyone changed it (in all cases)
+- "**BASE**": before anyone changed it (in all cases)
+- When **merging** (other branch coming to me):
+	- **LOCAL**:  branch I'm on
+	- **REMOTE**: branch I'm merging in
 
+- When **cherry-picking** (other commit coming to me):
+	- **LOCAL**:  branch I'm on
+	- **REMOTE**: commit I'm merging in
 
-- **merge** (other branch coming to me):
-	- **local**:  branch I'm on
-	- **remote**: branch I'm merging in
-
-- **cherrypick** (other commit coming to me):
-	- **local**:  branch I'm on
-	- **remote**: commit I'm merging in
-
-- **rebase** (my own branch coming to me):
-	- **local**:  branch I'm rebasing on to (checked out as detached head mid-rebase)
-	- **remote**: my commits on branch I'm rebasing
+- When **rebasing** (my own branch coming to me):
+	- **LOCAL**:  branch I'm rebasing on to (checked out as detached head mid-rebase)
+	- **REMOTE**: my commits on branch I'm rebasing
 
 ## Refs
 
