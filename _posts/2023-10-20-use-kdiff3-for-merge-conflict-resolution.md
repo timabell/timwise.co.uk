@@ -97,6 +97,11 @@ Prove me wrong and I'll either thank you or find you a harder conflict to solve.
 
 If you don't mind paying for a commercial tool, [Beyond Compare](https://www.scootersoftware.com/) is actually even better at 3-way merges than kdiff, and has a marginally better UI. It's been around a long time.
 
+Other tools that have 3-way merge capabilities to look at are:
+
+- [Perforce's p4merge](https://www.perforce.com/products/helix-core-apps/merge-diff-tool-p4merge)
+- [Araxis merge](https://www.araxis.com/merge/index.en)
+
 ## Dangerous hidden changes
 
 It's also worth noting that merge commits are the *least* well reviewed commits. I think a lot of devs don't even realise that they can contain anything you like, not just what was in the two source branches. Combine that with bad tooling and it's a [recipe for disaster](https://nakedsecurity.sophos.com/2014/02/24/anatomy-of-a-goto-fail-apples-ssl-bug-explained-plus-an-unofficial-patch/).
