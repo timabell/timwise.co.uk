@@ -89,11 +89,13 @@ It's really not that easy to use, but learn how to use the following and you can
 
 ## Finding other tools
 
-There aren't any as good as kdiff. I wish they were.
+There aren't any open source tools as good as kdiff. I wish they were.
 
 - <https://alternativeto.net/feature/3-way-merge/>
 
 Prove me wrong and I'll either thank you or find you a harder conflict to solve.
+
+If you don't mind paying for a commercial tool, [Beyond Compare](https://www.scootersoftware.com/) is actually even better at 3-way merges than kdiff, and has a marginally better UI. It's been around a long time.
 
 ## Dangerous hidden changes
 
