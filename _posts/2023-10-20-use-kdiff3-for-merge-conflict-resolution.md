@@ -99,8 +99,8 @@ If you don't mind paying for a commercial tool, [Beyond Compare](https://www.sco
 
 Other tools that have 3-way merge capabilities to look at are:
 
-- [Perforce's p4merge](https://www.perforce.com/products/helix-core-apps/merge-diff-tool-p4merge)
-- [Araxis merge](https://www.araxis.com/merge/index.en)
+- [Perforce's p4merge](https://www.perforce.com/products/helix-core-apps/merge-diff-tool-p4merge) (Proprietary freeware)
+- [Araxis merge](https://www.araxis.com/merge/index.en) (Paid)
 
 ## Dangerous hidden changes
 
