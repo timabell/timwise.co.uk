@@ -14,13 +14,22 @@ blogger_orig_url: https://timwise.blogspot.com/2010/09/configuring-kdiff3-as-mer
 
 How to configure kdiff3 as a mergetool in msysgit. (I think if you install kdiff3 *before* msysgit it is picked up automatically, if not, do the following after installing both).  
 
-In git bash:  
+In git bash:
 
-    git config --global merge.tool kdiff3git config --global mergetool.kdiff3.path "c:\Program Files\KDiff3\kdiff3.exe"
+```
+git config --global merge.tool kdiff3
+git config --global mergetool.kdiff3.path "c:\Program Files\KDiff3\kdiff3.exe"
+```
 
 double check:  
 
-    cat ~/.gitconfig[merge]  tool = kdiff3[mergetool "kdiff3"]  path = c:\\Program Files\\KDiff3\\kdiff3.exe
+```
+cat ~/.gitconfig
+[merge]
+	tool = kdiff3
+[mergetool "kdiff3"]
+	path = c:\\Program Files\\KDiff3\\kdiff3.exe
+```
 
 refs:  
 
@@ -29,12 +38,22 @@ refs:
 
 Under cygwin, the setup would be:  
 
-    git config --global merge.tool kdiff3git config --global mergetool.kdiff3.path /cygdrive/c/Program\ Files\ \(x86\)/KDiff3/kdiff3.exe
+```
+git config --global merge.tool kdiff3
+git config --global mergetool.kdiff3.path /cygdrive/c/Program\ Files\ \(x86\)/KDiff3/kdiff3.exe
+```
 
 Giving the config file contents:  
 
-    [merge]        tool = kdiff3[mergetool "kdiff3"]        path = /cygdrive/c/Program Files (x86)/KDiff3/kdiff3.exe
+```
+[merge]
+	tool = kdiff3
+[mergetool "kdiff3"]
+	path = /cygdrive/c/Program Files (x86)/KDiff3/kdiff3.exe
+```
 
 Which by the way you can view with  
 
-    git config -e --global
+```
+git config -e --global
+```
