@@ -305,6 +305,10 @@ Following the internet archives of Alistair's site, the original page was moved 
 
 It was interesting to run a diff on the oldest and newest copies of the article to see how much has changed in 18 years. The answer is not a lot apart from a bit of formatting and whitespace noise. I put a cache of the original in a gist and then overwrote it with a cache of the latest as a mirror, so you can see the diff here: <https://gist.github.com/timabell/4f6b6d222b7742f4784b3b306a0cfd43/revisions?diff=split>. I only spotted two changes, a typo fix, and that for some reason "event" has been replaced with "driver", presumably to broaden it from event based UI programming, to anything that might want to use the core logic.
 
+## Alistair on video
+
+- [Rodrigo Branas: Hexagonal Architecture (Ports and Adapters) with Alistair Cockburn // Live #98](https://www.youtube.com/watch?v=AOIWUPjal60) - May 2022 interview with Alistair, digging in to the history.
+
 ## Footnotes
 
 ### References & further reading
