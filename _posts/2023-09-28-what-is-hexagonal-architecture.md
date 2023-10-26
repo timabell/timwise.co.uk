@@ -325,6 +325,7 @@ It was interesting to run a diff on the oldest and newest copies of the article 
 * ["Hexagonal Architecture: What You Need To Know - Simple Explanation" by Alex Hyett on YouTube](https://www.youtube.com/watch?v=bDWApqAUjEI). - This was nice and clear, and touched on the pros and cons.
 * [vaadin - DDD Part 3: Domain-Driven Design and the Hexagonal Architecture](https://vaadin.com/blog/ddd-part-3-domain-driven-design-and-the-hexagonal-architecture) - an exceptionally long piece with one person's opinions on using hexagonal with DDD.
 * <https://softwareengineering.stackexchange.com/questions/386102/arent-domain-driven-design-hexagonal-architecture-with-real-world-constraints>
+* [Hexagonal Me](https://jmgarridopaz.github.io/)
 
 ### Attack Ideas not People
 
