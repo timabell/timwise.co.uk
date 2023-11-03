@@ -48,6 +48,18 @@ You can see what I managed to do with [reveal.js for the Rust Workshop](https://
 
 Markdown, VSCode with some markdown plugins, maybe even a [markdown-wiki](https://marketplace.visualstudio.com/items?itemName=kortina.vscode-markdown-notes) tool. [Markor](https://f-droid.org/packages/net.gsantner.markor/) on android. [Syncthing](https://syncthing.net/) to keep them in sync across devices. Works for me, and any conflicts due to editing files out of sync is easier to deal with than [tomboy](https://wiki.gnome.org/Apps/Tomboy)'s nasty XML format (yes I know XML is text but it's still naaaasty).
 
+### Creating pdf files
+
+Thanks to [pandoc](https://pandoc.org/) (other tools are available), you can trivially convert your markdown files to pdf files for sharing with people who insist on that as a format.
+
+```bash
+pandoc --from=gfm --to=pdf -t html5 "input.md" -o "output.pdf"
+```
+
+### Killer CV
+
+Thanks to [json resume](https://jsonresume.org/) you can create a CV in json (or yml), capturing the pure data, and then run it through a series of theme and formatting engines shared by the community to make something really fab in multiple formats.
+
 ### Coding
 
 This entry is only half tongue-in-cheek. I think it's worth pointing out that programmers have, after flirting with *many* other approaches, settled on plain old ASCII as being the one-true-format for explaining to a computer (and other programmers) what the computer is supposed to be doing. Pay attention to what programmers have learnt, there is much depth here on managing vast amounts of precise information in text form. Especially if you are not a programmer or not used to text tools there is much to learn from this world. You might think programmers are odd creatures that thrive on unnecessary complexity; nothing could be further from the truth, they (we) are *obsessive* about solving problems once and for all and being ruthlessly efficient in all things. The fact that programmer practices are seen as odd by the general public is more a sign of just how far programmers have optimised their lives away from the unthinking defaults of the masses than it is of any peculiarity of whim or culture.
