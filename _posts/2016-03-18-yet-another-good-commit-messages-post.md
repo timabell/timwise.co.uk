@@ -43,6 +43,7 @@ I, like many developers, also value speed of delivery, fast iteration, early pro
 
 There's not much for me to add on what's already been written, so read these articles on the specifics of writing good commit messages.
 
+* [Use the present-tense imperative](https://stackoverflow.com/questions/3580013/should-i-use-past-or-present-tense-in-git-commit-messages/3580764#3580764) ("Add …" not "Adds" or "Added")
 * <https://vip.wordpress.com/documentation/commit-messages/>
 * <https://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message>
 * <http://chris.beams.io/posts/git-commit/>
