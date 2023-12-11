@@ -7,6 +7,8 @@ layout: post
 
 It seems microsoft have produced a solution to this problem, along with the long awaited solution-level package management. Read all about it here: <https://devblogs.microsoft.com/nuget/introducing-central-package-management/#transitive-pinning>
 
+If you want to convert to central package management this tool works a charm: <https://github.com/Webreaper/CentralisedPackageConverter> ([via reddit](https://www.reddit.com/r/dotnet/comments/vnayh9/converting_a_large_project_to_central_package/))
+
 ---
 
 ## About
