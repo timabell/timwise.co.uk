@@ -170,7 +170,7 @@ I've seen code where blindly applying "hexagonal architecture" (or some unholy b
 
 Like so many patterns, people talk about the pattern's strengths but fail to mention when you shouldn't use them, leaving you to deduce the context for appropriate application yourself.
 
-What we want is not "no architecture", but it also isn't dogmatic and incorrect architecture. I don't think throwing in hexagonal because you can use it to [flex on the other developers](https://www.youtube.com/watch?v=M93w3TjzVUE) is the right balance.
+What we want is not "no architecture", but it also isn't dogmatic and incorrect architecture. I don't think throwing in hexagonal because you can use it to [flex on the other developers](https://www.youtube.com/watch?v=r6tH55syq0o) is the right balance.
 
 > "I also don't think you should YAGNI architecture to that extent, unless what you are doing is genuinely throw away. Architecture isn't optional - you'll get one whatever happens - it pays to think about it in advance so everybody shares a common technical vision and is pulling in the same direction."
 >
