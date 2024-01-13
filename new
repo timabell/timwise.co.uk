@@ -6,6 +6,6 @@
 name="${1:-todo}" # default name
 kebab_name=$(sed -e 's/ /-/g' -e 's/\(.*\)/\L\1/g' <<< "$name")
 newfile=_posts/`date +"%Y-%m-%d"`-$kebab_name.md
-sed "s/name_here/$name/" _drafts/template.md >> "$newfile"
+sed "s/name_here/\"$name\"/" _drafts/template.md >> "$newfile"
 echo "$newfile created"
 vim "$newfile"
