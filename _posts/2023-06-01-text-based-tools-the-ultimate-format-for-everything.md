@@ -73,6 +73,8 @@ There's even some neat web based real-time renderers:
 - <https://dreampuf.github.io/GraphvizOnline/>
 - <https://sketchviz.com/>
 
+For UML, graphviz and many other formats there is [mermaid.js](https://mermaid.js.org/), and amazingly you can embed the mermaid formats in markdown and [github pages will render your mermaid diagrams](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams). Win.
+
 ## The yucky bits
 
 The almost-rans:
