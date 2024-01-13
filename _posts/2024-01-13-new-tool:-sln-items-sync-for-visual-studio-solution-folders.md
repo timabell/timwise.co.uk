@@ -3,6 +3,10 @@ title: "New tool: sln-items-sync for Visual Studio solution folders"
 layout: post
 ---
 
+How and why I created `sln-items-sync`  - a `dotnet tool` to generate SolutionItems from filesystem folders.
+
+If you want to skip the backstory head over: <https://github.com/timabell/sln-items-sync>
+
 ## 15 years of minor irritation
 
 Faced with another set of microservice repos written in dotnet-core, with `.sln` files in various states of tidiness I found my self for the 1000th time in 15+ years manually pointy clicky adding fake solution-items folders and subfolders and then toiling away adding files **just** so I could search them, click them and view them from within Visual Studio or Rider.
