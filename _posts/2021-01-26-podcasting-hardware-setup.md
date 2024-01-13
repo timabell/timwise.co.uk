@@ -51,10 +51,14 @@ layout: post
 
 ## Also-ran hardware
 
-I started with a [Jabra Evolve 65 wireless headset](https://www.amazon.co.uk/gp/product/B074BPJRBW/) (~£130 because covid prices) but that heavily processes voice so while it's great for conference calls it's not good for anything beyond your third episode as people will unsubscribe just for the sound quality. Still use them for on the go conference calls and phone calls, and occasionally music (though my phone's bluetooth is currently borked).
+I started with a [Jabra Evolve 65 wireless headset](https://www.amazon.co.uk/gp/product/B074BPJRBW/) (~£130 because covid prices) but that heavily processes voice so while it's great for conference calls it's not good for anything beyond your third episode as people will unsubscribe just for the sound quality. Still use them for on the go conference calls and phone calls, and occasionally music (though my phone's bluetooth is currently borked). They eventually also snapped after being thrown in a bag too often, so now I have a...
 
-I tried a [Blue Microphones Snowball USB Microphone](https://www.amazon.co.uk/gp/product/B002OO18NS/) (~£75) next, but that picks up *everything* even in it's alleged cardioid mode.
+[Jabra Evolve2 65](https://www.amazon.co.uk/gp/product/B086M57V71) headset, which I use for conference calls (and it's great for that), especially out and about, but which is also too heavily processed to be suitable for recording high quality podcast audio.
+
+I tried a [Blue Microphones Snowball USB Microphone](https://www.amazon.co.uk/gp/product/B002OO18NS/) (~£75) next, but that picks up *everything* even in it's alleged cardioid mode. It did make a good recording of some thunder until the kids talked over it in excitement! You could use this if you have a *very* quiet environment.
 
 ## Out of my price range
 
 Some of my friends who take it more seriously splashed out on a [Shure SM7B XLR Mic](https://www.shure.com/en-GB/products/microphones/sm7b) at a mere £389, and you have to by an XLR mixer to run it. I have to say they sound lurvely, and when they knock it you hardly hear it so it's got excellent vibration isolation built in.
+
+You could also look at the [Shure MV7 USB Microphone](https://www.amazon.co.uk/Shure-MV7-Microphone-Podcasting-Voice-Isolating/dp/B08G7RG9ML) which has USB as well as XLR so you wouldn't need a mixer. That's £250 currently. Presumably it's also got Shure's excellent sound and vibration isolation, though I haven't got one, so let me know if you get one!
