@@ -104,4 +104,4 @@ Other tools that have 3-way merge capabilities to look at are:
 
 ## Dangerous hidden changes
 
-It's also worth noting that merge commits are the *least* well reviewed commits. I think a lot of devs don't even realise that they can contain anything you like, not just what was in the two source branches. Combine that with bad tooling and it's a [recipe for disaster](https://nakedsecurity.sophos.com/2014/02/24/anatomy-of-a-goto-fail-apples-ssl-bug-explained-plus-an-unofficial-patch/).
+It's also worth noting that merge commits are the *least* well reviewed commits. I think a lot of devs don't even realise that they can contain anything you like, not just what was in the two source branches. Combine that with bad tooling and it's a [recipe for disaster](https://web.archive.org/web/20140225140816/https://nakedsecurity.sophos.com/2014/02/24/anatomy-of-a-goto-fail-apples-ssl-bug-explained-plus-an-unofficial-patch/).
