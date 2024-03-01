@@ -87,6 +87,10 @@ It's really not that easy to use, but learn how to use the following and you can
 - If you *ever* edit those `>>>>>>  <<<<` conflict markers you are just editing git's non-attempt at merging the files. You're doing it wrong, get a real tool (kdiff).
 - If you use your IDE's built in merge conflict tooling, they are universally only 2-way at best, and not very good at that. You're doing it wrong, get a real tool and learn to use it (kdiff).
 
+## Configuring kdiff3
+
+One from the archives - [configuring kdiff3 as a mergetool](/2010/09/03/configuring-kdiff3-as-mergetool-in/) - I still have to do this occasionally on windows, though git has better defaults now so might just work if you pick kdiff3 as a difftool without the detailed config.
+
 ## Finding other tools
 
 There aren't any open source tools as good as kdiff. I wish they were.
