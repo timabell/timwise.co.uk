@@ -32,6 +32,9 @@ layout: default
   <hr/>
 	<div id="post_footer">
 		<div>
+				{% if page.reddit %}
+					<a href='{{page.reddit}}' target='_blank'>Discuss on Reddit</a> ||
+				{% endif %}
 				<a href='http://twitter.com/share?text=Read this: "{{ page.title | url_encode }}" by @{{
 					site.footer-links.twitter }}&url={{site.url}}{{page.url}}'
 					target='_blank'>Tweet This</a>
