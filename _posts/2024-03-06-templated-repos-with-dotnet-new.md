@@ -1,6 +1,7 @@
 ---
 title: "Templated repos with dotnet new"
 layout: post
+reddit: https://www.reddit.com/r/dotnet/comments/1baplh2/templated_repos_with_dotnet_new/
 ---
 
 I've been digging in to making `dotnet new` templates and it turns out to be a remarkably capable bit of tooling.
