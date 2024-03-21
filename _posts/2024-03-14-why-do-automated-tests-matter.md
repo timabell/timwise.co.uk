@@ -30,7 +30,19 @@ More recently I've had the pleasure on working with people who are super-keen on
 
 So let's take a step back for a moment. Why do we write tests at all, what is the big goal that makes this all worthwhile. There's long been discussions of the "cost/benefit" of tests, and there is academic research that shows [teams that write tests are more productive](https://en.wikipedia.org/wiki/Test-driven_development#Benefits). 
 
+To put it simply, the goal of writing any software is working software for users and businesses; and they aren't going to be too happy when something that worked fine on Monday is now broken on Tuesday. I don't think it's news to anyone that the goal of software tests is to prevent regressions. But there are two pieces that this does't explain:
+
+1. The more working features you add, the more you need every single feature and a quality automated test. When you add your 1st feature it's easy to do do a quick manual check and verify it's behaving. When you write your 99th feature, are you actually going to sit and check the other 98 again? Do you even have the time?
+2. What matters is not whether your class has a unit test, but whether the software as perceived by the user / business still does the job they wanted it to do.
 
 # Outside-in testing
 
+# Business Driven Development (BDD)
 
+Oh dear that went off the rails as a concept. I see so many teams entirely miss the point of this movement, which is conceptually a good thing, but: IT'S NOT ABOUT GHERKIN SYNTAX. IT'S NOT ABOUT BROWSER AUTOMATION. It's about writing down what the users expect of your software, in terms they'd understand, and making sure that those expectations are never broken unintentionally.
+
+BDD ends up using gherkin and browser automation because gherkin allows plain english explanations that can be turned into executable tests, and users often interact with software via a browser these days. They are tools for achieving BDD, not the definition of BDD.
+
+# QA Teams
+
+Just don't. Developers write better software if they have to write their own tests. Sure provide some outside expertise in performance testing tools etc for your devs, but they build it they run it.
