@@ -3,7 +3,9 @@ title: "Why do automated tests matter?"
 layout: post
 ---
 
-It might seem a bit odd to write a post on software tests after so many years and so much content, yet to this day I see well meaning developers every day writing software without adequate test coverage. In fact I will share that I myself have been _very_ late to enlightenment on this front.
+It might seem a bit odd to write a post on software tests after so many years and so much content, yet to this day I see well meaning developers writing software without adequate test coverage. In fact I will share that I myself have been _very_ late to enlightenment on this front. Sure I've been "writing tests" for a decade or more, but I was missing the framework would make those efforts coherent, complete and effective. In my view the mental model of why we would write tests is more important than the detailed "how" of writing unit/integration tests, because without that it can be at best haphazard whether the testing really serves its true purpose. I'll share with you here the keystone ideas that make it all sit together properly, just like keystone in a stone archway.
+
+![Photo: the shard through a brick archway](/images/blog/archway_IMG_20231109_135436.jpg)
 
 # The before time - TDD unit testing
 
