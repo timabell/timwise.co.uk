@@ -28,12 +28,43 @@ More recently I've had the pleasure on working with people who are super-keen on
 
 # The "why" of testing
 
-So let's take a step back for a moment. Why do we write tests at all, what is the big goal that makes this all worthwhile. There's long been discussions of the "cost/benefit" of tests, and there is academic research that shows [teams that write tests are more productive](https://en.wikipedia.org/wiki/Test-driven_development#Benefits). 
+So let's take a step back for a moment. Why do we write tests at all, what is the big goal that makes this all worthwhile. There's long been discussions of the "cost/benefit" of tests, and there is research that shows [teams that write tests are more productive](https://en.wikipedia.org/wiki/Test-driven_development#Benefits). 
 
-To put it simply, the goal of writing any software is working software for users and businesses; and they aren't going to be too happy when something that worked fine on Monday is now broken on Tuesday. I don't think it's news to anyone that the goal of software tests is to prevent regressions. But there are two pieces that this does't explain:
+To put it simply, the goal of writing any software is working software for users and businesses; and they aren't going to be too happy when something that worked fine on Monday is now broken on Tuesday. I don't think it's news to anyone that the goal of software tests is to prevent regressions. But there are two pieces of the testing puzzle that this doesn't make explicitly clear:
 
-1. The more working features you add, the more you need every single feature and a quality automated test. When you add your 1st feature it's easy to do do a quick manual check and verify it's behaving. When you write your 99th feature, are you actually going to sit and check the other 98 again? Do you even have the time?
+1. When you add your first feature it's easy quickly check and verify it's behaving as desired. When, however, you write your _ninety-ninth_ feature how can you be _certain_ that the other ninety-eight features are all intact. The more working features you add, the more you need every single feature tested by a quality automated test.
 2. What matters is not whether your class has a unit test, but whether the software as perceived by the user / business still does the job they wanted it to do.
+
+Anyone who's written software for any length of time will laugh at the idea that "a change in component A has no possibility of breaking something unrelated in component B". Or as a more rigorous colleague pointed out, this is the problem of "emergence" in complex systems.
+
+If you lack even a small amount test coverage (in quality or quantity) for your system, and you allow this to grow then you suffer from the two horse-riders of the testing apocalypse:
+
+1. Manual testing efforts increase, sometimes heroically, sometimes in the insidious form of the separate "QA" role.
+2. More regressions (aka bugs) make it to end users, resulting in unplanned and often pressurized work to fix them.
+
+Some teams end up with more of one or the other problem. Without addressing the root-cause of lack of automated tests, the harder you push on one, the more you end up with of the other.
+
+This is a subclass of the generalized "[technical debt](https://charmconsulting.co.uk/2020/11/27/leaders-guide-to-technical-debt/)" problem that results in a catastrophic drop-off of ability to delivery anything at all if it is allowed to grow.
+
+# Mindset and Culture
+
+In the end, it comes down to the core beliefs of your individual engineers writing the systems, and the teams they operate in.
+
+If there is any part of them then that isn't 110% on-board with what I've written here, then test coverage ends up being haphazard and incomplete, and over time gets steadily worse.
+
+## Hero culture
+
+
+
+# Excuses
+
+## "I don't have time"
+
+## "The boss/client/manager won't let me"
+
+The "should I do a good job" question, as I like to call it.
+
+I often see all but the most experienced software engineers falling into the trap of assuming that the person they report to is sufficiently all-knowing to make any decision in any area.
 
 # Outside-in testing
 
@@ -43,6 +74,7 @@ Oh dear that went off the rails as a concept. I see so many teams entirely miss 
 
 BDD ends up using gherkin and browser automation because gherkin allows plain english explanations that can be turned into executable tests, and users often interact with software via a browser these days. They are tools for achieving BDD, not the definition of BDD.
 
-# QA Teams
+## More
 
-Just don't. Developers write better software if they have to write their own tests. Sure provide some outside expertise in performance testing tools etc for your devs, but they build it they run it.
+- https://thoughtbot.com/blog/testing-from-the-outsidein
+- https://www.obeythetestinggoat.com/book/chapter_outside_in.html
