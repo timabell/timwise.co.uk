@@ -7,7 +7,7 @@ It might seem a bit odd to write a post on software tests after so many years an
 
 ![Photo: the shard through a brick archway](/images/blog/archway_IMG_20231109_135436.jpg)
 
-# The before time - TDD unit testing
+# The Before Time, TDD & Unit Testing
 
 I started my career in software development way back in 2000 when only a few very forward thinking people were doing high quality automated testing, and it really hadn't reached the broader consciousness off the software development community.
 
@@ -18,63 +18,129 @@ Like a large number of software devs of that era, I became aware of "software te
 3. "Here's why you should write the test before the code (red-green-refactor)."
 4. And in C# land "here's how you do dependency injection".
 
-This was also a time when SOLID was big in the OO consciousness, so classes, isolation, encapsulation and all the small pieces of the machine you were building was the focus, and testing those pieces was often enough to claim you were "doing testing". Interviews often being more about do you TDD than will your system break for end users.
+This was also a time when SOLID was big in the OO consciousness, so classes, isolation, encapsulation and all the small pieces of the machine you were building was the focus, and testing those pieces was often enough to claim you were "doing testing". Interviews often being more about "do you TDD" than "will your system break for end users".
 
-"Integration Testing" (i.e testing more than one piece together) was certainly in my awareness, but mostly as a TDD++, and was usually missing any kind of coherent "why". You might test some code with a real database instead of a mocked persistence layer, or check that all your pure code classes didn't blow up when they were wired back together. In C# world a lot of mental overhead was created by trying to work out how to test code that used Microsoft's not very test-friendly .NET Framework standard library code that often lacked even interfaces to make it possible to swap out without writing a facade at great expense.
+"Integration Testing" (i.e testing more than one piece together) was certainly in my awareness, but mostly as a TDD++, and was usually missing any kind of coherent "why". You might test some code with a real database instead of a mocked persistence layer, or check that all your pure code classes didn't blow up when they were wired back together. In C# world a lot of mental overhead was created by trying to work out how to test code that used Microsoft's not very test-friendly .NET Framework standard library code.
 
 So I bumbled along, more or less successfully writing tests for my software, but always feeling like I didn't have a really solid argument for the big picture. For me it was mostly "aim for 100% test coverage" and you'll catch/prevent lots of bugs, plus it was good at driving software architecture in the minutia by preventing things being too coupled together.
 
 More recently I've had the pleasure on working with people who are super-keen on "outside-in" testing and considerably less keen on acres of unit tests, and it finally dawned on me what I've been missing all these years.
 
-# The "why" of testing
+# The "Why" of Testing
 
 So let's take a step back for a moment. Why do we write tests at all, what is the big goal that makes this all worthwhile. There's long been discussions of the "cost/benefit" of tests, and there is research that shows [teams that write tests are more productive](https://en.wikipedia.org/wiki/Test-driven_development#Benefits). 
 
-To put it simply, the goal of writing any software is working software for users and businesses; and they aren't going to be too happy when something that worked fine on Monday is now broken on Tuesday. I don't think it's news to anyone that the goal of software tests is to prevent regressions. But there are two pieces of the testing puzzle that this doesn't make explicitly clear:
+The goal of writing any software is working software for users and businesses; and they aren't going to be too happy when something that worked fine on Monday is now broken on Tuesday.
 
-1. When you add your first feature it's easy quickly check and verify it's behaving as desired. When, however, you write your _ninety-ninth_ feature how can you be _certain_ that the other ninety-eight features are all intact. The more working features you add, the more you need every single feature tested by a quality automated test.
-2. What matters is not whether your class has a unit test, but whether the software as perceived by the user / business still does the job they wanted it to do.
+I don't think it's news to anyone that the goal of software tests is to prevent regressions.
 
-Anyone who's written software for any length of time will laugh at the idea that "a change in component A has no possibility of breaking something unrelated in component B". Or as a more rigorous colleague pointed out, this is the problem of "emergence" in complex systems.
+# Full, Automated Coverage
 
-If you lack even a small amount test coverage (in quality or quantity) for your system, and you allow this to grow then you suffer from the two horse-riders of the testing apocalypse:
+There are two pieces of the testing puzzle that "preventing regressions" alone didn't make immediately clear to me, and these are they key reasons I'm taking the time to write this post at all, because I think they drive a subtle but foundational shift in what our writing of tests actually looks like and the magnitude of their effectiveness. They are:
 
-1. Manual testing efforts increase, sometimes heroically, sometimes in the insidious form of the separate "QA" role.
-2. More regressions (aka bugs) make it to end users, resulting in unplanned and often pressurized work to fix them.
+1. What matters is not whether your class has "tests" but whether the software as perceived by the user does the job they need.
+2. When you add your _first_ feature it's easy to manually verify it's behaviour. When you write your _ninety-ninth_ feature how can you be _certain_ that the other ninety-eight features are _all_ still intact.
 
-Some teams end up with more of one or the other problem. Without addressing the root-cause of lack of automated tests, the harder you push on one, the more you end up with of the other.
+If you write insufficient automated tests there are only two things that can happen, both bad:
 
-This is a subclass of the generalized "[technical debt](https://charmconsulting.co.uk/2020/11/27/leaders-guide-to-technical-debt/)" problem that results in a catastrophic drop-off of ability to delivery anything at all if it is allowed to grow.
+1. You spend exponentially more time manually verifying all expected behaviour before any change is passed on for the user to use, or
+2. You give up trying to test what was supposed to work, and some of it stops working.
+
+Every time you touch your software, there is a non-zero risk that something that used to work will no longer work. Anyone who's written software for any length of time will laugh at the idea that "a change in component A has no possibility of breaking something unrelated in component B". And as a more rigorous colleague pointed out, we have problem of "emergence" in complex systems which makes it increasingly hard to predict behaviour.
+
+Full automated test coverage of *all* delivered features to date is the *only* solution to this problem. Any shortcoming in this coverage is a subclass of the generalized "[technical debt](https://charmconsulting.co.uk/2020/11/27/leaders-guide-to-technical-debt/)" problem that quickly results in a catastrophic drop-off of ability to delivery anything at all if it is allowed to grow:
+
+[![Graph delivery speed plummeting as tech debt piles up](https://charmconsulting.co.uk/assets/blog/graph-debt-vs-delivery.png)](https://charmconsulting.co.uk/2020/11/27/leaders-guide-to-technical-debt/)
+
+# What Kind of Tests
+
+So, if you accept all of the above, what does that mean when you actually fire up your editor and wonder what test to write?
+
+If the only thing that matters is that a feature works _from the users perspective_ then the only automated test that matters is one that tests a feature from the users perspective. In practice that means things like:
+
+- End to end tests
+- Browser automation
+- Smoke tests
+- Platform tests
+- Performance tests
+- Outside-in tests
+
+And what doesn't matter a hoot is things like unit tests, integration tests and component tests, i.e. the very things that we were taught in "TDD school", and the left to figure out "the real world" on our own.
+
+
+
+
+# Hiring a QA team - Just Don't
+
+Some organisations seem to think the answer is to take the regression test problem off developer's plates by hiring less skilled individuals to do this apparently mundane work. Some even hire SDETs to write automated tests for the developers.
+
+This is a fundamentally flawed approach in the same way that hiring an Operations teams as a separate function was accepted as a bad idea and replaced with an integrated DevOps product team. (Well, apart from the anti-pattern of a "DevOps" role, but that's another post).
+
+It's flawed in at least the following ways:
+
+1. It embeds the "manual testing is okay" approach in the culture, but adds some extra brute force people-power in the hope that this will prevent the eventual arrival of the 99th-feature problem. (The number just gets bigger, it's still there).
+2. It encourages developers to consider testing (automated or otherwise) "that other team/role's problem".
+3. It adds significant delays and an additional silo between writing code and delivering value to users and getting valuable feedback. Lengthening feedback cycles. This goes against _everything_ we have learned from toyota/kanban/lean etc.
+4. QA people _cannot_ actually improve "quality" - they are not the developers working on the actual code, and can at best catch the worst errors.
 
 # Mindset and Culture
 
-In the end, it comes down to the core beliefs of your individual engineers writing the systems, and the teams they operate in.
+In the end, whether the right sort of automated regression tests are written comes down to the core beliefs of your individual engineers writing the systems and the teams they operate in.
 
-If there is any part of them then that isn't 110% on-board with what I've written here, then test coverage ends up being haphazard and incomplete, and over time gets steadily worse.
+If there is _any_ part of them then that isn't 110% on-board with what I've written here, then test coverage ends up being haphazard and incomplete, and over time gets steadily less able to prevent regressions.
+
+If there is not a full belief in the need for high quality automated testing then even a small friction in the way (e.g. a difficult 3rd party dependency, or the need for complex multi-team multi-service regression test), then teams will generally quietly give up on full feature coverage from the user's perspective and satisfy themselves with unit or component level tests. Unhelpfully to the untrained eye a large amount of detailed tests look similar to the large amount of coverage needed for true regression proofing. We must be constantly vigilant for this as the message on this is still relatively weak in the industry, and often confused by the (valuable) talk of detailed test approaches.
 
 ## Hero culture
 
+If you are particularly unlucky, or have set up perverse incentives, you risk a harder problem to resolve which is the embedding of a self-perpetuating "[hero culture](https://scalablehuman.com/2023/10/19/the-dangers-of-hero-culture-in-development-teams/)" whereby engineers take the fastest path to delivering _percieved_ value (whilst incurring significant technical debt and unseen bugs), and then take credit again by rushing to highly visibly fixing the problems that they themselves created.
 
+Good regression coverage, like much good engineering, takes time to build in the short term for a payoff of peace, reliability and sustained velocity in the long term. Which is incompatible with hero-ing it.
 
-# Excuses
+Beware the "rock star" programmer.
+
+# Programmer Excuses
 
 ## "I don't have time"
+
+The client/boss is paying for your time, and the boss/client would like the long term benefits, mkay?
 
 ## "The boss/client/manager won't let me"
 
 The "should I do a good job" question, as I like to call it.
 
-I often see all but the most experienced software engineers falling into the trap of assuming that the person they report to is sufficiently all-knowing to make any decision in any area.
+> "Which is quicker? Do that one."  
+> ~ Your client / boss
 
-# Outside-in testing
+I often see all but the most experienced software engineers falling into the trap of confusing authority with expertise.
 
-# Business Driven Development (BDD)
+I often hear engineers complaining that "they aren't given the time" to write tests, or do a proper job on some aspect of the software they are writing.
+
+In reality what has always happened is the engineer has presented two options to a client/employer who doesn't know or care about how software is built:
+
+1. I can do this feature properly with all the tests and great architecture etc etc (client glazes over) it'll be amazing, or
+2. I can just do the feature without any of that proper stuff. Which one do you want?
+
+The client / boss / project manager responds [whilst thinking "I have no idea what you are talking about, or why you are asking] "Which is quicker? Do that one."
+
+Then the engineer gets the hump that they can't do a good job.
+
+Or worse, the engineer assumed the answer for them without even asking.
+
+Put it this way, if a plumber came to a house, should they ask the homeowner whether to earth the pipes, or should they just do it as part of the cost of the job. The homeowner might not understand why that's part of the job, but they probably also don't want to be electrocuted by the radiator.
+
+It is perfectly reasonable for an experienced software engineer, who is the expert in _their_ trade, to just include automated regression tests as part of the job of feature delivery. To **not even bring it up in conversation**. The client/employer NEVER wants to pay for a feature, think its done, only to have it break again four features later. From their point of view, and quite rightly, that's just shoddy software.
+
+This is not to say I'm secretive - I work in the open and am open to people asking why things are done the way they they are, and am happy to explain to the client why it's in their best interest. But whether it happens is not up for discussion.
+
+# Outside-In Testing
+
+- <https://thoughtbot.com/blog/testing-from-the-outsidein>
+- <https://www.obeythetestinggoat.com/book/chapter_outside_in.html>
+
+# On Business Driven Development (BDD)
 
 Oh dear that went off the rails as a concept. I see so many teams entirely miss the point of this movement, which is conceptually a good thing, but: IT'S NOT ABOUT GHERKIN SYNTAX. IT'S NOT ABOUT BROWSER AUTOMATION. It's about writing down what the users expect of your software, in terms they'd understand, and making sure that those expectations are never broken unintentionally.
 
-BDD ends up using gherkin and browser automation because gherkin allows plain english explanations that can be turned into executable tests, and users often interact with software via a browser these days. They are tools for achieving BDD, not the definition of BDD.
+BDD ends up using gherkin and browser automation because gherkin allows plain English explanations that can be turned into executable tests, and users often interact with software via a browser these days. They are tools for achieving BDD, not the definition of BDD.
 
-## More
-
-- https://thoughtbot.com/blog/testing-from-the-outsidein
-- https://www.obeythetestinggoat.com/book/chapter_outside_in.html
