@@ -116,3 +116,33 @@ void Foo(string otherThing, string importantThing) // <-- refactored
 ## Making Wrong Code Look Wrong
 
 This piece of code-style opinion falls under "[Making Wrong Code Look Wrong](https://www.joelonsoftware.com/2005/05/11/making-wrong-code-look-wrong/)" as Joel Spolsky teaches.
+
+## Using types
+
+Having many parameters of the same types can be a code smell that it's time to move to stronger typing.
+
+There's two ways you can do this:
+
+1. Create a wrapper type for all the data you need and only have one parameter of that type.
+2. Create meaningful types that wrap primitive types and pass those instead so that the compiler will check the right type of thing is going in as the right argument.
+
+
+E.g. this:
+
+```c#
+void Foo(string importantThing, string otherThing)
+```
+
+becomes
+
+```c#
+void Foo(SomeThings things)
+```
+
+or
+
+```c#
+void Foo(ImportantThing importantThing, OtherThing otherThing)
+```
+
+Thus making the arguments impossible to mix up through being out of order.
