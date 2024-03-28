@@ -85,3 +85,7 @@ Remember, your code and your commits can last a veeeeeery long time and you neve
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1NoNTqank_U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/G45hqWNScvE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Adding ADRs
+
+Documenting broader reasons can be done with [ADR](https://github.com/npryce/adr-tools/tree/master?tab=readme-ov-file)s (Architecture Decision Records, i.e. why we did this and not that), [Y-ADRs](https://medium.com/olzzio/y-statements-10eb07b5a177) (basically highly condensed one-liner ADRs), readme files etc., ideally in [ascii](https://timwise.co.uk/2023/06/01/text-based-tools-the-ultimate-format-for-everything/), and even more ideally in the same commit so that a `git blame` will lead the future reader to find the additional reasoning right there in the same patch as the change to the code.
