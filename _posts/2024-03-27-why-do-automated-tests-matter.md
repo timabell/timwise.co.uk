@@ -10,6 +10,8 @@ In my view the mental model of why we would write tests is more important than t
 
 I'll share with you here the keystone ideas that make it all sit together properly, just like the keystone in a stone archway. Then from there, all the tests you write will sit in their true and proper place within that framework, or be obviously either waste or missing.
 
+👉 🎙️ This topic is [also covered on my podcast](https://pod.timwise.co.uk/25) 🎙️
+
 ![Photo: the shard through a brick archway](/images/blog/archway_IMG_20231109_135436.jpg)
 
 Yes I'm aware this particular archway in the photo doesn't actually have a keystone, but I took the pic and I rather like it so it's staying.
