@@ -97,11 +97,23 @@ The only team I have ever come across that (incorrectly) disabled the "create a 
 
 If you want fast "mean time to recovery" (MTTR) you need to be able to ship a patch to `main` and on to production fast. There is nothing about the *ability* to create merge commits or use PRs that prevents that. So long as you don't enable the "require a PR" option in github, there's nothing to stop a team pushing straight to `main` when that's the right thing to do.
 
-I like the idea that the requirement is not a pull request, but just two pairs of eyes on everything. That gives you the ability to be more responsive as pairs can now ship straight to production. That said, I just don't buy the idea of "mainline development" for every patch. Some changes are just more complicated than a single patch and it's good to be able to break things down in a branch before merging. Don't get me wrong, I'm all for pulling groundwork out and mainlining it (if your dev team is good enough to do this) so that your final patch is smaller, but sometimes a feature change has to go in in one commit to `main`, and without a branch plus a merge commit to main it is just not granular enough to make a useful history. And no, feature flags will not fix this for you, they are a useful thing for sure, and can reduce the size of unmerged branches, but sometimes you just have to change fundamental things that can't be "flagged".
+I like the idea that the requirement is not a pull request, but just two pairs of eyes on everything. That gives you the ability to be more responsive as pairs can now ship straight to production. That said, [I just don't buy the idea of "mainline development" for every patch](/2024/04/18/trunk-based-development-is-wrong/). Some changes are just more complicated than a single patch and it's good to be able to break things down in a branch before merging. Don't get me wrong, I'm all for pulling groundwork out and mainlining it (if your dev team is good enough to do this) so that your final patch is smaller, but sometimes a feature change has to go in in one commit to `main`, and without a branch plus a merge commit to main it is just not granular enough to make a useful history. And no, feature flags will not fix this for you, they are a useful thing for sure, and can reduce the size of unmerged branches, but sometimes you just have to change fundamental things that can't be "flagged".
 
 Team culture is worth considering, regardless of tool configuration. If your team does everything by PR then when something is on fire they'll probably raise a PR and then sit around waiting for approval; and if your team always commits everything to main as they go they'll recover fast but their history will be full of mis-steps and fixups that could have been dealt with before they ever hit main. As always extremes are bad and anyone who fast-talks you into believing one extreme is a panacea is glossing over important nuance and interesting counter-examples.
 
 Disabling merge commits doesn't prevent people from having slow PR based async processes, and equally, enabling merge commits and PRs doesn't stop you shipping a quick patch by pushing straight to main when something's on fire. The two things are orthogonal.
+
+## The Review part of PR
+
+The existence of a Pull Request implies a review by another developer before merging to `main`. The series of commits, including their summary, description, author and gpg signature is something that we can review and provide feedback on as part of the review process in order to provide a high quality history for those that need to understand why code is how it is, sometimes years in the future.
+
+I have personally heard many developers say "Don't worry about the crappy history I'm going to squash it". Note the future tense in here. So the reviewer is supposed to just approved the awful "wip" history, or ignore it entirely, and trust that the person that does the merge will pick the right button and generate a sane commit to main.
+
+The branch history in the PR that was reviewed and approved is then thrown away and something completely different goes in to main without any opportunity for the reviewer to object or comment.
+
+What is the point of reviewing something and then committing something completely different to `main`?
+
+The generated history does have value, should be of good quality, and peer-review is an important part of keeping that quality high.
 
 ## Perfection?
 
