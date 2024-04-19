@@ -62,3 +62,7 @@ I tried a [Blue Microphones Snowball USB Microphone](https://www.amazon.co.uk/gp
 Some of my friends who take it more seriously splashed out on a [Shure SM7B XLR Mic](https://www.shure.com/en-GB/products/microphones/sm7b) at a mere £389, and you have to by an XLR mixer to run it. I have to say they sound lurvely, and when they knock it you hardly hear it so it's got excellent vibration isolation built in.
 
 You could also look at the [Shure MV7 USB Microphone](https://www.amazon.co.uk/Shure-MV7-Microphone-Podcasting-Voice-Isolating/dp/B08G7RG9ML) which has USB as well as XLR so you wouldn't need a mixer. That's £250 currently. Presumably it's also got Shure's excellent sound and vibration isolation, though I haven't got one, so let me know if you get one!
+
+## See also
+
+- [Scott Hansleman's AV kit guide - "good, better, best"](https://www.hanselman.com/blog/good-better-best-creating-the-ultimate-remote-worker-webcam-setup-on-a-budget)
