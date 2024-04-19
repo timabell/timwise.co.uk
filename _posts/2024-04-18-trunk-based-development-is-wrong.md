@@ -5,9 +5,11 @@ layout: post
 
 ## Mainlining
 
-Some very experienced developers, some of whom I've heard it from in-person, strongly advocate what is often called "mainline" or "trunk-based" development, meaning that the git history is a series of commits directly to the main branch, with no pull requests or merge commits in sight. This is often held up as the panacea for achieving fast, high-quality delivery.
+Some very experienced developers, some of whom I've heard it from in-person, strongly advocate what is often called "mainline" or "trunk-based" development, meaning that the git history is a series of commits directly to the main branch, with no pull requests, feature branches or merge commits in sight. This is often held up as the panacea for achieving fast, high-quality delivery.
 
-I. Do. Not. Agree. The absolute rule of "no merge commits on main" (aka straight-line history), sometimes enforced by github configuration, is absolute balderdash. This assertion is typical of the black-and-white presentations of topics that seem oh-so-appealing when presented in the conference talk circuit where there is no room for nuance and actual trade-offs made in the trenches, and where big extreme statements win the game of attention.
+Note that there is a bit of a terminology problem, and I am not talking about what is described at [trunkbaseddevelopment.com](https://trunkbaseddevelopment.com/) which I actually agree with and think is excellent.
+
+The absolute rule I've heard touted more than once of "no merge commits on main" (aka straight-line history), sometimes enforced by github configuration, is absolute balderdash. This assertion is typical of the black-and-white presentations of topics that seem oh-so-appealing when presented in the conference talk circuit where there is no room for nuance and actual trade-offs made in the trenches, and where big extreme statements win the game of attention.
 
 There is a place for thoughtful, individual mainline commits, so don't take this as saying the opposite extreme of "only merge commits / PRs on main". A small-to-medium internally consistent patch (say 1 to 200 lines of diff at most), can be quite a reasonable thing to just push to main.
 
