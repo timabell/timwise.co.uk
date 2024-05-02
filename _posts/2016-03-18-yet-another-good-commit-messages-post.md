@@ -89,3 +89,7 @@ Remember, your code and your commits can last a veeeeeery long time and you neve
 ## Adding ADRs
 
 Documenting broader reasons can be done with [ADR](https://github.com/npryce/adr-tools/tree/master?tab=readme-ov-file)s (Architecture Decision Records, i.e. why we did this and not that), [Y-ADRs](https://medium.com/olzzio/y-statements-10eb07b5a177) (basically highly condensed one-liner ADRs), readme files etc., ideally in [ascii](https://timwise.co.uk/2023/06/01/text-based-tools-the-ultimate-format-for-everything/), and even more ideally in the same commit so that a `git blame` will lead the future reader to find the additional reasoning right there in the same patch as the change to the code.
+
+## Learning more about git
+
+- [NDC Talk: "git beyond pull & push" - Jørgen Kvalsvik - NDC TechTown 2023](https://www.youtube.com/watch?v=nr0u3R3kVrI)
