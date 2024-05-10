@@ -56,11 +56,17 @@ This installs my [usual package list](https://github.com/timabell/dotmatrix/blob
 
 ## Hardware
 
+### Video
+
 * Disable nvidia GPU in favour of intel card
 
 ```
 sudo prime-select intel
 ```
+
+### Bluetooth
+
+[Enable fast-connect etc for bluetooth keyboard/mouse](https://gist.github.com/andrebrait/961cefe730f4a2c41f57911e6195e444).
 
 ## zsh
 
