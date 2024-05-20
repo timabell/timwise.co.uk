@@ -24,17 +24,13 @@ I did wonder if I could get away with mssql on linux, and tried the [mssql docke
 
 ## Windows Install
 
-Download from <https://www.microsoft.com/en-us/software-download/windows10ISO>
+Download a virtualbox image from <https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/>
 
-*   Windows 10 Fall Creators Update
-*   English
-*   64-bit
-
-Start a new VM with the iso. Run the install. Install hangs on windows logo. Hard reset, try again several times. Eventually it works. Even managed to crash my host entirely.
-
-Shut down the VM with clean windows install.
-
-Take a backup
+- Attach the vm disk in virtualbox
+- Fire up and run updates
+- Install Rider via jetbrains toolbox
+- Shut down the VM
+- Take a virtualbox snapshot
 
 # backing up a vm  
 ```
