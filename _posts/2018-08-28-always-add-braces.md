@@ -54,4 +54,4 @@ For the reasons behind this, read the following:
 
 * <https://www.joelonsoftware.com/2005/05/11/making-wrong-code-look-wrong/>
 * <https://dzone.com/articles/omitting-braces-not-just-a-mat>
-* <https://nakedsecurity.sophos.com/2014/02/24/anatomy-of-a-goto-fail-apples-ssl-bug-explained-plus-an-unofficial-patch/>
+* [Anatomy of a “goto fail” – Apple’s SSL bug explained, plus an unofficial patch for OS X!](https://web.archive.org/web/20220406111833/https://nakedsecurity.sophos.com/2014/02/24/anatomy-of-a-goto-fail-apples-ssl-bug-explained-plus-an-unofficial-patch/)
