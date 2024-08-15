@@ -214,7 +214,7 @@ In no particular order, and of varying usefulness:
 
 ## Get started with a template GTD+Trello board
 
-You can easily create your own GTD Trello board from this template I've created for you.
+You can easily [create your own GTD Trello board from this template](https://trello.com/b/4L9ezgRP/gtd-template) that I've created for you.
 
 The template contains:
 
@@ -228,62 +228,6 @@ I reckon using this ready-made template will save you at least an half-an-hour o
 
 ![Screenshot of my template](/assets/gtd-trello-template.png)
 
-<!-- Load Stripe.js on your website. -->
-<script src="https://js.stripe.com/v3"></script>
-
-<p style="text-align: center;margin: 2em;">
-Go to stripe to pay securely:
-<br/>
-<button
-  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-  id="checkout-button-price_1HRjjxBOy2zUVRPdBXTMJ5tv"
-  role="link"
-  type="button"
->
-  Buy My GTD Template For £5
-</button>
-</p>
-
-If you are in any way dissatisfied then let me know within 30 days and I will refund you, no questions asked.
-
-### Business details
-
-Payment will go to Charm Consulting Ltd., which is my wholly owned contracting company.
-
-Registered address: Unit 4, Vista Place, Coy Pond Business Park, Ingworth Road, Poole, BH12 1JY
-
-<div id="error-message"></div>
-
-<script>
-(function() {
-  var stripe = Stripe('pk_live_yNiRZTjor0ntOGLd5UFPeqW3');
-
-  var checkoutButton = document.getElementById('checkout-button-price_1HRjjxBOy2zUVRPdBXTMJ5tv');
-  checkoutButton.addEventListener('click', function () {
-    // When the customer clicks on the button, redirect
-    // them to Checkout.
-    stripe.redirectToCheckout({
-      lineItems: [{price: 'price_1HRjjxBOy2zUVRPdBXTMJ5tv', quantity: 1}],
-      mode: 'payment',
-      // Do not rely on the redirect to the successUrl for fulfilling
-      // purchases, customers may not always reach the success_url after
-      // a successful payment.
-      // Instead use one of the strategies described in
-      // https://stripe.com/docs/payments/checkout/fulfillment
-      successUrl: 'https://timwise.co.uk/pay/success-gtd/',
-      cancelUrl: 'https://timwise.co.uk/pay/cancelled/',
-    })
-    .then(function (result) {
-      if (result.error) {
-        // If `redirectToCheckout` fails due to a browser or network
-        // error, display the localized error message to your customer.
-        var displayError = document.getElementById('error-message');
-        displayError.textContent = result.error.message;
-      }
-    });
-  });
-})();
-</script>
 
 ## Beyond GTD
 
