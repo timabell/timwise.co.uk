@@ -48,6 +48,8 @@ You can see what I managed to do with [reveal.js for the Rust Workshop](https://
 
 Markdown, VSCode with some markdown plugins, maybe even a [markdown-wiki](https://marketplace.visualstudio.com/items?itemName=kortina.vscode-markdown-notes) tool. [Markor](https://f-droid.org/packages/net.gsantner.markor/) on android. [Syncthing](https://syncthing.net/) to keep them in sync across devices. Works for me, and any conflicts due to editing files out of sync is easier to deal with than [tomboy](https://wiki.gnome.org/Apps/Tomboy)'s nasty XML format (yes I know XML is text but it's still naaaasty).
 
+And for something much fancier, [Logseq](https://logseq.com/) is a FOSS note-taking app that stores all your notes as markdown and layers on a sqlite index, a great UI, and a ton of plugins.
+
 ### Creating pdf files
 
 Thanks to [pandoc](https://pandoc.org/) (other tools are available), you can trivially convert your markdown files to pdf files for sharing with people who insist on that as a format.
