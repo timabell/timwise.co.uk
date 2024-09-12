@@ -12,6 +12,7 @@ I do custom coding, but sometimes non-technical folk ask me how to build a websi
 - [bricksbuilder.io](https://bricksbuilder.io/)
 - [brixbuilder.com](https://www.brixbuilder.com/)
 - [squarespace.com](https://www.squarespace.com/)
+- [weebly.com](https://www.weebly.com/)
 - [wordpress.com](https://wordpress.com/)
 - [Jekyll + github pages](/2019/06/24/setting-up-a-jekyll-blog/) if you're feeling a bit brave
 
