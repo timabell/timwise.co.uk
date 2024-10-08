@@ -8,12 +8,17 @@ In the manner of choosing the colour to paint the bikeshed, the decision of whet
 ## In short
 
 - Correct: create tickets only for features and larger technical work. Allow engineers to commit smaller improvements ad-hoc.
-- Incorrect: create an atmosphere of stifling bureaucracy where ll attempts to keep the work area tidy will require sign-off from the CFO and approval from the product owner who has never written a line of code (some have, but that's a rare wonder).
+- Incorrect: create an atmosphere of stifling bureaucracy where all attempts to keep the work area tidy will require sign-off from the CFO and approval from the product owner who has never written a line of code (some have, but that's a rare wonder).
 
 ## Who cares?
 
-If anyone wonders why engineers get *so* bent out of shape about this seemingly harmless request, imagine if someone asked you to fill out a form and submit it for every single piece of your work that you currently don't have to. Want to pick up the phone?… create a ticket. Want to send an email?…
- - create a ticket. Can you imagine that this might make you a) miserable, b) less productive, and c) give up trying to do more than the bare minimum. By requesting tickets for everything you are introducing friction directly into the path of a programmer's most important output - the codebase. We instinctively know that fast iteration and short cycle times lead to better delivery of value to users, and instinctively dislike anything that gets in the way. Note that the "auditing" and "why it changed" are already covered by source control (git) history and "pull requests" so adding tickets is redundant toil.
+If anyone wonders why engineers get *so* bent out of shape about this seemingly harmless request, imagine if someone asked you to fill out a form and submit it for every single piece of your work that you currently don't have to. Want to pick up the phone?… create a ticket. Want to send an email?… - create a ticket. Can you imagine that this might make you a) miserable, b) less productive, and c) give up trying to do more than the bare minimum.
+
+By requesting tickets for everything you are introducing friction directly into the path of a programmer's most important output - the codebase.
+
+As experienced developers we instinctively know that fast iteration and short cycle times lead to better delivery of value to users, and instinctively dislike anything that gets in the way.
+
+That the need for "auditing" and "why it changed" are already covered by source control history (git) and "pull requests" so adding a requirement for tickets is redundant toil with little additional benefit.
 
 ## Turning to GPT for explanations
 
